@@ -1,0 +1,886 @@
+fileFormatVersion: 2
+guid: 9c032f6a9f1ff1d4197d1516cf067e5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4202810685295687097
+    second: idle
+  - first:
+      213: 8168034733590911773
+    second: idle1
+  - first:
+      213: 6768120213856297613
+    second: walk
+  - first:
+      213: -8258968096492797991
+    second: walk1
+  - first:
+      213: -330728379893608040
+    second: walk2
+  - first:
+      213: -990810502142483263
+    second: walk3
+  - first:
+      213: 881427956577823805
+    second: walk4
+  - first:
+      213: -8505248859143337074
+    second: walk5
+  - first:
+      213: -5023570512076541141
+    second: Jumpt
+  - first:
+      213: 3057411953121671533
+    second: NES - Gimmick Mr Gimmick - Yumetaro_9
+  - first:
+      213: 1699646642234865722
+    second: NES - Gimmick Mr Gimmick - Yumetaro_10
+  - first:
+      213: 4159606040427410652
+    second: NES - Gimmick Mr Gimmick - Yumetaro_11
+  - first:
+      213: 3737994501232181514
+    second: faint4
+  - first:
+      213: 7320492297271233003
+    second: NES - Gimmick Mr Gimmick - Yumetaro_13
+  - first:
+      213: -8799969173832189988
+    second: NES - Gimmick Mr Gimmick - Yumetaro_14
+  - first:
+      213: 1704176387654405901
+    second: faint8
+  - first:
+      213: -3062537324552229686
+    second: faint9
+  - first:
+      213: -7127240794038510959
+    second: faint10
+  - first:
+      213: -8649980326568355239
+    second: faint
+  - first:
+      213: 4231078178225888317
+    second: faint1
+  - first:
+      213: 8273164888524788793
+    second: faint2
+  - first:
+      213: -1443592123010401421
+    second: faint3
+  - first:
+      213: -881098475545777539
+    second: faint5
+  - first:
+      213: 4071982867422604034
+    second: faint6
+  - first:
+      213: 1686319878445956251
+    second: NES - Gimmick Mr Gimmick - Yumetaro_24
+  - first:
+      213: 1229156117190588253
+    second: NES - Gimmick Mr Gimmick - Yumetaro_25
+  - first:
+      213: -7849621259308809291
+    second: NES - Gimmick Mr Gimmick - Yumetaro_26
+  - first:
+      213: 681242557195316501
+    second: NES - Gimmick Mr Gimmick - Yumetaro_27
+  - first:
+      213: 4860637680969412501
+    second: NES - Gimmick Mr Gimmick - Yumetaro_28
+  - first:
+      213: -1359046287572838035
+    second: NES - Gimmick Mr Gimmick - Yumetaro_29
+  - first:
+      213: 1928233048086575550
+    second: NES - Gimmick Mr Gimmick - Yumetaro_30
+  - first:
+      213: 5934654566842198820
+    second: NES - Gimmick Mr Gimmick - Yumetaro_31
+  - first:
+      213: -4421875430667951365
+    second: NES - Gimmick Mr Gimmick - Yumetaro_32
+  - first:
+      213: 3073091657535267120
+    second: NES - Gimmick Mr Gimmick - Yumetaro_33
+  - first:
+      213: 6957945629682255437
+    second: NES - Gimmick Mr Gimmick - Yumetaro_34
+  - first:
+      213: 3813593773719430358
+    second: NES - Gimmick Mr Gimmick - Yumetaro_35
+  - first:
+      213: 3159672066004943642
+    second: NES - Gimmick Mr Gimmick - Yumetaro_36
+  - first:
+      213: -5767399378763325157
+    second: NES - Gimmick Mr Gimmick - Yumetaro_37
+  - first:
+      213: -5846016851135999309
+    second: NES - Gimmick Mr Gimmick - Yumetaro_38
+  - first:
+      213: 7937407235538054997
+    second: NES - Gimmick Mr Gimmick - Yumetaro_39
+  - first:
+      213: 7843070469696432193
+    second: NES - Gimmick Mr Gimmick - Yumetaro_40
+  - first:
+      213: -4857287867593631417
+    second: NES - Gimmick Mr Gimmick - Yumetaro_41
+  - first:
+      213: -5139193935518237965
+    second: NES - Gimmick Mr Gimmick - Yumetaro_42
+  - first:
+      213: 4246528141055369669
+    second: NES - Gimmick Mr Gimmick - Yumetaro_43
+  - first:
+      213: 5762965919549447555
+    second: NES - Gimmick Mr Gimmick - Yumetaro_44
+  - first:
+      213: -7999767186365542975
+    second: NES - Gimmick Mr Gimmick - Yumetaro_45
+  - first:
+      213: 7786842488964097978
+    second: NES - Gimmick Mr Gimmick - Yumetaro_46
+  - first:
+      213: -8572099585162171013
+    second: NES - Gimmick Mr Gimmick - Yumetaro_47
+  - first:
+      213: -6526782456102218639
+    second: NES - Gimmick Mr Gimmick - Yumetaro_48
+  - first:
+      213: 1869183381541513017
+    second: NES - Gimmick Mr Gimmick - Yumetaro_49
+  - first:
+      213: -2524632391682517345
+    second: NES - Gimmick Mr Gimmick - Yumetaro_50
+  - first:
+      213: 5377371627017138170
+    second: NES - Gimmick Mr Gimmick - Yumetaro_51
+  - first:
+      213: 8482477471423757456
+    second: NES - Gimmick Mr Gimmick - Yumetaro_52
+  - first:
+      213: 5239994773244384501
+    second: NES - Gimmick Mr Gimmick - Yumetaro_53
+  - first:
+      213: 5319778741959050056
+    second: NES - Gimmick Mr Gimmick - Yumetaro_54
+  - first:
+      213: 2462694417346314597
+    second: NES - Gimmick Mr Gimmick - Yumetaro_55
+  - first:
+      213: -753759974076978448
+    second: NES - Gimmick Mr Gimmick - Yumetaro_56
+  - first:
+      213: -5661882554203341670
+    second: NES - Gimmick Mr Gimmick - Yumetaro_57
+  - first:
+      213: -3624081631425069050
+    second: NES - Gimmick Mr Gimmick - Yumetaro_58
+  - first:
+      213: -6356516870651110325
+    second: NES - Gimmick Mr Gimmick - Yumetaro_59
+  - first:
+      213: -3075146936329780760
+    second: NES - Gimmick Mr Gimmick - Yumetaro_60
+  - first:
+      213: -4635225984173996644
+    second: NES - Gimmick Mr Gimmick - Yumetaro_61
+  - first:
+      213: -2323103905727808838
+    second: NES - Gimmick Mr Gimmick - Yumetaro_62
+  - first:
+      213: 5415301073535881430
+    second: NES - Gimmick Mr Gimmick - Yumetaro_63
+  - first:
+      213: -7918338061530078275
+    second: NES - Gimmick Mr Gimmick - Yumetaro_64
+  - first:
+      213: -6877409259100348481
+    second: NES - Gimmick Mr Gimmick - Yumetaro_65
+  - first:
+      213: 1971560165759485570
+    second: NES - Gimmick Mr Gimmick - Yumetaro_66
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 287
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a0cbcf2fd9ca5c0800000000000000
+      internalID: -4202810685295687097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 287
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b1db86050ba5170800000000000000
+      internalID: 8168034733590911773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82ab08b9713ded50800000000000000
+      internalID: 6768120213856297613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df334d2640426d80800000000000000
+      internalID: -8258968096492797991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8911d4f6a44096bf0800000000000000
+      internalID: -330728379893608040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4221c091fef32f0800000000000000
+      internalID: -990810502142483263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c6be67e067b3c00800000000000000
+      internalID: 881427956577823805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 265
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b0770b93947f980800000000000000
+      internalID: -8505248859143337074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumpt
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23fc8b3c31b84ab0800000000000000
+      internalID: -5023570512076541141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 242
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69b9d5f8fb1e6a20800000000000000
+      internalID: 3057411953121671533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 227
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a383812bd9b569710800000000000000
+      internalID: 1699646642234865722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 227
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4be3db7a3e9b930800000000000000
+      internalID: 4159606040427410652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 211
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01ce42b13600e330800000000000000
+      internalID: 3737994501232181514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 231
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9c5df65fc979560800000000000000
+      internalID: 7320492297271233003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 230
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7385f19aa30e580800000000000000
+      internalID: -8799969173832189988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 211
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fcfbc356376a710800000000000000
+      internalID: 1704176387654405901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint9
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 211
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc60b2878eaf75d0800000000000000
+      internalID: -3062537324552229686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 211
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a59a27244f61d90800000000000000
+      internalID: -7127240794038510959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 211
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a96c8f8b815f780800000000000000
+      internalID: -8649980326568355239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 211
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c9f069f2fc7ba30800000000000000
+      internalID: 4231078178225888317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 211
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93411cc02af20d270800000000000000
+      internalID: 8273164888524788793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 211
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bb963dc9457fbe0800000000000000
+      internalID: -1443592123010401421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 211
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7aa4f0da95b5c3f0800000000000000
+      internalID: -881098475545777539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faint6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 211
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b6338f7d6928830800000000000000
+      internalID: 4071982867422604034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_24
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 211
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c7374bef2076710800000000000000
+      internalID: 1686319878445956251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 188
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57b4aae9f6de0110800000000000000
+      internalID: 1229156117190588253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Yumetaro_26
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 188
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b34b81cd0b801390800000000000000
+      internalID: -7849621259308809291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
