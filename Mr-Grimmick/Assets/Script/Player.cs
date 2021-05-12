@@ -33,12 +33,12 @@ public class Player : MonoBehaviour
 
         if (h > 0)
         {
-            vel.x = 5;
+            vel.x = 7;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (h < 0)
         {
-            vel.x = -5;
+            vel.x = -7;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else vel.x = 0;
@@ -64,8 +64,9 @@ public class Player : MonoBehaviour
         }
         else
         {
-            timePressJump+=0.02f;
-            body.AddForce(new Vector2(0, 200));
+            timePressJump+=0.03f;
+             body.AddForce(new Vector2(0, 200));
+            //body.velocity += new Vector2(0, 1000);
             if (timePressJump >= 2)
             {
                 timePressJump = 0;

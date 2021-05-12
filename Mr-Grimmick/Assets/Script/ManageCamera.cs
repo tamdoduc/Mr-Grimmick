@@ -37,7 +37,7 @@ public class ManageCamera : MonoBehaviour
         }
 
 
-        if (pos.y <= limBottom) // limBottom
+        if (pos.y <= (limBottom+limTop)/2) // limBottom
         {
             posCam.y = limBottom;
         } 
