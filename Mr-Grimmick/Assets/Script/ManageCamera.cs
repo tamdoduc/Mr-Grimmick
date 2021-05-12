@@ -6,41 +6,50 @@ public class ManageCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     Camera cam;
-    float widthCam,heightCam;
-    const float widthWorld = 16* 29;
-    const float heightWorld = 16 *75;
-
-    const float posCamDefaultX = 4.5f;
-    const float posCamDefaultY = -14f;
-    const float posCamDefaultZ = -10f;
+    public GameObject Player;
+    public float limLeft,limTop,limRight,limBottom;
     void Start()
     {
         cam = Camera.main;
-        //widthCam = 2f * cam.orthographicSize;
-        //heightCam = widthCam * cam.aspect;  
-
-
+        cam.transform.position = new Vector3(limLeft, limBottom, cam.transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MoveBasePosision(Player.transform.position);
     }
-    public void MoveBasePosision(Vector2 pos)
+     void MoveBasePosision(Vector2 pos)
     {
-        Vector2 posCam = new Vector2();
-        if (pos.x <= 4.5f) // limited Left X
+        Vector3 posCam = new Vector3();
+        posCam.z = cam.transform.position.z;
+        if (pos.x <= limLeft) // limited Left
         {
-            posCam.x = posCamDefaultX;
+            posCam.x = limLeft;
         }
-        if (pos.y <= -14f)
+        else if (pos.x >= limRight) // limited right
         {
-            posCam.x = posCamDefaultY;
+            posCam.x = limRight;
         }
-        if (pos.x>= 53.5f) // limited right X
+        else
         {
+            posCam.x = pos.x;
+        }
 
+
+        if (pos.y <= limBottom) // limBottom
+        {
+            posCam.y = limBottom;
+        } 
+        else if (pos.y>= limTop) // limited Top
+        {
+            posCam.y = limTop;
         }
+        else
+        {
+            posCam.y = pos.y;
+        }
+
+        cam.transform.position = posCam;
     }
 }
