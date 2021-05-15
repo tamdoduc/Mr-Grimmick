@@ -156,6 +156,7 @@ MonoBehaviour:
   IsPressJump: 0
   timePressJump: 0
   skill: {fileID: 4978808554869312327, guid: f42f28644a7dbd449ab2ff26990ed483, type: 3}
+  countCollision: 0
 --- !u!50 &6760469138675873800
 Rigidbody2D:
   serializedVersion: 4

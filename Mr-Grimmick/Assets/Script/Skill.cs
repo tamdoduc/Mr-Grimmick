@@ -51,7 +51,7 @@ public class Skill : MonoBehaviour
         if (isShot)
         {
             body.velocity = velocity;
-            if (countCollision >= 100)               player.DestroySkill();
+            if (countCollision >= 100) player.DestroySkill();
         }
     }
     void SetShadow()
@@ -85,7 +85,7 @@ public class Skill : MonoBehaviour
             directory = -1;
         else
             directory = 1;
-        velocity = new Vector2(directory*8, -10f);
+        velocity = new Vector2(directory * 8, -10f);
     }
     public bool IsShot()
     {
@@ -111,25 +111,27 @@ public class Skill : MonoBehaviour
         Vector3 vel = velocity;
         if (collisionD)
         {
-            vel.y = decrease* Mathf.Abs(velocity.y);
+            vel.y = decrease * Mathf.Abs(velocity.y);
             countCollision++;
-        } else if (collisionU)
+        }
+        else if (collisionU)
         {
-            vel.y = decrease* -Mathf.Abs(velocity.y);
+            vel.y = decrease * -Mathf.Abs(velocity.y);
             countCollision++;
         }
         if (collisionL)
         {
-            vel.x = decrease* Mathf.Abs(velocity.x);
+            vel.x = decrease * Mathf.Abs(velocity.x);
             countCollision++;
-        } else if (collisionR)
+        }
+        else if (collisionR)
         {
-            vel.x = decrease* -Mathf.Abs(velocity.x);
+            vel.x = decrease * -Mathf.Abs(velocity.x);
             countCollision++;
         }
 
         velocity = vel;
-        if (!collisionD && !collisionU )
+        if (!collisionD && !collisionU)
             velocity -= new Vector2(0, 0.1f);
     }
     public int CountCollision()
