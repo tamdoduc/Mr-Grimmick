@@ -4,28 +4,28 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4202810685295687097
-    second: idle
+    second: Idle1
   - first:
       213: 8168034733590911773
-    second: idle1
+    second: Idle2
   - first:
       213: 6768120213856297613
-    second: walk
+    second: Walk1
   - first:
       213: -8258968096492797991
-    second: walk1
+    second: Walk2
   - first:
       213: -330728379893608040
-    second: walk2
+    second: Walk3
   - first:
       213: -990810502142483263
-    second: walk3
+    second: Walk4
   - first:
       213: 881427956577823805
-    second: walk4
+    second: Walk5
   - first:
       213: -8505248859143337074
-    second: walk5
+    second: Walk6
   - first:
       213: -5023570512076541141
     second: Jumpt
@@ -40,7 +40,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Yumetaro_11
   - first:
       213: 3737994501232181514
-    second: faint4
+    second: Faint5
   - first:
       213: 7320492297271233003
     second: NES - Gimmick Mr Gimmick - Yumetaro_13
@@ -49,34 +49,34 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Yumetaro_14
   - first:
       213: 1704176387654405901
-    second: faint8
+    second: Faint9
   - first:
       213: -3062537324552229686
-    second: faint9
+    second: Faint10
   - first:
       213: -7127240794038510959
-    second: faint10
+    second: Faint11
   - first:
       213: -8649980326568355239
-    second: faint
+    second: Faint1
   - first:
       213: 4231078178225888317
-    second: faint1
+    second: Faint2
   - first:
       213: 8273164888524788793
-    second: faint2
+    second: Faint3
   - first:
       213: -1443592123010401421
-    second: faint3
+    second: Faint4
   - first:
       213: -881098475545777539
-    second: faint5
+    second: Faint6
   - first:
       213: 4071982867422604034
-    second: faint6
+    second: Faint7
   - first:
       213: 1686319878445956251
-    second: NES - Gimmick Mr Gimmick - Yumetaro_24
+    second: Faint
   - first:
       213: 1229156117190588253
     second: NES - Gimmick Mr Gimmick - Yumetaro_25
@@ -200,9 +200,6 @@ TextureImporter:
   - first:
       213: -6877409259100348481
     second: NES - Gimmick Mr Gimmick - Yumetaro_65
-  - first:
-      213: 1971560165759485570
-    second: NES - Gimmick Mr Gimmick - Yumetaro_66
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -302,7 +299,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle
+      name: Idle1
       rect:
         serializedVersion: 2
         x: 2
@@ -323,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle1
+      name: Idle2
       rect:
         serializedVersion: 2
         x: 22
@@ -344,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk
+      name: Walk1
       rect:
         serializedVersion: 2
         x: 2
@@ -365,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk1
+      name: Walk2
       rect:
         serializedVersion: 2
         x: 21
@@ -386,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk2
+      name: Walk3
       rect:
         serializedVersion: 2
         x: 39
@@ -407,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk3
+      name: Walk4
       rect:
         serializedVersion: 2
         x: 58
@@ -428,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk4
+      name: Walk5
       rect:
         serializedVersion: 2
         x: 79
@@ -449,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk5
+      name: Walk6
       rect:
         serializedVersion: 2
         x: 99
@@ -486,27 +483,6 @@ TextureImporter:
       bones: []
       spriteID: b23fc8b3c31b84ab0800000000000000
       internalID: -5023570512076541141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Yumetaro_9
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 242
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d69b9d5f8fb1e6a20800000000000000
-      internalID: 3057411953121671533
       vertices: []
       indices: 
       edges: []
@@ -554,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint4
+      name: Faint5
       rect:
         serializedVersion: 2
         x: 96
@@ -617,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint8
+      name: Faint9
       rect:
         serializedVersion: 2
         x: 200
@@ -638,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint9
+      name: Faint10
       rect:
         serializedVersion: 2
         x: 221
@@ -659,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint10
+      name: Faint11
       rect:
         serializedVersion: 2
         x: 241
@@ -680,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint
+      name: Faint1
       rect:
         serializedVersion: 2
         x: 2
@@ -701,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint1
+      name: Faint2
       rect:
         serializedVersion: 2
         x: 24
@@ -722,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint2
+      name: Faint3
       rect:
         serializedVersion: 2
         x: 45
@@ -743,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint3
+      name: Faint4
       rect:
         serializedVersion: 2
         x: 68
@@ -764,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint5
+      name: Faint6
       rect:
         serializedVersion: 2
         x: 123
@@ -785,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: faint6
+      name: Faint7
       rect:
         serializedVersion: 2
         x: 149
@@ -806,10 +782,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Yumetaro_24
+      name: Faint
       rect:
         serializedVersion: 2
-        x: 171
+        x: 170
         y: 211
         width: 19
         height: 20
