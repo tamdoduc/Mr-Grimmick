@@ -1,23 +1,6 @@
 ﻿
 using UnityEngine;
 
-enum State
-{
-    IDLELEFT,
-    IDLERIGHT,
-    WALKLEFT,
-    WALKRIGHT,
-    JUMPTLEFT,
-    JUMPRIGHT,
-    FAINT,
-    DIE
-}
-struct InfoJumpt
-{
-    public float timeJumpt;
-    const float maxTimeJumpt = 1;
-}
-
 public class Player : MonoBehaviour
 {
     [SerializeField] Vector2 vel;
@@ -33,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] Skill skill;
     Skill CloneSkill;
 
+    [SerializeField] int countCollision;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +30,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckCommand();
+        if (CloneSkill != null)
+            countCollision = CloneSkill.CountCollision();
     }
     void CheckCommand()
     {

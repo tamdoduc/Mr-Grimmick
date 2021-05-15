@@ -51,7 +51,7 @@ public class Skill : MonoBehaviour
         if (isShot)
         {
             body.velocity = velocity;
-         //   if (countCollision >= 10)               player.DestroySkill();
+            if (countCollision >= 100)               player.DestroySkill();
         }
     }
     void SetShadow()
@@ -85,7 +85,7 @@ public class Skill : MonoBehaviour
             directory = -1;
         else
             directory = 1;
-        velocity = new Vector2(directory*8, 0.1f);
+        velocity = new Vector2(directory*8, -10f);
     }
     public bool IsShot()
     {
@@ -97,29 +97,43 @@ public class Skill : MonoBehaviour
     }
     void CheckCollision()
     {
-        RaycastHit2D hit2DL = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0.1f, GroundLayer);
-        bool collisionL = hit2DL.collider != null;
-        RaycastHit2D hit2DR = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0.1f, GroundLayer);
-        bool collisionR = hit2DR.collider != null;
-        RaycastHit2D hit2DT = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
-        bool collisionU = hit2DT.collider != null;
-        RaycastHit2D hit2DD = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
-        bool collisionD = hit2DD.collider != null;
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0.2f, GroundLayer);
+        bool collisionL = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0.2f, GroundLayer);
+        bool collisionR = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0.2f, GroundLayer);
+        bool collisionU = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.2f, GroundLayer);
+        bool collisionD = hit2D.collider != null;
+
+        float decrease = 0.99f;
 
         Vector3 vel = velocity;
-        if (collisionD || collisionU)
+        if (collisionD)
         {
-            vel.y = -0.8f*velocity.y;
+            vel.y = decrease* Mathf.Abs(velocity.y);
             countCollision++;
-        } 
-       //else
-        if (collisionL || collisionR)
+        } else if (collisionU)
         {
-            vel.x = -0.8f*velocity.x;
+            vel.y = decrease* -Mathf.Abs(velocity.y);
             countCollision++;
         }
+        if (collisionL)
+        {
+            vel.x = decrease* Mathf.Abs(velocity.x);
+            countCollision++;
+        } else if (collisionR)
+        {
+            vel.x = decrease* -Mathf.Abs(velocity.x);
+            countCollision++;
+        }
+
         velocity = vel;
         if (!collisionD && !collisionU )
             velocity -= new Vector2(0, 0.1f);
+    }
+    public int CountCollision()
+    {
+        return countCollision;
     }
 }
