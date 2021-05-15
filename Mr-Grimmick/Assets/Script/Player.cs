@@ -1,25 +1,45 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
+enum State
+{
+    IDLELEFT,
+    IDLERIGHT,
+    WALKLEFT,
+    WALKRIGHT,
+    JUMPTLEFT,
+    JUMPRIGHT,
+    FAINT,
+    DIE
+}
+struct InfoJumpt
+{
+    public float timeJumpt;
+    const float maxTimeJumpt = 1;
+}
 
 public class Player : MonoBehaviour
 {
-    Vector2 vel;
+    [SerializeField] Vector2 vel;
 
     [SerializeField] Rigidbody2D body;
-    [SerializeField] Collider2D collider2D;
+    [SerializeField] Collider2D colliderBody;
+    [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask GroundLayer;
 
     [SerializeField] bool IsPressJump;
     [SerializeField] float timePressJump;
+    [SerializeField] Skill skill;
+    Skill CloneSkill;
 
     // Start is called before the first frame update
     void Start()
     {
+        body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
+        vel = new Vector2(0, 0);
     }
     // Update is called once per frame
     void Update()
@@ -28,52 +48,91 @@ public class Player : MonoBehaviour
     }
     void CheckCommand()
     {
-       // vel = new Vector2(0, 0);
-        float h = Input.GetAxisRaw("Horizontal");
 
+        CheckMove();
+        CheckJumpt();
+        CheckSkill();
+
+        body.velocity = vel;
+    }     
+    void CheckSkill()
+    {
+        if (Input.GetKeyDown(KeyCode.V))
+        if (CloneSkill==null)
+        {
+            CloneSkill = GameObject.Instantiate(skill);
+        }
+        if (Input.GetKeyUp(KeyCode.V))
+        if (CloneSkill!=null)
+        {
+            if (CloneSkill.GetTime()< 1.0f)
+                DestroySkill();
+            else if (!CloneSkill.IsShot())
+                CloneSkill.Shot();
+        }
+    }
+    public void DestroySkill()
+    {
+        GameObject.Destroy(CloneSkill.gameObject);
+    }
+    void CheckMove()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
         if (h > 0)
         {
-            vel.x = 7;
+            vel.x = 5;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (h < 0)
         {
-            vel.x = -7;
+            vel.x = -5;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        else vel.x = 0;
-
+        else
+        {
+            vel.x = 0;
+        }
         if (h != 0)
-            animator.SetFloat("Speed", Mathf.Abs(vel.x));
+            animator.SetFloat("Speed", Mathf.Abs(body.velocity.x));
         else
             animator.SetFloat("Speed", 0);
-
-
+    }
+    void CheckJumpt()
+    {
         if (Input.GetKeyUp(KeyCode.Space))
         {
             IsPressJump = false;
             timePressJump = 0;
+            vel.y = -7f;
         }
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+            if (Input.GetKeyDown(KeyCode.Space) && IsNearGrounded())
             {
                 IsPressJump = true;
             }
         }
         else
         {
-            timePressJump+=0.03f;
-             body.AddForce(new Vector2(0, 200));
-            //body.velocity += new Vector2(0, 1000);
-            if (timePressJump >= 2)
+            timePressJump += Time.deltaTime;  //  1/1000 giaay
+            vel.y = 15;
+            if (timePressJump >= 0.25f) // time
             {
                 timePressJump = 0;
                 IsPressJump = false;
+                vel.y = -7f;
             }
         }
-        if (IsGrounded())
+        if (timePressJump == 0)
+            if (IsGrounded())
+            {
+                vel.y = -0.0001f;
+                this.transform.position += new Vector3(0, 0.0000005f);
+            }
+            else
+                vel.y = -7;
+        if (IsNearGrounded())
         {
             animator.SetBool("IsJumpt", false);
         }
@@ -81,15 +140,15 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("IsJumpt", true);
         }
-
-
-
-
-        body.velocity = vel;
-    }     
+    }
     bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(collider2D.bounds.center, collider2D.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        return hit2D.collider != null;
+    }
+    bool IsNearGrounded()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, GroundLayer);
         return hit2D.collider != null;
     }
 }
