@@ -7,40 +7,46 @@ public class ManageCamera : MonoBehaviour
     // Start is called before the first frame update
     Camera cam;
     float widthCam,heightCam;
-    const float widthWorld = 16* 29;
-    const float heightWorld = 16 *75;
 
-    const float posCamDefaultX = 4.5f;
-    const float posCamDefaultY = -14f;
-    const float posCamDefaultZ = -10f;
+    [SerializeField] float limBottom;
+    [SerializeField] float limTop;
+    [SerializeField] float limLeft;
+    [SerializeField] float limRight;
+
+    [SerializeField] Player player;
     void Start()
     {
         cam = Camera.main;
-        //widthCam = 2f * cam.orthographicSize;
-        //heightCam = widthCam * cam.aspect;  
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MoveBasePosision(player.transform.position);
     }
-    public void MoveBasePosision(Vector2 pos)
+    void MoveBasePosision(Vector2 pos)
     {
-        Vector2 posCam = new Vector2();
-        if (pos.x <= 4.5f) // limited Left X
+        Vector3 posCam = new Vector3(0,0,-10);
+        if (pos.x <= limLeft) // limited Left X
         {
-            posCam.x = posCamDefaultX;
+            posCam.x = limLeft;
         }
-        if (pos.y <= -14f)
+        else
+        if (pos.x >= 53.5f) // limited right X
         {
-            posCam.x = posCamDefaultY;
+            posCam.x = limRight;
         }
-        if (pos.x>= 53.5f) // limited right X
+        else
+            posCam.x = pos.x;
+        if (pos.y <= (limBottom+limTop)/2) // less than midle
         {
+            posCam.y = limBottom;
+        } 
+        else 
+        {
+            posCam.y = limTop;
+        }
+        cam.transform.position = posCam;
 
-        }
     }
 }
