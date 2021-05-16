@@ -862,6 +862,14 @@ PrefabInstance:
       propertyPath: nextScene
       value: Scene 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
+      propertyPath: NewPosInNextScene.x
+      value: 59.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
+      propertyPath: NewPosInNextScene.y
+      value: -19.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565385, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: m_Name
       value: SwitchScene
@@ -1003,11 +1011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.33
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.08
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1411,6 +1419,14 @@ PrefabInstance:
     - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: nextScene
       value: Scene 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
+      propertyPath: NewPosInNextScene.x
+      value: -6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
+      propertyPath: NewPosInNextScene.y
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565385, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: m_Name
