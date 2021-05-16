@@ -8,12 +8,13 @@ public class ManageCamera : MonoBehaviour
     Camera cam;
     float widthCam,heightCam;
 
-    [SerializeField] float limBottom;
-    [SerializeField] float limTop;
-    [SerializeField] float limLeft;
-    [SerializeField] float limRight;
+    [SerializeField] float[] limLeft;
+    [SerializeField] float[] limRight;
+    [SerializeField] float[] posY;
+
 
     [SerializeField] Player player;
+    [SerializeField] HUBManage hub;
     void Start()
     {
         cam = Camera.main;
@@ -27,26 +28,41 @@ public class ManageCamera : MonoBehaviour
     void MoveBasePosision(Vector2 pos)
     {
         Vector3 posCam = new Vector3(0,0,-10);
-        if (pos.x <= limLeft) // limited Left X
-        {
-            posCam.x = limLeft;
-        }
-        else
-        if (pos.x >= 53.5f) // limited right X
-        {
-            posCam.x = limRight;
-        }
-        else
-            posCam.x = pos.x;
-        if (pos.y <= (limBottom+limTop)/2) // less than midle
-        {
-            posCam.y = limBottom;
-        } 
-        else 
-        {
-            posCam.y = limTop;
-        }
-        cam.transform.position = posCam;
+        int index = 0;
+        
 
+        posCam.y = (posY[0] + posY[1]) / 2;
+
+        for (int i=0;i<posY.Length-1;i++)
+        {
+            if (posY[i]<=pos.y && pos.y<=posY[i+1])
+            {
+                posCam.y = (posY[i] + posY[i + 1]) / 2;
+                index = i;
+                break;
+            }
+        }
+        if (pos.y > posY[posY.Length - 1])
+        {
+            posCam.y = (posY[posY.Length - 2] + posY[posY.Length - 1]) / 2;
+            index = posY.Length - 2;
+        }
+        if (index >= 0 && index<posY.Length-1)
+        {
+            if (pos.x <= limLeft[index])
+            {
+                posCam.x = limLeft[index];
+            }
+            else
+            if (pos.x >= limRight[index])
+            {
+                posCam.x = limRight[index];
+            }
+            else
+                posCam.x = pos.x;
+        }
+        posCam.y--;
+        cam.transform.position = posCam;
+        hub.transform.position = posCam - new Vector3(0, 6, -10); 
     }
 }

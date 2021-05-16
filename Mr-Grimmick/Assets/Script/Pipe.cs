@@ -33,7 +33,6 @@ public class Pipe : MonoBehaviour
                 {
                     player.SetActive(true);
                     isActived = false;
-                    Application.LoadLevel("Scene 1.2");
                 }
             }
             else
@@ -79,7 +78,7 @@ public class Pipe : MonoBehaviour
         }
         else
         {
-            indexPos = pos.Length - 1;
+            indexPos = pos.Length - 2;
         }
     }
 }
