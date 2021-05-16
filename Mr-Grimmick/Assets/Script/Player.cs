@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask GroundLayer;
+    [SerializeField] LayerMask ScrollBarLeft;
+    [SerializeField] LayerMask ScrollBarRight;
 
     [SerializeField] bool IsPressJump;
     [SerializeField] float timePressJump;
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         CheckMove();
         CheckJumpt();
         CheckSkill();
+        CheckScrollBar();
 
         body.velocity = vel;
     }     
@@ -67,12 +70,12 @@ public class Player : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         if (h > 0)
         {
-            vel.x = 5;
+            vel.x = 6;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (h < 0)
         {
-            vel.x = -5;
+            vel.x = -6;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else
@@ -95,7 +98,7 @@ public class Player : MonoBehaviour
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && IsNearGrounded())
+            if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() ||  IsOnScrollBarLeft() || IsOnScrollBarRight()))
             {
                 IsPressJump = true;
             }
@@ -112,14 +115,14 @@ public class Player : MonoBehaviour
             }
         }
         if (timePressJump == 0)
-            if (IsGrounded())
+            if (IsGrounded() || IsOnScrollBarLeft() || IsOnScrollBarRight())
             {
-                vel.y = -0.0001f;
+                vel.y = -3f;
                 this.transform.position += new Vector3(0, 0.0000005f);
             }
             else
                 vel.y = -7;
-        if (IsNearGrounded())
+        if (IsGrounded()||IsOnScrollBarLeft()||IsOnScrollBarRight())
         {
             animator.SetBool("IsJumpt", false);
         }
@@ -130,12 +133,24 @@ public class Player : MonoBehaviour
     }
     bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, GroundLayer);
         return hit2D.collider != null;
     }
-    bool IsNearGrounded()
+    void CheckScrollBar()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, GroundLayer);
+        if (IsOnScrollBarLeft())
+            vel.x -= 4f;
+        if (IsOnScrollBarRight())
+            vel.x += 4f;
+    }
+    bool IsOnScrollBarLeft()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarLeft);
+        return hit2D.collider != null;
+    }
+    bool IsOnScrollBarRight()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarRight);
         return hit2D.collider != null;
     }
 }

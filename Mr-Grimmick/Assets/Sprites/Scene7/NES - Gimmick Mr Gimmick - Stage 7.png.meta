@@ -1,7 +1,1015 @@
 fileFormatVersion: 2
 guid: 52738823137e12c4f88c452b4a2024a8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8328702275634863333
+    second: NES - Gimmick Mr Gimmick - Stage 7_0
+  - first:
+      213: 1044067460037513422
+    second: NES - Gimmick Mr Gimmick - Stage 7_1
+  - first:
+      213: -3866273604228034676
+    second: NES - Gimmick Mr Gimmick - Stage 7_2
+  - first:
+      213: -6809137452267548434
+    second: NES - Gimmick Mr Gimmick - Stage 7_3
+  - first:
+      213: -6778349150502432055
+    second: NES - Gimmick Mr Gimmick - Stage 7_4
+  - first:
+      213: 3076862919288450559
+    second: NES - Gimmick Mr Gimmick - Stage 7_5
+  - first:
+      213: 7378097077626078759
+    second: NES - Gimmick Mr Gimmick - Stage 7_6
+  - first:
+      213: -2733166396778586017
+    second: NES - Gimmick Mr Gimmick - Stage 7_7
+  - first:
+      213: -1906425605948632862
+    second: NES - Gimmick Mr Gimmick - Stage 7_8
+  - first:
+      213: -8857166550849470374
+    second: NES - Gimmick Mr Gimmick - Stage 7_9
+  - first:
+      213: -3119850066816835979
+    second: NES - Gimmick Mr Gimmick - Stage 7_10
+  - first:
+      213: 2062489765661606459
+    second: NES - Gimmick Mr Gimmick - Stage 7_11
+  - first:
+      213: 7309598422738463777
+    second: NES - Gimmick Mr Gimmick - Stage 7_12
+  - first:
+      213: -9011494705210839656
+    second: NES - Gimmick Mr Gimmick - Stage 7_13
+  - first:
+      213: -7874481221563500181
+    second: NES - Gimmick Mr Gimmick - Stage 7_14
+  - first:
+      213: -1039526011993523426
+    second: NES - Gimmick Mr Gimmick - Stage 7_15
+  - first:
+      213: -1026526264054328901
+    second: NES - Gimmick Mr Gimmick - Stage 7_16
+  - first:
+      213: 3214837374093710180
+    second: NES - Gimmick Mr Gimmick - Stage 7_17
+  - first:
+      213: -779636630209816114
+    second: NES - Gimmick Mr Gimmick - Stage 7_18
+  - first:
+      213: 3662198203793821479
+    second: NES - Gimmick Mr Gimmick - Stage 7_19
+  - first:
+      213: -3529001711976366811
+    second: NES - Gimmick Mr Gimmick - Stage 7_20
+  - first:
+      213: -1142847094963148679
+    second: NES - Gimmick Mr Gimmick - Stage 7_21
+  - first:
+      213: -2109350505563828002
+    second: NES - Gimmick Mr Gimmick - Stage 7_22
+  - first:
+      213: 9200079744324305827
+    second: NES - Gimmick Mr Gimmick - Stage 7_23
+  - first:
+      213: 467342413487943771
+    second: NES - Gimmick Mr Gimmick - Stage 7_24
+  - first:
+      213: -8579144378374508695
+    second: NES - Gimmick Mr Gimmick - Stage 7_25
+  - first:
+      213: 7878358024437757928
+    second: NES - Gimmick Mr Gimmick - Stage 7_26
+  - first:
+      213: -2967247003382899410
+    second: NES - Gimmick Mr Gimmick - Stage 7_27
+  - first:
+      213: -2562589551533814175
+    second: NES - Gimmick Mr Gimmick - Stage 7_28
+  - first:
+      213: 7718019386287456629
+    second: NES - Gimmick Mr Gimmick - Stage 7_29
+  - first:
+      213: -3797374722125026194
+    second: NES - Gimmick Mr Gimmick - Stage 7_30
+  - first:
+      213: -7829346426853342318
+    second: NES - Gimmick Mr Gimmick - Stage 7_31
+  - first:
+      213: 1448846907625629101
+    second: NES - Gimmick Mr Gimmick - Stage 7_32
+  - first:
+      213: -1057621913649667604
+    second: NES - Gimmick Mr Gimmick - Stage 7_33
+  - first:
+      213: -116437280718930447
+    second: NES - Gimmick Mr Gimmick - Stage 7_34
+  - first:
+      213: 326722819054096035
+    second: NES - Gimmick Mr Gimmick - Stage 7_35
+  - first:
+      213: -436675626479550583
+    second: NES - Gimmick Mr Gimmick - Stage 7_36
+  - first:
+      213: -5926015571365010928
+    second: NES - Gimmick Mr Gimmick - Stage 7_37
+  - first:
+      213: -2292285754769934937
+    second: NES - Gimmick Mr Gimmick - Stage 7_38
+  - first:
+      213: 6266771764898509380
+    second: NES - Gimmick Mr Gimmick - Stage 7_39
+  - first:
+      213: -6988390854274945399
+    second: NES - Gimmick Mr Gimmick - Stage 7_40
+  - first:
+      213: -8797383461818566780
+    second: NES - Gimmick Mr Gimmick - Stage 7_41
+  - first:
+      213: -6248982390815804105
+    second: NES - Gimmick Mr Gimmick - Stage 7_42
+  - first:
+      213: 4462500158225860680
+    second: NES - Gimmick Mr Gimmick - Stage 7_43
+  - first:
+      213: 2465149330735212758
+    second: NES - Gimmick Mr Gimmick - Stage 7_44
+  - first:
+      213: 1468371003848615284
+    second: NES - Gimmick Mr Gimmick - Stage 7_45
+  - first:
+      213: -4414550967365109448
+    second: NES - Gimmick Mr Gimmick - Stage 7_46
+  - first:
+      213: -4388988215754825128
+    second: NES - Gimmick Mr Gimmick - Stage 7_47
+  - first:
+      213: 883032123886672339
+    second: NES - Gimmick Mr Gimmick - Stage 7_48
+  - first:
+      213: 8834933469149275656
+    second: NES - Gimmick Mr Gimmick - Stage 7_49
+  - first:
+      213: 6900088407266253572
+    second: NES - Gimmick Mr Gimmick - Stage 7_50
+  - first:
+      213: -3378850076090240143
+    second: NES - Gimmick Mr Gimmick - Stage 7_51
+  - first:
+      213: 8029730169827121687
+    second: NES - Gimmick Mr Gimmick - Stage 7_52
+  - first:
+      213: -8008149583477359194
+    second: NES - Gimmick Mr Gimmick - Stage 7_53
+  - first:
+      213: 2501433668960098692
+    second: NES - Gimmick Mr Gimmick - Stage 7_54
+  - first:
+      213: -8641346663141236564
+    second: NES - Gimmick Mr Gimmick - Stage 7_55
+  - first:
+      213: 3133294675528745086
+    second: NES - Gimmick Mr Gimmick - Stage 7_56
+  - first:
+      213: -8491506686587879494
+    second: NES - Gimmick Mr Gimmick - Stage 7_57
+  - first:
+      213: 7223663071883966889
+    second: NES - Gimmick Mr Gimmick - Stage 7_58
+  - first:
+      213: -8708480583912025997
+    second: NES - Gimmick Mr Gimmick - Stage 7_59
+  - first:
+      213: 5848874144895303238
+    second: NES - Gimmick Mr Gimmick - Stage 7_60
+  - first:
+      213: -7095651379867229737
+    second: NES - Gimmick Mr Gimmick - Stage 7_61
+  - first:
+      213: -2359607064231011200
+    second: NES - Gimmick Mr Gimmick - Stage 7_62
+  - first:
+      213: 4548138264473724196
+    second: NES - Gimmick Mr Gimmick - Stage 7_63
+  - first:
+      213: 4933608461343246180
+    second: NES - Gimmick Mr Gimmick - Stage 7_64
+  - first:
+      213: -6273515259141927371
+    second: NES - Gimmick Mr Gimmick - Stage 7_65
+  - first:
+      213: 6461868289160734176
+    second: NES - Gimmick Mr Gimmick - Stage 7_66
+  - first:
+      213: 8214805521884106102
+    second: NES - Gimmick Mr Gimmick - Stage 7_67
+  - first:
+      213: 6227153721892430413
+    second: NES - Gimmick Mr Gimmick - Stage 7_68
+  - first:
+      213: -2165343343117727512
+    second: NES - Gimmick Mr Gimmick - Stage 7_69
+  - first:
+      213: 6254831435329166659
+    second: NES - Gimmick Mr Gimmick - Stage 7_70
+  - first:
+      213: 6962764178601603270
+    second: NES - Gimmick Mr Gimmick - Stage 7_71
+  - first:
+      213: -7556968557126963793
+    second: NES - Gimmick Mr Gimmick - Stage 7_72
+  - first:
+      213: -1405511806182140987
+    second: NES - Gimmick Mr Gimmick - Stage 7_73
+  - first:
+      213: 7016476177599400203
+    second: NES - Gimmick Mr Gimmick - Stage 7_74
+  - first:
+      213: 7341639444771667161
+    second: NES - Gimmick Mr Gimmick - Stage 7_75
+  - first:
+      213: 7253402610935505641
+    second: NES - Gimmick Mr Gimmick - Stage 7_76
+  - first:
+      213: -522821842323505665
+    second: NES - Gimmick Mr Gimmick - Stage 7_77
+  - first:
+      213: -8304731715396448506
+    second: NES - Gimmick Mr Gimmick - Stage 7_78
+  - first:
+      213: 4049970491065678484
+    second: NES - Gimmick Mr Gimmick - Stage 7_79
+  - first:
+      213: 4224935548132026728
+    second: NES - Gimmick Mr Gimmick - Stage 7_80
+  - first:
+      213: 6928776094121844938
+    second: NES - Gimmick Mr Gimmick - Stage 7_81
+  - first:
+      213: 7067541210068148855
+    second: NES - Gimmick Mr Gimmick - Stage 7_82
+  - first:
+      213: 5517898039539039614
+    second: NES - Gimmick Mr Gimmick - Stage 7_83
+  - first:
+      213: 36876292146438743
+    second: NES - Gimmick Mr Gimmick - Stage 7_84
+  - first:
+      213: -8855737284774958811
+    second: NES - Gimmick Mr Gimmick - Stage 7_85
+  - first:
+      213: -2922494485084827485
+    second: NES - Gimmick Mr Gimmick - Stage 7_86
+  - first:
+      213: 20672560710892763
+    second: NES - Gimmick Mr Gimmick - Stage 7_87
+  - first:
+      213: -2604468873222733115
+    second: NES - Gimmick Mr Gimmick - Stage 7_88
+  - first:
+      213: 136560912180222332
+    second: NES - Gimmick Mr Gimmick - Stage 7_89
+  - first:
+      213: -6954917900534775401
+    second: NES - Gimmick Mr Gimmick - Stage 7_90
+  - first:
+      213: -4512025455306610013
+    second: NES - Gimmick Mr Gimmick - Stage 7_91
+  - first:
+      213: 8022896961209708925
+    second: NES - Gimmick Mr Gimmick - Stage 7_92
+  - first:
+      213: -7700441069555644564
+    second: NES - Gimmick Mr Gimmick - Stage 7_93
+  - first:
+      213: -2384982396131820811
+    second: NES - Gimmick Mr Gimmick - Stage 7_94
+  - first:
+      213: -5772839701082963595
+    second: NES - Gimmick Mr Gimmick - Stage 7_95
+  - first:
+      213: 5575529677840177309
+    second: NES - Gimmick Mr Gimmick - Stage 7_96
+  - first:
+      213: -9077267544112353615
+    second: NES - Gimmick Mr Gimmick - Stage 7_97
+  - first:
+      213: -7944344457170350787
+    second: NES - Gimmick Mr Gimmick - Stage 7_98
+  - first:
+      213: 490206037276748097
+    second: NES - Gimmick Mr Gimmick - Stage 7_99
+  - first:
+      213: 5464672453613187727
+    second: NES - Gimmick Mr Gimmick - Stage 7_100
+  - first:
+      213: -669133095434827028
+    second: NES - Gimmick Mr Gimmick - Stage 7_101
+  - first:
+      213: -6025431261791134873
+    second: NES - Gimmick Mr Gimmick - Stage 7_102
+  - first:
+      213: -3205696461529940397
+    second: NES - Gimmick Mr Gimmick - Stage 7_103
+  - first:
+      213: 1471218888106254395
+    second: NES - Gimmick Mr Gimmick - Stage 7_104
+  - first:
+      213: 6105990867896749110
+    second: NES - Gimmick Mr Gimmick - Stage 7_105
+  - first:
+      213: -7609379610175622376
+    second: NES - Gimmick Mr Gimmick - Stage 7_106
+  - first:
+      213: -697817255908010041
+    second: NES - Gimmick Mr Gimmick - Stage 7_107
+  - first:
+      213: -243333806432371865
+    second: NES - Gimmick Mr Gimmick - Stage 7_108
+  - first:
+      213: -4786488449322422403
+    second: NES - Gimmick Mr Gimmick - Stage 7_109
+  - first:
+      213: 3781379612606480475
+    second: NES - Gimmick Mr Gimmick - Stage 7_110
+  - first:
+      213: -7112997006825260184
+    second: NES - Gimmick Mr Gimmick - Stage 7_111
+  - first:
+      213: -5843873616315125102
+    second: NES - Gimmick Mr Gimmick - Stage 7_112
+  - first:
+      213: 1781768171386915806
+    second: NES - Gimmick Mr Gimmick - Stage 7_113
+  - first:
+      213: -7672123023799293516
+    second: NES - Gimmick Mr Gimmick - Stage 7_114
+  - first:
+      213: -3759643411021960176
+    second: NES - Gimmick Mr Gimmick - Stage 7_115
+  - first:
+      213: -5480457670515311342
+    second: NES - Gimmick Mr Gimmick - Stage 7_116
+  - first:
+      213: -24322070967671045
+    second: NES - Gimmick Mr Gimmick - Stage 7_117
+  - first:
+      213: 2842354876976961333
+    second: NES - Gimmick Mr Gimmick - Stage 7_118
+  - first:
+      213: 1965135795660640956
+    second: NES - Gimmick Mr Gimmick - Stage 7_119
+  - first:
+      213: 918249516859560828
+    second: NES - Gimmick Mr Gimmick - Stage 7_120
+  - first:
+      213: 8334239186270151734
+    second: NES - Gimmick Mr Gimmick - Stage 7_121
+  - first:
+      213: 6913222438132018799
+    second: NES - Gimmick Mr Gimmick - Stage 7_122
+  - first:
+      213: 7156731638876606706
+    second: NES - Gimmick Mr Gimmick - Stage 7_123
+  - first:
+      213: -5636492847454447206
+    second: NES - Gimmick Mr Gimmick - Stage 7_124
+  - first:
+      213: 1006208232503437137
+    second: NES - Gimmick Mr Gimmick - Stage 7_125
+  - first:
+      213: 6968952058132730045
+    second: NES - Gimmick Mr Gimmick - Stage 7_126
+  - first:
+      213: -3333194589246560494
+    second: NES - Gimmick Mr Gimmick - Stage 7_127
+  - first:
+      213: -7606632423486308419
+    second: NES - Gimmick Mr Gimmick - Stage 7_128
+  - first:
+      213: 8061527410747392132
+    second: NES - Gimmick Mr Gimmick - Stage 7_129
+  - first:
+      213: -5709119157601711014
+    second: NES - Gimmick Mr Gimmick - Stage 7_130
+  - first:
+      213: 7027380864372948592
+    second: NES - Gimmick Mr Gimmick - Stage 7_131
+  - first:
+      213: -7996482966728434189
+    second: NES - Gimmick Mr Gimmick - Stage 7_132
+  - first:
+      213: 4701412306431738598
+    second: NES - Gimmick Mr Gimmick - Stage 7_133
+  - first:
+      213: -7065826388677145286
+    second: NES - Gimmick Mr Gimmick - Stage 7_134
+  - first:
+      213: 5917717855414004798
+    second: NES - Gimmick Mr Gimmick - Stage 7_135
+  - first:
+      213: -8543578134514229000
+    second: NES - Gimmick Mr Gimmick - Stage 7_136
+  - first:
+      213: 962383704189832109
+    second: NES - Gimmick Mr Gimmick - Stage 7_137
+  - first:
+      213: 2430418235248596497
+    second: NES - Gimmick Mr Gimmick - Stage 7_138
+  - first:
+      213: 4697329362193198851
+    second: NES - Gimmick Mr Gimmick - Stage 7_139
+  - first:
+      213: 6016340656411024743
+    second: NES - Gimmick Mr Gimmick - Stage 7_140
+  - first:
+      213: -2189967338608360341
+    second: NES - Gimmick Mr Gimmick - Stage 7_141
+  - first:
+      213: -4697668517854306624
+    second: NES - Gimmick Mr Gimmick - Stage 7_142
+  - first:
+      213: 4021558801723925881
+    second: NES - Gimmick Mr Gimmick - Stage 7_143
+  - first:
+      213: -3994685145639738125
+    second: NES - Gimmick Mr Gimmick - Stage 7_144
+  - first:
+      213: -2448155592999553548
+    second: NES - Gimmick Mr Gimmick - Stage 7_145
+  - first:
+      213: 644143432048882230
+    second: NES - Gimmick Mr Gimmick - Stage 7_146
+  - first:
+      213: 6222331795892555756
+    second: NES - Gimmick Mr Gimmick - Stage 7_147
+  - first:
+      213: -7354242046424806621
+    second: NES - Gimmick Mr Gimmick - Stage 7_148
+  - first:
+      213: 2605397726779593782
+    second: NES - Gimmick Mr Gimmick - Stage 7_149
+  - first:
+      213: -5237593967019419566
+    second: NES - Gimmick Mr Gimmick - Stage 7_150
+  - first:
+      213: 1725271683450221518
+    second: NES - Gimmick Mr Gimmick - Stage 7_151
+  - first:
+      213: -160001022592706640
+    second: NES - Gimmick Mr Gimmick - Stage 7_152
+  - first:
+      213: 4724249432312399928
+    second: NES - Gimmick Mr Gimmick - Stage 7_153
+  - first:
+      213: 9021510412659172080
+    second: NES - Gimmick Mr Gimmick - Stage 7_154
+  - first:
+      213: -8735720402757752140
+    second: NES - Gimmick Mr Gimmick - Stage 7_155
+  - first:
+      213: -7865875146297536523
+    second: NES - Gimmick Mr Gimmick - Stage 7_156
+  - first:
+      213: 308874151671715672
+    second: NES - Gimmick Mr Gimmick - Stage 7_157
+  - first:
+      213: -7522354656650047020
+    second: NES - Gimmick Mr Gimmick - Stage 7_158
+  - first:
+      213: 6962278948137819720
+    second: NES - Gimmick Mr Gimmick - Stage 7_159
+  - first:
+      213: 4238415161332998321
+    second: NES - Gimmick Mr Gimmick - Stage 7_160
+  - first:
+      213: 6491049235150422540
+    second: NES - Gimmick Mr Gimmick - Stage 7_161
+  - first:
+      213: -6408569268872169625
+    second: NES - Gimmick Mr Gimmick - Stage 7_162
+  - first:
+      213: -2378659468936660744
+    second: NES - Gimmick Mr Gimmick - Stage 7_163
+  - first:
+      213: -7985227320476270676
+    second: NES - Gimmick Mr Gimmick - Stage 7_164
+  - first:
+      213: -2900363751947930596
+    second: NES - Gimmick Mr Gimmick - Stage 7_165
+  - first:
+      213: -3735874795735748395
+    second: NES - Gimmick Mr Gimmick - Stage 7_166
+  - first:
+      213: 7063506903442197475
+    second: NES - Gimmick Mr Gimmick - Stage 7_167
+  - first:
+      213: 7417679867421662973
+    second: NES - Gimmick Mr Gimmick - Stage 7_168
+  - first:
+      213: 8338343229378928623
+    second: NES - Gimmick Mr Gimmick - Stage 7_169
+  - first:
+      213: 2865802823371774771
+    second: NES - Gimmick Mr Gimmick - Stage 7_170
+  - first:
+      213: -3169773418930355901
+    second: NES - Gimmick Mr Gimmick - Stage 7_171
+  - first:
+      213: -4995920215765061294
+    second: NES - Gimmick Mr Gimmick - Stage 7_172
+  - first:
+      213: 9188907378151186987
+    second: NES - Gimmick Mr Gimmick - Stage 7_173
+  - first:
+      213: -7746722852237191176
+    second: NES - Gimmick Mr Gimmick - Stage 7_174
+  - first:
+      213: 7328273793233198386
+    second: NES - Gimmick Mr Gimmick - Stage 7_175
+  - first:
+      213: -2501390246889290209
+    second: NES - Gimmick Mr Gimmick - Stage 7_176
+  - first:
+      213: 4461538181076212051
+    second: NES - Gimmick Mr Gimmick - Stage 7_177
+  - first:
+      213: 8878061086568324963
+    second: NES - Gimmick Mr Gimmick - Stage 7_178
+  - first:
+      213: 1927461196520537396
+    second: NES - Gimmick Mr Gimmick - Stage 7_179
+  - first:
+      213: 701901206136340641
+    second: NES - Gimmick Mr Gimmick - Stage 7_180
+  - first:
+      213: 4123117111501137632
+    second: NES - Gimmick Mr Gimmick - Stage 7_181
+  - first:
+      213: 8808617726268261176
+    second: NES - Gimmick Mr Gimmick - Stage 7_182
+  - first:
+      213: -2209799703303568159
+    second: NES - Gimmick Mr Gimmick - Stage 7_183
+  - first:
+      213: 7586022215279676498
+    second: NES - Gimmick Mr Gimmick - Stage 7_184
+  - first:
+      213: -8232691138727607466
+    second: NES - Gimmick Mr Gimmick - Stage 7_185
+  - first:
+      213: -6810932369347372745
+    second: NES - Gimmick Mr Gimmick - Stage 7_186
+  - first:
+      213: -8836808029460247306
+    second: NES - Gimmick Mr Gimmick - Stage 7_187
+  - first:
+      213: 3458786215924035496
+    second: NES - Gimmick Mr Gimmick - Stage 7_188
+  - first:
+      213: -124388357509874010
+    second: NES - Gimmick Mr Gimmick - Stage 7_189
+  - first:
+      213: -8984363477565288236
+    second: NES - Gimmick Mr Gimmick - Stage 7_190
+  - first:
+      213: -2444264994083435412
+    second: NES - Gimmick Mr Gimmick - Stage 7_191
+  - first:
+      213: 6212073891669037417
+    second: NES - Gimmick Mr Gimmick - Stage 7_192
+  - first:
+      213: -2439503835574618854
+    second: NES - Gimmick Mr Gimmick - Stage 7_193
+  - first:
+      213: -4349706028536295960
+    second: NES - Gimmick Mr Gimmick - Stage 7_194
+  - first:
+      213: -4180765244606616164
+    second: NES - Gimmick Mr Gimmick - Stage 7_195
+  - first:
+      213: -6953429211089055441
+    second: NES - Gimmick Mr Gimmick - Stage 7_196
+  - first:
+      213: 2359551256554688590
+    second: NES - Gimmick Mr Gimmick - Stage 7_197
+  - first:
+      213: 6274720973387990846
+    second: NES - Gimmick Mr Gimmick - Stage 7_198
+  - first:
+      213: -3958927989614028972
+    second: NES - Gimmick Mr Gimmick - Stage 7_199
+  - first:
+      213: 3263519228785299067
+    second: NES - Gimmick Mr Gimmick - Stage 7_200
+  - first:
+      213: -6505712325490370043
+    second: NES - Gimmick Mr Gimmick - Stage 7_201
+  - first:
+      213: -2973870904432430501
+    second: NES - Gimmick Mr Gimmick - Stage 7_202
+  - first:
+      213: -4275365665946050641
+    second: NES - Gimmick Mr Gimmick - Stage 7_203
+  - first:
+      213: -56728316980877017
+    second: NES - Gimmick Mr Gimmick - Stage 7_204
+  - first:
+      213: 8519340621116148358
+    second: NES - Gimmick Mr Gimmick - Stage 7_205
+  - first:
+      213: -4891691916078780782
+    second: NES - Gimmick Mr Gimmick - Stage 7_206
+  - first:
+      213: -1226139408416442266
+    second: NES - Gimmick Mr Gimmick - Stage 7_207
+  - first:
+      213: 5979778416713925049
+    second: NES - Gimmick Mr Gimmick - Stage 7_208
+  - first:
+      213: -7729258646909053239
+    second: NES - Gimmick Mr Gimmick - Stage 7_209
+  - first:
+      213: -2969872539257329505
+    second: NES - Gimmick Mr Gimmick - Stage 7_210
+  - first:
+      213: 1164813985581572110
+    second: NES - Gimmick Mr Gimmick - Stage 7_211
+  - first:
+      213: 3215376840399669167
+    second: NES - Gimmick Mr Gimmick - Stage 7_212
+  - first:
+      213: 3226782669142876673
+    second: NES - Gimmick Mr Gimmick - Stage 7_213
+  - first:
+      213: 204395830166102670
+    second: NES - Gimmick Mr Gimmick - Stage 7_214
+  - first:
+      213: -3539708389008877319
+    second: NES - Gimmick Mr Gimmick - Stage 7_215
+  - first:
+      213: 8111811784909707177
+    second: NES - Gimmick Mr Gimmick - Stage 7_216
+  - first:
+      213: 6448647991173380919
+    second: NES - Gimmick Mr Gimmick - Stage 7_217
+  - first:
+      213: 2787319860379186911
+    second: NES - Gimmick Mr Gimmick - Stage 7_218
+  - first:
+      213: -8140131222594024253
+    second: NES - Gimmick Mr Gimmick - Stage 7_219
+  - first:
+      213: -3655435689506168373
+    second: NES - Gimmick Mr Gimmick - Stage 7_220
+  - first:
+      213: -5073476355495579871
+    second: NES - Gimmick Mr Gimmick - Stage 7_221
+  - first:
+      213: 8295190531910281166
+    second: NES - Gimmick Mr Gimmick - Stage 7_222
+  - first:
+      213: 5089507208678338467
+    second: NES - Gimmick Mr Gimmick - Stage 7_223
+  - first:
+      213: 3120456763211809857
+    second: NES - Gimmick Mr Gimmick - Stage 7_224
+  - first:
+      213: -5483173578372048807
+    second: NES - Gimmick Mr Gimmick - Stage 7_225
+  - first:
+      213: -7772586565874305745
+    second: NES - Gimmick Mr Gimmick - Stage 7_226
+  - first:
+      213: 2038979696997854852
+    second: NES - Gimmick Mr Gimmick - Stage 7_227
+  - first:
+      213: 7754307809830710825
+    second: NES - Gimmick Mr Gimmick - Stage 7_228
+  - first:
+      213: 4700767748434830919
+    second: NES - Gimmick Mr Gimmick - Stage 7_229
+  - first:
+      213: -2485411973559475188
+    second: NES - Gimmick Mr Gimmick - Stage 7_230
+  - first:
+      213: 4041900019811823043
+    second: NES - Gimmick Mr Gimmick - Stage 7_231
+  - first:
+      213: 3579462573892361909
+    second: NES - Gimmick Mr Gimmick - Stage 7_232
+  - first:
+      213: 6448346071286048850
+    second: NES - Gimmick Mr Gimmick - Stage 7_233
+  - first:
+      213: -8590758375084207350
+    second: NES - Gimmick Mr Gimmick - Stage 7_234
+  - first:
+      213: -6798178841393517916
+    second: NES - Gimmick Mr Gimmick - Stage 7_235
+  - first:
+      213: -488329432630560118
+    second: NES - Gimmick Mr Gimmick - Stage 7_236
+  - first:
+      213: -2480819910574226504
+    second: NES - Gimmick Mr Gimmick - Stage 7_237
+  - first:
+      213: -5422584091142489064
+    second: NES - Gimmick Mr Gimmick - Stage 7_238
+  - first:
+      213: 1643574444104187872
+    second: NES - Gimmick Mr Gimmick - Stage 7_239
+  - first:
+      213: -1065241075685334050
+    second: NES - Gimmick Mr Gimmick - Stage 7_240
+  - first:
+      213: 398276738621182254
+    second: NES - Gimmick Mr Gimmick - Stage 7_241
+  - first:
+      213: 2119706669150108595
+    second: NES - Gimmick Mr Gimmick - Stage 7_242
+  - first:
+      213: 5603383863616855658
+    second: NES - Gimmick Mr Gimmick - Stage 7_243
+  - first:
+      213: 2173468018168440655
+    second: NES - Gimmick Mr Gimmick - Stage 7_244
+  - first:
+      213: 2403411209241246767
+    second: NES - Gimmick Mr Gimmick - Stage 7_245
+  - first:
+      213: -6960946699776505172
+    second: NES - Gimmick Mr Gimmick - Stage 7_246
+  - first:
+      213: -7985626028700532206
+    second: NES - Gimmick Mr Gimmick - Stage 7_247
+  - first:
+      213: 7307343971597352839
+    second: NES - Gimmick Mr Gimmick - Stage 7_248
+  - first:
+      213: 612381138051299246
+    second: NES - Gimmick Mr Gimmick - Stage 7_249
+  - first:
+      213: -4759184726503569149
+    second: NES - Gimmick Mr Gimmick - Stage 7_250
+  - first:
+      213: -2738438069894409678
+    second: NES - Gimmick Mr Gimmick - Stage 7_251
+  - first:
+      213: -373858748945494806
+    second: NES - Gimmick Mr Gimmick - Stage 7_252
+  - first:
+      213: 1909929335446007829
+    second: NES - Gimmick Mr Gimmick - Stage 7_253
+  - first:
+      213: -7491132979507838625
+    second: NES - Gimmick Mr Gimmick - Stage 7_254
+  - first:
+      213: -4936022784023904245
+    second: NES - Gimmick Mr Gimmick - Stage 7_255
+  - first:
+      213: -7128642669991586213
+    second: NES - Gimmick Mr Gimmick - Stage 7_256
+  - first:
+      213: 1517808544577224685
+    second: NES - Gimmick Mr Gimmick - Stage 7_257
+  - first:
+      213: -8078920683713627994
+    second: NES - Gimmick Mr Gimmick - Stage 7_258
+  - first:
+      213: -2529921404939764663
+    second: NES - Gimmick Mr Gimmick - Stage 7_259
+  - first:
+      213: -8995943433690475944
+    second: NES - Gimmick Mr Gimmick - Stage 7_260
+  - first:
+      213: -3144820784579675345
+    second: NES - Gimmick Mr Gimmick - Stage 7_261
+  - first:
+      213: 3562504775567284325
+    second: NES - Gimmick Mr Gimmick - Stage 7_262
+  - first:
+      213: 300090168203783474
+    second: NES - Gimmick Mr Gimmick - Stage 7_263
+  - first:
+      213: -8988898219442199074
+    second: NES - Gimmick Mr Gimmick - Stage 7_264
+  - first:
+      213: -3489091505022821626
+    second: NES - Gimmick Mr Gimmick - Stage 7_265
+  - first:
+      213: -1101283396723365810
+    second: NES - Gimmick Mr Gimmick - Stage 7_266
+  - first:
+      213: -286521778309906967
+    second: NES - Gimmick Mr Gimmick - Stage 7_267
+  - first:
+      213: 788583005962927512
+    second: NES - Gimmick Mr Gimmick - Stage 7_268
+  - first:
+      213: -3607096225456418765
+    second: NES - Gimmick Mr Gimmick - Stage 7_269
+  - first:
+      213: 3835270961737436477
+    second: NES - Gimmick Mr Gimmick - Stage 7_270
+  - first:
+      213: 1884172589354462838
+    second: NES - Gimmick Mr Gimmick - Stage 7_271
+  - first:
+      213: -689046120889393792
+    second: NES - Gimmick Mr Gimmick - Stage 7_272
+  - first:
+      213: -7702671130217192714
+    second: NES - Gimmick Mr Gimmick - Stage 7_273
+  - first:
+      213: -7484152158511299643
+    second: NES - Gimmick Mr Gimmick - Stage 7_274
+  - first:
+      213: -7684763401146832609
+    second: NES - Gimmick Mr Gimmick - Stage 7_275
+  - first:
+      213: 8425628961214232370
+    second: NES - Gimmick Mr Gimmick - Stage 7_276
+  - first:
+      213: 7058101773753705830
+    second: NES - Gimmick Mr Gimmick - Stage 7_277
+  - first:
+      213: -9059597216204677195
+    second: NES - Gimmick Mr Gimmick - Stage 7_278
+  - first:
+      213: -1587006793900477966
+    second: NES - Gimmick Mr Gimmick - Stage 7_279
+  - first:
+      213: 7728815379931050999
+    second: NES - Gimmick Mr Gimmick - Stage 7_280
+  - first:
+      213: -3390362217943261393
+    second: NES - Gimmick Mr Gimmick - Stage 7_281
+  - first:
+      213: 5089477384329419310
+    second: NES - Gimmick Mr Gimmick - Stage 7_282
+  - first:
+      213: -2596173734748121909
+    second: NES - Gimmick Mr Gimmick - Stage 7_283
+  - first:
+      213: -8263354116699904673
+    second: NES - Gimmick Mr Gimmick - Stage 7_284
+  - first:
+      213: -6500988601852297246
+    second: NES - Gimmick Mr Gimmick - Stage 7_285
+  - first:
+      213: -3659166452709557443
+    second: NES - Gimmick Mr Gimmick - Stage 7_286
+  - first:
+      213: 8000779280864785569
+    second: NES - Gimmick Mr Gimmick - Stage 7_287
+  - first:
+      213: 8763437880443444534
+    second: NES - Gimmick Mr Gimmick - Stage 7_288
+  - first:
+      213: 2766221706148864211
+    second: NES - Gimmick Mr Gimmick - Stage 7_289
+  - first:
+      213: 3918218848664944523
+    second: NES - Gimmick Mr Gimmick - Stage 7_290
+  - first:
+      213: 6860181615098518579
+    second: NES - Gimmick Mr Gimmick - Stage 7_291
+  - first:
+      213: -4044253745913954000
+    second: NES - Gimmick Mr Gimmick - Stage 7_292
+  - first:
+      213: 4352074528456354028
+    second: NES - Gimmick Mr Gimmick - Stage 7_293
+  - first:
+      213: 2654753217613872593
+    second: NES - Gimmick Mr Gimmick - Stage 7_294
+  - first:
+      213: -167991777429016943
+    second: NES - Gimmick Mr Gimmick - Stage 7_295
+  - first:
+      213: -1996811877120967969
+    second: NES - Gimmick Mr Gimmick - Stage 7_296
+  - first:
+      213: -3800933244153478867
+    second: NES - Gimmick Mr Gimmick - Stage 7_297
+  - first:
+      213: -4643917755547405587
+    second: NES - Gimmick Mr Gimmick - Stage 7_298
+  - first:
+      213: -7961639427246702668
+    second: NES - Gimmick Mr Gimmick - Stage 7_299
+  - first:
+      213: 7894443831327036552
+    second: NES - Gimmick Mr Gimmick - Stage 7_300
+  - first:
+      213: -1662317018275704888
+    second: NES - Gimmick Mr Gimmick - Stage 7_301
+  - first:
+      213: -207951729850865092
+    second: NES - Gimmick Mr Gimmick - Stage 7_302
+  - first:
+      213: -982103596543534061
+    second: NES - Gimmick Mr Gimmick - Stage 7_303
+  - first:
+      213: -4105235074671831225
+    second: NES - Gimmick Mr Gimmick - Stage 7_304
+  - first:
+      213: -5563242345911261656
+    second: NES - Gimmick Mr Gimmick - Stage 7_305
+  - first:
+      213: -232290600266857541
+    second: NES - Gimmick Mr Gimmick - Stage 7_306
+  - first:
+      213: 219098375812550480
+    second: NES - Gimmick Mr Gimmick - Stage 7_307
+  - first:
+      213: -841384817478140130
+    second: NES - Gimmick Mr Gimmick - Stage 7_308
+  - first:
+      213: -6806702286837584795
+    second: NES - Gimmick Mr Gimmick - Stage 7_309
+  - first:
+      213: -16670981922456942
+    second: NES - Gimmick Mr Gimmick - Stage 7_310
+  - first:
+      213: 8450273991310702523
+    second: NES - Gimmick Mr Gimmick - Stage 7_311
+  - first:
+      213: 3317607725108680902
+    second: NES - Gimmick Mr Gimmick - Stage 7_312
+  - first:
+      213: 2909425709498427799
+    second: NES - Gimmick Mr Gimmick - Stage 7_313
+  - first:
+      213: -8454823065397488866
+    second: NES - Gimmick Mr Gimmick - Stage 7_314
+  - first:
+      213: 3125623137430383960
+    second: NES - Gimmick Mr Gimmick - Stage 7_315
+  - first:
+      213: -6641118211268335702
+    second: NES - Gimmick Mr Gimmick - Stage 7_316
+  - first:
+      213: -7616141059263710006
+    second: NES - Gimmick Mr Gimmick - Stage 7_317
+  - first:
+      213: 8303896345602386282
+    second: NES - Gimmick Mr Gimmick - Stage 7_318
+  - first:
+      213: -7492102751555529555
+    second: NES - Gimmick Mr Gimmick - Stage 7_319
+  - first:
+      213: 7029711709778758888
+    second: NES - Gimmick Mr Gimmick - Stage 7_320
+  - first:
+      213: 3430651925817855636
+    second: NES - Gimmick Mr Gimmick - Stage 7_321
+  - first:
+      213: -2235422706413754223
+    second: NES - Gimmick Mr Gimmick - Stage 7_322
+  - first:
+      213: 7735001422786231807
+    second: NES - Gimmick Mr Gimmick - Stage 7_323
+  - first:
+      213: 2362648659695197653
+    second: NES - Gimmick Mr Gimmick - Stage 7_324
+  - first:
+      213: 2460126316579954144
+    second: NES - Gimmick Mr Gimmick - Stage 7_325
+  - first:
+      213: -2085320177346954821
+    second: NES - Gimmick Mr Gimmick - Stage 7_326
+  - first:
+      213: -8432736580015456324
+    second: NES - Gimmick Mr Gimmick - Stage 7_327
+  - first:
+      213: -2023894595787062046
+    second: NES - Gimmick Mr Gimmick - Stage 7_328
+  - first:
+      213: 5183333011359652643
+    second: NES - Gimmick Mr Gimmick - Stage 7_329
+  - first:
+      213: 4878119686931041762
+    second: NES - Gimmick Mr Gimmick - Stage 7_330
+  - first:
+      213: 14878582143941916
+    second: NES - Gimmick Mr Gimmick - Stage 7_331
+  - first:
+      213: -6946444255124108015
+    second: NES - Gimmick Mr Gimmick - Stage 7_332
+  - first:
+      213: -7891279483982359730
+    second: NES - Gimmick Mr Gimmick - Stage 7_333
+  - first:
+      213: 2092114182968716682
+    second: NES - Gimmick Mr Gimmick - Stage 7_334
+  - first:
+      213: 9008535421558824792
+    second: NES - Gimmick Mr Gimmick - Stage 7_335
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +1049,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +1081,3528 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec1433a79e759370800000000000000
+      internalID: 8328702275634863333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0941db2d54d7e00800000000000000
+      internalID: 1044067460037513422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fc48f24ac385ac0800000000000000
+      internalID: -3866273604228034676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0d8c240951181a0800000000000000
+      internalID: -6809137452267548434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25bb06c577ee1a0800000000000000
+      internalID: -6778349150502432055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd62cee58633ba20800000000000000
+      internalID: 3076862919288450559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72600468334446660800000000000000
+      internalID: 7378097077626078759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f506aff94a7d11ad0800000000000000
+      internalID: -2733166396778586017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e019b613040b85e0800000000000000
+      internalID: -1906425605948632862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50452403f5051580800000000000000
+      internalID: -8857166550849470374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_10
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e57e6d4e014b4d0800000000000000
+      internalID: -3119850066816835979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32832ba38f6f9c10800000000000000
+      internalID: 2062489765661606459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce41e9909e07560800000000000000
+      internalID: 7309598422738463777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_13
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d28908f4db0f280800000000000000
+      internalID: -9011494705210839656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97862284f9ac320f0800000000000000
+      internalID: -1142847094963148679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_22
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0d31914e41ab2e0800000000000000
+      internalID: -2109350505563828002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_23
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a387b988cf3daf70800000000000000
+      internalID: 9200079744324305827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_24
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b503c60f2755c7600800000000000000
+      internalID: 467342413487943771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_25
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fa23264a1c0f880800000000000000
+      internalID: -8579144378374508695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_26
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7f5f3c1ec855d60800000000000000
+      internalID: 7878358024437757928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d1582529832d6d0800000000000000
+      internalID: -2967247003382899410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_28
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e03bb416adf6cd0800000000000000
+      internalID: -2562589551533814175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_29
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5710e317db9eb1b60800000000000000
+      internalID: 7718019386287456629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_30
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ca0b04fc30d4bc0800000000000000
+      internalID: -3797374722125026194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_31
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293ceeb08e2985390800000000000000
+      internalID: -7829346426853342318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_32
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5e2fe06965b1410800000000000000
+      internalID: 1448846907625629101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_33
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce12e3a19729251f0800000000000000
+      internalID: -1057621913649667604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_34
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdb22cf8e4526ef0800000000000000
+      internalID: -116437280718930447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735b0c3cf972749a0800000000000000
+      internalID: -6248982390815804105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_43
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8484d25204cfded30800000000000000
+      internalID: 4462500158225860680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_44
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8a3c06148f53220800000000000000
+      internalID: 2465149330735212758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_45
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47561e2f5a3b06410800000000000000
+      internalID: 1468371003848615284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_46
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8397853d84d5cb2c0800000000000000
+      internalID: -4414550967365109448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_47
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852ee8cb87e2713c0800000000000000
+      internalID: -4388988215754825128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_48
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d91685c909214c00800000000000000
+      internalID: 883032123886672339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8062ad24e2dfb9a70800000000000000
+      internalID: 8834933469149275656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_50
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b55e129d902cf50800000000000000
+      internalID: 6900088407266253572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_51
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173f659f1c9eb11d0800000000000000
+      internalID: -3378850076090240143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_52
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a58cecb055f6f60800000000000000
+      internalID: 8029730169827121687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_53
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adb3a002665dd090800000000000000
+      internalID: -8008149583477359194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_54
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48991933ba0e6b220800000000000000
+      internalID: 2501433668960098692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_55
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0a5726ef4c31880800000000000000
+      internalID: -8641346663141236564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_63
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425615b87ab3e1f30800000000000000
+      internalID: 4548138264473724196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_64
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467c93791c2b77440800000000000000
+      internalID: 4933608461343246180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_65
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e4add3c1fffe8a0800000000000000
+      internalID: -6273515259141927371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_66
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e569c8f8fa2da950800000000000000
+      internalID: 6461868289160734176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_67
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dc1d6291ad00270800000000000000
+      internalID: 8214805521884106102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_68
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d426623315b4b6650800000000000000
+      internalID: 6227153721892430413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_69
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e806b0b3b723f1e0800000000000000
+      internalID: -2165343343117727512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dddb80d00adc650800000000000000
+      internalID: 6254831435329166659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_71
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0fc505125b0a060800000000000000
+      internalID: 6962764178601603270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_72
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fada6a5c221402790800000000000000
+      internalID: -7556968557126963793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_73
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c355e0857e9e7ce0800000000000000
+      internalID: -1405511806182140987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_74
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b098dcc98e78f5160800000000000000
+      internalID: 7016476177599400203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_75
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc7c966d2eb2e560800000000000000
+      internalID: 7341639444771667161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_76
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 205
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2a3b59e3349a460800000000000000
+      internalID: 7253402610935505641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_84
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752a506dac2038000800000000000000
+      internalID: 36876292146438743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_85
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5296ec4fbd91a1580800000000000000
+      internalID: -8855737284774958811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_86
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a01b76ffb63177d0800000000000000
+      internalID: -2922494485084827485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_87
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc35cd9591794000800000000000000
+      internalID: 20672560710892763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_88
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c24ffedb511bdbd0800000000000000
+      internalID: -2604468873222733115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_90
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7918e98a40b2b7f90800000000000000
+      internalID: -6954917900534775401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_91
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aaedee01c01261c0800000000000000
+      internalID: -4512025455306610013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_92
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d713772774e075f60800000000000000
+      internalID: 8022896961209708925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_93
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c678e4b55a9822590800000000000000
+      internalID: -7700441069555644564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_94
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fab00b9527d6eed0800000000000000
+      internalID: -2384982396131820811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_95
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5718dafa0e0c2efa0800000000000000
+      internalID: -5772839701082963595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_96
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98df4a93b2406d40800000000000000
+      internalID: 5575529677840177309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_97
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be20061341170280800000000000000
+      internalID: -9077267544112353615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_98
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d8401aec400c190800000000000000
+      internalID: -7944344457170350787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_100
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82f97bb4aa66db40800000000000000
+      internalID: 5464672453613187727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_101
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea4623bef2c6b6f0800000000000000
+      internalID: -669133095434827028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_102
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bd766013e516ca0800000000000000
+      internalID: -6025431261791134873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_105
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cc3cae756dcb450800000000000000
+      internalID: 6105990867896749110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_106
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813b16e8f8d066690800000000000000
+      internalID: -7609379610175622376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_107
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7177727ead056f0800000000000000
+      internalID: -697817255908010041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_108
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b31c931318f9cf0800000000000000
+      internalID: -243333806432371865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_109
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f60a08d1af29db0800000000000000
+      internalID: -4786488449322422403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_110
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50405a19b82a7430800000000000000
+      internalID: 3781379612606480475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_111
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b73c798ee894d90800000000000000
+      internalID: -7112997006825260184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_112
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292724b78e366eea0800000000000000
+      internalID: -5843873616315125102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_113
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb4d9f26bc1ab810800000000000000
+      internalID: 1781768171386915806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_118
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5379fcf73b2127720800000000000000
+      internalID: 2842354876976961333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_119
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2d1cb2890954b10800000000000000
+      internalID: 1965135795660640956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_120
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73969b02174ebc00800000000000000
+      internalID: 918249516859560828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_121
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634e5ca126a29a370800000000000000
+      internalID: 8334239186270151734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_122
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e6e1efd23b0ff50800000000000000
+      internalID: 6913222438132018799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_123
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f01a00f181d15360800000000000000
+      internalID: 7156731638876606706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_126
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db09ab949f0b6b060800000000000000
+      internalID: 6968952058132730045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_127
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21764bc5e2d1eb1d0800000000000000
+      internalID: -3333194589246560494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_128
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf312dcc10df6690800000000000000
+      internalID: -7606632423486308419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_129
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4804ca0e77c40ef60800000000000000
+      internalID: 8061527410747392132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_130
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cc5c6df5225c0b0800000000000000
+      internalID: -5709119157601711014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_131
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eb35ad9a5468160800000000000000
+      internalID: 7027380864372948592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_139
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fa98ada24403140800000000000000
+      internalID: 4697329362193198851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_140
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d9e1973f55e7350800000000000000
+      internalID: 6016340656411024743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_141
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b648a88fe4cab91e0800000000000000
+      internalID: -2189967338608360341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_142
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce12c05f578eceb0800000000000000
+      internalID: -4697668517854306624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_143
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975a91c4c627fc730800000000000000
+      internalID: 4021558801723925881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_144
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f42d9856070098c0800000000000000
+      internalID: -3994685145639738125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_147
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef4bc01dc92a5650800000000000000
+      internalID: 6222331795892555756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_148
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b8b9eb2db70f990800000000000000
+      internalID: -7354242046424806621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_149
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634de43bd6b382420800000000000000
+      internalID: 2605397726779593782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_150
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258141679045057b0800000000000000
+      internalID: -5237593967019419566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_151
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec33719847561f710800000000000000
+      internalID: 1725271683450221518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_152
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b799aceaef87cdf0800000000000000
+      internalID: -160001022592706640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_153
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838425b14d7ef8140800000000000000
+      internalID: 4724249432312399928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_160
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b022e51220e1da30800000000000000
+      internalID: 4238415161332998321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_161
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0246b863e6d41a50800000000000000
+      internalID: 6491049235150422540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_162
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767b36a34303017a0800000000000000
+      internalID: -6408569268872169625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_163
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f83960d0dd4dfed0800000000000000
+      internalID: -2378659468936660744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_168
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe1c33f984e0f660800000000000000
+      internalID: 7417679867421662973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_169
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef1a6a1dfeb7b370800000000000000
+      internalID: 8338343229378928623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_170
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bd263fb7065c720800000000000000
+      internalID: 2865802823371774771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_171
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3414e22aed3b204d0800000000000000
+      internalID: -3169773418930355901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_172
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2517125880deaaab0800000000000000
+      internalID: -4995920215765061294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_173
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22eaa4539e858f70800000000000000
+      internalID: 9188907378151186987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_174
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7500b1c9c1e7490800000000000000
+      internalID: -7746722852237191176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_175
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d1876203243b560800000000000000
+      internalID: 7328273793233198386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_176
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f168989c2d6494dd0800000000000000
+      internalID: -2501390246889290209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_180
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0cc2b9d67adb900800000000000000
+      internalID: 701901206136340641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_181
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e62c5eea21483930800000000000000
+      internalID: 4123117111501137632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_182
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833cd68e62f7e3a70800000000000000
+      internalID: 8808617726268261176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_183
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4c3dbb0e63551e0800000000000000
+      internalID: -2209799703303568159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_184
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c87f72307f64960800000000000000
+      internalID: 7586022215279676498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_189
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aefd68a275164ef0800000000000000
+      internalID: -124388357509874010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_190
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d05ab2b401215380800000000000000
+      internalID: -8984363477565288236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_191
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c0cba20f9341ed0800000000000000
+      internalID: -2444264994083435412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_194
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed08bba96db2a3c0800000000000000
+      internalID: -4349706028536295960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_195
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d6ce12920faf5c0800000000000000
+      internalID: -4180765244606616164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_196
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21563e29f4708f90800000000000000
+      internalID: -6953429211089055441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_197
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40d44ccd5fceb020800000000000000
+      internalID: 2359551256554688590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_201
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a1444db1117b5a0800000000000000
+      internalID: -6505712325490370043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_202
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b527f6d2b20bab6d0800000000000000
+      internalID: -2973870904432430501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_203
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf52642499daa4c0800000000000000
+      internalID: -4275365665946050641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_210
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98216d19a4e8c6d0800000000000000
+      internalID: -2969872539257329505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_211
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e002ffff5204a2010800000000000000
+      internalID: 1164813985581572110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_212
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa74a0753305f9c20800000000000000
+      internalID: 3215376840399669167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_213
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102e5a9cdb5d7cc20800000000000000
+      internalID: 3226782669142876673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_214
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e822f92bce826d200800000000000000
+      internalID: 204395830166102670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_215
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8d7a079fd60eec0800000000000000
+      internalID: -3539708389008877319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_216
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7de5417d1f29070800000000000000
+      internalID: 8111811784909707177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_217
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73bfc6b7e233e7950800000000000000
+      internalID: 6448647991173380919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_224
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144843ca4e61e4b20800000000000000
+      internalID: 3120456763211809857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_231
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd278237a6b71830800000000000000
+      internalID: 4041900019811823043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_232
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bed8a30f3ecca130800000000000000
+      internalID: 3579462573892361909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_233
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2586ac746902d7950800000000000000
+      internalID: 6448346071286048850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_234
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03d4ed06ce77c880800000000000000
+      internalID: -8590758375084207350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_235
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aaa92fac5408a1a0800000000000000
+      internalID: -6798178841393517916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_236
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8affa2e7fa1939f0800000000000000
+      internalID: -488329432630560118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_237
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3c18e6f6b529dd0800000000000000
+      internalID: -2480819910574226504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_238
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c74cacf7c1fb4b0800000000000000
+      internalID: -5422584091142489064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_240
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3ee93b2e08731f0800000000000000
+      internalID: -1065241075685334050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_245
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 69
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c3400d2c1aa5120800000000000000
+      internalID: 2403411209241246767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_252
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec8ee8d279cfcaf0800000000000000
+      internalID: -373858748945494806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_253
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5107b518c9e618a10800000000000000
+      internalID: 1909929335446007829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_254
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51c83fae362a0890800000000000000
+      internalID: -7491132979507838625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_255
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00450b1e69bf7bb0800000000000000
+      internalID: -4936022784023904245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_256
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b569574c249f11d90800000000000000
+      internalID: -7128642669991586213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_257
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deff39064d6501510800000000000000
+      internalID: 1517808544577224685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_258
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a871be2178e1ef80800000000000000
+      internalID: -8078920683713627994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_259
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c78e4e2e9e3ecd0800000000000000
+      internalID: -2529921404939764663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_266
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48a445e59477b0f0800000000000000
+      internalID: -1101283396723365810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_274
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 35
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c306fab343f22890800000000000000
+      internalID: -7484152158511299643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_275
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 35
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1968bbf66c3a5590800000000000000
+      internalID: -7684763401146832609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_276
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 35
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237fa6a36e8dde470800000000000000
+      internalID: 8425628961214232370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - Gimmick Mr Gimmick - Stage 7_309
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ce435655cb981a0800000000000000
+      internalID: -6806702286837584795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
