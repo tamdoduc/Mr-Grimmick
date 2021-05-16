@@ -78,7 +78,7 @@ public class Pipe : MonoBehaviour
         }
         else
         {
-            indexPos = pos.Length - 1;
+            indexPos = pos.Length - 2;
         }
     }
 }

@@ -45,20 +45,22 @@ public class ManageCamera : MonoBehaviour
         if (pos.y > posY[posY.Length - 1])
         {
             posCam.y = (posY[posY.Length - 2] + posY[posY.Length - 1]) / 2;
-            index = posY.Length - 1;
+            index = posY.Length - 2;
         }
-
-        if (pos.x <= limLeft[index])
+        if (index >= 0 && index<posY.Length-1)
         {
-            posCam.x = limLeft[index];
+            if (pos.x <= limLeft[index])
+            {
+                posCam.x = limLeft[index];
+            }
+            else
+            if (pos.x >= limRight[index])
+            {
+                posCam.x = limRight[index];
+            }
+            else
+                posCam.x = pos.x;
         }
-        else
-        if (pos.x >= limRight[index]) 
-        {
-            posCam.x = limRight[index];
-        }
-        else
-            posCam.x = pos.x;
         posCam.y--;
         cam.transform.position = posCam;
         hub.transform.position = posCam - new Vector3(0, 6, -10); 
