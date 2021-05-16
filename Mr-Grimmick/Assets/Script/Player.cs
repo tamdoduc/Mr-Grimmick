@@ -24,6 +24,15 @@ public class Player : MonoBehaviour
     public void SetActive(bool active)
     {
         isActive = active;
+        if (!isActive)
+            Stop();    
+    }
+    private void Stop()
+    {
+        animator.SetFloat("Speed", 0);
+        animator.SetBool("IsJumpt", false);
+        animator.SetBool("IsFaint", false);
+        body.velocity = new Vector2(0, 0);
     }
     void Start()
     {
@@ -38,13 +47,6 @@ public class Player : MonoBehaviour
     {
         if (isActive)
             CheckCommand();
-        else
-        {
-            animator.SetFloat("Speed", 0);
-            animator.SetBool("IsJumpt", false);
-            animator.SetBool("IsFaint", false);
-            body.velocity = new Vector2(0, 0);
-        }
     }
     void CheckCommand()
     {
@@ -81,12 +83,12 @@ public class Player : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         if (h > 0)
         {
-            vel.x = 6;
+            vel.x = 5;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (h < 0)
         {
-            vel.x = -6;
+            vel.x = -5;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else
@@ -109,7 +111,7 @@ public class Player : MonoBehaviour
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() ||  IsOnScrollBarLeft() || IsOnScrollBarRight()))
+            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() ||  IsOnScrollBarLeft() || IsOnScrollBarRight()))
             {
                 IsPressJump = true;
             }
@@ -128,12 +130,12 @@ public class Player : MonoBehaviour
         if (timePressJump == 0)
             if (IsGrounded() || IsOnScrollBarLeft() || IsOnScrollBarRight())
             {
-                vel.y = -3f;
+                vel.y = -1f;
                 this.transform.position += new Vector3(0, 0.0000005f);
             }
             else
                 vel.y = -7;
-        if (IsGrounded()||IsOnScrollBarLeft()||IsOnScrollBarRight())
+        if (IsNearGrounded()||IsOnScrollBarLeft()||IsOnScrollBarRight())
         {
             animator.SetBool("IsJumpt", false);
         }
@@ -144,7 +146,12 @@ public class Player : MonoBehaviour
     }
     bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        return hit2D.collider != null;
+    } 
+    bool IsNearGrounded()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.3f, GroundLayer);
         return hit2D.collider != null;
     }
     void CheckScrollBar()

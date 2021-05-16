@@ -33,7 +33,6 @@ public class Pipe : MonoBehaviour
                 {
                     player.SetActive(true);
                     isActived = false;
-                    Application.LoadLevel("Scene 1.2");
                 }
             }
             else
