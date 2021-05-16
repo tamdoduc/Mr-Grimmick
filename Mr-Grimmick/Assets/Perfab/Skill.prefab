@@ -358,7 +358,7 @@ MonoBehaviour:
   animator: {fileID: 4978808554869312324}
   shadowSkill1: {fileID: 4978808553580294103}
   shadowSkill2: {fileID: 4978808553594714544}
-  player: {fileID: 6760469138675873799, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+  player: {fileID: 8946205385286984416, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
   collider2D: {fileID: 4978808554869312328}
   colliderD: {fileID: -3183797238408787167}
   colliderL: {fileID: -6562620369163732360}

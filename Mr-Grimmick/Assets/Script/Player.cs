@@ -18,22 +18,33 @@ public class Player : MonoBehaviour
     [SerializeField] Skill skill;
     Skill CloneSkill;
 
-    [SerializeField] int countCollision;
+    [SerializeField] bool isActive;
 
-    // Start is called before the first frame update
+
+    public void SetActive(bool active)
+    {
+        isActive = active;
+    }
     void Start()
     {
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
         vel = new Vector2(0, 0);
+        isActive = true;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        CheckCommand();
-        if (CloneSkill != null)
-            countCollision = CloneSkill.CountCollision();
+        if (isActive)
+            CheckCommand();
+        else
+        {
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("IsJumpt", false);
+            animator.SetBool("IsFaint", false);
+            body.velocity = new Vector2(0, 0);
+        }
     }
     void CheckCommand()
     {
@@ -47,7 +58,7 @@ public class Player : MonoBehaviour
     }     
     void CheckSkill()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V) && IsGrounded())
         if (CloneSkill==null)
         {
             CloneSkill = GameObject.Instantiate(skill);
