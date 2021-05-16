@@ -14,6 +14,7 @@ public class ManageCamera : MonoBehaviour
 
 
     [SerializeField] Player player;
+    [SerializeField] HUBManage hub;
     void Start()
     {
         cam = Camera.main;
@@ -58,8 +59,8 @@ public class ManageCamera : MonoBehaviour
         }
         else
             posCam.x = pos.x;
-
+        posCam.y--;
         cam.transform.position = posCam;
-
+        hub.transform.position = posCam - new Vector3(0, 6, -10); 
     }
 }
