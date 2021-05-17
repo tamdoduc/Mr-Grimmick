@@ -13,7 +13,7 @@ public class ManageCamera : MonoBehaviour
     [SerializeField] float[] posY;
 
 
-    [SerializeField] Player player;
+    [SerializeField] GameObject player;
     [SerializeField] HUBManage hub;
     void Start()
     {
