@@ -47,9 +47,9 @@ public class Skill : MonoBehaviour
             this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
         SetShadow();
 
-        CheckCollision();
         if (isShot)
         {
+            CheckCollision();
             body.velocity = velocity;
             if (countCollision >= 100) player.DestroySkill();
         }

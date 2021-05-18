@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Time.deltaTime);
+       // Debug.Log(Time.deltaTime);
         if (isActive)
             CheckCommand();
     }
@@ -71,10 +71,10 @@ public class Player : MonoBehaviour
         ReSetPerFrame();
         CheckScrollBar();
         CheckMove();
-        CheckJumpt();
+        CheckJump();
         CheckSkill();
 
-        this.transform.position += new Vector3(0, 0.0000005f);
+        this.transform.position += new Vector3(0, 0.00001f);
         body.velocity = vel;
     }     
     void CheckSkill()
@@ -141,7 +141,7 @@ public class Player : MonoBehaviour
         }
         animator.SetFloat("Speed",Mathf.Abs( vel.x - VelocityXIdle));
     }
-    void CheckJumpt()
+    void CheckJump()
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -181,11 +181,11 @@ public class Player : MonoBehaviour
             }
         if (IsNearGrounded()||IsOnScrollBarLeft()||IsOnScrollBarRight())
         {
-            animator.SetBool("IsJumpt", false);
+            animator.SetBool("IsJumping", false);
         }
         else
         {
-            animator.SetBool("IsJumpt", true);
+            animator.SetBool("IsJumping", true);
         }
     }
     bool IsGrounded()
