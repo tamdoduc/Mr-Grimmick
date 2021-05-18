@@ -190,7 +190,7 @@ public class Player : MonoBehaviour
     }
     bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, GroundLayer);
         return hit2D.collider != null;
     } 
     bool IsNearGrounded()
