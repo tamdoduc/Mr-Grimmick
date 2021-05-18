@@ -3785,6 +3785,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: -3, y: 21, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -1, y: 21, z: 0}
     second:
       serializedVersion: 2
@@ -4270,7 +4279,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 38fbdfd56dc7a754bb265ab1198d3d55, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: e53f6a767d53fdb479cff948b997f452, type: 2}
-  - m_RefCount: 27
+  - m_RefCount: 28
     m_Data: {fileID: 11400000, guid: c27023f9962cb5c478b6933858a239c4, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: a3b60a5e0c2f008408b525d31d3eb1ec, type: 2}
@@ -4321,7 +4330,7 @@ Tilemap:
     m_Data: {fileID: -9101340316657311635, guid: 8c7c9f86b4febe147b3f185ab6ea1a62, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 5398372894673952466, guid: 8c7c9f86b4febe147b3f185ab6ea1a62, type: 3}
-  - m_RefCount: 27
+  - m_RefCount: 28
     m_Data: {fileID: 122390609965500913, guid: 8c7c9f86b4febe147b3f185ab6ea1a62, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 8729318374921289870, guid: 8c7c9f86b4febe147b3f185ab6ea1a62, type: 3}
@@ -4366,7 +4375,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 724777126230736321, guid: 8c7c9f86b4febe147b3f185ab6ea1a62, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 188
+  - m_RefCount: 189
     m_Data:
       e00: 1
       e01: 0
@@ -4385,7 +4394,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 188
+  - m_RefCount: 189
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5462,7 +5471,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 32, y: 48}
+  m_Size: {x: 5.12, y: 7.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
