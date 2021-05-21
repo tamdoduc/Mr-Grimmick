@@ -16,14 +16,16 @@ public class Skill : MonoBehaviour
     [SerializeField] Collider2D colliderL;
     [SerializeField] Collider2D colliderR;
     [SerializeField] Collider2D colliderT;
+
     [SerializeField] LayerMask GroundLayer;
     [SerializeField] Rigidbody2D body;
 
     [SerializeField] Vector2 velocity;
 
-    Vector3[] positionShadow = new Vector3[9];
+    Vector3[] positionShadow = new Vector3[3];
 
     [SerializeField] float timeExist;
+    [SerializeField] float timeChangeShadowPos;
 
     bool isShot;
 
@@ -31,8 +33,9 @@ public class Skill : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 6; i++) positionShadow[i] = transform.position;
+        for (int i = 0; i < 3; i++) positionShadow[i] = transform.position;
         timeExist = 0;
+        timeChangeShadowPos = 0;
         isShot = false;
         countCollision = 0;
         velocity = new Vector2(0, 0);
@@ -45,24 +48,29 @@ public class Skill : MonoBehaviour
         timeExist += Time.deltaTime;
         if (!isShot)
             this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
-        SetShadow();
+        timeChangeShadowPos += Time.deltaTime;
+        if (timeChangeShadowPos >= 0.02f)
+        {
+            timeChangeShadowPos = 0;
+            SetShadow();
+        }
 
         if (isShot)
         {
             CheckCollision();
             body.velocity = velocity;
-            if (countCollision >= 100) player.DestroySkill();
+            if (countCollision >= 20) player.DestroySkill();
         }
     }
     void SetShadow()
     {
-        for (int i = 8; i > 0; i--)
+        for (int i = 2; i > 0; i--)
         {
             positionShadow[i] = positionShadow[i - 1];
         }
         positionShadow[0] = transform.position;
 
-        if (timeExist >= 1)
+        if (timeExist >= 0.7f)
         {
             body.velocity = velocity;
             if (shadowSkill1.IsNull())
@@ -70,8 +78,8 @@ public class Skill : MonoBehaviour
                 shadowSkill1.Run();
                 shadowSkill2.Run();
             }
-            shadowSkill1.SetPosition(positionShadow[4]);
-            shadowSkill2.SetPosition(positionShadow[8]);
+            shadowSkill1.SetPosition(positionShadow[1]);
+            shadowSkill2.SetPosition(positionShadow[2]);
         }
 
     }
@@ -79,13 +87,13 @@ public class Skill : MonoBehaviour
     {
         isShot = true;
         float directory;
-        bool left = player.transform.rotation.y == -1;
+        bool left = !(player.transform.rotation.y == 0);
         Debug.Log(player.transform.rotation.y);
         if (left)
             directory = -1;
         else
             directory = 1;
-        velocity = new Vector2(directory * 8, -10f);
+        velocity = new Vector2(directory * 10, -15f);
     }
     public bool IsShot()
     {
@@ -97,42 +105,54 @@ public class Skill : MonoBehaviour
     }
     void CheckCollision()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0.2f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0.1f, GroundLayer);
         bool collisionL = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0.2f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0.1f, GroundLayer);
         bool collisionR = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0.2f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
         bool collisionU = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.2f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
         bool collisionD = hit2D.collider != null;
 
-        float decrease = 0.99f;
+        float decrease = 0.7f;
 
         Vector3 vel = velocity;
         if (collisionD)
         {
-            vel.y = decrease * Mathf.Abs(velocity.y);
-            countCollision++;
+            if (velocity.y < 0)
+            {
+                vel.y = decrease * Mathf.Abs(velocity.y);
+                countCollision++;
+            }
         }
         else if (collisionU)
         {
-            vel.y = decrease * -Mathf.Abs(velocity.y);
-            countCollision++;
+            if (velocity.y > 0)
+            {
+                vel.y = decrease * -Mathf.Abs(velocity.y);
+                countCollision++;
+            }
         }
+        else
         if (collisionL)
         {
-            vel.x = decrease * Mathf.Abs(velocity.x);
-            countCollision++;
+            if (velocity.x < 0)
+            {
+                vel.x = decrease * Mathf.Abs(velocity.x);
+                countCollision++;
+            }
         }
         else if (collisionR)
         {
-            vel.x = decrease * -Mathf.Abs(velocity.x);
-            countCollision++;
+            if (velocity.x > 0)
+            {
+                vel.x = decrease * -Mathf.Abs(velocity.x);
+                countCollision++;
+            }
         }
 
         velocity = vel;
-        if (!collisionD && !collisionU)
-            velocity -= new Vector2(0, 0.1f);
+        velocity.y -= Time.deltaTime *35;
     }
     public int CountCollision()
     {

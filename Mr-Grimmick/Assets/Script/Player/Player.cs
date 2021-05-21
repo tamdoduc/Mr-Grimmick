@@ -10,9 +10,11 @@ public class Player : MonoBehaviour
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderCheckTop;
     [SerializeField] Animator animator;
+
     [SerializeField] LayerMask GroundLayer;
-    [SerializeField] LayerMask ScrollBarLeft;
-    [SerializeField] LayerMask ScrollBarRight;
+    [SerializeField] LayerMask ScrollBarLeftLayer;
+    [SerializeField] LayerMask ScrollBarRightLayer;
+    [SerializeField] LayerMask SkillLayer;
 
     [SerializeField] bool IsPressJump;
     [SerializeField] float timePressJump;
@@ -23,8 +25,8 @@ public class Player : MonoBehaviour
 
     float MaxVelocityXRight = 5f;
     float MaxVelocityXLeft = -5f;
-    float MaxVelocityY = 8.5f;
-    float MaxGravity = -7f;
+    float MaxVelocityY = 7.5f;
+    float MaxGravity = -8f;
     float VelocityXIdle = 0;
 
 
@@ -156,7 +158,7 @@ public class Player : MonoBehaviour
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() ||  IsOnScrollBarLeft() || IsOnScrollBarRight()))
+            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() ||  IsOnScrollBarLeftLayer() || IsOnScrollBarRightLayer()||IsOnSkillLayer()))
             {
                 IsPressJump = true;
             }
@@ -165,14 +167,14 @@ public class Player : MonoBehaviour
         {
             timePressJump += Time.deltaTime; //Time last frame
             vel.y = MaxVelocityY;
-            if (timePressJump >= 0.3f) // time (s)
+            if (timePressJump >= 0.4f) // time (s)
             {
                 timePressJump = 0;
                 IsPressJump = false;
             }
         }
         if (timePressJump == 0)
-            if (IsGrounded() || IsOnScrollBarLeft() || IsOnScrollBarRight())
+            if (IsGrounded() || IsOnScrollBarLeftLayer() || IsOnScrollBarRightLayer())
             {
                 vel.y = -1f;
             }
@@ -180,7 +182,7 @@ public class Player : MonoBehaviour
             {
                 vel.y -= Time.deltaTime * (MaxVelocityY - MaxGravity) / 0.3f;
             }
-        if (IsNearGrounded()||IsOnScrollBarLeft()||IsOnScrollBarRight())
+        if (IsNearGrounded()||IsOnScrollBarLeftLayer()||IsOnScrollBarRightLayer())
         {
             animator.SetBool("IsJumping", false);
         }
@@ -192,8 +194,8 @@ public class Player : MonoBehaviour
     bool IsColliderTop()
     {
         RaycastHit2D hit1 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckTop.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
-        RaycastHit2D hit2 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarRight);
-        RaycastHit2D hit3 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarLeft);
+        RaycastHit2D hit2 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarRightLayer);
+        RaycastHit2D hit3 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarLeftLayer);
         return hit1.collider != null ||hit2.collider!=null ||hit3.collider!=null;
     }
     bool IsGrounded()
@@ -208,27 +210,32 @@ public class Player : MonoBehaviour
     }
     void CheckScrollBar()
     {
-        if (IsOnScrollBarLeft())
+        if (IsOnScrollBarLeftLayer())
         {
             VelocityXIdle = -3;
             MaxVelocityXRight = 3;
             MaxVelocityXLeft = -8;
         }
-        if (IsOnScrollBarRight())
+        if (IsOnScrollBarRightLayer())
         {
             VelocityXIdle = 3;
             MaxVelocityXRight = 8;
             MaxVelocityXLeft = -3;
         }
     }
-    bool IsOnScrollBarLeft()
+    bool IsOnScrollBarLeftLayer()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarLeft);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarLeftLayer);
         return hit2D.collider != null;
     }
-    bool IsOnScrollBarRight()
+    bool IsOnScrollBarRightLayer()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarRight);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarRightLayer);
+        return hit2D.collider != null;
+    }  
+    bool IsOnSkillLayer()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, SkillLayer);
         return hit2D.collider != null;
     }
 }

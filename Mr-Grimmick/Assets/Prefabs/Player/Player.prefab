@@ -123,16 +123,20 @@ MonoBehaviour:
   body: {fileID: 8946205385286984447}
   colliderBody: {fileID: 8946205385286984417}
   colliderCheckGround: {fileID: 8946205385286984422}
+  colliderCheckTop: {fileID: 0}
   animator: {fileID: 8946205385286984419}
   GroundLayer:
     serializedVersion: 2
     m_Bits: 256
-  ScrollBarLeft:
+  ScrollBarLeftLayer:
     serializedVersion: 2
     m_Bits: 512
-  ScrollBarRight:
+  ScrollBarRightLayer:
     serializedVersion: 2
     m_Bits: 1024
+  SkillLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   IsPressJump: 0
   timePressJump: 0
   skill: {fileID: 4978808554869312327, guid: f42f28644a7dbd449ab2ff26990ed483, type: 3}
