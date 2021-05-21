@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D body;
     [SerializeField] Collider2D colliderBody;
     [SerializeField] Collider2D colliderCheckGround;
+    [SerializeField] Collider2D colliderCheckTop;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask GroundLayer;
     [SerializeField] LayerMask ScrollBarLeft;
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
         //PlayerPrefs.SetFloat("posYStart", -17);
         //PlayerPrefs.SetFloat("posZStart", 0);
         Vector3 newPos = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
-        this.transform.position = newPos;
+        //this.transform.position = newPos;
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
         CheckJump();
         CheckSkill();
 
-        this.transform.position += new Vector3(0, 0.00001f);
+        //this.transform.position += new Vector3(0, 0.00001f *Time.deltaTime);
         body.velocity = vel;
     }     
     void CheckSkill()
@@ -143,7 +144,7 @@ public class Player : MonoBehaviour
     }
     void CheckJump()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || IsColliderTop())
         {
             IsPressJump = false;
             timePressJump = 0;
@@ -188,9 +189,16 @@ public class Player : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
     }
+    bool IsColliderTop()
+    {
+        RaycastHit2D hit1 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckTop.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
+        RaycastHit2D hit2 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarRight);
+        RaycastHit2D hit3 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarLeft);
+        return hit1.collider != null ||hit2.collider!=null ||hit3.collider!=null;
+    }
     bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, GroundLayer);
         return hit2D.collider != null;
     } 
     bool IsNearGrounded()
