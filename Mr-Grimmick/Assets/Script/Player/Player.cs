@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     float MaxVelocityXRight = 5f;
     float MaxVelocityXLeft = -5f;
     float MaxVelocityY = 7.5f;
-    float MaxGravity = -8f;
+    float MaxGravity = -10f;
     float VelocityXIdle = 0;
 
 

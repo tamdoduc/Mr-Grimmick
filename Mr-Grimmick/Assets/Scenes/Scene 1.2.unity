@@ -1592,8 +1592,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8946205385286984416, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+      propertyPath: colliderCheckTop
+      value: 
+      objectReference: {fileID: 1527511968}
     - target: {fileID: 8946205385286984418, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946205385286984422, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984423, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
@@ -1657,6 +1665,11 @@ PrefabInstance:
 --- !u!1 &1527511967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8946205385286984423, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+  m_PrefabInstance: {fileID: 1527511966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1527511968 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6547149955744189269, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
   m_PrefabInstance: {fileID: 1527511966}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575729058

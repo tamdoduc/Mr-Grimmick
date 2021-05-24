@@ -5318,6 +5318,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8946205385286984416, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+      propertyPath: colliderCheckTop
+      value: 
+      objectReference: {fileID: 1633776585}
     - target: {fileID: 8946205385286984418, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -5394,6 +5398,11 @@ MonoBehaviour:
 --- !u!1 &1633776584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8946205385286984423, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+  m_PrefabInstance: {fileID: 1633776582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1633776585 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6547149955744189269, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
   m_PrefabInstance: {fileID: 1633776582}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1793001415
