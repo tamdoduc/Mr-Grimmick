@@ -8,8 +8,8 @@ public class Trap : MonoBehaviour
     [SerializeField] Animator animator;
 
     bool isActived ;
-    bool isSelfDestruct;
-    float timeSelfDestruct;
+
+    [SerializeField] SelfDestruct selfDestruct;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +21,7 @@ public class Trap : MonoBehaviour
     {
         if (isActived) 
         {
-            this.transform.position += new Vector3(0,- Time.deltaTime *5, 0);
-        }
-        if (isSelfDestruct)
-        {
-            timeSelfDestruct += Time.deltaTime;
-            if  (timeSelfDestruct>0.3f)
-            {
-                GameObject.Destroy(this.gameObject);
-            }
+            this.transform.position += new Vector3(0,- Time.deltaTime *10, 0);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,9 +37,9 @@ public class Trap : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name != "Player")
         {
-            animator.SetBool("IsSelfDestruct", true);
-            isActived = false;
-            isSelfDestruct = true;
+            selfDestruct = GameObject.Instantiate(selfDestruct);
+            selfDestruct.transform.position = this.gameObject.transform.position;
+            GameObject.Destroy(this.gameObject);
         }
     }
 }
