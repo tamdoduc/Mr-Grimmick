@@ -18,6 +18,10 @@ public class ShadowSkill : MonoBehaviour
     public void Run()
     {
         animator.SetBool("IsNull", false);
+    }  
+    public void Destroy()
+    {
+        animator.SetBool("IsNull", true);
     }
     public bool IsNull()
     {

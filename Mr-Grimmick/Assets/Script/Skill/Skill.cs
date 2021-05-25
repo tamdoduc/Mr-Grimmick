@@ -28,6 +28,8 @@ public class Skill : MonoBehaviour
     [SerializeField] float timeChangeShadowPos;
 
     bool isShot;
+    bool isSelfDestruct;
+    float timeSelfDestruct;
 
     [SerializeField] int countCollision;
 
@@ -38,28 +40,47 @@ public class Skill : MonoBehaviour
         timeChangeShadowPos = 0;
         isShot = false;
         countCollision = 0;
+        isSelfDestruct = false;
+        timeSelfDestruct = 0;
         velocity = new Vector2(0, 0);
         player = GameObject.Find("Player").GetComponent<Player>();
+        animator.SetBool("IsSelfDestruct", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeExist += Time.deltaTime;
-        if (!isShot)
-            this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
-        timeChangeShadowPos += Time.deltaTime;
-        if (timeChangeShadowPos >= 0.02f)
+        if (!isSelfDestruct)
         {
-            timeChangeShadowPos = 0;
-            SetShadow();
-        }
+            timeExist += Time.deltaTime;
+            if (!isShot)
+                this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
+            timeChangeShadowPos += Time.deltaTime;
+            if (timeChangeShadowPos >= 0.02f)
+            {
+                timeChangeShadowPos = 0;
+                SetShadow();
+            }
 
-        if (isShot)
+            if (isShot)
+            {
+                CheckCollision();
+                body.velocity = velocity;
+                if (countCollision >= 20)
+                {
+                    isSelfDestruct = true;
+                    animator.SetBool("IsSelfDestruct", true);
+                    body.velocity = new Vector2(0, 0);
+                    shadowSkill1.Destroy();
+                    shadowSkill2.Destroy();
+                }
+            }
+        }
+        else
         {
-            CheckCollision();
-            body.velocity = velocity;
-            if (countCollision >= 20) player.DestroySkill();
+            timeSelfDestruct += Time.deltaTime;
+            if (timeSelfDestruct > 0.3f) 
+                player.DestroySkill();
         }
     }
     void SetShadow()
@@ -133,7 +154,7 @@ public class Skill : MonoBehaviour
                 countCollision++;
             }
         }
-        else
+    //    else
         if (collisionL)
         {
             if (velocity.x < 0)
