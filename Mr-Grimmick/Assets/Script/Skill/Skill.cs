@@ -63,12 +63,16 @@ public class Skill : MonoBehaviour
             body.velocity = velocity;
             if (countCollision >= 20)
             {
-                selfDestruct = GameObject.Instantiate(selfDestruct);
-                selfDestruct.transform.position = this.gameObject.transform.position;
-                player.DestroySkill();
+                SelfDestruct();
             }
         }
     }
+    public void SelfDestruct()
+    {
+        selfDestruct = GameObject.Instantiate(selfDestruct);
+        selfDestruct.transform.position = this.gameObject.transform.position;
+        GameObject.Destroy(this.gameObject);
+    }    
     void SetShadow()
     {
         for (int i = 2; i > 0; i--)
@@ -163,5 +167,12 @@ public class Skill : MonoBehaviour
     public int CountCollision()
     {
         return countCollision;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
+        {
+            SelfDestruct();
+        }
     }
 }

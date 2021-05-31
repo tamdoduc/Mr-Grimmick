@@ -55,7 +55,6 @@ public class FlyingBrick : MonoBehaviour
                 }
                 break;
         }
-        Debug.Log(minRange);
 
         if (this.isBelowPlayer)
         {

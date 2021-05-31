@@ -249,7 +249,7 @@ Transform:
   m_Children:
   - {fileID: 1058802722}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257794991
 GameObject:
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 257794992}
   - component: {fileID: 257794994}
   - component: {fileID: 257794993}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 275799633}
   - component: {fileID: 275799635}
   - component: {fileID: 275799634}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 316873838}
   - component: {fileID: 316873840}
   - component: {fileID: 316873839}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 322925450}
   - component: {fileID: 322925452}
   - component: {fileID: 322925451}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376045497}
   - component: {fileID: 376045496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScrollBars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: -7801224778962114861, guid: dc99380bf49811a4d87e3cfcfcb3390e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1260,7 +1260,7 @@ Transform:
   m_Children:
   - {fileID: 1964312979}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546267434
 GameObject:
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 546267435}
   - component: {fileID: 546267437}
   - component: {fileID: 546267436}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: 8462900069250351817, guid: dc99380bf49811a4d87e3cfcfcb3390e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1457,7 +1457,8 @@ GameObject:
   - component: {fileID: 568103088}
   - component: {fileID: 568103090}
   - component: {fileID: 568103089}
-  m_Layer: 10
+  - component: {fileID: 568103091}
+  m_Layer: 8
   m_Name: ScrollBarR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,8 +1473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568103087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.47, y: -5.02, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.47, y: -5.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1880832889}
   - {fileID: 257794992}
@@ -1559,6 +1560,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &568103091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568103087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b2930b3f8b434d9731448ade2ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directory_IsLeft: 0
+  force: 4
 --- !u!1 &592900781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1585,8 @@ GameObject:
   - component: {fileID: 592900782}
   - component: {fileID: 592900784}
   - component: {fileID: 592900783}
-  m_Layer: 9
+  - component: {fileID: 592900785}
+  m_Layer: 8
   m_Name: ScrollBarL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,8 +1601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592900781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.48, y: -0.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.48, y: -0.03, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 322925450}
   - {fileID: 895906229}
@@ -1670,6 +1686,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &592900785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592900781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b2930b3f8b434d9731448ade2ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directory_IsLeft: 1
+  force: 4
 --- !u!1 &616824373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,7 +1883,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: -7197489939552186004, guid: dc99380bf49811a4d87e3cfcfcb3390e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1921,7 +1951,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1940,16 +1970,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759895570}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.319523, y: -17.47189, z: -4.371425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1195221, y: -7.99189, z: -4.371425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 628499778}
   - {fileID: 555795339}
   - {fileID: 480911334}
   - {fileID: 921186754}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1099763638}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &895906228
 GameObject:
@@ -1962,7 +1992,7 @@ GameObject:
   - component: {fileID: 895906229}
   - component: {fileID: 895906231}
   - component: {fileID: 895906230}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2123,7 +2153,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: 8462900069250351817, guid: dc99380bf49811a4d87e3cfcfcb3390e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2146,7 +2176,7 @@ GameObject:
   - component: {fileID: 1008817679}
   - component: {fileID: 1008817681}
   - component: {fileID: 1008817680}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2402,7 +2432,7 @@ Transform:
   m_Children:
   - {fileID: 617637010}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1064283429
 BoxCollider2D:
@@ -2458,7 +2488,7 @@ GameObject:
   - component: {fileID: 1099763638}
   - component: {fileID: 1099763637}
   m_Layer: 0
-  m_Name: Stage1-1
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2525,9 +2555,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 59.2, y: -9.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 759895572}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255383364
 GameObject:
@@ -3002,7 +3033,7 @@ GameObject:
   - component: {fileID: 1569887244}
   - component: {fileID: 1569887246}
   - component: {fileID: 1569887245}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3260,7 @@ Transform:
   m_Children:
   - {fileID: 1259267198}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1716330528 stripped
 MonoBehaviour:
@@ -3253,7 +3284,8 @@ GameObject:
   - component: {fileID: 1767901462}
   - component: {fileID: 1767901464}
   - component: {fileID: 1767901463}
-  m_Layer: 9
+  - component: {fileID: 1767901465}
+  m_Layer: 8
   m_Name: ScrollBarL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3268,8 +3300,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767901461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.47, y: -5.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 30.47, y: -5.01, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 2032819850}
   - {fileID: 1008817679}
@@ -3355,6 +3387,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1767901465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767901461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b2930b3f8b434d9731448ade2ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directory_IsLeft: 1
+  force: 4
 --- !u!1 &1806323515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,7 +3412,7 @@ GameObject:
   - component: {fileID: 1806323516}
   - component: {fileID: 1806323518}
   - component: {fileID: 1806323517}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3468,7 +3514,8 @@ GameObject:
   - component: {fileID: 1826160335}
   - component: {fileID: 1826160336}
   - component: {fileID: 1826160337}
-  m_Layer: 10
+  - component: {fileID: 1826160338}
+  m_Layer: 8
   m_Name: ScrollBarR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3483,8 +3530,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826160334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: -0.02, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.52, y: -0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1569887244}
   - {fileID: 1891941940}
@@ -3568,6 +3615,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.990119, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1826160338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826160334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b2930b3f8b434d9731448ade2ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directory_IsLeft: 0
+  force: 4
 --- !u!1 &1880832888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3579,7 +3640,7 @@ GameObject:
   - component: {fileID: 1880832889}
   - component: {fileID: 1880832891}
   - component: {fileID: 1880832890}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3795,7 +3856,7 @@ GameObject:
   - component: {fileID: 1891941940}
   - component: {fileID: 1891941942}
   - component: {fileID: 1891941941}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ScrollBar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3979,7 +4040,7 @@ GameObject:
   - component: {fileID: 2032819850}
   - component: {fileID: 2032819852}
   - component: {fileID: 2032819851}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ScrollBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7081,6 +7142,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8946205385286984416, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
+      propertyPath: animationSkill
+      value: 
+      objectReference: {fileID: 5960081207114066356, guid: 5284e9482850a2f4eac40cae366d8983, type: 3}
+    - target: {fileID: 8946205385286984416, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: colliderCheckTop
       value: 
       objectReference: {fileID: 1657502767}
@@ -7094,11 +7159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.02
+      value: 55.25
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -17.41
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z

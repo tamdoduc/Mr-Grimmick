@@ -40,7 +40,6 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.layer.ToString());
         if (collision.gameObject.layer.ToString()=="12") //Thorn Trap
         {
             selfDestruct = GameObject.Instantiate(selfDestruct);

@@ -20,7 +20,7 @@ public class Elevator : MonoBehaviour
     {
         isActive = false;
         isMoving = false;
-        animator.SetBool("isMoving", false);
+        animator.SetBool("IsMoving", false);
         timeActived = 0;
         isActiveTrap = false;
     }
@@ -30,7 +30,7 @@ public class Elevator : MonoBehaviour
     {
         if (isMoving)
         {
-            if (timeActived < 2)
+            if (timeActived < 1.5f)
             {
                 timeActived += Time.deltaTime;
                 float range = Time.deltaTime * 5 /2;
@@ -69,5 +69,16 @@ public class Elevator : MonoBehaviour
     public bool GetActive()
     {
         return isActive;
+    }
+    public void Reset()
+    {
+        isActive = false;
+        isMoving = false;
+        animator.SetBool("IsMoving", false);
+        animator.SetBool("IsActiveTraps", false);
+        timeActived = 0;
+        isActiveTrap = false;
+        this.gameObject.transform.position = new Vector3(-3.11f, 0.68f, 0);
+        boxCollider2D.enabled = true;
     }
 }
