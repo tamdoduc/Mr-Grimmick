@@ -17,9 +17,15 @@ TagManager:
   - ScrollBarLeft
   - ScrollBarRight
   - Skill
+<<<<<<< Updated upstream
   - 
   - 
   - 
+=======
+  - ThornTrap
+  - Enemy
+  - Player
+>>>>>>> Stashed changes
   - 
   - 
   - 

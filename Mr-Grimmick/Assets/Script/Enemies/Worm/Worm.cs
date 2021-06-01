@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Worm : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [SerializeField] Worm worm;
+=======
+>>>>>>> Stashed changes
     [SerializeField] Animator anim;
     [SerializeField] Rigidbody2D body;
 
@@ -17,7 +20,10 @@ public class Worm : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+<<<<<<< Updated upstream
         worm = gameObject.GetComponent<Worm>();
+=======
+>>>>>>> Stashed changes
         body = gameObject.GetComponent<Rigidbody2D>();
         vel = new Vector2(MaxVelocityX, 0);
     }

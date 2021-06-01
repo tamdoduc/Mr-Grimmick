@@ -8,6 +8,7 @@ public class WormEdgeCheck : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< Updated upstream
         Debug.Log("Enter");
         worm.isOnEdge = false;
     }
@@ -19,6 +20,13 @@ public class WormEdgeCheck : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Exit");
+=======
+        worm.isOnEdge = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+>>>>>>> Stashed changes
         worm.isOnEdge = true;
     }
 }
