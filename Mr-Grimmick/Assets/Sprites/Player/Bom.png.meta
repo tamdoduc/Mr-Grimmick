@@ -29,6 +29,15 @@ TextureImporter:
   - first:
       213: -4272469432612010445
     second: Bom_8
+  - first:
+      213: 3718231513525598596
+    second: Bom_9
+  - first:
+      213: -8083982448118588318
+    second: Bom_10
+  - first:
+      213: 2720205851210542891
+    second: Bom_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,11 +131,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 194
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 196
+        width: 21
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5474448, y: 0.4501831}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,9 +152,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 143
-        width: 13
-        height: 13
+        y: 144
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,12 +172,12 @@ TextureImporter:
       name: Bom_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 132
-        width: 33
-        height: 35
-      alignment: 9
-      pivot: {x: 0.5000001, y: 0.44800895}
+        x: 31
+        y: 136
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,11 +194,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 125
-        width: 46
-        height: 51
+        y: 126
+        width: 45
+        height: 50
       alignment: 9
-      pivot: {x: 0.5000002, y: 0.47324}
+      pivot: {x: 0.54428166, y: 0.4601465}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +214,12 @@ TextureImporter:
       name: Bom_4
       rect:
         serializedVersion: 2
-        x: 126
-        y: 127
-        width: 67
-        height: 63
-      alignment: 9
-      pivot: {x: 0.45926085, y: 0.456674}
+        x: 128
+        y: 129
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,12 +235,12 @@ TextureImporter:
       name: Bom_5
       rect:
         serializedVersion: 2
-        x: 216
-        y: 143
-        width: 26
-        height: 26
-      alignment: 9
-      pivot: {x: 0.53499424, y: 0.4125149}
+        x: 33
+        y: 81
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +256,12 @@ TextureImporter:
       name: Bom_6
       rect:
         serializedVersion: 2
-        x: 249
-        y: 123
-        width: 79
-        height: 73
-      alignment: 9
-      pivot: {x: 0.54031026, y: 0.50623184}
+        x: 71
+        y: 68
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,10 +277,10 @@ TextureImporter:
       name: Bom_7
       rect:
         serializedVersion: 2
-        x: 338
-        y: 119
-        width: 92
-        height: 85
+        x: 128
+        y: 61
+        width: 57
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,12 +298,12 @@ TextureImporter:
       name: Bom_8
       rect:
         serializedVersion: 2
-        x: 438
-        y: 120
-        width: 86
-        height: 87
-      alignment: 9
-      pivot: {x: 0.51058, y: 0.46339715}
+        x: 203
+        y: 61
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,6 +311,69 @@ TextureImporter:
       bones: []
       spriteID: 336427300b325b4c0800000000000000
       internalID: -4272469432612010445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bom_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 62
+        width: 85
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4893b5c8cdfc99330800000000000000
+      internalID: 3718231513525598596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bom_10
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 64
+        width: 88
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5226444, y: 0.47232404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c16615bccefcf80800000000000000
+      internalID: -8083982448118588318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bom_11
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 60
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fe7553fcc10c520800000000000000
+      internalID: 2720205851210542891
       vertices: []
       indices: 
       edges: []

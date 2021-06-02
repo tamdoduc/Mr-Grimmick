@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill : MonoBehaviour
+public class Skill : SkillTemp
 {
     // Start is called before the first frame update
 
-    [SerializeField] Animator animator;
-
-    [SerializeField] ShadowSkill shadowSkill1;
-    [SerializeField] ShadowSkill shadowSkill2;
-    [SerializeField] Player player;
+    [SerializeField] GameObject shadowSkill1;
+    [SerializeField] GameObject shadowSkill2;
     [SerializeField] Collider2D collider2D;
     [SerializeField] Collider2D colliderD;
     [SerializeField] Collider2D colliderL;
@@ -18,16 +15,11 @@ public class Skill : MonoBehaviour
     [SerializeField] Collider2D colliderT;
 
     [SerializeField] LayerMask GroundLayer;
-    [SerializeField] Rigidbody2D body;
-
-    [SerializeField] Vector2 velocity;
 
     Vector3[] positionShadow = new Vector3[3];
 
     [SerializeField] float timeExist;
     [SerializeField] float timeChangeShadowPos;
-
-    bool isShot;
 
     [SerializeField] int countCollision;
 
@@ -35,20 +27,18 @@ public class Skill : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Player>();
         for (int i = 0; i < 3; i++) positionShadow[i] = transform.position;
         timeExist = 0;
         timeChangeShadowPos = 0;
-        isShot = false;
         countCollision = 0;
-        velocity = new Vector2(0, 0);
-        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
         timeExist += Time.deltaTime;
-        if (!isShot)
+        if (!isShooted)
             this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
         timeChangeShadowPos += Time.deltaTime;
         if (timeChangeShadowPos >= 0.02f)
@@ -57,7 +47,7 @@ public class Skill : MonoBehaviour
             SetShadow();
         }
 
-        if (isShot)
+        if (isShooted)
         {
             CheckCollision();
             body.velocity = velocity;
@@ -67,7 +57,7 @@ public class Skill : MonoBehaviour
             }
         }
     }
-    public void SelfDestruct()
+    override public void SelfDestruct()
     {
         selfDestruct = GameObject.Instantiate(selfDestruct);
         selfDestruct.transform.position = this.gameObject.transform.position;
@@ -84,30 +74,10 @@ public class Skill : MonoBehaviour
         if (timeExist >= 0.7f)
         {
             body.velocity = velocity;
-            if (shadowSkill1.IsNull())
-            {
-                shadowSkill1.Run();
-                shadowSkill2.Run();
-            }
-            shadowSkill1.SetPosition(positionShadow[1]);
-            shadowSkill2.SetPosition(positionShadow[2]);
+            shadowSkill1.transform.position = positionShadow[1];
+            shadowSkill2.transform.position = positionShadow[2];
         }
 
-    }
-    public void Shot()
-    {
-        isShot = true;
-        float directory;
-        bool left = !(player.transform.rotation.y == 0);
-        if (left)
-            directory = -1;
-        else
-            directory = 1;
-        velocity = new Vector2(directory * 10, -15f);
-    }
-    public bool IsShot()
-    {
-        return isShot;
     }
     public float GetTime()
     {
@@ -163,10 +133,6 @@ public class Skill : MonoBehaviour
 
         velocity = vel;
         velocity.y -= Time.deltaTime *35;
-    }
-    public int CountCollision()
-    {
-        return countCollision;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

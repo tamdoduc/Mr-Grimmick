@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
 
     Vector3 PosBefore;
 
+    float timeExist;
+
     [SerializeField] Animator animator;
 
     [SerializeField] Rigidbody2D body;
@@ -20,6 +22,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         PosBefore = this.gameObject.transform.position;
+        timeExist = 0;
     }
     public void SetBelowPlayer(bool b)
     {
@@ -28,6 +31,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeExist += Time.deltaTime;
+        if (timeExist >= 3f)
+            SelfDestruct();
+
         if (isBelowPlayer)
         {
             player.transform.position += this.gameObject.transform.position - PosBefore;
@@ -38,13 +45,17 @@ public class Bullet : MonoBehaviour
     {
         body.velocity = velocity;
     }
+    void SelfDestruct()
+    {
+        selfDestruct = GameObject.Instantiate(selfDestruct);
+        selfDestruct.transform.position = this.gameObject.transform.position;
+        GameObject.Destroy(this.gameObject);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer.ToString()=="12") //Thorn Trap
         {
-            selfDestruct = GameObject.Instantiate(selfDestruct);
-            selfDestruct.transform.position = this.gameObject.transform.position;
-            GameObject.Destroy(this.gameObject);
+            SelfDestruct();
         }
     }
 }

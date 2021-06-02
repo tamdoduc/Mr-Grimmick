@@ -22,10 +22,13 @@ public class Player : MonoBehaviour
 
     float timeHoldSkill=0;
     bool isHoldingSkill = false;
-    [SerializeField] Skill skill;
+
     [SerializeField] GameObject animationSkill;
     GameObject cloneAnimationSkill;
-    Skill cloneSkill;
+    [SerializeField] Skill skill;
+    [SerializeField] Bomb bomb;
+    [SerializeField] EnergyBall energyBall;
+    SkillTemp cloneSkill;
 
     [SerializeField] bool isActive;
 
@@ -77,6 +80,7 @@ public class Player : MonoBehaviour
     }     
     void CheckSkill()
     {
+        const int typeSkill = 2;
         if (isHoldingSkill)
             timeHoldSkill += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null)
@@ -93,23 +97,53 @@ public class Player : MonoBehaviour
             GameObject.Destroy(cloneAnimationSkill.gameObject);
             isHoldingSkill = false;
             timeHoldSkill = 0;
-            cloneSkill = GameObject.Instantiate(skill);
+            switch (typeSkill)
+            {
+                case 0:
+                    cloneSkill = GameObject.Instantiate(skill);
+                    break;  
+                case 1:
+                    cloneSkill = GameObject.Instantiate(bomb);
+                    break; 
+                case 2:
+                    cloneSkill = GameObject.Instantiate(energyBall);
+                    break;
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.V))
         {
             if (cloneSkill != null)
             {
-                if (IsCollisionAreaSkill())
-                    cloneSkill.SelfDestruct();
+                int directory;
+                if (this.gameObject.transform.rotation.y != 0)
+                    directory = -1;
                 else
-                    cloneSkill.Shot();
-            }
-            if (cloneAnimationSkill != null)
-            {
-                GameObject.Destroy(cloneAnimationSkill.gameObject);
-                timeHoldSkill = 0;
-                isHoldingSkill = false;
+                    directory = 1;
+                switch (typeSkill)
+                {
+                    case 0:
+                        if (IsCollisionAreaSkill())
+                            cloneSkill.SelfDestruct();
+                        else
+                            cloneSkill.Shot(directory, new Vector2(10, -15));
+                        break;
+                    case 1:
+                        if (IsCollisionAreaSkill())
+                            cloneSkill.SelfDestruct();
+                        else
+                            cloneSkill.Shot(directory, new Vector2(10, 10));
+                        break;  
+                    case 2:
+                        cloneSkill.Shot(directory, new Vector2(10, 0));
+                        break;
+                }
+                if (cloneAnimationSkill != null)
+                {
+                    GameObject.Destroy(cloneAnimationSkill.gameObject);
+                    timeHoldSkill = 0;
+                    isHoldingSkill = false;
+                }
             }
         }
     }
