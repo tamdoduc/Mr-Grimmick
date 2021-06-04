@@ -13,14 +13,12 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
 
     [SerializeField] LayerMask GroundLayer;
-    [SerializeField] LayerMask ScrollBarLeftLayer;
-    [SerializeField] LayerMask ScrollBarRightLayer;
     [SerializeField] LayerMask SkillLayer;
 
     [SerializeField] bool IsPressJump;
     [SerializeField] float timePressJump;
 
-    float timeHoldSkill=0;
+    float timeHoldSkill = 0;
     bool isHoldingSkill = false;
 
     [SerializeField] GameObject animationSkill;
@@ -31,6 +29,9 @@ public class Player : MonoBehaviour
     SkillTemp cloneSkill;
 
     [SerializeField] bool isActive;
+    [SerializeField] bool isUntouchable;
+    float timeUntouchable;
+    float timeLoopAnimationUntouchable;
 
     const float MaxVelocityXRight = 5f;
     const float MaxVelocityXLeft = -5f;
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour
     {
         isActive = active;
         if (!isActive)
-            Stop();    
+            Stop();
     }
     void Stop()
     {
@@ -63,12 +64,33 @@ public class Player : MonoBehaviour
         timePressJump = 0;
         vel = new Vector2(0, 0);
         isActive = true;
+        isHoldingSkill = false;
     }
 
     void Update()
     {
         if (isActive)
             CheckCommand();
+        if (isUntouchable)
+        {
+            const float timeloop = 0.1f;
+            timeLoopAnimationUntouchable += Time.deltaTime;
+            if (timeLoopAnimationUntouchable >= timeloop * 2)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                timeLoopAnimationUntouchable = 0;
+            }
+            if (timeLoopAnimationUntouchable >= timeloop)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
+            colliderBody.enabled = false;
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            colliderBody.enabled = true;
+        }
     }
     void CheckCommand()
     {
@@ -77,10 +99,14 @@ public class Player : MonoBehaviour
         CheckSkill();
 
         body.velocity = vel;
-    }     
+    }
+    public bool IsHoldingSkill()
+    {
+        return isHoldingSkill;
+    }
     void CheckSkill()
     {
-        const int typeSkill = 2;
+        int typeSkill = PlayerPrefs.GetInt("IDSkill");
         if (isHoldingSkill)
             timeHoldSkill += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null)
@@ -92,27 +118,33 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (timeHoldSkill >= 1f)
+        if (cloneSkill==null && timeHoldSkill >= 1f)
         {
             GameObject.Destroy(cloneAnimationSkill.gameObject);
-            isHoldingSkill = false;
-            timeHoldSkill = 0;
             switch (typeSkill)
             {
                 case 0:
                     cloneSkill = GameObject.Instantiate(skill);
-                    break;  
+                    break;
                 case 1:
+                    PlayerPrefs.SetInt("item0", PlayerPrefs.GetInt("item0") + 3);
                     cloneSkill = GameObject.Instantiate(bomb);
-                    break; 
+                    break;
                 case 2:
+                    PlayerPrefs.SetInt("item0", PlayerPrefs.GetInt("item0") + 3);
                     cloneSkill = GameObject.Instantiate(energyBall);
                     break;
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.V))
+        if (Input.GetKeyUp(KeyCode.V) && isHoldingSkill == true)
         {
+            isHoldingSkill = false;
+            timeHoldSkill = 0;
+            if (cloneAnimationSkill != null)
+            {
+               GameObject.Destroy(cloneAnimationSkill.gameObject);
+            }
             if (cloneSkill != null)
             {
                 int directory;
@@ -129,35 +161,31 @@ public class Player : MonoBehaviour
                             cloneSkill.Shot(directory, new Vector2(10, -15));
                         break;
                     case 1:
+                        PlayerPrefs.SetInt("item0", 0);
                         if (IsCollisionAreaSkill())
                             cloneSkill.SelfDestruct();
                         else
                             cloneSkill.Shot(directory, new Vector2(10, 10));
-                        break;  
+                        break;
                     case 2:
+                        PlayerPrefs.SetInt("item0", 0);
                         cloneSkill.Shot(directory, new Vector2(10, 0));
                         break;
-                }
-                if (cloneAnimationSkill != null)
-                {
-                    GameObject.Destroy(cloneAnimationSkill.gameObject);
-                    timeHoldSkill = 0;
-                    isHoldingSkill = false;
                 }
             }
         }
     }
     void CheckMove()
     {
-        float h = Input.GetAxisRaw("Horizontal");    
+        float h = Input.GetAxisRaw("Horizontal");
         if (h > 0)
         {
-            if (vel.x<MaxVelocityXRight)
+            if (vel.x < MaxVelocityXRight)
             {
                 vel.x += (Time.deltaTime * MaxVelocityXRight) / (0.5f);  //    0.5 là thời gian cần để đạt max     
             }
             else
-            if (vel.x >MaxVelocityXRight)
+            if (vel.x > MaxVelocityXRight)
             {
                 vel.x = MaxVelocityXRight;
             }
@@ -167,7 +195,7 @@ public class Player : MonoBehaviour
         {
             if (vel.x > MaxVelocityXLeft)
             {
-                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);         
+                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);
             }
             else
             if (vel.x < MaxVelocityXLeft)
@@ -176,7 +204,7 @@ public class Player : MonoBehaviour
             }
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        if (h==0)
+        if (h == 0)
         {
             if (vel.x > 0)
             {
@@ -184,10 +212,10 @@ public class Player : MonoBehaviour
             }
             if (vel.x < 0)
             {
-                vel.x = Mathf.Min(vel.x - (Time.deltaTime * MaxVelocityXLeft) / (0.2f), 0);   
+                vel.x = Mathf.Min(vel.x - (Time.deltaTime * MaxVelocityXLeft) / (0.2f), 0);
             }
         }
-        animator.SetFloat("Speed",Mathf.Abs(vel.x));
+        animator.SetFloat("Speed", Mathf.Abs(vel.x));
     }
     void CheckJump()
     {
@@ -203,7 +231,7 @@ public class Player : MonoBehaviour
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() ||IsOnSkillLayer())) // Start jump
+            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() || IsOnSkillLayer())) // Start jump
             {
                 IsPressJump = true;
             }
@@ -221,7 +249,9 @@ public class Player : MonoBehaviour
         if (timePressJump == 0) // Fall down
             if (IsGrounded())
             {
-                vel.y = -1f;
+                if (isUntouchable) vel.y = 0;
+                else
+                    vel.y = -1f;
             }
             else if (vel.y >= MaxGravity)
             {
@@ -245,7 +275,7 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, GroundLayer);
         return hit2D.collider != null;
-    } 
+    }
     bool IsNearGrounded()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.3f, GroundLayer);

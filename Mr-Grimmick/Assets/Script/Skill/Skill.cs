@@ -28,7 +28,10 @@ public class Skill : SkillTemp
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        for (int i = 0; i < 3; i++) positionShadow[i] = transform.position;
+        this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
+        for (int i = 0; i < 3; i++) positionShadow[i] = this.gameObject.transform.position;
+        shadowSkill1.transform.position = positionShadow[0];
+        shadowSkill2.transform.position = positionShadow[0];
         timeExist = 0;
         timeChangeShadowPos = 0;
         countCollision = 0;
@@ -41,7 +44,7 @@ public class Skill : SkillTemp
         if (!isShooted)
             this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
         timeChangeShadowPos += Time.deltaTime;
-        if (timeChangeShadowPos >= 0.02f)
+        if (timeChangeShadowPos >= 0.025f)
         {
             timeChangeShadowPos = 0;
             SetShadow();
@@ -69,19 +72,9 @@ public class Skill : SkillTemp
         {
             positionShadow[i] = positionShadow[i - 1];
         }
-        positionShadow[0] = transform.position;
-
-        if (timeExist >= 0.7f)
-        {
-            body.velocity = velocity;
-            shadowSkill1.transform.position = positionShadow[1];
-            shadowSkill2.transform.position = positionShadow[2];
-        }
-
-    }
-    public float GetTime()
-    {
-        return timeExist;
+        positionShadow[0] = this.gameObject.transform.position;
+        shadowSkill1.transform.position = positionShadow[1];
+        shadowSkill2.transform.position = positionShadow[2];
     }
     void CheckCollision()
     {

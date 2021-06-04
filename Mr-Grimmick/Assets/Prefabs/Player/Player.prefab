@@ -32,8 +32,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946205385286984423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 46.429634, y: 26.409143, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -130,20 +130,17 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 256
-  ScrollBarLeftLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  ScrollBarRightLayer:
-    serializedVersion: 2
-    m_Bits: 1024
   SkillLayer:
     serializedVersion: 2
     m_Bits: 2048
   IsPressJump: 0
   timePressJump: 0
-  skill: {fileID: 4978808554869312327, guid: f42f28644a7dbd449ab2ff26990ed483, type: 3}
   animationSkill: {fileID: 5960081207114066356, guid: 5284e9482850a2f4eac40cae366d8983, type: 3}
+  skill: {fileID: 4978808554869312327, guid: f42f28644a7dbd449ab2ff26990ed483, type: 3}
+  bomb: {fileID: 2215305258077099842, guid: 2100e429dcaa8084fbf8df7ec022b1e9, type: 3}
+  energyBall: {fileID: 3866075876664747672, guid: ed10cd99255fcfc4bbe7081773e2542a, type: 3}
   isActive: 0
+  isUntouchable: 0
 --- !u!58 &8946205385286984417
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,7 +170,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004150778, y: -0.51497436}
+  m_Offset: {x: 0.004150778, y: -0.5704317}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -184,7 +181,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6615793, y: 0.15755129}
+  m_Size: {x: 0.6615793, y: 0.04663658}
   m_EdgeRadius: 0
 --- !u!50 &8946205385286984447
 Rigidbody2D:

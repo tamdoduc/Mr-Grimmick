@@ -28,12 +28,11 @@ public class MachineGun : MonoBehaviour
             timeLoop = 0;
             bullets = GameObject.Instantiate(bullet);
             bullets.transform.position = this.gameObject.transform.position + new Vector3(1, 0, 0);
-            bullets.SetSpeed(new Vector2(2, 0));
+            bullets.SetSpeed(new Vector2(5, -5));
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.layer.ToString());
         if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
         {
             selfDestruct = GameObject.Instantiate(selfDestruct);

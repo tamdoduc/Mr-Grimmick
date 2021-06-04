@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6f598a5efacb52448a4c3375b8ca9463
+guid: 2b3a93843494167458434180473591dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6277792378113802136
-    second: HUD
+      213: -2713570706027933686
+    second: HUB_Boxung_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,9 +35,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -58,6 +58,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -88,29 +90,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD
+      name: HUB_Boxung_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 256
-        height: 32
+        x: 8
+        y: 102
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8604fd0e71dc0e8a0800000000000000
-      internalID: -6277792378113802136
+      spriteID: a009c4ae1d5775ad0800000000000000
+      internalID: -2713570706027933686
       vertices: []
       indices: 
       edges: []
