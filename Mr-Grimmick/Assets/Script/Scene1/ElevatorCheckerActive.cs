@@ -12,6 +12,7 @@ public class ElevatorCheckerActive : MonoBehaviour
             elevator.BelowPlayer();
             if (!elevator.GetActive())
                 elevator.Active();
+            Debug.Log("collition");
         }
     }  
     private void OnTriggerExit2D(Collider2D collision)

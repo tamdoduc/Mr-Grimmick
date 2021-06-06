@@ -40,8 +40,7 @@ public class Bullet : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, 1f);
         else
             body.velocity = new Vector2(body.velocity.x, -8f);
-        Debug.Log(IsGrounded());
-        if (timeExist >= 3f)
+        if (timeExist >= 2f)
             SelfDestruct();
 
         if (isBelowPlayer)
@@ -69,9 +68,13 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer.ToString()=="12") //Thorn Trap
+        if (collision.gameObject.layer.ToString() == "12" || collision.gameObject.layer.ToString() == "14" ||collision.gameObject.name == "Bullet(Clone)")  //Thorn Trap
         {
             SelfDestruct();
         }
+        if (collision.gameObject.layer.ToString() == "15")
+            body.velocity = new Vector2(-0.5f, body.velocity.y);     
+        if (collision.gameObject.layer.ToString() == "16")
+            body.velocity = new Vector2(0.5f, body.velocity.y);
     }
 }

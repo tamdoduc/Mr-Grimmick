@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ItemHP : MonoBehaviour
 {
+    bool isUsed = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" && !isUsed)
         {
+            isUsed = true;
             int maxHp = PlayerPrefs.GetInt("maxHp");
             if (maxHp < 4)
             {
+                Debug.Log("+1");
                 PlayerPrefs.SetInt("maxHp", maxHp + 1);
                 PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("currentHp") + 1);
+                PlayerPrefs.SetInt("currentHp", maxHp + 1);
             }
             GameObject.Destroy(this.gameObject);
         }

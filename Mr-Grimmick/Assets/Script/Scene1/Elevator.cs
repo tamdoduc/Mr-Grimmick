@@ -12,17 +12,19 @@ public class Elevator : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] BoxCollider2D boxCollider2D;
 
-    [SerializeField] Player player;
+    [SerializeField] GameObject player;
 
     [SerializeField] float timeActived = 0;
     // Start is called before the first frame update
     void Start()
     {
+
         isActive = false;
         isMoving = false;
         animator.SetBool("IsMoving", false);
         timeActived = 0;
         isActiveTrap = false;
+        isBelowPlayer = false;
     }
 
     // Update is called once per frame
@@ -30,13 +32,16 @@ public class Elevator : MonoBehaviour
     {
         if (isMoving)
         {
+            timeActived += Time.deltaTime;
+            float range = Time.deltaTime * 5 / 2;
             if (timeActived < 1.5f)
             {
-                timeActived += Time.deltaTime;
-                float range = Time.deltaTime * 5 /2;
                 this.transform.position += new Vector3(range, 0, 0);
                 if (isBelowPlayer)
+                {
                     player.transform.position += new Vector3(range, 0, 0);
+                    Debug.Log(range);
+                }
             }
             else
             {
@@ -57,6 +62,7 @@ public class Elevator : MonoBehaviour
         isMoving = true;
         animator.SetBool("IsMoving", true);
         isBelowPlayer = true;
+        timeActived = 0;
     }
     public void BelowPlayer()
     {
@@ -65,6 +71,7 @@ public class Elevator : MonoBehaviour
     public void UnBelowPlayer()
     {
         isBelowPlayer = false;
+        Debug.Log(false);
     }
     public bool GetActive()
     {
@@ -75,7 +82,7 @@ public class Elevator : MonoBehaviour
         isActive = false;
         isMoving = false;
         animator.SetBool("IsMoving", false);
-        animator.SetBool("IsActiveTraps", false);
+        animator.SetBool("IsActiveTrap", false);
         timeActived = 0;
         isActiveTrap = false;
         this.gameObject.transform.position = new Vector3(-3.11f, 0.68f, 0);
