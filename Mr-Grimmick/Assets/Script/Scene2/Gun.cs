@@ -9,8 +9,14 @@ public class Gun : MonoBehaviour
 
     [SerializeField] Animator animator;
     int id;
+
+    [SerializeField] BulletFly bulletFly;
+    BulletFly cloneBulletFly;
+
+    [SerializeField] float time, timeLoop;
     void Start()
     {
+        time = 0;
         id = 0;
         posBefore = this.gameObject.transform.position;
     }
@@ -18,6 +24,19 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 velocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+        if (velocity.x > 0)
+            velocity.x = Mathf.Max(0, velocity.x - Time.deltaTime * 0.1f);
+        if (velocity.x < 0)
+            velocity.x = Mathf.Min(0, velocity.x + Time.deltaTime * 0.1f);
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+        time += Time.deltaTime;
+        if (time>=timeLoop)
+        {
+            time = 0;
+            cloneBulletFly =  GameObject.Instantiate(bulletFly);
+            cloneBulletFly.transform.position = this.gameObject.transform.position - new Vector3(1.26f, -0.5f, 0);
+        }
         Vector3 range = this.gameObject.transform.position - posBefore;
         if (Mathf.Abs(range.x)>0.1f)
         {

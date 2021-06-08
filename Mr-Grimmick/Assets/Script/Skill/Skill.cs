@@ -87,7 +87,7 @@ public class Skill : SkillTemp
         hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
         bool collisionD = hit2D.collider != null;
 
-        float decrease = 0.7f;
+        float decrease = 0.8f;
 
         Vector3 vel = velocity;
         if (collisionD)
@@ -96,6 +96,7 @@ public class Skill : SkillTemp
             {
                 vel.y = decrease * Mathf.Abs(velocity.y);
                 countCollision++;
+                this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
             }
         }
         else if (collisionU)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelfDestruct : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] float timeMax;
     float time;
     void Start()
     {
@@ -15,9 +16,13 @@ public class SelfDestruct : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time>0.3f)
+        if (time>=timeMax)
         {
             GameObject.Destroy(this.gameObject);
         }
+    }
+    private void OnDestroy()
+    {
+        Debug.Log("destroy");
     }
 }

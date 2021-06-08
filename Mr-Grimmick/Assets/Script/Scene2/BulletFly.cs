@@ -12,11 +12,12 @@ public class BulletFly : MonoBehaviour
 
     [SerializeField] Rigidbody2D body;
 
-    [SerializeField] Player player;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
         velocity = new Vector3(-5, 0, 0);
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
     // Update is called once per frame
     void Update()
@@ -30,8 +31,9 @@ public class BulletFly : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer.ToString() == "8") // Ground
+        if (collision.gameObject.layer.ToString() == "8" && collision.gameObject.name!="Gun") // Ground
         {
+            body.constraints = RigidbodyConstraints2D.FreezeRotation;
             body.gravityScale = 1;
             body.AddForce(new Vector2(0.05f, 0.15f));
             velocity = Vector3.zero;
