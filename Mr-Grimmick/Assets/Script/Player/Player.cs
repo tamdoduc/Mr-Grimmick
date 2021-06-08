@@ -54,11 +54,11 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        //PlayerPrefs.SetFloat("posXStart", 1);
-        //PlayerPrefs.SetFloat("posYStart", -17);
+        //PlayerPrefs.SetFloat("posXStart", -2.5f);
+        //PlayerPrefs.SetFloat("posYStart", 1.5f);
         //PlayerPrefs.SetFloat("posZStart", 0);
         Vector3 newPos = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
-        //this.transform.position = newPos;
+       // this.transform.position = newPos;
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;

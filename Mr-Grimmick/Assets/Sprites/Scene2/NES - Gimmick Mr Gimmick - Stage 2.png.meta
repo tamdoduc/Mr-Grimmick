@@ -40,16 +40,16 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_11
   - first:
       213: 7508475518057297014
-    second: NES - Gimmick Mr Gimmick - Stage 2_12
+    second: Water31
   - first:
       213: 4833335070515631984
-    second: NES - Gimmick Mr Gimmick - Stage 2_13
+    second: Water32
   - first:
       213: -8909079072088291789
-    second: NES - Gimmick Mr Gimmick - Stage 2_14
+    second: Water33
   - first:
       213: 8773489903858746696
-    second: NES - Gimmick Mr Gimmick - Stage 2_15
+    second: Water34
   - first:
       213: 7694282606244533692
     second: NES - Gimmick Mr Gimmick - Stage 2_16
@@ -61,16 +61,16 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_18
   - first:
       213: -1922833355391268887
-    second: NES - Gimmick Mr Gimmick - Stage 2_19
+    second: Water23
   - first:
       213: 4455522664351539535
-    second: NES - Gimmick Mr Gimmick - Stage 2_20
+    second: Water21
   - first:
       213: 2400689060455174547
-    second: NES - Gimmick Mr Gimmick - Stage 2_21
+    second: Water24
   - first:
       213: 8471927575174878855
-    second: NES - Gimmick Mr Gimmick - Stage 2_22
+    second: Water41
   - first:
       213: 7126951709725010812
     second: NES - Gimmick Mr Gimmick - Stage 2_23
@@ -79,10 +79,10 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_24
   - first:
       213: -1597088743380452927
-    second: NES - Gimmick Mr Gimmick - Stage 2_25
+    second: Water22
   - first:
       213: 9111597956282811506
-    second: NES - Gimmick Mr Gimmick - Stage 2_26
+    second: Water42
   - first:
       213: -984053776189403454
     second: NES - Gimmick Mr Gimmick - Stage 2_27
@@ -100,7 +100,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_31
   - first:
       213: 8479845896924434848
-    second: NES - Gimmick Mr Gimmick - Stage 2_32
+    second: Water43
   - first:
       213: 8023543087397206985
     second: NES - Gimmick Mr Gimmick - Stage 2_33
@@ -118,7 +118,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_37
   - first:
       213: -420789908207572643
-    second: NES - Gimmick Mr Gimmick - Stage 2_38
+    second: Water44
   - first:
       213: 7805287372704253421
     second: NES - Gimmick Mr Gimmick - Stage 2_39
@@ -1093,7 +1093,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_362
   - first:
       213: 4394847451774881467
-    second: NES - Gimmick Mr Gimmick - Stage 2_363
+    second: Water11
   - first:
       213: -9194629018667304210
     second: NES - Gimmick Mr Gimmick - Stage 2_364
@@ -1192,7 +1192,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_395
   - first:
       213: -200870915919546501
-    second: NES - Gimmick Mr Gimmick - Stage 2_396
+    second: Water12
   - first:
       213: -7121477119181129205
     second: NES - Gimmick Mr Gimmick - Stage 2_397
@@ -1291,7 +1291,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_428
   - first:
       213: -989494525946789584
-    second: NES - Gimmick Mr Gimmick - Stage 2_429
+    second: Water13
   - first:
       213: -4677291972015762464
     second: NES - Gimmick Mr Gimmick - Stage 2_430
@@ -1390,7 +1390,7 @@ TextureImporter:
     second: NES - Gimmick Mr Gimmick - Stage 2_461
   - first:
       213: 6719677690865768049
-    second: NES - Gimmick Mr Gimmick - Stage 2_462
+    second: Water14
   - first:
       213: -7197118794299193631
     second: NES - Gimmick Mr Gimmick - Stage 2_463
@@ -6313,12 +6313,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_363
+      name: Water11
       rect:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6329,153 +6329,6 @@ TextureImporter:
       bones: []
       spriteID: bbe8215f872adfc30800000000000000
       internalID: 4394847451774881467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_364
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eea36dc6f9d166080800000000000000
-      internalID: -9194629018667304210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_365
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03ba44691cb4d0740800000000000000
-      internalID: 5119831646211975984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_366
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c205b9766bcd2220800000000000000
-      internalID: 2462848212230537921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_367
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21b8e81a9b042d8a0800000000000000
-      internalID: -6281887364204819694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_368
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a4bba67c52bbfb40800000000000000
-      internalID: 5475165882196669603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_369
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58adfc5f4f6e5dcd0800000000000000
-      internalID: -2533865275555587451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_370
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a672b54803ef8bb0800000000000000
-      internalID: -4931473442278836576
       vertices: []
       indices: 
       edges: []
@@ -6544,12 +6397,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_396
+      name: Water12
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6565,159 +6418,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_397
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0af2239a4e6b2d90800000000000000
-      internalID: -7121477119181129205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_398
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f0c5c9b19b8c6b0800000000000000
-      internalID: -5275763435226001532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_399
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82761a61ca51996b0800000000000000
-      internalID: -5289172458511702232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_400
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d59345191f40b13d0800000000000000
-      internalID: -3234986471763723939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_401
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 516d4a6ac70b6ab20800000000000000
-      internalID: 3145395439183123989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_402
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df90cfe21fe8285e0800000000000000
-      internalID: -1908806125525136899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_403
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3c5e1fca20018b80800000000000000
-      internalID: -8394428046578394053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_429
+      name: Water13
       rect:
         serializedVersion: 2
         x: 0
         y: 16
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6733,159 +6439,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_430
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e3d6399bbbe61fb0800000000000000
-      internalID: -4677291972015762464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_431
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6ce6d30076e48ed0800000000000000
-      internalID: -2412550131588600724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_432
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b1876d5f06ad1f90800000000000000
-      internalID: -6981241262432616008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_433
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf5f3e3cc7bce3d90800000000000000
-      internalID: -7116026624475924997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_434
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2eaf0854c6f66750800000000000000
-      internalID: 6297992452075662892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_435
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6947310f0322398d0800000000000000
-      internalID: -2840889346359069546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_436
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d45b476f84947ee70800000000000000
-      internalID: 9144358146120398157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_462
+      name: Water14
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6901,12 +6460,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_463
+      name: Water31
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
+        x: 64
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6915,19 +6474,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e6428ba692be1c90800000000000000
-      internalID: -7197118794299193631
+      spriteID: 674b58ab3b6733860800000000000000
+      internalID: 7508475518057297014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_464
+      name: Water32
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
+        x: 64
+        y: 32
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6936,19 +6495,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ccc34aad09bc3100800000000000000
-      internalID: 89149560982850756
+      spriteID: 077958673a4731340800000000000000
+      internalID: 4833335070515631984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_465
+      name: Water33
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
+        x: 64
+        y: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6957,19 +6516,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8b56cfd51c137c0800000000000000
-      internalID: -4093277976892426027
+      spriteID: 3368f4849c79c5480800000000000000
+      internalID: -8909079072088291789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_466
+      name: Water34
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6978,71 +6537,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 223592fbd41f5fa50800000000000000
-      internalID: 6554410148929557282
+      spriteID: 8450af76592b1c970800000000000000
+      internalID: 8773489903858746696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_467
+      name: Water21
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
+        x: 32
+        y: 48
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e592e81384d27d90800000000000000
-      internalID: -7101380002886543898
+      spriteID: f412061c14235dd30800000000000000
+      internalID: 4455522664351539535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_468
+      name: Water22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c97808ef3006d9e0800000000000000
+      internalID: -1597088743380452927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e781a93049b055e0800000000000000
+      internalID: -1922833355391268887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391d8982bf5f05120800000000000000
+      internalID: 2400689060455174547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78692215e35529570800000000000000
+      internalID: 8471927575174878855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2748960e016e27e70800000000000000
+      internalID: 9111597956282811506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a11c344ae67ea570800000000000000
+      internalID: 8479845896924434848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water44
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e3d8395f741bc2d0800000000000000
-      internalID: -3257487368282123287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Stage 2_469
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ce86e42cf2348680800000000000000
-      internalID: -8753815717169164603
+      spriteID: d59e734decd092af0800000000000000
+      internalID: -420789908207572643
       vertices: []
       indices: 
       edges: []
