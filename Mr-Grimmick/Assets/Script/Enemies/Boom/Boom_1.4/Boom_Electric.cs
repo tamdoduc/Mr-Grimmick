@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Boom_Electric : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D body;
     [SerializeField] Transform target;
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderCheckCarry;
+=======
+    [SerializeField] Transform target;
+    [SerializeField] Animator animator;
+    [SerializeField] Rigidbody2D body;
+    [SerializeField] Collider2D colliderCheckCarry;
+    [SerializeField] Collider2D colliderCheckGround;
+>>>>>>> Stashed changes
     [SerializeField] Collider2D colliderCheckEdge;
     [SerializeField] LayerMask GroundLayer;
     [SerializeField] LayerMask PlayerLayer;
     [SerializeField] bool isCarry = false, isDSM = false;
+<<<<<<< Updated upstream
     [SerializeField] int healPoint = 1;
 
     public float wakepositionX;
@@ -21,6 +30,16 @@ public class Boom_Electric : MonoBehaviour
     private Vector2 vel;
     private float detectTime = 0.001f, handleTime = 0;
     private bool isActive = false, inRange = false, faceRight = true;
+=======
+
+    public bool isNotEdge = false;
+    public float wakepositionX, posX, posY, posZ;
+
+    private int healPoint = 1;
+    private float detectTime = 0.001f, handleTime = 0;
+    private bool isActive = false, inRange = false, faceRight = true;
+    private Vector2 vel;
+>>>>>>> Stashed changes
     private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, resetTime = 1.7f, idleTime = 1.5f, DSMTime = 0.7f;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +49,7 @@ public class Boom_Electric : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (isActive)
         {
             isCarry = IsCarriedPlayer();
@@ -80,6 +100,66 @@ public class Boom_Electric : MonoBehaviour
             CheckActive();
         else
             CheckRange();
+=======
+        switch (healPoint)
+        {
+            case 0:
+                break;
+            case 1:
+                if (isActive)
+                {
+                    isCarry = IsCarry();
+                    animator.SetBool("CP", isCarry);
+                    if (isCarry)
+                    {
+                        IdleState();
+                    }
+                    else
+                    if (!isDSM)
+                    {
+                        body.velocity = vel;
+
+                        //handleSkill
+                        if (detectTime == 0 || handleTime > 0)
+                            handleTime += Time.deltaTime;
+
+                        if (handleTime >= idleTime)
+                        {
+                            handleTime = 0;
+                            vel = new Vector2(0, vel.y);
+                            body.velocity = vel;
+                            isDSM = true;
+                            animator.SetBool("DSM", true);
+                            animator.SetFloat("Speed", 0);
+                            return;
+                        }
+                        //
+                        if (!IsNotEdge())
+                            faceRight = !faceRight;
+                        CheckMove();
+                        if (detectTime < resetTime)
+                        {
+                            detectTime += Time.deltaTime;
+                        }
+                        else
+                        {
+                            CheckFace();
+                            detectTime = 0;
+
+                        }
+                    }
+                    else
+                        StopState();
+                }
+                else
+                if (inRange)
+                    CheckActive();
+                else
+                    CheckRange();
+                break;
+        }
+       
+>>>>>>> Stashed changes
     }
 
     void IdleState()
@@ -98,10 +178,13 @@ public class Boom_Electric : MonoBehaviour
             animator.SetBool("DSM", false);
         }
     }
+<<<<<<< Updated upstream
     void DieState()
     {
         GameObject.Destroy(this.gameObject);
     }
+=======
+>>>>>>> Stashed changes
     void CheckRange()
     {
         if (wakepositionX >= target.transform.position.x)
@@ -173,7 +256,11 @@ public class Boom_Electric : MonoBehaviour
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckEdge.bounds.center, colliderCheckEdge.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
         return hit2D.collider != null;
     }
+<<<<<<< Updated upstream
     bool IsCarriedPlayer()
+=======
+    bool IsCarry()
+>>>>>>> Stashed changes
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckCarry.bounds.center, colliderCheckCarry.bounds.size, 0, Vector2.down, 0.1f, PlayerLayer);
         return hit2D.collider != null;

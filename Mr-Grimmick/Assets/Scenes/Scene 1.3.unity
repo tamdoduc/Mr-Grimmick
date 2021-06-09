@@ -4695,6 +4695,71 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &1261206677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6291424985688051845, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1633776586}
+    - target: {fileID: 6291424985688051845, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: wakerange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296651, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_Name
+      value: Boom_DownPrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922808029782296653, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed4974a15bc814d4abb1cf5441bf4105, type: 3}
 --- !u!1 &1294795088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,7 +5538,11 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 6547149955744189269, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
   m_PrefabInstance: {fileID: 1633776582}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!4 &1633776592 stripped
+=======
+--- !u!4 &1633776586 stripped
+>>>>>>> Stashed changes
 Transform:
   m_CorrespondingSourceObject: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
   m_PrefabInstance: {fileID: 1633776582}

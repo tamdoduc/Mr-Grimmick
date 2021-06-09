@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Boom_DownPrior : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D body;
     [SerializeField] Transform target;
+=======
+    [SerializeField] Transform target;
+    [SerializeField] Animator animator;
+    [SerializeField] Rigidbody2D body;
+>>>>>>> Stashed changes
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderCheckThorn;
     [SerializeField] Collider2D colliderCheckNearThorn;
     [SerializeField] LayerMask GroundLayer;
     [SerializeField] LayerMask ThornLayer;
     [SerializeField] float distance, wakerange;
+<<<<<<< Updated upstream
     [SerializeField] bool isJump = false;
     [SerializeField] int healPoint = 1;
 
@@ -22,6 +29,15 @@ public class Boom_DownPrior : MonoBehaviour
     private float detectTime = 0, jumpTime = 0;
     private bool isActive = false;
     private bool faceRight = true;
+=======
+    [SerializeField] float posX, posY, posZ;
+
+    private int healPoint = 1;
+    private float turnTime = 0, jumpTime = 0;
+    private bool isActive = false, faceRight = true, grounded = true, isJump = false;
+    private Vector2 vel;
+    private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, MaxVelocityY = 7.5f, MaxGravity = -8f;
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +47,7 @@ public class Boom_DownPrior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (IsColliderThorn())
             GameObject.Destroy(this.gameObject);
         CheckRange();
@@ -49,6 +66,33 @@ public class Boom_DownPrior : MonoBehaviour
                 detectTime = 0;
             }
         }
+=======
+        switch (healPoint)
+        {
+            case 0:
+                break;
+            case 1:
+                if (IsColliderThorn())
+                    GameObject.Destroy(this.gameObject);
+                CheckRange();
+                if (isActive)
+                {
+                    body.velocity = vel;
+                    CheckMove();
+                    CheckJump();
+                    if (turnTime < 2)
+                    {
+                        turnTime += Time.deltaTime;
+                    }
+                    else
+                    {
+                        CheckFace();
+                        turnTime = 0;
+                    }
+                }
+                break;
+        }   
+>>>>>>> Stashed changes
     }
 
     void CheckRange()

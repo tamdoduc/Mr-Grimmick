@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &2768181340304767648
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +124,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1314888, y: 1.3268967}
   m_EdgeRadius: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8461976455478280329
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,9 +138,16 @@ GameObject:
   - component: {fileID: 5181631013115043151}
   - component: {fileID: 7135249759758786898}
   - component: {fileID: 2860952813412408077}
+<<<<<<< Updated upstream
   - component: {fileID: 1122756679537569384}
   - component: {fileID: 1037016990237563112}
   - component: {fileID: 1166281622694522044}
+=======
+  - component: {fileID: 1037016990237563112}
+  - component: {fileID: 1166281622694522044}
+  - component: {fileID: 8534312854178257302}
+  - component: {fileID: 3918647235712495726}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Worm
   m_TagString: Untagged
@@ -155,8 +165,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.02, y: -14.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_Children:
   - {fileID: 7806566180486111367}
+=======
+  m_Children: []
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,11 +267,16 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
+<<<<<<< Updated upstream
   m_Material: {fileID: 0}
+=======
+  m_Material: {fileID: 6200000, guid: 5f25b91131f912a479cade2d9c24a112, type: 2}
+>>>>>>> Stashed changes
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< Updated upstream
 --- !u!114 &1122756679537569384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +293,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   body: {fileID: 0}
   isOnEdge: 1
+=======
+>>>>>>> Stashed changes
 --- !u!95 &1037016990237563112
 Animator:
   serializedVersion: 3
@@ -319,3 +340,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2864227, y: 0.094246864}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
+--- !u!61 &8534312854178257302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461976455478280329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.73954296, y: -0.1767397}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4375, y: 1}
+    newSize: {x: 1.4375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.062478065, y: 1.3534794}
+  m_EdgeRadius: 0
+--- !u!114 &3918647235712495726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461976455478280329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1849d6b841ffc4c9c8cbc420ca7fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  body: {fileID: 0}
+  colliderCheckEdge: {fileID: 0}
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+>>>>>>> Stashed changes

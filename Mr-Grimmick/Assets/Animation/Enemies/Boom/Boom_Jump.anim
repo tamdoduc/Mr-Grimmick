@@ -20,7 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+<<<<<<< Updated upstream
       value: {fileID: 2943683401893172945, guid: 36ee811f8b0e73846997ffe534de2ef3, type: 3}
+=======
+      value: {fileID: 2645479423449390443, guid: 36ee811f8b0e73846997ffe534de2ef3, type: 3}
+>>>>>>> Stashed changes
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +44,11 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
+<<<<<<< Updated upstream
     - {fileID: 2943683401893172945, guid: 36ee811f8b0e73846997ffe534de2ef3, type: 3}
+=======
+    - {fileID: 2645479423449390443, guid: 36ee811f8b0e73846997ffe534de2ef3, type: 3}
+>>>>>>> Stashed changes
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
