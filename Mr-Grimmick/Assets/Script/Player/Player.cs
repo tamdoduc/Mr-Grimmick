@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     float timeHoldSkill = 0;
     bool isHoldingSkill = false;
-
     [SerializeField] GameObject animationSkill;
     GameObject cloneAnimationSkill;
     [SerializeField] Skill skill;
@@ -29,14 +28,19 @@ public class Player : MonoBehaviour
     SkillTemp cloneSkill;
 
     [SerializeField] bool isActive;
-    [SerializeField] bool isUntouchable;
-    float timeUntouchable;
-    float timeLoopAnimationUntouchable;
+    [SerializeField] bool isFainting;
+    float timeFainting = 0;
+    [SerializeField] EffectFlash effectPlash;
+    EffectFlash cloneEffectFLash;
 
     const float MaxVelocityXRight = 5f;
     const float MaxVelocityXLeft = -5f;
-    const float MaxVelocityY = 7.5f;
+    const float MaxVelocityY = 8f;
     const float MaxGravity = -10f;
+
+    int HP;
+    int Res;
+    [SerializeField] EventPlayerDie eventPlayerDie;
 
 
     public void SetActive(bool active)
@@ -52,44 +56,55 @@ public class Player : MonoBehaviour
         animator.SetBool("IsFainting", false);
         body.velocity = new Vector2(0, 0);
     }
+    void SetPosStart()
+    {
+        Vector3 posStart;
+        if (PlayerPrefs.GetInt("isRevive") == 0)
+        {
+            //PlayerPrefs.SetFloat("posXStart", 62.5f);
+            //PlayerPrefs.SetFloat("posYStart", -12.5f);
+            //PlayerPrefs.SetFloat("posZStart", 0);
+            posStart = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
+        }
+        else
+        {
+            posStart = new Vector3(PlayerPrefs.GetFloat("posXRevive"), PlayerPrefs.GetFloat("posYRevive"), PlayerPrefs.GetFloat("posZRevive"));
+        }
+        this.transform.position = posStart;
+
+    }
     void Start()
     {
-        //PlayerPrefs.SetFloat("posXStart", -2.5f);
-        //PlayerPrefs.SetFloat("posYStart", 1.5f);
-        //PlayerPrefs.SetFloat("posZStart", 0);
-        Vector3 newPos = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
-       // this.transform.position = newPos;
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
         vel = new Vector2(0, 0);
         isActive = true;
         isHoldingSkill = false;
+
+        HP = PlayerPrefs.GetInt("currentHp");
+        Res = PlayerPrefs.GetInt("res");
     }
 
     void Update()
     {
         if (isActive)
+        {
             CheckCommand();
-        if (isUntouchable)
+            FallDown();
+        } 
+        if (isFainting)
         {
-            const float timeloop = 0.1f;
-            timeLoopAnimationUntouchable += Time.deltaTime;
-            if (timeLoopAnimationUntouchable >= timeloop * 2)
+            FallDown();
+            timeFainting += Time.deltaTime;
+            if (timeFainting >= 0.5f) 
             {
-                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-                timeLoopAnimationUntouchable = 0;
+                timeFainting = 0;
+                animator.SetBool("IsFainting", false);
+                isFainting = false;
+                SetActive(true);
+                colliderBody.enabled = true;
             }
-            if (timeLoopAnimationUntouchable >= timeloop)
-            {
-                this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            }
-            colliderBody.enabled = false;
-        }
-        else
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            colliderBody.enabled = true;
         }
     }
     void CheckCommand()
@@ -246,11 +261,12 @@ public class Player : MonoBehaviour
                 IsPressJump = false;
             }
         }
+    }
+    void FallDown()
+    {
         if (timePressJump == 0) // Fall down
             if (IsGrounded())
             {
-                if (isUntouchable) vel.y = 0;
-                else
                     vel.y = -1f;
             }
             else if (vel.y >= MaxGravity)
@@ -290,6 +306,44 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit1 = Physics2D.BoxCast(colliderCheckSkillArea.bounds.center, colliderCheckTop.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
         return hit1.collider != null;
+    }
+    public void BeActack()
+    {
+        HP--;
+        HP = Mathf.Max(HP, 0);
+        PlayerPrefs.SetInt("currentHp", HP);
+        if (HP > 0)
+        {
+            isFainting = true;
+            SetActive(false);
+            colliderBody.enabled = false;
+            IsPressJump = false;
+            timePressJump = 0;
+            animator.SetBool("IsFainting", true);
+            if (cloneEffectFLash == null)
+            {
+                cloneEffectFLash = GameObject.Instantiate(effectPlash);
+                cloneEffectFLash.SetTimeMax(2);
+                cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
+                cloneEffectFLash.Active();
+            }
+        }
+        if (HP==0)
+        {
+            Die();
+        }
+    }
+    public bool IsFainting()
+    {
+        return isFainting;
+    }
+    public void Die()
+    {
+        Res--;
+        Res = Mathf.Max(Res, -1);
+        PlayerPrefs.SetInt("res", Res);
+        GameObject.Instantiate(eventPlayerDie);
+        GameObject.Destroy(this.gameObject);
     }
 }
 

@@ -6,13 +6,10 @@ public class FlyingBrick : MonoBehaviour
 {
     [SerializeField] Vector3[] listPos;
     [SerializeField] int id;
-    [SerializeField] Player player;
-    bool isBelowPlayer;
     
     void Start()
     {
         id = 1;
-        isBelowPlayer = false;
     }
 
     // Update is called once per frame
@@ -55,21 +52,6 @@ public class FlyingBrick : MonoBehaviour
                 }
                 break;
         }
-
-        if (this.isBelowPlayer)
-        {
-            player.transform.position += temp - this.transform.position;
-        }
         this.transform.position = temp;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-            isBelowPlayer = true;
-    } 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-            isBelowPlayer = false;
     }
 }

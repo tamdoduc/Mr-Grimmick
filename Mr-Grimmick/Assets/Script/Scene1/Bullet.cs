@@ -5,17 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     // Start is called before the first frame update
-   Player player;
-
-    bool isBelowPlayer;
-
-    Vector3 PosBefore;
 
     float timeExist;
 
     [SerializeField] Animator animator;
 
     [SerializeField] Rigidbody2D body;
+    Vector3 velocity;
 
     [SerializeField] SelfDestruct selfDestruct;
 
@@ -24,36 +20,23 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
-        PosBefore = this.gameObject.transform.position;
         timeExist = 0;
-    }
-    public void SetBelowPlayer(bool b)
-    {
-        isBelowPlayer = b;
     }
     // Update is called once per frame
     void Update()
     {
         timeExist += Time.deltaTime;
         if (IsGrounded())
-            body.velocity = new Vector2(body.velocity.x, 1f);
+            velocity.y = 0.5f;
         else
-            body.velocity = new Vector2(body.velocity.x, -8f);
+            velocity.y = -8f;
+        this.gameObject.transform.position += new Vector3(velocity.x * Time.deltaTime, velocity.y * Time.deltaTime);
         if (timeExist >= 2f)
             SelfDestruct();
-
-        if (isBelowPlayer)
-        {
-            player.transform.position += this.gameObject.transform.position - PosBefore;
-            Debug.Log("Now " +this.gameObject.transform.position);
-            Debug.Log("Before "+ PosBefore);
-        }
-        PosBefore = this.gameObject.transform.position;
     }
     public void SetSpeed(Vector2 velocity)
     {
-        body.velocity = velocity;
+        this.velocity = velocity;
     }
     void SelfDestruct()
     {
@@ -63,7 +46,7 @@ public class Bullet : MonoBehaviour
     }
     [SerializeField] bool IsGrounded()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, layerGround);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.15f, layerGround);
         return hit2D.collider != null;
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -72,9 +55,7 @@ public class Bullet : MonoBehaviour
         {
             SelfDestruct();
         }
-        if (collision.gameObject.layer.ToString() == "15")
-            body.velocity = new Vector2(-0.5f, body.velocity.y);     
-        if (collision.gameObject.layer.ToString() == "16")
-            body.velocity = new Vector2(0.5f, body.velocity.y);
+        velocity.x = -0.5f;
+        velocity.x = 0.5f;
     }
 }

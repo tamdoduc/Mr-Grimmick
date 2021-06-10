@@ -7,6 +7,13 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     Vector3 posBefore;
 
+    [SerializeField] EffectFlash effectPlash;
+    EffectFlash cloneEffectFLash;
+
+    [SerializeField] SelfDestruct selfDestruct;
+
+    int HP = 4;
+
     [SerializeField] Animator animator;
     int id;
 
@@ -51,5 +58,26 @@ public class Gun : MonoBehaviour
         id++;
         id = id % 4;
         animator.SetInteger("id", id);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (cloneEffectFLash == null && collision.gameObject.layer.ToString() == "11") //skill
+        {
+            HP--;
+            if (HP == 0)
+            {
+                selfDestruct = GameObject.Instantiate(selfDestruct);
+                selfDestruct.transform.position = this.gameObject.transform.position;
+                GameObject.Destroy(this.gameObject);
+            }
+            if (HP > 0) 
+            {
+                cloneEffectFLash = GameObject.Instantiate(effectPlash);
+                cloneEffectFLash.SetTimeMax(2);
+                cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
+                cloneEffectFLash.Active();
+            }
+
+        }
     }
 }

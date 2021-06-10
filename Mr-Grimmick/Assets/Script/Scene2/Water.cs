@@ -21,12 +21,13 @@ public class Water : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer.ToString() != "8" || collision.gameObject.name == "BulletFly(Clone)")
+        if (collision.gameObject.layer.ToString() != "8" )
         {
             clone = GameObject.Instantiate(animationDestruct);
             pos.x = collision.gameObject.transform.position.x;
             clone.transform.position = pos;
-            GameObject.Destroy(collision.gameObject);
+            if (collision.gameObject.name != "Player")
+                GameObject.Destroy(collision.gameObject);
         }
     }
 }

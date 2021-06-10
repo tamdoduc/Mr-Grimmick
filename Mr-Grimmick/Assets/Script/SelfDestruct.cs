@@ -21,8 +21,4 @@ public class SelfDestruct : MonoBehaviour
             GameObject.Destroy(this.gameObject);
         }
     }
-    private void OnDestroy()
-    {
-        Debug.Log("destroy");
-    }
 }

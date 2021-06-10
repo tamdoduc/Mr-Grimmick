@@ -78,13 +78,13 @@ public class Skill : SkillTemp
     }
     void CheckCollision()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0.1f, GroundLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0, GroundLayer);
         bool collisionL = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0.1f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0, GroundLayer);
         bool collisionR = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0f, GroundLayer);
         bool collisionU = hit2D.collider != null;
-        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
+        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0f, GroundLayer);
         bool collisionD = hit2D.collider != null;
 
         float decrease = 0.8f;

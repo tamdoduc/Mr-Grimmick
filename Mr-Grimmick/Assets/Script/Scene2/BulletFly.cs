@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class BulletFly : MonoBehaviour
 {
-    bool isBelowPlayer;
-
-    Vector3 PosBefore;
-
     Vector3 velocity;
 
     [SerializeField] Rigidbody2D body;
 
     Player player;
+
+    Vector3 defaultPos;
     // Start is called before the first frame update
     void Start()
     {
+        defaultPos = this.gameObject.transform.position;
         velocity = new Vector3(-5, 0, 0);
         player = GameObject.Find("Player").GetComponent<Player>();
+
     }
     // Update is called once per frame
     void Update()
     {
         this.gameObject.transform.position += new Vector3(velocity.x * Time.deltaTime, velocity.y*Time.deltaTime, 0);
-        if (isBelowPlayer)
+        if (this.gameObject.transform.position.y<=defaultPos.y-5)
         {
-            player.transform.position += this.gameObject.transform.position- PosBefore;
+            GameObject.Destroy(this.gameObject);
         }
-        PosBefore = this.gameObject.transform.position;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,15 +37,5 @@ public class BulletFly : MonoBehaviour
             body.AddForce(new Vector2(0.05f, 0.15f));
             velocity = Vector3.zero;
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-            isBelowPlayer = true;
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-            isBelowPlayer = false;
     }
 }
