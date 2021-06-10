@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,63 +6,120 @@ public class ManageCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     Camera cam;
-    float widthCam,heightCam;
 
-    [SerializeField] float[] limLeft;
-    [SerializeField] float[] limRight;
-    [SerializeField] float[] posY;
+    [SerializeField] float[] arrLimVertical;
 
+    [SerializeField] string[] limHorizontal;
+
+    float[,] arrLimHorizontal;
+    int[] count;
 
     [SerializeField] GameObject player;
     [SerializeField] HUBManage hub;
+
+    Vector3 posCam;
+
+    [SerializeField] int idV = -1, idH;
     void Start()
     {
+        count = new int[limHorizontal.Length];
         cam = Camera.main;
+        posCam = this.gameObject.transform.position;
+        arrLimHorizontal = new float[limHorizontal.Length, 10];
+        SetLimHorizontal();
+        Vector3 pos = player.transform.position;
+        SetPosVertical(pos);
+        SetIDH(pos);
+        posCam.x = Mathf.Max(pos.x, arrLimHorizontal[idV,idH]+8);
+        posCam.x = Mathf.Min(posCam.x, arrLimHorizontal[idV, idH + 1] - 8);
+        cam.transform.position = posCam;
     }
-
-    // Update is called once per frame
     void Update()
     {
+        posCam = this.gameObject.transform.position;
+        SetPosVertical(player.transform.position);
+
         MoveBasePosision(player.transform.position);
     }
-    void MoveBasePosision(Vector2 pos)
+    void SetLimHorizontal()
     {
-        Vector3 posCam = new Vector3(0,0,-10);
-        int index = 0;
-        
-
-        posCam.y = (posY[0] + posY[1]) / 2;
-
-        for (int i=0;i<posY.Length-1;i++)
+        Debug.Log(limHorizontal.Length);
+        for (int i = 0; i < limHorizontal.Length; i++)
         {
-            if (posY[i]<=pos.y && pos.y<=posY[i+1])
+            string tmp = "";
+            count[i] = 0;
+            for (int j = 0; j < limHorizontal[i].Length; j++)
             {
-                posCam.y = (posY[i] + posY[i + 1]) / 2;
-                index = i;
+                if (limHorizontal[i][j] != '|')
+                {
+                    tmp += limHorizontal[i][j];
+                }
+                else
+                {
+                    arrLimHorizontal[i, count[i]] = float.Parse(tmp);
+                    tmp = "";
+                    count[i]++;
+                }
+            }
+        }
+    }
+    void SetPosVertical(Vector3 pos)
+    {
+        int id = 0;
+        posCam.y = (arrLimVertical[0] + arrLimVertical[1]) / 2;
+
+        for (int i = 0; i < arrLimVertical.Length - 1; i++)
+        {
+            if (arrLimVertical[i] <= pos.y && pos.y <= arrLimVertical[i + 1])
+            {
+                posCam.y = (arrLimVertical[i] + arrLimVertical[i + 1]) / 2;
+                id = i;
                 break;
             }
         }
-        if (pos.y > posY[posY.Length - 1])
+        if (pos.y > arrLimVertical[arrLimVertical.Length - 1])
         {
-            posCam.y = (posY[posY.Length - 2] + posY[posY.Length - 1]) / 2;
-            index = posY.Length - 2;
+            posCam.y = (arrLimVertical[arrLimVertical.Length - 2] + arrLimVertical[arrLimVertical.Length - 1]) / 2;
+            id = arrLimVertical.Length - 2;
         }
-        if (index >= 0 && index<posY.Length-1)
+        if (id!=this.idV)
+            this.idV = id;
+    }
+    void SetIDH(Vector3 pos)
+    {
+        if (pos.x < arrLimHorizontal[idV, 0] || pos.x > arrLimHorizontal[idV, count[idV] - 1])
         {
-            if (pos.x <= limLeft[index])
-            {
-                posCam.x = limLeft[index];
-            }
-            else
-            if (pos.x >= limRight[index])
-            {
-                posCam.x = limRight[index];
-            }
-            else
-                posCam.x = pos.x;
+            Debug.Log("False");
+            return;
         }
-        posCam.y--;
+        for (int i = 0; i < count[idV]-1; i++) 
+        {
+            if (pos.x > arrLimHorizontal[idV, i])
+                idH = i;
+        }
+    }
+    // Update is called once per frame
+    void MoveBasePosision(Vector2 pos)
+    {
+        SetPosVertical(pos);
+        SetIDH(pos);
+        SetPosHorizontal(pos);
         cam.transform.position = posCam;
-        hub.transform.position = posCam - new Vector3(0, 6, -10); 
+        hub.transform.position = posCam - new Vector3(0, 6, -10);
+    }
+    void SetPosHorizontal(Vector2 pos)
+    {
+        float speed = 20;
+        posCam.x = cam.transform.position.x;
+        if (posCam.x > arrLimHorizontal[idV, idH + 1] - 8)
+            posCam.x = Mathf.Max(posCam.x - Time.deltaTime * speed, arrLimHorizontal[idV, idH + 1] - 8);
+        else
+        if (posCam.x < arrLimHorizontal[idV, idH] + 8)
+            posCam.x = Mathf.Min(posCam.x + Time.deltaTime * speed, arrLimHorizontal[idV, idH] + 8);
+        else
+        {
+            posCam.x = Mathf.Max(pos.x, arrLimHorizontal[idV, idH] + 8);
+            posCam.x = Mathf.Min(posCam.x, arrLimHorizontal[idV, idH + 1] - 8);
+        }
     }
 }

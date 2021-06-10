@@ -9,10 +9,10 @@ public class Pipe : MonoBehaviour
 
     [SerializeField] Player player;
 
-    bool isActived;
-    bool isUp;
+    [SerializeField] bool isActived;
+    [SerializeField] bool isUp;
 
-    int indexPos;
+    [SerializeField] int indexPos;
     void Start()
     {
         isActived = false;
@@ -24,10 +24,9 @@ public class Pipe : MonoBehaviour
         if (isActived)
         {
             Vector3 temp = player.transform.position;
-            int numberOfRound = 100;
             if (isUp)
             {
-                if (Mathf.Round(temp.x * numberOfRound) == Mathf.Round(pos[indexPos].x * numberOfRound) && Mathf.Round(temp.y * numberOfRound) == Mathf.Round(pos[indexPos].y * numberOfRound)) 
+                if (temp.x==pos[indexPos].x  && temp.y == pos[indexPos].y ) 
                 indexPos++;
                 if (indexPos == pos.Length)
                 {
@@ -37,8 +36,8 @@ public class Pipe : MonoBehaviour
             }
             else
             {
-                if (Mathf.Round(temp.x * numberOfRound) == Mathf.Round(pos[indexPos].x * numberOfRound) && Mathf.Round(temp.y * numberOfRound) == Mathf.Round(pos[indexPos].y * numberOfRound)) 
-                indexPos--;
+                if (temp.x == pos[indexPos].x && temp.y == pos[indexPos].y) 
+                    indexPos--;
                 if (indexPos == -1)
                 {
                     player.SetActive(true);
@@ -49,21 +48,18 @@ public class Pipe : MonoBehaviour
         if (isActived)
         {
             Vector3 temp = player.transform.position;
-            int numberOfRound = 100;
-            if (Mathf.Round(temp.x * numberOfRound) < Mathf.Round(pos[indexPos].x * numberOfRound))
-                //temp.x += 0.01f;
-                temp.x += Time.deltaTime * 5;
-           // else
-            if (Mathf.Round(temp.x * numberOfRound) > Mathf.Round(pos[indexPos].x * numberOfRound))
-                //temp.x -= 0.01f;
-                temp.x -= Time.deltaTime *4;
-            if (Mathf.Round(temp.y * numberOfRound) < Mathf.Round(pos[indexPos].y * numberOfRound))
-                //temp.y += 0.01f;
-                temp.y += Time.deltaTime *5;
-           // else
-            if (Mathf.Round(temp.y * numberOfRound) > Mathf.Round(pos[indexPos].y * numberOfRound))
-               // temp.y -= 0.01f;
-                temp.y -= Time.deltaTime *4;
+            if (temp.x < pos[indexPos].x)
+                temp.x = Mathf.Min(pos[indexPos].x, temp.x + Time.deltaTime * 5);
+
+            if (temp.x > pos[indexPos].x)
+                temp.x = Mathf.Max(pos[indexPos].x, temp.x - Time.deltaTime * 5);
+
+
+            if (temp.y < pos[indexPos].y)
+                temp.y = Mathf.Min(pos[indexPos].y, temp.y + Time.deltaTime * 5);
+            else
+            if (temp.y > pos[indexPos].y)
+                temp.y = Mathf.Max(pos[indexPos].y, temp.y - Time.deltaTime * 5);
             player.transform.position = temp;
         }
     }

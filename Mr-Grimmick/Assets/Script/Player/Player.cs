@@ -9,108 +9,200 @@ public class Player : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderCheckTop;
+    [SerializeField] Collider2D colliderCheckSkillArea;
     [SerializeField] Animator animator;
 
     [SerializeField] LayerMask GroundLayer;
-    [SerializeField] LayerMask ScrollBarLeftLayer;
-    [SerializeField] LayerMask ScrollBarRightLayer;
     [SerializeField] LayerMask SkillLayer;
 
     [SerializeField] bool IsPressJump;
     [SerializeField] float timePressJump;
+
+    float timeHoldSkill = 0;
+    bool isHoldingSkill = false;
+    [SerializeField] GameObject animationSkill;
+    GameObject cloneAnimationSkill;
     [SerializeField] Skill skill;
-    Skill CloneSkill;
+    [SerializeField] Bomb bomb;
+    [SerializeField] EnergyBall energyBall;
+    SkillTemp cloneSkill;
 
     [SerializeField] bool isActive;
+    [SerializeField] bool isFainting;
+    float timeFainting = 0;
+    [SerializeField] EffectFlash effectPlash;
+    EffectFlash cloneEffectFLash;
 
-    float MaxVelocityXRight = 5f;
-    float MaxVelocityXLeft = -5f;
-    float MaxVelocityY = 7.5f;
-    float MaxGravity = -8f;
-    float VelocityXIdle = 0;
+    const float MaxVelocityXRight = 5f;
+    const float MaxVelocityXLeft = -5f;
+    const float MaxVelocityY = 8f;
+    const float MaxGravity = -10f;
+
+    int HP;
+    int Res;
+    [SerializeField] EventPlayerDie eventPlayerDie;
 
 
     public void SetActive(bool active)
     {
         isActive = active;
         if (!isActive)
-            Stop();    
+            Stop();
     }
-    private void Stop()
+    void Stop()
     {
         animator.SetFloat("Speed", 0);
-        animator.SetBool("IsJumpt", false);
-        animator.SetBool("IsFaint", false);
+        animator.SetBool("IsJumping", false);
+        animator.SetBool("IsFainting", false);
         body.velocity = new Vector2(0, 0);
+    }
+    void SetPosStart()
+    {
+        Vector3 posStart;
+        if (PlayerPrefs.GetInt("isRevive") == 0)
+        {
+            //PlayerPrefs.SetFloat("posXStart", 62.5f);
+            //PlayerPrefs.SetFloat("posYStart", -12.5f);
+            //PlayerPrefs.SetFloat("posZStart", 0);
+
+            posStart = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
+        }
+        else
+        {
+            PlayerPrefs.SetInt("isRevive", 0);
+            posStart = new Vector3(PlayerPrefs.GetFloat("posXRevive"), PlayerPrefs.GetFloat("posYRevive"), PlayerPrefs.GetFloat("posZRevive"));
+        }
+        this.transform.position = posStart;
+
     }
     void Start()
     {
-        //PlayerPrefs.SetFloat("posXStart", 1);
-        //PlayerPrefs.SetFloat("posYStart", -17);
-        //PlayerPrefs.SetFloat("posZStart", 0);
-        Vector3 newPos = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
-        //this.transform.position = newPos;
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
         vel = new Vector2(0, 0);
         isActive = true;
+        isHoldingSkill = false;
+
+        HP = PlayerPrefs.GetInt("currentHp");
+        Res = PlayerPrefs.GetInt("res");
     }
 
     void Update()
     {
-       // Debug.Log(Time.deltaTime);
         if (isActive)
+        {
             CheckCommand();
-    }
-    void ReSetPerFrame()
-    {
-        VelocityXIdle = 0;
-        MaxVelocityXLeft = -5;
-        MaxVelocityXRight = 5;
+            FallDown();
+        } 
+        if (isFainting)
+        {
+            FallDown();
+            timeFainting += Time.deltaTime;
+            if (timeFainting >= 0.5f) 
+            {
+                timeFainting = 0;
+                animator.SetBool("IsFainting", false);
+                isFainting = false;
+                SetActive(true);
+                colliderBody.enabled = true;
+            }
+        }
     }
     void CheckCommand()
     {
-        ReSetPerFrame();
-        CheckScrollBar();
         CheckMove();
         CheckJump();
         CheckSkill();
 
-        //this.transform.position += new Vector3(0, 0.00001f *Time.deltaTime);
         body.velocity = vel;
-    }     
+    }
+    public bool IsHoldingSkill()
+    {
+        return isHoldingSkill;
+    }
     void CheckSkill()
     {
-        if (Input.GetKeyDown(KeyCode.V) && IsGrounded())
-        if (CloneSkill==null)
+        int typeSkill = PlayerPrefs.GetInt("IDSkill");
+        if (isHoldingSkill)
+            timeHoldSkill += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null)
         {
-            CloneSkill = GameObject.Instantiate(skill);
+            if (cloneAnimationSkill == null)
+            {
+                cloneAnimationSkill = GameObject.Instantiate(animationSkill);
+                isHoldingSkill = true;
+            }
         }
-        if (Input.GetKeyUp(KeyCode.V))
-        if (CloneSkill!=null)
+
+        if (cloneSkill==null && timeHoldSkill >= 1f)
         {
-            if (CloneSkill.GetTime()< 1.0f)
-                DestroySkill();
-            else if (!CloneSkill.IsShot())
-                CloneSkill.Shot();
+            GameObject.Destroy(cloneAnimationSkill.gameObject);
+            switch (typeSkill)
+            {
+                case 0:
+                    cloneSkill = GameObject.Instantiate(skill);
+                    break;
+                case 1:
+                    PlayerPrefs.SetInt("item0", PlayerPrefs.GetInt("item0") + 3);
+                    cloneSkill = GameObject.Instantiate(bomb);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("item0", PlayerPrefs.GetInt("item0") + 3);
+                    cloneSkill = GameObject.Instantiate(energyBall);
+                    break;
+            }
         }
-    }
-    public void DestroySkill()
-    {
-        GameObject.Destroy(CloneSkill.gameObject);
+
+        if (Input.GetKeyUp(KeyCode.V) && isHoldingSkill == true)
+        {
+            isHoldingSkill = false;
+            timeHoldSkill = 0;
+            if (cloneAnimationSkill != null)
+            {
+               GameObject.Destroy(cloneAnimationSkill.gameObject);
+            }
+            if (cloneSkill != null)
+            {
+                int directory;
+                if (this.gameObject.transform.rotation.y != 0)
+                    directory = -1;
+                else
+                    directory = 1;
+                switch (typeSkill)
+                {
+                    case 0:
+                        if (IsCollisionAreaSkill())
+                            cloneSkill.SelfDestruct();
+                        else
+                            cloneSkill.Shot(directory, new Vector2(10, -15));
+                        break;
+                    case 1:
+                        PlayerPrefs.SetInt("item0", 0);
+                        if (IsCollisionAreaSkill())
+                            cloneSkill.SelfDestruct();
+                        else
+                            cloneSkill.Shot(directory, new Vector2(10, 10));
+                        break;
+                    case 2:
+                        PlayerPrefs.SetInt("item0", 0);
+                        cloneSkill.Shot(directory, new Vector2(10, 0));
+                        break;
+                }
+            }
+        }
     }
     void CheckMove()
     {
         float h = Input.GetAxisRaw("Horizontal");
         if (h > 0)
         {
-            if (vel.x<MaxVelocityXRight)
+            if (vel.x < MaxVelocityXRight)
             {
                 vel.x += (Time.deltaTime * MaxVelocityXRight) / (0.5f);  //    0.5 là thời gian cần để đạt max     
             }
             else
-            if (vel.x >MaxVelocityXRight)
+            if (vel.x > MaxVelocityXRight)
             {
                 vel.x = MaxVelocityXRight;
             }
@@ -120,7 +212,7 @@ public class Player : MonoBehaviour
         {
             if (vel.x > MaxVelocityXLeft)
             {
-                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);  //  0.5 là thời gian cần để đạt max       
+                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);
             }
             else
             if (vel.x < MaxVelocityXLeft)
@@ -129,24 +221,22 @@ public class Player : MonoBehaviour
             }
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        if (h==0)
+        if (h == 0)
         {
-            if (vel.x > VelocityXIdle)
+            if (vel.x > 0)
             {
-                vel.x -= (Time.deltaTime * MaxVelocityXRight) / (0.2f);  //  0.2 là thời gian cần để đạt max     
+                vel.x = Mathf.Max(vel.x - (Time.deltaTime * MaxVelocityXRight) / (0.2f), 0);
             }
-            if (vel.x < VelocityXIdle)
+            if (vel.x < 0)
             {
-                vel.x -= (Time.deltaTime * MaxVelocityXLeft) / (0.2f);  //   0.2 là thời gian cần để đạt max      
+                vel.x = Mathf.Min(vel.x - (Time.deltaTime * MaxVelocityXLeft) / (0.2f), 0);
             }
-            if (Mathf.Abs(vel.x) <Mathf.Abs(VelocityXIdle) + 0.2f )  //0.2 là chỉ số làm tròn
-                vel.x = VelocityXIdle;
         }
-        animator.SetFloat("Speed",Mathf.Abs( vel.x - VelocityXIdle));
+        animator.SetFloat("Speed", Mathf.Abs(vel.x));
     }
     void CheckJump()
     {
-        if (Input.GetKeyUp(KeyCode.Space) || IsColliderTop())
+        if (Input.GetKeyUp(KeyCode.Space) || IsColliderTop()) // Cancel jump
         {
             IsPressJump = false;
             timePressJump = 0;
@@ -158,31 +248,34 @@ public class Player : MonoBehaviour
 
         if (!IsPressJump)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() ||  IsOnScrollBarLeftLayer() || IsOnScrollBarRightLayer()||IsOnSkillLayer()))
+            if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() || IsOnSkillLayer())) // Start jump
             {
                 IsPressJump = true;
             }
         }
-        else
+        else   //  Jumping
         {
-            timePressJump += Time.deltaTime; //Time last frame
+            timePressJump += Time.deltaTime;
             vel.y = MaxVelocityY;
-            if (timePressJump >= 0.4f) // time (s)
+            if (timePressJump >= 0.4f)
             {
                 timePressJump = 0;
                 IsPressJump = false;
             }
         }
-        if (timePressJump == 0)
-            if (IsGrounded() || IsOnScrollBarLeftLayer() || IsOnScrollBarRightLayer())
+    }
+    void FallDown()
+    {
+        if (timePressJump == 0) // Fall down
+            if (IsGrounded())
             {
-                vel.y = -1f;
+                    vel.y = -1f;
             }
             else if (vel.y >= MaxGravity)
             {
                 vel.y -= Time.deltaTime * (MaxVelocityY - MaxGravity) / 0.3f;
             }
-        if (IsNearGrounded()||IsOnScrollBarLeftLayer()||IsOnScrollBarRightLayer())
+        if (IsNearGrounded()) // Check state jump
         {
             animator.SetBool("IsJumping", false);
         }
@@ -194,49 +287,65 @@ public class Player : MonoBehaviour
     bool IsColliderTop()
     {
         RaycastHit2D hit1 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckTop.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
-        RaycastHit2D hit2 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarRightLayer);
-        RaycastHit2D hit3 = Physics2D.BoxCast(colliderCheckTop.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.up, 0.18f, ScrollBarLeftLayer);
-        return hit1.collider != null ||hit2.collider!=null ||hit3.collider!=null;
+        return hit1.collider != null;
     }
     bool IsGrounded()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, GroundLayer);
         return hit2D.collider != null;
-    } 
+    }
     bool IsNearGrounded()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.3f, GroundLayer);
         return hit2D.collider != null;
     }
-    void CheckScrollBar()
-    {
-        if (IsOnScrollBarLeftLayer())
-        {
-            VelocityXIdle = -3;
-            MaxVelocityXRight = 3;
-            MaxVelocityXLeft = -8;
-        }
-        if (IsOnScrollBarRightLayer())
-        {
-            VelocityXIdle = 3;
-            MaxVelocityXRight = 8;
-            MaxVelocityXLeft = -3;
-        }
-    }
-    bool IsOnScrollBarLeftLayer()
-    {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarLeftLayer);
-        return hit2D.collider != null;
-    }
-    bool IsOnScrollBarRightLayer()
-    {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, ScrollBarRightLayer);
-        return hit2D.collider != null;
-    }  
     bool IsOnSkillLayer()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.18f, SkillLayer);
         return hit2D.collider != null;
+    }
+    bool IsCollisionAreaSkill()
+    {
+        RaycastHit2D hit1 = Physics2D.BoxCast(colliderCheckSkillArea.bounds.center, colliderCheckTop.bounds.size, 0, Vector2.up, 0.1f, GroundLayer);
+        return hit1.collider != null;
+    }
+    public void BeActack()
+    {
+        HP--;
+        HP = Mathf.Max(HP, 0);
+        PlayerPrefs.SetInt("currentHp", HP);
+        if (HP > 0)
+        {
+            isFainting = true;
+            SetActive(false);
+            colliderBody.enabled = false;
+            IsPressJump = false;
+            timePressJump = 0;
+            animator.SetBool("IsFainting", true);
+            if (cloneEffectFLash == null)
+            {
+                cloneEffectFLash = GameObject.Instantiate(effectPlash);
+                cloneEffectFLash.SetTimeMax(2);
+                cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
+                cloneEffectFLash.Active();
+            }
+        }
+        if (HP==0)
+        {
+            Die();
+        }
+    }
+    public bool IsFainting()
+    {
+        return isFainting;
+    }
+    public void Die()
+    {
+        Res--;
+        Res = Mathf.Max(Res, -1);
+        PlayerPrefs.SetInt("res", Res);
+        GameObject.Instantiate(eventPlayerDie);
+        GameObject.Destroy(this.gameObject);
     }
 }
 

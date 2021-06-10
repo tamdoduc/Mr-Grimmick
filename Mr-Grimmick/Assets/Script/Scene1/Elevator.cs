@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    bool isActive;
     bool isMoving;
     bool isActiveTrap;
-    bool isBelowPlayer;
 
     [SerializeField] Animator animator;
     [SerializeField] BoxCollider2D boxCollider2D;
 
-    [SerializeField] Player player;
+    [SerializeField] GameObject player;
 
     [SerializeField] float timeActived = 0;
     // Start is called before the first frame update
     void Start()
     {
-        isActive = false;
         isMoving = false;
-        animator.SetBool("isMoving", false);
+        animator.SetBool("IsMoving", false);
         timeActived = 0;
         isActiveTrap = false;
     }
@@ -30,13 +27,11 @@ public class Elevator : MonoBehaviour
     {
         if (isMoving)
         {
-            if (timeActived < 2)
+            timeActived += Time.deltaTime;
+            float range = Time.deltaTime * 5 / 2;
+            if (timeActived < 1.5f)
             {
-                timeActived += Time.deltaTime;
-                float range = Time.deltaTime * 5 /2;
                 this.transform.position += new Vector3(range, 0, 0);
-                if (isBelowPlayer)
-                    player.transform.position += new Vector3(range, 0, 0);
             }
             else
             {
@@ -51,23 +46,13 @@ public class Elevator : MonoBehaviour
         }
             
     }
-    public void Active()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        isActive = true;
-        isMoving = true;
-        animator.SetBool("IsMoving", true);
-        isBelowPlayer = true;
-    }
-    public void BelowPlayer()
-    {
-        isBelowPlayer = true;
-    }  
-    public void UnBelowPlayer()
-    {
-        isBelowPlayer = false;
-    }
-    public bool GetActive()
-    {
-        return isActive;
+        if (collision.gameObject.name == "Player")
+        {
+            isMoving = true;
+            animator.SetBool("IsMoving", true);
+            timeActived = 0;
+        }
     }
 }

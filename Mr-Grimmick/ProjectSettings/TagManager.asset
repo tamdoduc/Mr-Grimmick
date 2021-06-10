@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,12 +15,12 @@ TagManager:
   - 
   - 
   - Ground
-  - ScrollBarLeft
-  - ScrollBarRight
+  - 
+  - 
   - Skill
-  - 
-  - 
-  - 
+  - ThornTrap
+  - Enemy
+  - MachineGun
   - 
   - 
   - 
@@ -40,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 1643383513
     locked: 0
