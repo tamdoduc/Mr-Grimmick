@@ -64,10 +64,12 @@ public class Player : MonoBehaviour
             //PlayerPrefs.SetFloat("posXStart", 62.5f);
             //PlayerPrefs.SetFloat("posYStart", -12.5f);
             //PlayerPrefs.SetFloat("posZStart", 0);
+
             posStart = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
         }
         else
         {
+            PlayerPrefs.SetInt("isRevive", 0);
             posStart = new Vector3(PlayerPrefs.GetFloat("posXRevive"), PlayerPrefs.GetFloat("posYRevive"), PlayerPrefs.GetFloat("posZRevive"));
         }
         this.transform.position = posStart;

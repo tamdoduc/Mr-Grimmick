@@ -58,7 +58,6 @@ public class ManageCamera : MonoBehaviour
                 {
                     arrLimHorizontal[i, count[i]] = float.Parse(tmp);
                     tmp = "";
-                    Debug.Log(arrLimHorizontal[i, count[i]]);
                     count[i]++;
                 }
             }
