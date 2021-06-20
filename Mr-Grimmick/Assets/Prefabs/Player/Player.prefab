@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8946205385286984447}
   - component: {fileID: 6547149955744189269}
   - component: {fileID: 1527511969}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ MonoBehaviour:
   animator: {fileID: 8946205385286984419}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 33024
   SkillLayer:
     serializedVersion: 2
     m_Bits: 2048

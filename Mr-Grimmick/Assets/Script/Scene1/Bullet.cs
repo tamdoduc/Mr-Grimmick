@@ -38,6 +38,10 @@ public class Bullet : MonoBehaviour
     {
         this.velocity = velocity;
     }
+    public void SetTimeExist(float time)
+    {
+        timeExist = time;
+    }
     void SelfDestruct()
     {
         selfDestruct = GameObject.Instantiate(selfDestruct);

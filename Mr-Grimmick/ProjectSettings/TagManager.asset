@@ -21,10 +21,10 @@ TagManager:
   - ThornTrap
   - Enemy
   - MachineGun
-  - 
-  - 
-  - 
-  - 
+  - EnemyHead
+  - Player
+  - Trigger
+  - Boss
   - 
   - 
   - 

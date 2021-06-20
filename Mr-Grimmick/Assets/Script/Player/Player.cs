@@ -330,7 +330,7 @@ public class Player : MonoBehaviour
                 cloneEffectFLash.Active();
             }
         }
-        if (HP==0)
+        if (HP == 0)
         {
             Die();
         }
