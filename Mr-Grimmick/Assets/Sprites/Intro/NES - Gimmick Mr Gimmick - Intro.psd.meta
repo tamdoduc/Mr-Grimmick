@@ -1,7 +1,22 @@
 fileFormatVersion: 2
-guid: cba622710874cd648971621426b95ba6
+guid: 22030415bfe3c9b4bb3a76b461811227
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2285283623468544252
+    second: 7
+  - first:
+      213: -7248481016508416833
+    second: 8
+  - first:
+      213: 2472130963859681689
+    second: 9
+  - first:
+      213: -5966334917982862412
+    second: 10
+  - first:
+      213: -8368520430605067810
+    second: null
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_0
+      name: 1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1282
-        width: 128
-        height: 80
+        x: 151
+        y: 168
+        width: 3
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b192bd19ec0a2e30800000000000000
-      internalID: 4479406974738534836
+      spriteID: 05178cce0da6cb400800000000000000
+      internalID: 341265117331616080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_1
+      name: 2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1202
-        width: 128
-        height: 80
+        x: 181
+        y: 168
+        width: 3
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab397b242247c3820800000000000000
-      internalID: 2899319950616794042
+      spriteID: 3a2f20ecd2068faf0800000000000000
+      internalID: -362434020157230429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_2
+      name: 3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1122
-        width: 128
-        height: 80
+        x: 144
+        y: 161
+        width: 16
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ee21a8e1127a8850800000000000000
-      internalID: 6380037243366616809
+      spriteID: 8919a0f23adbc6110800000000000000
+      internalID: 1255586904696066456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_3
+      name: 4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1042
-        width: 128
-        height: 80
+        x: 175
+        y: 161
+        width: 16
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed08989580c8c0a40800000000000000
-      internalID: 5335793626017005790
+      spriteID: 1f22173f9ceaf8080800000000000000
+      internalID: -9182928932789214479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_4
+      name: 5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 962
-        width: 128
-        height: 80
+        x: 141
+        y: 153
+        width: 23
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6092caaf7481f4bb0800000000000000
-      internalID: -4949710768029554426
+      spriteID: 9127cba01797a7ec0800000000000000
+      internalID: -3568406228319309287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_5
+      name: 6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 882
-        width: 128
-        height: 80
+        x: 173
+        y: 152
+        width: 23
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 166affd739e50e160800000000000000
-      internalID: 7052741004029306465
+      spriteID: 679769f9d060a4e60800000000000000
+      internalID: 7947171148030441846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_6
+      name: 7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 802
-        width: 128
-        height: 80
+        x: 140
+        y: 124
+        width: 23
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b2b6a44627e0430800000000000000
-      internalID: 3751061314717035389
+      spriteID: cf03cdbf855f6bf10800000000000000
+      internalID: 2285283623468544252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_7
+      name: 8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 722
-        width: 128
-        height: 80
+        x: 173
+        y: 121
+        width: 23
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b49f73b8a0e6f46e0800000000000000
-      internalID: -1851139930261554869
+      spriteID: fbc7ad96be8386b90800000000000000
+      internalID: -7248481016508416833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_8
+      name: 9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 642
-        width: 128
-        height: 80
+        x: 173
+        y: 182
+        width: 23
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +288,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d203d8c6a45dc00800000000000000
-      internalID: 924727128580173107
+      spriteID: 991b9138306ce4220800000000000000
+      internalID: 2472130963859681689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_9
+      name: 10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 562
-        width: 128
-        height: 80
+        x: 141
+        y: 182
+        width: 23
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,155 +309,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa90ba771cfc33cb0800000000000000
-      internalID: -4885332740923520593
+      spriteID: 4b34f9ac002533da0800000000000000
+      internalID: -5966334917982862412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_10
+      name: null
       rect:
         serializedVersion: 2
-        x: 0
-        y: 482
-        width: 128
-        height: 80
+        x: 145
+        y: 695
+        width: 17
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e128d28b7bec170800000000000000
-      internalID: 8200693973153619476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 401
-        width: 128
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9418c1b254c441010800000000000000
-      internalID: 1158634864100802889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 128
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf38525cfcbd6d740800000000000000
-      internalID: 5176566507121247228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 240
-        width: 128
-        height: 79
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70e52c4c082129610800000000000000
-      internalID: 1626382759700356615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 128
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d9c9c01d9cb79f00800000000000000
-      internalID: 1123574014829775319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 128
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85fee6098afce0a30800000000000000
-      internalID: 4183509426758414168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NES - Gimmick Mr Gimmick - Intro-Recovered_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2e9435b564a49150800000000000000
-      internalID: 5878504170364116526
+      spriteID: ed99f26b10b0ddb80800000000000000
+      internalID: -8368520430605067810
       vertices: []
       indices: 
       edges: []
@@ -459,7 +348,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
