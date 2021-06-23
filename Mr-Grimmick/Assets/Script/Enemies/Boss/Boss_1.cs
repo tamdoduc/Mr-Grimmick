@@ -16,8 +16,8 @@ public class Boss_1 : MonoBehaviour
     Boss_1_Boom booms;
 
     private int healPoint = 3, status = 2, bfstatus = 0, index = 0;
-    private float handleTime = 0, dieVelocity = 0.7f;
-    private bool isActive = false, isIM = false, fUse = true;
+    private float handleTime = 0, dieVelocity = 0.7f, imCount = 0;
+    public bool isActive = false, isIM = false, fUse = true;
     private Vector2 vel;
     private const int score = 5000;
     private const float MaxVelocityXRight = 1f, MaxVelocityXLeft = -2f, idleTime = 0.8f, prepareTime = 1.7f, hitTime = 0.8f, imTime = 2f, creTime = 2f, dieTime = 0.2f;
@@ -65,8 +65,14 @@ public class Boss_1 : MonoBehaviour
                     if (!isIM)
                         CheckHit();
                     else
-                    if (handleTime > imTime)
-                        isIM = false;
+                    {
+                        imCount += Time.deltaTime;
+                        if (imCount > imTime)
+                        {
+                            isIM = false;
+                            imCount = 0;
+                        }
+                    }
                     if (status != bfstatus)
                     {
                         handleTime = 0;
@@ -100,8 +106,8 @@ public class Boss_1 : MonoBehaviour
                         case 3:
                             if (handleTime > creTime)
                             {
-                                CreateBoom();
                                 handleTime = 0;
+                                CreateBoom();
                             }
                             break;
                         case 4:
@@ -158,23 +164,22 @@ public class Boss_1 : MonoBehaviour
     }
     void CreateBoom()
     {
-        handleTime += Time.deltaTime;
-        if (handleTime > 1.2)
+        float x = 3, y = 3;
+        if (target.transform.position.x < transform.position.x)
+            x = -3;
+        while (true)
         {
-            handleTime = 0;
-            int x = 4, y = 20;
-            while (true)
-            {
-                booms = GameObject.Instantiate(boom);
-                booms.transform.position = this.gameObject.transform.position + new Vector3(0, 3, 0);
-                booms.SetStartVel(new Vector2(4 + x * index / 2, y * index / 4));
-                index++;
-                index %= 6;
-                if (!fUse || index == 0)
-                    break;
-            }
-            fUse = false;
+            booms = GameObject.Instantiate(boom);
+            booms.transform.position = this.gameObject.transform.position + new Vector3(0, 2, 0);
+            booms.SetStartVel(4 + x * index / 2, y * index / 4);
+            index++;
+            Debug.Log(index);
+            index %= 6;
+            if (!fUse || index == 0)
+                break;
         }
+        fUse = false;
+
     }
     bool IsNotEdge()
     {

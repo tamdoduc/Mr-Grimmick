@@ -22,9 +22,9 @@ public class Boom_DownJump : MonoBehaviour
 
     private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
-    private bool isActive = false, faceRight = false, isJump = false;
+    public bool isActive = false, faceRight = false, isJump = false;
     private Vector2 vel;
-    private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 3.2f, jumpTime = 0.35f, dieTime = 0.2f;
+    private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 3.2f, jumpTime = 0.37f, dieTime = 0.2f;
 
     void Start()
     {
@@ -117,7 +117,7 @@ public class Boom_DownJump : MonoBehaviour
     }
     void CheckInRange()
     {
-        if (target.transform.position.y < groundLim || target.transform.position.y > topLim)
+        if (target.transform.position.y > groundLim || target.transform.position.y < topLim)
         {
             transform.position = new Vector3(posX, posY, 0);
             isActive = true;
@@ -229,8 +229,7 @@ public class Boom_DownJump : MonoBehaviour
     }
     bool SpecialJump()
     {
-        Debug.Log(faceRight + " " + (target.transform.position.y > 21));
-        if (faceRight && (transform.position.x < -3.6f) && (transform.position.x > -3.7f) && target.transform.position.y > 21)
+        if (faceRight && (transform.position.x < -3.5f) && (transform.position.x > -3.6f) && target.transform.position.y > 21)
             return true;
         else
             return false;

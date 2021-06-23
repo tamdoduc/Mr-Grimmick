@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
                 animator.SetBool("IsFainting", false);
                 isFainting = false;
                 SetActive(true);
-                colliderBody.enabled = true;
+                gameObject.layer = 16; //player
             }
         }
     }
@@ -311,14 +311,14 @@ public class Player : MonoBehaviour
     }
     public void BeActack()
     {
-        HP--;
+        //HP--;
         HP = Mathf.Max(HP, 0);
         PlayerPrefs.SetInt("currentHp", HP);
         if (HP > 0)
         {
             isFainting = true;
             SetActive(false);
-            colliderBody.enabled = false;
+            gameObject.layer = 19; //immortal
             IsPressJump = false;
             timePressJump = 0;
             animator.SetBool("IsFainting", true);

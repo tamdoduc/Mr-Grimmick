@@ -7,19 +7,26 @@ public class CarryBird : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D body;
-    [SerializeField] Collider2D colliderCheckCarry;
+    [SerializeField] Collider2D colliderHead;
+    [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask playerLayer;
-    [SerializeField] float wakeRange, resetRange, startPositionX, endPositionX, posX, posY, camRange;
+    [SerializeField] LayerMask skillLayer;
+    [SerializeField] float wakeRange, resetRange, startPositionX, endPositionX, posX, posY, camRange, posYEnd;
     [SerializeField] int goRight; //1 = gotoright -1 = gotoleft
+    [SerializeField] EffectFlash effectPlash;
+    EffectFlash cloneEffectFLash;
 
     private int healPoint = 3, status = -1;
     private float handleTime = 0, maxVelocityY = 1f;
     private bool isActive = false;
-    private const float prepareTime = 3.7f, flyTime = 2f, turnVelocityYTime = 0.5f, maxVelocityX = 2f;
+    private const float prepareTime = 3.7f, flyTime = 2f, turnVelocityYTime = 1f, maxVelocityX = 2f;
     // Start is called before the first frame update
     void Start()
     {
         body.velocity = new Vector2(0, 0);
+        target = GameObject.Find("Player").GetComponent<Transform>();
+        posX = transform.position.x;
+        posY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -33,6 +40,7 @@ public class CarryBird : MonoBehaviour
                 if (isActive)
                 {
                     Debug.Log(body.velocity.y);
+                    CheckHit();
                     CheckOutRange();
                     animator.SetInteger("Status", status);
                     switch (status)
@@ -57,6 +65,21 @@ public class CarryBird : MonoBehaviour
                 else
                     CheckInRange();
                 break;
+        }
+    }
+    void CheckHit()
+    {
+        if (IsColliderSkill())
+        {
+            healPoint--;
+            if (healPoint > 0)
+                if (cloneEffectFLash == null)
+                {
+                    cloneEffectFLash = GameObject.Instantiate(effectPlash);
+                    cloneEffectFLash.SetTimeMax(2);
+                    cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
+                    cloneEffectFLash.Active();
+                }
         }
     }
     void CheckInRange()
@@ -104,6 +127,10 @@ public class CarryBird : MonoBehaviour
             maxVelocityY = -maxVelocityY;
             handleTime = 0;
         }
+        if (transform.position.y > posYEnd)
+            transform.position -= new Vector3(0, 0.2f, 0);
+        else
+            transform.position += new Vector3(0, 0.2f, 0);
     }
     void Waiting()
     {
@@ -117,6 +144,7 @@ public class CarryBird : MonoBehaviour
         }
         if (IsCarry())
         {
+            colliderBody.isTrigger = true;
             status = 3;
         }
     }
@@ -127,7 +155,7 @@ public class CarryBird : MonoBehaviour
         //fly to end posX
         if (goRight * transform.position.x >= goRight * endPositionX)
         {
-            colliderCheckCarry.isTrigger = true;
+            colliderHead.isTrigger = true;
             status = 4;
         }
     }
@@ -137,7 +165,7 @@ public class CarryBird : MonoBehaviour
         if (handleTime > flyTime)
         {
             maxVelocityY = Mathf.Abs(maxVelocityY);
-            body.velocity = new Vector2(goRight * maxVelocityX, maxVelocityY);
+            body.velocity = new Vector2(goRight * maxVelocityX * 2, maxVelocityY * 2);
             status = 5;
         }
     }
@@ -148,12 +176,17 @@ public class CarryBird : MonoBehaviour
         status = -1;
         animator.SetInteger("Status", status);
         body.velocity = new Vector2(0, 0);
-        colliderCheckCarry.isTrigger = false;
+        colliderHead.isTrigger = false;
         handleTime = 0;
     }
     bool IsCarry()
     {
-        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckCarry.bounds.center, colliderCheckCarry.bounds.size, 0, Vector2.down, 0.1f, playerLayer);
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderHead.bounds.center, colliderHead.bounds.size, 0, Vector2.down, 0.1f, playerLayer);
+        return hit2D.collider != null;
+    }
+    bool IsColliderSkill()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
         return hit2D.collider != null;
     }
 }

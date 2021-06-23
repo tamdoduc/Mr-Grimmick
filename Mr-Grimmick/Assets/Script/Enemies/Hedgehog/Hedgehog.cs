@@ -46,14 +46,14 @@ public class Hedgehog : MonoBehaviour
                 if (dieVelocity < 0)
                 {
                     body.velocity = new Vector2(0, 0);
-                    body.AddForce(Vector2.left * 3f, ForceMode2D.Impulse);
-                    body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.left * 0.08f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.up * 0.2f, ForceMode2D.Impulse);
                 }
                 else
                 {
                     body.velocity = new Vector2(0, 0);
-                    body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
-                    body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.right * 0.08f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.up * 0.2f, ForceMode2D.Impulse);
                 }
                 break;
             case 1:
@@ -130,14 +130,14 @@ public class Hedgehog : MonoBehaviour
             if (dieVelocity < 0)
             {
                 body.velocity = new Vector2(dieVelocity, 0);
-                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+                body.AddForce(Vector2.down * 0.25f, ForceMode2D.Impulse);
             }
             else
             {
                 body.velocity = new Vector2(dieVelocity, 0);
-                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+                body.AddForce(Vector2.down * 0.25f, ForceMode2D.Impulse);
             }
-        if (transform.position.y < groundLim)
+        if (transform.position.y < groundLim - 1)
             GameObject.Destroy(this.gameObject);
     }
     void Flip()

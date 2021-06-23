@@ -24,8 +24,8 @@ TagManager:
   - EnemyHead
   - Player
   - Trigger
-  - Boss
-  - 
+  - DestroySkill
+  - Immortal
   - 
   - 
   - 

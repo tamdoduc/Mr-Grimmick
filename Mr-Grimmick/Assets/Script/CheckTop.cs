@@ -17,7 +17,7 @@ public class CheckTop : MonoBehaviour
         posBefore = Temp.gameObject.transform.position;
         isActive = true;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (isActive)
         {
@@ -36,8 +36,8 @@ public class CheckTop : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" )
-            //&& collision.gameObject.transform.position.y >= this.gameObject.transform.position.y + 0.1f)
+        if (collision.gameObject.name == "Player" 
+            && collision.gameObject.transform.position.y >= this.gameObject.transform.position.y + 0.1f)
         {
             isBelowPlayer = true;
             Debug.Log("on top");
@@ -46,7 +46,9 @@ public class CheckTop : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
+        {
             isBelowPlayer = false;
+        }
     }
     public void SetActive(bool b)
     {

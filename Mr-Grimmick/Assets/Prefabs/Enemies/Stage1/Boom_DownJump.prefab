@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1976846646292106478}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &4102860535050543962
 CircleCollider2D:
@@ -82,9 +82,9 @@ Transform:
   m_LocalPosition: {x: -0.045167446, y: 26.460516, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4089786167904435212}
   - {fileID: 420162150031768326}
   - {fileID: 6535487444027176650}
+  - {fileID: 4089786167904435212}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -311,16 +311,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   checkTop: {fileID: 4089786167904435213}
-  selfDestruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
-  wakeRange: 20
   resetRange: 15
   camRange: 7
-  stageRange:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+  groundLim: 16.5
+  topLim: 29
 --- !u!1 &4087362964490949321
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1976846646292106478}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8741895472625837825
 BoxCollider2D:
@@ -399,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617270591653126662, guid: 1811bed9649b46b4895bddbab786dc31, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 617270591653126662, guid: 1811bed9649b46b4895bddbab786dc31, type: 3}
       propertyPath: m_LocalPosition.x

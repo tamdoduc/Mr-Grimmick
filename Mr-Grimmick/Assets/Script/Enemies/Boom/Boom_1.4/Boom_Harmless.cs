@@ -142,6 +142,8 @@ public class Boom_Harmless : MonoBehaviour
     {
         animator.SetBool("Dead", true);
         transform.eulerAngles = new Vector3(180, 0, 0);
+        var sprite = gameObject.GetComponent<SpriteRenderer>();
+        sprite.sortingOrder = 0;
         handleTime += Time.deltaTime;
         if (handleTime > dieTime)
             if (dieVelocity < 0)

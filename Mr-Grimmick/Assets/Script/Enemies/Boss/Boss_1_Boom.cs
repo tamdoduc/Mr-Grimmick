@@ -19,7 +19,7 @@ public class Boss_1_Boom : MonoBehaviour
     [SerializeField] float camRange, groundLim, limX;
 
     private int healPoint = 1;
-    private float detectTime = 0, handleTime = 0, posX, posY, DieVelocity = 6, MaxVelocityY = 5f, MaxGravity = -8f, MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f;
+    private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f, MaxVelocityY = 5f, MaxGravity = -8f, MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f;
     private bool isActive = false, faceRight = false, isJump = false;
     private Vector2 vel;
     private const int score = 0;
@@ -28,8 +28,6 @@ public class Boss_1_Boom : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
-        posX = transform.position.x;
-        posY = transform.position.y;
         checkTop.SetActive(true);
     }
 
@@ -44,23 +42,32 @@ public class Boss_1_Boom : MonoBehaviour
             case 0:
                 PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + score);
                 if (target.transform.position.x > transform.position.x)
-                    DieVelocity = -DieVelocity;
+                    dieVelocity = -dieVelocity;
                 handleTime = 0;
                 healPoint--;
+                if (dieVelocity < 0)
+                {
+                    body.velocity = new Vector2(0, 0);
+                    body.AddForce(Vector2.left * 3f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    body.velocity = new Vector2(0, 0);
+                    body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
+                    body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
+                }
                 break;
             default:
+                CheckHit();
                 if (isActive)
                 {
-                    if (transform.position.y < groundLim)
-                        GameObject.Destroy(this.gameObject);
                     SetState();
                     CheckOutRange();
-                    CheckHit();
                     body.velocity = vel;
                     if (IsGrounded())
                         ResetVel();
                     NormalMode();
-
                 }
                 else
                     CheckInRange();
@@ -76,14 +83,24 @@ public class Boss_1_Boom : MonoBehaviour
     }
     void DieState()
     {
+        GameObject g = gameObject.transform.GetChild(1).gameObject;
+        g.layer = 8;
         animator.SetBool("Dead", true);
         transform.eulerAngles = new Vector3(180, 0, 0);
+        colliderHead.isTrigger = true;
+        colliderBody.isTrigger = true;
         handleTime += Time.deltaTime;
-        Debug.Log(handleTime);
         if (handleTime > dieTime)
-            body.velocity = new Vector2(DieVelocity / 3, -10f);
-        else
-            body.velocity = new Vector2(DieVelocity, 8f);
+            if (dieVelocity < 0)
+            {
+                body.velocity = new Vector2(dieVelocity, 0);
+                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+            }
+            else
+            {
+                body.velocity = new Vector2(dieVelocity, 0);
+                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+            }
         if (Mathf.Abs(target.transform.position.y - transform.position.y) > camRange)
             GameObject.Destroy(this.gameObject);
     }
@@ -92,13 +109,13 @@ public class Boss_1_Boom : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(vel.x));
         animator.SetBool("OnGround", IsGrounded());
     }
-    public void SetStartVel(Vector2 v)
+    public void SetStartVel(float x, float y)
     {
-        vel = v;
-        MaxVelocityY = v.y;
-        MaxGravity = -12f;
-        MaxVelocityXRight = v.x;
-        MaxVelocityXLeft = -v.x;
+        if (x > 1)
+            body.AddForce(Vector2.right * x, ForceMode2D.Impulse);
+        else
+            body.AddForce(Vector2.left * x, ForceMode2D.Impulse);
+        body.AddForce(Vector2.up * y, ForceMode2D.Impulse);
     }
     private void ResetVel()
     {
@@ -110,12 +127,16 @@ public class Boss_1_Boom : MonoBehaviour
     void CheckInRange()
     {
         CheckFace();
-        transform.position = new Vector3(posX, posY, 0);
-        isActive = true;
+        handleTime += Time.deltaTime;
+        if (handleTime > resetTime)
+        {
+            isActive = true;
+            handleTime = 0;
+        }
     }
     void CheckOutRange()
     {
-        if (transform.position.x > limX)
+        if (transform.position.x > limX || transform.position.y < groundLim)
             GameObject.Destroy(this.gameObject);
     }
     void CheckFace()
@@ -182,8 +203,7 @@ public class Boss_1_Boom : MonoBehaviour
             }
             else if (vel.y >= MaxGravity)
             {
-                vel.y -= Time.deltaTime * (MaxVelocityY - MaxGravity) / 0.3f;
-                Debug.Log(vel.y);
+                vel.y -= Time.deltaTime * (MaxVelocityY - MaxGravity) / 0.8f;
             }
     }
     void NormalMode()

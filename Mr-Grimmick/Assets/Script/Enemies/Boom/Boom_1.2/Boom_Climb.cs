@@ -24,9 +24,9 @@ public class Boom_Climb : MonoBehaviour
 
     private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
-    private bool isActive = false, faceRight = false, isJump = false, isOutStage = false;
+    public bool isActive = false, faceRight = false, isJump = false, isOutStage = false;
     private Vector2 vel;
-    private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 1.5f, jumpTime = 0.35f, dieTime = 0.2f;
+    private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 1.5f, jumpTime = 0.2f, dieTime = 0.2f;
 
     void Start()
     {
@@ -97,6 +97,8 @@ public class Boom_Climb : MonoBehaviour
         GameObject g = gameObject.transform.GetChild(1).gameObject;
         g.layer = 8;
         transform.eulerAngles = new Vector3(180, 0, 0);
+        colliderHead.isTrigger = true;
+        colliderBody.isTrigger = true;
         handleTime += Time.deltaTime;
         if (handleTime > dieTime)
             if (dieVelocity < 0)
@@ -124,6 +126,10 @@ public class Boom_Climb : MonoBehaviour
             CheckFace();
             transform.position = new Vector3(posX, posY, 0);
             isActive = true;
+        }
+        else
+        {
+            transform.position = new Vector3(posX, posY, 0);
         }
     }
     void CheckOutRange()
@@ -215,6 +221,8 @@ public class Boom_Climb : MonoBehaviour
         {
             vel.y = -1f;
         }
+        if (!IsNotEdge())
+            Debug.Log("j" + IsGrounded());
         if (!IsNotEdge() || IsColliderWall())
         {
             if (!isJump && IsGrounded())

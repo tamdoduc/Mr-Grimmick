@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 2943683401893172945, guid: 36ee811f8b0e73846997ffe534de2ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -268,10 +268,14 @@ MonoBehaviour:
     m_Bits: 4096
   checkTop: {fileID: 617270591653126663, guid: 1811bed9649b46b4895bddbab786dc31, type: 3}
   selfDestruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
-  wakeRange: 8.5
+  wakeRange: 15
   resetRange: 15
   camRange: 7
   groundLim: -10
+  isActive: 0
+  faceRight: 0
+  isJump: 0
+  isOutStage: 0
 --- !u!1 &791447619630969145
 GameObject:
   m_ObjectHideFlags: 0

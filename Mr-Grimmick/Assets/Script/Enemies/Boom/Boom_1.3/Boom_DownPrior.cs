@@ -239,7 +239,7 @@ public class Boom_DownPrior : MonoBehaviour
     {
         isActive = false;
         isJump = false;
-        colliderHead.isTrigger = false;
+        faceRight = true;
         checkTop.SetActive(true);
         detectTime = 0;
         handleTime = 0;
