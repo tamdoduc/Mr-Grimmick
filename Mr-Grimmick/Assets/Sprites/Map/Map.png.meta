@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 645411862609229670
-    second: Map_0
+    second: Null
   - first:
       213: -3276122099754389042
     second: Cloud1
   - first:
       213: -135665275369439952
-    second: Map_2
+    second: enemy1
   - first:
       213: 6732742066884364779
-    second: Map_3
+    second: enemy2
   - first:
       213: -7324858090283886608
-    second: Map_4
+    second: enemy3
   - first:
       213: 4945718543514210754
-    second: Map_5
+    second: Tick
   - first:
       213: -7516791614127822498
     second: BackGround2
@@ -28,13 +28,13 @@ TextureImporter:
     second: Cloud2
   - first:
       213: -7902874161665819209
-    second: Map_8
+    second: enemy4
   - first:
       213: -1382599404536372767
-    second: Map_9
+    second: enemy5
   - first:
       213: -1703855962273834177
-    second: Map_10
+    second: enemy6
   - first:
       213: 943897181365695813
     second: Ship
@@ -64,13 +64,13 @@ TextureImporter:
     second: BackGround1
   - first:
       213: -4568697809530194781
-    second: Map_20
+    second: enemy7
   - first:
       213: 1593215189244636201
-    second: Map_21
+    second: enemy8
   - first:
       213: 8573059855525071730
-    second: Map_22
+    second: enemy9
   - first:
       213: 7425192431115120889
     second: Map_23
@@ -161,7 +161,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -173,7 +173,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -207,7 +207,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,14 +220,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_2
+      name: enemy1
       rect:
         serializedVersion: 2
         x: 224
         y: 329
         width: 9
         height: 16
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -241,14 +241,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_3
+      name: enemy2
       rect:
         serializedVersion: 2
         x: 235
         y: 329
         width: 11
         height: 16
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -262,14 +262,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_4
+      name: enemy3
       rect:
         serializedVersion: 2
         x: 247
         y: 330
         width: 12
         height: 12
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_5
+      name: Tick
       rect:
         serializedVersion: 2
         x: 263
@@ -291,7 +291,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,7 +312,7 @@ TextureImporter:
         width: 468
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,7 +333,7 @@ TextureImporter:
         width: 24
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,15 +346,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_8
+      name: enemy4
       rect:
         serializedVersion: 2
         x: 224
         y: 310
         width: 9
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.305542}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,15 +367,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_9
+      name: enemy5
       rect:
         serializedVersion: 2
         x: 235
         y: 310
         width: 11
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4214311, y: 0.30554008}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,15 +388,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Map_10
+      name: enemy6
       rect:
         serializedVersion: 2
         x: 247
-        y: 311
+        y: 310
         width: 12
         height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.38476562, y: 0.41356912}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -417,7 +417,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,7 +438,7 @@ TextureImporter:
         width: 48
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -459,7 +459,7 @@ TextureImporter:
         width: 6
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,7 +480,7 @@ TextureImporter:
         width: 6
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,7 +501,7 @@ TextureImporter:
         width: 32
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,7 +522,7 @@ TextureImporter:
         width: 32
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -543,7 +543,7 @@ TextureImporter:
         width: 32
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -564,7 +564,7 @@ TextureImporter:
         width: 32
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -585,7 +585,7 @@ TextureImporter:
         width: 160
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,6 +593,90 @@ TextureImporter:
       bones: []
       spriteID: 2325b319937640a70800000000000000
       internalID: 8792265869481431602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Null
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 330
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66775a46ba6f4f800800000000000000
+      internalID: 645411862609229670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 348
+        width: 12
+        height: 13
+      alignment: 9
+      pivot: {x: 0.6296374, y: 0.30055588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4f8d85c89b890c0800000000000000
+      internalID: -4568697809530194781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 347
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.6296374, y: 0.29473686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ceeadf5cc3c1610800000000000000
+      internalID: 1593215189244636201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 347
+        width: 9
+        height: 16
+      alignment: 9
+      pivot: {x: 0.51920575, y: 0.29473877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bcbbe3480a9f670800000000000000
+      internalID: 8573059855525071730
       vertices: []
       indices: 
       edges: []

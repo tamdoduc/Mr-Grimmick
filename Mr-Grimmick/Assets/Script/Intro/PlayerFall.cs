@@ -10,26 +10,32 @@ public class PlayerFall : MonoBehaviour
     [SerializeField] float[] timeChangePos;
     [SerializeField] Vector2[] tmpos ;
     [SerializeField] float timeWait;
+    [SerializeField] float timeStart;
+
 
     void Start()
     {
         
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
+        if (time>timeStart)
         if (index < tmpos.Length)
         { 
-            if (time >= timeChangePos[index])
-            {
-                time = timeChangePos[index] - time;
-                index++;
-            }
+            //if (time >= timeChangePos[index])
+            //{
+            //    time = timeChangePos[index] - time;
+            //    index++;
+            //}
+           
             if (index == tmpos.Length) return;
-            float range = 6f * Time.deltaTime;
+            float range = 2f * Time.deltaTime;
             Vector2 pos = this.gameObject.transform.position;
+            if (pos == tmpos[index])
+                index++;
             if (pos.x < tmpos[index].x)
             {
                 pos.x = Mathf.Min(pos.x + range, tmpos[index].x);
