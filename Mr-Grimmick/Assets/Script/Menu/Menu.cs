@@ -27,6 +27,10 @@ public class Menu : MonoBehaviour
             {
                 case 0:
                     PlayerPrefs.SetInt("currentMap", 1);
+                    PlayerPrefs.SetInt("maxHp", 2);
+                    PlayerPrefs.SetInt("currentHp", 2);
+                    PlayerPrefs.SetInt("score", 0);
+                    PlayerPrefs.SetInt("res", 0);
                     Application.LoadLevel("Map");
                     break;
                 case 1:

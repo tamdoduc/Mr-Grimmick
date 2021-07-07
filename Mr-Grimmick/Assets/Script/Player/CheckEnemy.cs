@@ -25,6 +25,7 @@ public class CheckEnemy : MonoBehaviour
         }
         if (collision.gameObject.layer.ToString() == "12") //thorTrap
         {
+            Debug.LogWarning("Die");
             player.Die();
         }
     }

@@ -13,6 +13,9 @@ public class MachineGun : MonoBehaviour
     [SerializeField] Bullet bullet;
     Bullet bullets;
 
+    [SerializeField] GameObject itemBom;
+    GameObject cloneitem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +28,20 @@ public class MachineGun : MonoBehaviour
         timeLoop += Time.deltaTime;
         if (timeLoop>1.2)
         {
-            timeLoop = 0;
-            bullets = GameObject.Instantiate(bullet);
-            bullets.transform.position = this.gameObject.transform.position + new Vector3(1, 0, 0);
-            bullets.SetSpeed(new Vector2(5, -5));
+            int r = Random.Range(0, 2);
+            if (r > 0)
+            {
+                timeLoop = 0;
+                bullets = GameObject.Instantiate(bullet);
+                bullets.transform.position = this.gameObject.transform.position + new Vector3(1, 0, 0);
+                bullets.SetSpeed(new Vector2(5, -5));
+            }
+            else
+            {
+                timeLoop = 0;
+                cloneitem = GameObject.Instantiate(itemBom);
+                cloneitem.transform.position = this.gameObject.transform.position + new Vector3(1, 0, 0);
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

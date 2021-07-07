@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1184532213557652280}
   - component: {fileID: 1184532213557652281}
   - component: {fileID: 1184532213557652286}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MachineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,3 +167,4 @@ MonoBehaviour:
   animator: {fileID: 1184532213557652229}
   selfDestruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
   bullet: {fileID: 2533607569329513225, guid: dc7ab64bafd2d29419f95d738aada598, type: 3}
+  itemBom: {fileID: 8533105233371735712, guid: 463b8182822b5c243ab541d92779f704, type: 3}

@@ -8,7 +8,10 @@ public class UnlockStage : MonoBehaviour
     [SerializeField] int stage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerPrefs.SetInt("Stage", stage);
-        Application.LoadLevel("Map");
+        if (collision.gameObject.name == "Player")
+        {
+            PlayerPrefs.SetInt("currentLevel", stage);
+            Application.LoadLevel("Map");
+        }
     }
 }

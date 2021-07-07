@@ -36,10 +36,6 @@ public class HUBManage : MonoBehaviour
             stateItem[i] = 0;
             PlayerPrefs.SetInt("item" + i.ToString(), 0);
         }
-        PlayerPrefs.SetInt("maxHp", 2);
-        PlayerPrefs.SetInt("currentHp", 2);
-        PlayerPrefs.SetInt("score", 1321241);
-        PlayerPrefs.SetInt("res", 24);
     }
     void SetAnimationScore()
     {

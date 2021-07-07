@@ -73,10 +73,21 @@ public class Player : MonoBehaviour
             posStart = new Vector3(PlayerPrefs.GetFloat("posXRevive"), PlayerPrefs.GetFloat("posYRevive"), PlayerPrefs.GetFloat("posZRevive"));
         }
         this.transform.position = posStart;
-
+        Debug.Log(posStart);
     }
+
+    float timeAppear;
+    [SerializeField] GameObject Gate;
+    [SerializeField] Vector3 PosGate;
     void Start()
     {
+        timeAppear = PlayerPrefs.GetFloat("timeAppear");
+        if (timeAppear>0)
+        {
+            Gate = GameObject.Instantiate(Gate);
+            Gate.transform.position = this.gameObject.transform.position + new Vector3(0, 0.5f, 0); 
+        }
+       // SetPosStart();
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -90,6 +101,19 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (timeAppear > 0)
+        {
+            timeAppear -= Time.deltaTime;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            if (timeAppear <= 0)
+            {
+                PlayerPrefs.SetFloat("timeAppear",0);
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                body.AddForce(new Vector2(0, 0.3f));
+                GameObject.Destroy(Gate);
+            }
+            return;
+        }
         if (isActive)
         {
             CheckCommand();
@@ -312,6 +336,13 @@ public class Player : MonoBehaviour
     public void BeActack()
     {
         //HP--;
+        timeHoldSkill = 0;
+        isHoldingSkill = false;
+        if (cloneAnimationSkill != null)
+        {
+            GameObject.Destroy(cloneAnimationSkill.gameObject);
+        }
+
         HP = Mathf.Max(HP, 0);
         PlayerPrefs.SetInt("currentHp", HP);
         if (HP > 0)
@@ -332,6 +363,8 @@ public class Player : MonoBehaviour
         }
         if (HP == 0)
         {
+            cloneSkill.SelfDestruct();
+            Destroy(animationSkill);
             Die();
         }
     }
@@ -341,6 +374,14 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
+        timeHoldSkill = 0;
+        isHoldingSkill = false;
+        if (cloneAnimationSkill != null)
+        {
+            GameObject.Destroy(cloneAnimationSkill.gameObject);
+        }
+        if (cloneSkill!=null)
+            cloneSkill.SelfDestruct();
         Res--;
         Res = Mathf.Max(Res, -1);
         PlayerPrefs.SetInt("res", Res);

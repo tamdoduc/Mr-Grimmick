@@ -62,6 +62,10 @@ public class Skill : SkillTemp
     }
     override public void SelfDestruct()
     {
+        Destroy(shadowSkill1.gameObject);
+        Destroy(shadowSkill2.gameObject);
+        Debug.LogWarning("asdasd");
+        
         selfDestruct = GameObject.Instantiate(selfDestruct);
         selfDestruct.transform.position = this.gameObject.transform.position;
         GameObject.Destroy(this.gameObject);
@@ -133,6 +137,11 @@ public class Skill : SkillTemp
         if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
         {
             SelfDestruct();
+        }
+        if (collision.gameObject.name == "Boss")
+        {
+            SelfDestruct();
+            Debug.Log("Bossssss");
         }
     }
 }
