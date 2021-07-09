@@ -339,7 +339,9 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 256
-  velocity: {x: 0, y: 0}
+  DestroySkillLayer:
+    serializedVersion: 2
+    m_Bits: 262144
   timeExist: 0
   timeChangeShadowPos: 0
   countCollision: 0
@@ -361,7 +363,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5152326, y: 0.4238194}
-    oldSize: {x: 1.7502018, y: 1.75}
+    oldSize: {x: 1.75, y: 1.75}
     newSize: {x: 2.375274, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -408,7 +410,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5152326, y: 0.4238194}
-    oldSize: {x: 1.7502018, y: 1.75}
+    oldSize: {x: 1.75, y: 1.75}
     newSize: {x: 2.375274, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -434,7 +436,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5152326, y: 0.4238194}
-    oldSize: {x: 1.7502018, y: 1.75}
+    oldSize: {x: 1.75, y: 1.75}
     newSize: {x: 2.375274, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -460,7 +462,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5152326, y: 0.4238194}
-    oldSize: {x: 1.7502018, y: 1.75}
+    oldSize: {x: 1.75, y: 1.75}
     newSize: {x: 2.375274, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -486,7 +488,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5152326, y: 0.4238194}
-    oldSize: {x: 1.7502018, y: 1.75}
+    oldSize: {x: 1.75, y: 1.75}
     newSize: {x: 2.375274, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

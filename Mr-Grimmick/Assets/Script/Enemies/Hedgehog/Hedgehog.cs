@@ -76,6 +76,12 @@ public class Hedgehog : MonoBehaviour
                 {
                     Flip();
                 }
+                Vector2 velocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+                if (velocity.x > 0)
+                    velocity.x = Mathf.Max(0, velocity.x - Time.deltaTime * 0.1f);
+                if (velocity.x < 0)
+                    velocity.x = Mathf.Min(0, velocity.x + Time.deltaTime * 0.1f);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
                 break;
             default:
                 if (!isIM)

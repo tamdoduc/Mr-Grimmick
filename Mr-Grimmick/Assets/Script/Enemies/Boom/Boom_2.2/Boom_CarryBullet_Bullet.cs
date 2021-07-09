@@ -31,12 +31,6 @@ public class Boom_CarryBullet_Bullet : MonoBehaviour
         if (!bounce)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-            //if (boom_CarryBullet != null)
-            //{
-            //    Vector3 range = boom_CarryBullet.transform.position - posBefore;
-            //    transform.position += range;
-            //}
-            //posBefore = boom_CarryBullet.transform.position;
             transform.position = boom_CarryBullet.transform.position + new Vector3(0, 0.9f, 0);
             if (IsColliderSkill())
             {
@@ -65,10 +59,10 @@ public class Boom_CarryBullet_Bullet : MonoBehaviour
         directLeft = dir;
         if (directLeft)
         {
-            body.velocity = new Vector2(-3, 0);
+            body.AddForce(Vector2.left * 3f, ForceMode2D.Impulse);
         }
         else
-            body.velocity = new Vector2(3, 0);
+            body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
     }
     bool IsColliderSkill()
     {

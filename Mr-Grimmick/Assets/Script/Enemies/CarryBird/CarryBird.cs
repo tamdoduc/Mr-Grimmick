@@ -15,10 +15,11 @@ public class CarryBird : MonoBehaviour
     [SerializeField] int goRight; //1 = gotoright -1 = gotoleft
     [SerializeField] EffectFlash effectPlash;
     EffectFlash cloneEffectFLash;
+    [SerializeField] SelfDestruct selfDestruct;
 
     private int healPoint = 3, status = -1;
-    private float handleTime = 0, maxVelocityY = 1f;
-    private bool isActive = false;
+    private float handleTime = 0, maxVelocityY = 1f, eps = 0.1f;
+    private bool isActive = false, moveToYLine = true;
     private const float prepareTime = 3.7f, flyTime = 2f, turnVelocityYTime = 1f, maxVelocityX = 2f;
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,13 @@ public class CarryBird : MonoBehaviour
         switch (healPoint)
         {
             case 0:
+                selfDestruct = GameObject.Instantiate(selfDestruct);
+                selfDestruct.transform.position = this.gameObject.transform.position;
+                GameObject.Destroy(this.gameObject);
                 break;
             default:
                 if (isActive)
                 {
-                    Debug.Log(body.velocity.y);
                     CheckHit();
                     CheckOutRange();
                     animator.SetInteger("Status", status);
@@ -76,7 +79,7 @@ public class CarryBird : MonoBehaviour
                 if (cloneEffectFLash == null)
                 {
                     cloneEffectFLash = GameObject.Instantiate(effectPlash);
-                    cloneEffectFLash.SetTimeMax(2);
+                    cloneEffectFLash.SetTimeMax(0.5f);
                     cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
                     cloneEffectFLash.Active();
                 }
@@ -112,6 +115,8 @@ public class CarryBird : MonoBehaviour
     }
     void Flying()
     {
+        colliderHead.isTrigger = true;
+        colliderBody.isTrigger = true;
         //fly to start posX
         if (goRight * transform.position.x < goRight * startPositionX)
             body.velocity = new Vector2(goRight * maxVelocityX, maxVelocityY);
@@ -127,13 +132,22 @@ public class CarryBird : MonoBehaviour
             maxVelocityY = -maxVelocityY;
             handleTime = 0;
         }
-        if (transform.position.y > posYEnd)
-            transform.position -= new Vector3(0, 0.2f, 0);
-        else
-            transform.position += new Vector3(0, 0.2f, 0);
+        if (transform.position.y + eps > posYEnd && transform.position.y - eps < posYEnd)
+            moveToYLine = false;
+        if (moveToYLine)
+            if (transform.position.y > posYEnd)
+            {
+                transform.position -= new Vector3(0, 0.1f, 0);
+            }
+            else
+            {
+                transform.position += new Vector3(0, 0.1f, 0);
+            }
     }
     void Waiting()
     {
+        colliderHead.isTrigger = false;
+        colliderBody.isTrigger = false;
         //turn velocityY
         handleTime += Time.deltaTime;
         if (handleTime > turnVelocityYTime)

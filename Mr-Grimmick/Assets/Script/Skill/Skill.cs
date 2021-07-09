@@ -15,6 +15,7 @@ public class Skill : SkillTemp
     [SerializeField] Collider2D colliderT;
 
     [SerializeField] LayerMask GroundLayer;
+    [SerializeField] LayerMask DestroySkillLayer;
 
     Vector3[] positionShadow = new Vector3[3];
 
@@ -54,7 +55,7 @@ public class Skill : SkillTemp
         {
             CheckCollision();
             body.velocity = velocity;
-            if (countCollision >= 20)
+            if (countCollision >= 20 || IsDestroySkill())
             {
                 SelfDestruct();
             }
@@ -138,10 +139,24 @@ public class Skill : SkillTemp
         {
             SelfDestruct();
         }
-        if (collision.gameObject.name == "Boss")
+        if (collision.gameObject.layer == 18) //DestroySkill
         {
             SelfDestruct();
             Debug.Log("Bossssss");
         }
+    }
+    bool IsDestroySkill()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0, DestroySkillLayer);
+        bool collisionL = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0, DestroySkillLayer);
+        bool collisionR = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0f, DestroySkillLayer);
+        bool collisionU = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0f, DestroySkillLayer);
+        bool collisionD = hit2D.collider != null;
+        if (collisionL || collisionR || collisionU || collisionD)
+            return true;
+        return false;
     }
 }

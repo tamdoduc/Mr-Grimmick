@@ -10,6 +10,7 @@ public class Boss_2 : MonoBehaviour
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderBody;
     [SerializeField] Collider2D colliderSword;
+    [SerializeField] Collider2D colliderSwordHit;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float groundLim, leftLim, rightLim;
@@ -22,7 +23,7 @@ public class Boss_2 : MonoBehaviour
     public float distance;
     public bool isActive = false, murderMode = false, isIM = false, hit = false, hurt = false, jump = false, goRight = false, faceRight = true, isJump = false;
     private Vector2 vel;
-    private const float MaxVelocityXRight = 5f, MaxVelocityXLeft = -5f, MaxVelocityY = 12f, MaxGravity = -8f, imTime = 1f, murderTime = 2f, jumpTime = 0.3f, dieTime = 0.2f, eps = 1f;
+    private const float MaxVelocityXRight = 5f, MaxVelocityXLeft = -5f, MaxVelocityY = 12f, MaxGravity = -8f, imTime = 0.2f, murderTime = 2f, jumpTime = 0.3f, dieTime = 0.2f, eps = 1f;
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
@@ -282,7 +283,7 @@ public class Boss_2 : MonoBehaviour
                 isIM = false;
                 hurt = false;
             }
-            body.velocity = new Vector2(0, -1);
+            body.velocity = new Vector2(0, -2);
             return;
         }
         CheckFace();
@@ -308,15 +309,25 @@ public class Boss_2 : MonoBehaviour
     }
     void HitMode()
     {
+        var swordhit = gameObject.transform.GetChild(2).gameObject;
         if (!isIM && IsGrounded())
         {
             if (hit || IsNearSkill())
+            {
                 g.layer = 18;
+                swordhit.layer = 13;
+            }
             else
+            {
                 g.layer = 17;
+                swordhit.layer = 17;
+            }
         }
         else
+        {
             g.layer = 17;
+            swordhit.layer = 17;
+        }
     }
     void MurderMode()
     {

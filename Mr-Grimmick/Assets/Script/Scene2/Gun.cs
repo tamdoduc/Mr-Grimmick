@@ -73,7 +73,7 @@ public class Gun : MonoBehaviour
             if (HP > 0) 
             {
                 cloneEffectFLash = GameObject.Instantiate(effectPlash);
-                cloneEffectFLash.SetTimeMax(2);
+                cloneEffectFLash.SetTimeMax(0.5f);
                 cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
                 cloneEffectFLash.Active();
             }

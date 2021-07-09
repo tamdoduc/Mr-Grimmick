@@ -142,7 +142,8 @@ public class Boom : MonoBehaviour
     {
         if (Mathf.Abs(target.transform.position.x - transform.position.x) > resetRange 
             || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange 
-            || transform.position.y < groundLim)
+            || transform.position.y < groundLim
+            || target.transform.position.y < groundLim)
         {
             outRange = true;
         }
@@ -152,7 +153,8 @@ public class Boom : MonoBehaviour
             transform.position = new Vector3(posX, posY + resetRange * 2, 0);
             body.velocity = new Vector2(0, 0);
             if (Mathf.Abs(target.transform.position.x - posX) > camRange * 1.5f
-                || Mathf.Abs(target.transform.position.y - posY) > camRange * 1.5f)
+                || Mathf.Abs(target.transform.position.y - posY) > camRange * 1.5f
+                || target.transform.position.y < groundLim)
                 ResetBoom();
         }
     }

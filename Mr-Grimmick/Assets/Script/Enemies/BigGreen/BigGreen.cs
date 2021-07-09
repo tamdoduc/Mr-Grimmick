@@ -71,12 +71,16 @@ public class BigGreen : MonoBehaviour
                 if (isActive)
                 {
                     if (!isIM)
+                    {
                         CheckHit();
+                    }
                     else
                     {
                         imCount += Time.deltaTime;
                         if (imCount > imTime)
+                        {
                             isIM = false;
+                        }
                     }
                     SetState();
                     body.velocity = vel;
@@ -99,7 +103,7 @@ public class BigGreen : MonoBehaviour
                 if (cloneEffectFLash == null)
                 {
                     cloneEffectFLash = GameObject.Instantiate(effectPlash);
-                    cloneEffectFLash.SetTimeMax(1);
+                    cloneEffectFLash.SetTimeMax(0.5f);
                     cloneEffectFLash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
                     cloneEffectFLash.Active();
                 }
@@ -305,7 +309,7 @@ public class BigGreen : MonoBehaviour
     }
     bool SpecialJump()
     {
-        if (transform.position.x > leftLim)
+        if (transform.position.x > rightLim)
         {
             bounce = true;
             return true;
