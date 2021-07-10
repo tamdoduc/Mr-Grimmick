@@ -24,7 +24,6 @@ public class CheckTop : MonoBehaviour
         {
             if (player.gameObject.layer.ToString() == "16" && isBelowPlayer && player!=null)
             {
-                Debug.LogError("fffffffffffffffff");
                 Vector3 range = Temp.transform.position - posBefore;
                 player.transform.position += range;
                 Debug.Log("f");

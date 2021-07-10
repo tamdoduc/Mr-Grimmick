@@ -7,16 +7,18 @@ public class White : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D body;
+    [SerializeField] Collider2D colliderCheckEdge;
     [SerializeField] Collider2D colliderHead;
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] LayerMask playerLayer;
+    [SerializeField] LayerMask groundLayer;
     [SerializeField] CheckTop checkTop;
-    [SerializeField] float wakeRange, resetRange;
-    private bool isActive = false, faceRight = true, chaseMode = false, hurt = false;
+    [SerializeField] float wakeRange, resetRange, groundLim;
+    private bool isActive = false, faceRight = true, chaseMode = false, hurt = false, onHead = false;
     private float handleTime = 0, chaseCount = 0;
     private Vector2 vel = new Vector2(0, -1);
-    private const float MaxVelocityXRight = 5.5f, MaxVelocityXLeft = -5.5f, walkTime = 6f, imTime = 0.5f;
+    private const float MaxVelocityXRight = 5.5f, MaxVelocityXLeft = -5.5f, walkTime = 4f, imTime = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class White : MonoBehaviour
         if (isActive)
         {
             CheckHit();
+            if (IsGrounded())
+                vel.y = -8f;
             if (hurt)
             {
                 handleTime += Time.deltaTime;
@@ -41,6 +45,7 @@ public class White : MonoBehaviour
             }
             if (!IsColliderHead())
             {
+                onHead = false;
                 CheckOutRange();
                 if (chaseMode)
                 {
@@ -54,6 +59,14 @@ public class White : MonoBehaviour
                     {
                         chaseMode = true;
                     }
+                    if (!IsNotEdge())
+                    {
+                        faceRight = !faceRight;
+                        if (faceRight)
+                            transform.eulerAngles = new Vector3(0, 0, 0);
+                        else
+                            transform.eulerAngles = new Vector3(0, 180, 0);
+                    }
                     if (faceRight)
                         vel.x = 1;
                     else
@@ -62,12 +75,13 @@ public class White : MonoBehaviour
             }
             else
             {
+                if (!onHead)
+                    PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
                 if (vel.x > 0)
                     vel.x = Mathf.Max(0, vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.8f));
                 else
                     vel.x = Mathf.Min(0, vel.x += (Time.deltaTime * MaxVelocityXRight) / (0.8f));
             }
-            Debug.Log(vel.x);
             animator.SetFloat("Speed", Mathf.Abs(vel.x));
             body.velocity = vel;
         }
@@ -79,7 +93,8 @@ public class White : MonoBehaviour
         if (IsColliderSkill() && !hurt)
         {
             hurt = true;
-            handleTime = 0; 
+            handleTime = 0;
+            chaseCount = 0;
             if (faceRight)
                 body.AddForce(Vector2.left * 2f, ForceMode2D.Impulse);
             else
@@ -97,7 +112,8 @@ public class White : MonoBehaviour
     void CheckOutRange()
     {
         if (Mathf.Abs(target.transform.position.x - transform.position.x) > resetRange
-            || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange)
+            || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange
+            || target.transform.position.y < groundLim)
         {
             GameObject.Destroy(this.gameObject);
         }
@@ -152,6 +168,16 @@ public class White : MonoBehaviour
     bool IsColliderSkill()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
+        return hit2D.collider != null;
+    }
+    bool IsNotEdge()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckEdge.bounds.center, colliderCheckEdge.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return hit2D.collider != null;
+    }
+    bool IsGrounded()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return hit2D.collider != null;
     }
 }

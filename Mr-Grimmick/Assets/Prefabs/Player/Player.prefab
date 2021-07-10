@@ -253,7 +253,7 @@ MonoBehaviour:
   animator: {fileID: 8946205385286984419}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 33024
+    m_Bits: 256
   SkillLayer:
     serializedVersion: 2
     m_Bits: 2048
