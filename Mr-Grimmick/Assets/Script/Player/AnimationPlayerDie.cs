@@ -17,7 +17,6 @@ public class AnimationPlayerDie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(velocity);
         this.gameObject.transform.position += new Vector3(velocity.x* Time.deltaTime,velocity.y*Time.deltaTime,0);
     }
 }

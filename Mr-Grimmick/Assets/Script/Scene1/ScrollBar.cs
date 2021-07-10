@@ -20,7 +20,8 @@ public class ScrollBar : MonoBehaviour
         else direction = 1;
         
         for (int i = 0; i < currentCollisions.Count; i++) 
-        {
+        { 
+            if (currentCollisions[i].transform.position.y > this.gameObject.transform.position.y)
             currentCollisions[i].transform.position += new Vector3(Time.deltaTime * direction * force, 0, 0);
         }
     }

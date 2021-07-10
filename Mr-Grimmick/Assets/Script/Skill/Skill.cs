@@ -1,4 +1,5 @@
-﻿using System.Collections;
+  
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -66,11 +67,11 @@ public class Skill : SkillTemp
         Destroy(shadowSkill1.gameObject);
         Destroy(shadowSkill2.gameObject);
         Debug.LogWarning("asdasd");
-        
+
         selfDestruct = GameObject.Instantiate(selfDestruct);
         selfDestruct.transform.position = this.gameObject.transform.position;
         GameObject.Destroy(this.gameObject);
-    }    
+    }
     void SetShadow()
     {
         for (int i = 2; i > 0; i--)
@@ -94,44 +95,49 @@ public class Skill : SkillTemp
 
         float decrease = 0.8f;
 
+        
         Vector3 vel = velocity;
-        if (collisionD)
         {
-            if (velocity.y < 0)
+            if (collisionD)
             {
-                vel.y = decrease * Mathf.Abs(velocity.y);
-                countCollision++;
-                this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
+                if (velocity.y < 0)
+                {
+                    vel.y = decrease * Mathf.Abs(velocity.y);
+                    countCollision++;
+                    this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
+                }
+            }
+            else if (collisionU)
+            {
+                if (velocity.y > 0)
+                {
+                    vel.y = decrease * -Mathf.Abs(velocity.y);
+                    countCollision++;
+                }
             }
         }
-        else if (collisionU)
+      //  if (Mathf.Abs(vel.y) < Mathf.Abs(vel.x) || Mathf.Abs(vel.x) < 1f)
         {
-            if (velocity.y > 0)
+            if (collisionL)
             {
-                vel.y = decrease * -Mathf.Abs(velocity.y);
-                countCollision++;
+                if (velocity.x < 0)
+                {
+                    vel.x = decrease * Mathf.Abs(velocity.x);
+                    countCollision++;
+                }
             }
-        }
-    //    else
-        if (collisionL)
-        {
-            if (velocity.x < 0)
+            else if (collisionR)
             {
-                vel.x = decrease * Mathf.Abs(velocity.x);
-                countCollision++;
-            }
-        }
-        else if (collisionR)
-        {
-            if (velocity.x > 0)
-            {
-                vel.x = decrease * -Mathf.Abs(velocity.x);
-                countCollision++;
+                if (velocity.x > 0)
+                {
+                    vel.x = decrease * -Mathf.Abs(velocity.x);
+                    countCollision++;
+                }
             }
         }
 
         velocity = vel;
-        velocity.y -= Time.deltaTime *35;
+        velocity.y -= Time.deltaTime * 35;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

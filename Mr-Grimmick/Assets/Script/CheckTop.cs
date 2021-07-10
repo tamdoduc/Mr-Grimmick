@@ -17,12 +17,14 @@ public class CheckTop : MonoBehaviour
         posBefore = Temp.gameObject.transform.position;
         isActive = true;
     }
-    private void FixedUpdate()
+    
+    private void Update()
     {
-        if (isActive)
+        if ( isActive)
         {
-            if (isBelowPlayer && player!=null)
+            if (player.gameObject.layer.ToString() == "16" && isBelowPlayer && player!=null)
             {
+                Debug.LogError("fffffffffffffffff");
                 Vector3 range = Temp.transform.position - posBefore;
                 player.transform.position += range;
                 Debug.Log("f");
@@ -36,8 +38,8 @@ public class CheckTop : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player") 
-            //&& collision.gameObject.transform.position.y >= this.gameObject.transform.position.y + 0.1f)
+        if (collision.gameObject.name == "Player"
+            && collision.gameObject.transform.position.y >= this.gameObject.transform.position.y )
         {
             isBelowPlayer = true;
             Debug.Log("on top");

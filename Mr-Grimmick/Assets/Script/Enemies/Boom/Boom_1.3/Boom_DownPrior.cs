@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,7 +64,7 @@ public class Boom_DownPrior : MonoBehaviour
                 }
                 break;
             default:
-                if(target.transform.position.y < groundLim || target.transform.position.y > topLim)
+                if (target.transform.position.y < groundLim || target.transform.position.y > topLim)
                 {
                     ResetBoom();
                     return;

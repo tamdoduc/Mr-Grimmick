@@ -144,13 +144,13 @@ public class Boom_Electric : MonoBehaviour
                     CheckRange();
                 break;
         }
-       
+
     }
     void CheckHit()
     {
         if (IsColliderSkill() && isCarry)
         {
-            healPoint--;  
+            healPoint--;
         }
     }
     void DieState()
@@ -220,7 +220,7 @@ public class Boom_Electric : MonoBehaviour
         {
             if (vel.x < MaxVelocityXRight)
             {
-                vel.x += (Time.deltaTime * MaxVelocityXRight) / (0.5f); 
+                vel.x += (Time.deltaTime * MaxVelocityXRight) / (0.5f);
             }
             else
             if (vel.x > MaxVelocityXRight)
@@ -233,7 +233,7 @@ public class Boom_Electric : MonoBehaviour
         {
             if (vel.x > MaxVelocityXLeft)
             {
-                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);     
+                vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.5f);
             }
             else
            if (vel.x < MaxVelocityXLeft)

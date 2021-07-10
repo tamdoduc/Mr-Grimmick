@@ -25,7 +25,7 @@ public class EffectFlash : MonoBehaviour
                 sprite.enabled = true;
                 GameObject.Destroy(this.gameObject);
             }
-            if (timeLoop >= 0.05f)
+            if (timeLoop >= 0.1f)
             {
                 timeLoop = 0;
                 sprite.enabled = !sprite.enabled;

@@ -267,8 +267,8 @@ MonoBehaviour:
   isFainting: 0
   effectPlash: {fileID: 1110899992657816096, guid: 44f64ecf6edf504488cf40b89094f2e6, type: 3}
   eventPlayerDie: {fileID: 6057661117125279073, guid: 873415bc0eb326048969a35910cde5c2, type: 3}
-  Gate: {fileID: 0}
-  PosGate: {x: 0, y: 0, z: 0}
+  Gate: {fileID: 6869838295550178229, guid: 977ffe537f380224c87ddce1737b416e, type: 3}
+  PosGate: {x: 2, y: -15, z: 0}
 --- !u!58 &8946205385286984417
 CircleCollider2D:
   m_ObjectHideFlags: 0

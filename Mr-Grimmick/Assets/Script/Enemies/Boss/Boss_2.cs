@@ -146,8 +146,11 @@ public class Boss_2 : MonoBehaviour
             }
         }
     }
+    [SerializeField] UnlockStage unlock;
     void DieState()
     {
+        unlock =  GameObject.Instantiate(unlock);
+        unlock.SetStage(2);
         animator.SetBool("Dead", true);
         gameObject.layer = 17;
         GameObject g = gameObject.transform.GetChild(1).gameObject;

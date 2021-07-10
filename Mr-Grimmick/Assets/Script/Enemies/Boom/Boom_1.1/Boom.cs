@@ -1,4 +1,5 @@
-﻿using System.Collections;
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +36,7 @@ public class Boom : MonoBehaviour
         posY = transform.position.y;
         checkTop.SetActive(true);
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -112,16 +113,16 @@ public class Boom : MonoBehaviour
         colliderHead.isTrigger = true;
         colliderBody.isTrigger = true;
         if (handleTime > dieTime)
-        if (dieVelocity < 0)
-        {
-            body.velocity = new Vector2(dieVelocity, 0);
-            body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
-        }
-        else
-        {
-            body.velocity = new Vector2(dieVelocity, 0);
-            body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
-        }
+            if (dieVelocity < 0)
+            {
+                body.velocity = new Vector2(dieVelocity, 0);
+                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+            }
+            else
+            {
+                body.velocity = new Vector2(dieVelocity, 0);
+                body.AddForce(Vector2.down * 10f, ForceMode2D.Impulse);
+            }
         if (transform.position.y < groundLim)
             GameObject.Destroy(this.gameObject);
     }
@@ -140,8 +141,8 @@ public class Boom : MonoBehaviour
     }
     void CheckOutRange()
     {
-        if (Mathf.Abs(target.transform.position.x - transform.position.x) > resetRange 
-            || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange 
+        if (Mathf.Abs(target.transform.position.x - transform.position.x) > resetRange
+            || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange
             || transform.position.y < groundLim
             || target.transform.position.y < groundLim)
         {
@@ -243,7 +244,7 @@ public class Boom : MonoBehaviour
                 CheckJump();
         }
         CheckMove();
-        if (!isJump) 
+        if (!isJump)
             FallDown();
         if (detectTime < resetTime)
         {

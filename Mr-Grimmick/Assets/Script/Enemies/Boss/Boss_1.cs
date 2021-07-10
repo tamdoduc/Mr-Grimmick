@@ -134,8 +134,12 @@ public class Boss_1 : MonoBehaviour
             status = 4;  
         }
     }
+    [SerializeField] UnlockStage unlock;
+
     void DieState()
     {
+        unlock = GameObject.Instantiate(unlock);
+        unlock.SetStage(1);
         GameObject g = gameObject.transform.GetChild(1).gameObject;
         g.layer = 8;
         transform.eulerAngles = new Vector3(180, 0, 0);

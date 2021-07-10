@@ -28,7 +28,7 @@ public class MachineGun : MonoBehaviour
         timeLoop += Time.deltaTime;
         if (timeLoop>1.2)
         {
-            int r = Random.Range(0, 2);
+            int r = Random.Range(0, 20);
             if (r > 0)
             {
                 timeLoop = 0;

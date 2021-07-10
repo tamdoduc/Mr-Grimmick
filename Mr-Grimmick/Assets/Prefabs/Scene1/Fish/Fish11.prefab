@@ -120,4 +120,4 @@ MonoBehaviour:
   limLeft: 26.5
   limRight: 55.5
   minSpeed: 1
-  maxSpeed: 1
+  maxSpeed: 2

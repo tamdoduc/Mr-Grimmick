@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6716328634715135757}
-  direction_isLeft: 0
-  limLeft: 0
-  limRight: 0
-  minSpeed: 0
-  maxSpeed: 0
+  direction_isLeft: 1
+  limLeft: 26.5
+  limRight: 55.5
+  minSpeed: 1
+  maxSpeed: 2
