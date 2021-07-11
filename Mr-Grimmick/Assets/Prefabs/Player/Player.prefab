@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1638833251}
   - component: {fileID: 1638833252}
   - component: {fileID: 1638833254}
-  - component: {fileID: 781807162}
+  - component: {fileID: 262623586}
   m_Layer: 16
   m_Name: CheckEnemy
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638833250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.036, y: -0.073, z: 0}
+  m_LocalScale: {x: 0.525, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8946205385286984445}
   m_RootOrder: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8946205385286984416}
---- !u!61 &781807162
-BoxCollider2D:
+--- !u!58 &262623586
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,19 +110,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007277161, y: -0.07806659}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.07949741, y: 0.16950786}
   serializedVersion: 2
-  m_Size: {x: 0.8592883, y: 0.92861176}
-  m_EdgeRadius: 0
+  m_Radius: 0.51171243
 --- !u!1 &8946205385286984423
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +132,7 @@ GameObject:
   - component: {fileID: 1527511969}
   m_Layer: 16
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: MovingByPipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +243,10 @@ MonoBehaviour:
   animator: {fileID: 8946205385286984419}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4227328
+  HeadEnemyLayer:
+    serializedVersion: 2
+    m_Bits: 32768
   SkillLayer:
     serializedVersion: 2
     m_Bits: 2048

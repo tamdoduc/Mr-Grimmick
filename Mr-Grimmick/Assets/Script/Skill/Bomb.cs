@@ -40,6 +40,7 @@ public class Bomb : SkillTemp
     {
         isExist = false;
         animator.SetBool("IsActive", true);
+        Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,8 +30,11 @@ public class HUBManage : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
+        PlayerPrefs.SetInt("score",0);
+        PlayerPrefs.SetInt("maxHp",2);
+        PlayerPrefs.SetInt("currentHp",2);
         PlayerPrefs.SetInt("countItem", 0);
-        for (int i=0;i<3;i++)
+        for (int i = 0; i < 3; i++)
         {
             stateItem[i] = 0;
             PlayerPrefs.SetInt("item" + i.ToString(), 0);
@@ -39,11 +42,19 @@ public class HUBManage : MonoBehaviour
     }
     void SetAnimationScore()
     {
-        int score = PlayerPrefs.GetInt("score");
+
+        int score2 = PlayerPrefs.GetInt("score");
+        Debug.LogError(score2);
+        Debug.LogError(score);
+        if (score2 - score >= 100)
+            score += 100;
+        else
+            score = score2;
+        score2 = score;
         for (int i = 7; i >= 0; i--)
         {
-            aniScores[i].SetInteger("Number", score % 10);
-            score = score / 10;
+            aniScores[i].SetInteger("Number", score2 % 10);
+            score2 = score2 / 10;
         }
     }
     void SetAnimationRes()
@@ -55,12 +66,18 @@ public class HUBManage : MonoBehaviour
             res = res / 10;
         }
     }
+    float time = 0;
     void Update()
     {
-        if (score != PlayerPrefs.GetInt("score"))
+        time += Time.deltaTime;
+        if (time > 0.1f)
         {
-            score = PlayerPrefs.GetInt("score");
-            SetAnimationScore();
+            if (score != PlayerPrefs.GetInt("score"))
+            {
+                time = 0;
+                //score = PlayerPrefs.GetInt("score");
+                SetAnimationScore();
+            }
         }
         if (res != PlayerPrefs.GetInt("res"))
         {
@@ -94,8 +111,13 @@ public class HUBManage : MonoBehaviour
             PlayerPrefs.SetInt("IDSkill", 0);
         else
             PlayerPrefs.SetInt("IDSkill", (stateItem[0] - (stateItem[0] - 1) / 3 * 3) - 1);
-        if (PlayerPrefs.GetInt("countItem")>0 && stateItem[0] == 0)
+        if (PlayerPrefs.GetInt("countItem") > 0 && stateItem[0] == 0)
             UsedItem();
+        if (Input.GetKeyDown(KeyCode.V) && PlayerPrefs.GetInt("countItem") > 0 && stateItem[0] == 4)
+        {
+            PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("maxHp"));
+            UsedItem();
+        }
     }
     void CheckAnimationItem()
     {
@@ -106,9 +128,9 @@ public class HUBManage : MonoBehaviour
         if (stateItem[2] > 3)
             stateItem[2] -= (stateItem[2] - 1) / 3 * 3;
 
-        for (int i=0;i<3;i++)
+        for (int i = 0; i < 3; i++)
         {
-            PlayerPrefs.SetInt("item"+i.ToString(), stateItem[i]);
+            PlayerPrefs.SetInt("item" + i.ToString(), stateItem[i]);
             aniItem[i].SetInteger("ID", stateItem[i]);
         }
     }

@@ -27,6 +27,7 @@ public class Skill : SkillTemp
 
     [SerializeField] SelfDestruct selfDestruct;
 
+    bool isActive=true;
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -42,9 +43,10 @@ public class Skill : SkillTemp
     // Update is called once per frame
     void Update()
     {
+        if (!isActive)
+            return;
         timeExist += Time.deltaTime;
-        if (!isShooted)
-            this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
+        if (!isShooted)           this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
         timeChangeShadowPos += Time.deltaTime;
         if (timeChangeShadowPos >= 0.025f)
         {
@@ -141,6 +143,10 @@ public class Skill : SkillTemp
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer.ToString() == "23") //pipe
+        {
+            isActive = false;
+        }
         if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
         {
             SelfDestruct();
@@ -165,4 +171,5 @@ public class Skill : SkillTemp
             return true;
         return false;
     }
+
 }

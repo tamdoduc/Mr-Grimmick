@@ -9,9 +9,10 @@ public class Water : MonoBehaviour
     [SerializeField] Vector3 pos;
 
     GameObject clone;
+    Player player;
     void Start()
     {
-        
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,13 +22,14 @@ public class Water : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer.ToString() != "8" )
+        if (collision.gameObject.layer.ToString() != "8")
         {
             clone = GameObject.Instantiate(animationDestruct);
             pos.x = collision.gameObject.transform.position.x;
             clone.transform.position = pos;
             if (collision.gameObject.name != "Player")
                 GameObject.Destroy(collision.gameObject);
+            else player.FallDownWater();
         }
     }
 }

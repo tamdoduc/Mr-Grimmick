@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
 
     [SerializeField] LayerMask GroundLayer;
+    [SerializeField] LayerMask HeadEnemyLayer;
     [SerializeField] LayerMask SkillLayer;
 
     [SerializeField] bool IsPressJump;
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
             Gate = GameObject.Instantiate(Gate);
             Gate.transform.position = this.gameObject.transform.position + new Vector3(0, 0.5f, 0); 
         }
-       // SetPosStart();
+       //  SetPosStart();
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -166,7 +167,7 @@ public class Player : MonoBehaviour
     {
         if (isHoldingSkill)
             timeHoldSkill += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null)
+        if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null &&PlayerPrefs.GetInt("item0")!=4)
         {
             if (cloneAnimationSkill == null)
             {
@@ -200,7 +201,12 @@ public class Player : MonoBehaviour
                     PlayerPrefs.SetInt("item0", PlayerPrefs.GetInt("item0") + 3);
                     cloneSkill = GameObject.Instantiate(energyBall);
                     break;
-            }
+        }
+        cloneSkill.gameObject.layer = 19;
+    }
+    public bool FollowAble()
+    {
+        return this.gameObject.layer == 16;
     }
     void Shoot(int typeSkill)
     {
@@ -208,11 +214,13 @@ public class Player : MonoBehaviour
         timeHoldSkill = 0;
         if (cloneAnimationSkill != null)
         {
+            
             GameObject.Destroy(cloneAnimationSkill.gameObject);
         }
         if (cloneSkill != null)
         {
             int directory;
+            cloneSkill.gameObject.layer = 11;
             if (this.gameObject.transform.rotation.y != 0)
                 directory = -1;
             else
@@ -339,12 +347,14 @@ public class Player : MonoBehaviour
     bool IsGrounded()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, GroundLayer);
-        return hit2D.collider != null;
+        RaycastHit2D hit2D1 = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.05f, HeadEnemyLayer);
+        return hit2D.collider != null || hit2D1.collider != null;
     }
     bool IsNearGrounded()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.3f, GroundLayer);
-        return hit2D.collider != null;
+        RaycastHit2D hit2D1 = Physics2D.BoxCast(colliderCheckGround.bounds.center, colliderCheckGround.bounds.size, 0, Vector2.down, 0.3f, HeadEnemyLayer);
+        return hit2D.collider != null || hit2D1.collider != null;
     }
     bool IsOnSkillLayer()
     {
@@ -410,6 +420,35 @@ public class Player : MonoBehaviour
         GameObject.Instantiate(eventPlayerDie);
         GameObject.Destroy(this.gameObject);
     }
+    public void FallDownWater()
+    {
+        timeHoldSkill = 0;
+        isHoldingSkill = false;
+        if (cloneAnimationSkill != null)
+        {
+            GameObject.Destroy(cloneAnimationSkill.gameObject);
+        }
+        if (cloneSkill != null)
+            cloneSkill.SelfDestruct();
+        Res--;
+        Res = Mathf.Max(Res, -1);
+        PlayerPrefs.SetInt("res", Res);
+        GameObject.Destroy(this.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "23") //pipe
+        {
+            if (cloneAnimationSkill != null)
+                GameObject.Destroy(cloneAnimationSkill);
+            if (cloneSkill != null)
+                cloneSkill.SelfDestruct();
+            timeHoldSkill = 0;
+            isHoldingSkill = false;
+            isActive = false;
+        }
+    }
+
 }
 
 
