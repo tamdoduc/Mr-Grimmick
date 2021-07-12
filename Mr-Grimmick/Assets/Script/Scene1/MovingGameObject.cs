@@ -9,13 +9,17 @@ public class MovingGameObject : MonoBehaviour
     GameObject Object;
     bool active = false;
     int id=0;
+    Player player;
+    Pipe pipe;
     void Start()
     {
-        
+        player = GameObject.Find("Player").GetComponent<Player>();
+        Debug.Log(player.gameObject.name);
     }
-    public void SetGameObject(GameObject O)
+    public void SetGameObject(GameObject O,Pipe p)
     {
         this.Object = O;
+        pipe = p;
     }
     public void Active()
     {
@@ -33,13 +37,7 @@ public class MovingGameObject : MonoBehaviour
         {
             Debug.Log(id);
             Vector3 temp = Object.gameObject.transform.position;
-            Debug.Log(temp);
-            if (temp.y == listPos[id].y && temp.x == listPos[id].x)
-            {
-                id++;
-                return;
-               
-            }
+            Debug.Log(listPos[id]);
             float speed = 5;
             if (temp.x < listPos[id].x)
                 temp.x = Mathf.Min(listPos[id].x, temp.x + Time.deltaTime * speed);
@@ -55,6 +53,17 @@ public class MovingGameObject : MonoBehaviour
 
 
             Object.gameObject.transform.position = temp;
+
+            if (temp.y == listPos[id].y && temp.x == listPos[id].x)
+            {
+                id++;
+                if (id == listPos.Count)
+                {
+                    pipe.ResetObject(Object);
+                    GameObject.Destroy(this.gameObject);
+                }
+                return;
+            }
         } 
     }
 }

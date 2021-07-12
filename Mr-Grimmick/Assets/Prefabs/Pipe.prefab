@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1624975442142488474}
   - component: {fileID: 1624975442142488475}
   - component: {fileID: 1624975442142488468}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Gate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624975442142488472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -1.04, z: 0}
+  m_LocalPosition: {x: -0.21, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624975442626685659}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1624975442626685659}
   - component: {fileID: 1624975442626685658}
   - component: {fileID: 1624975442626685652}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,9 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos:
-  - {x: 55.5, y: -17.56739, z: 0}
-  - {x: 59.5, y: -17.56739, z: 0}
-  - {x: 59.5, y: -20.8, z: 0}
+  - {x: 7.7, y: 1, z: 0}
+  - {x: 7.7, y: 4.8, z: 0}
   isActived: 0
   isUp: 0
   indexPos: 0
@@ -241,7 +240,7 @@ GameObject:
   - component: {fileID: 1624975443508341498}
   - component: {fileID: 1624975443508341499}
   - component: {fileID: 1624975443508341492}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Gate2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624975443508341496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.998, y: -3.06, z: 0}
+  m_LocalPosition: {x: -0.15, y: 2.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624975442626685659}

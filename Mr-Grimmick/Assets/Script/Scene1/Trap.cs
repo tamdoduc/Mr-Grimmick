@@ -21,7 +21,7 @@ public class Trap : MonoBehaviour
     {
         if (isActived) 
         {
-            trap.transform.position += new Vector3(0,- Time.deltaTime *10, 0);
+            trap.transform.position += new Vector3(0,- Time.deltaTime *5, 0);
         }
     }
     public void Active()

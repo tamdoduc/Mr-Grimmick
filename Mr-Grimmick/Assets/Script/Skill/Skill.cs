@@ -157,6 +157,13 @@ public class Skill : SkillTemp
             Debug.Log("Bossssss");
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "23") //pipe
+        {
+            SelfDestruct();
+        }
+    }
     bool IsDestroySkill()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0, DestroySkillLayer);

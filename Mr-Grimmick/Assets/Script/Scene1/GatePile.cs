@@ -13,6 +13,7 @@ public class GatePile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag.ToString() == "MovingByPipe")
         {
             pipe.Active(collision.gameObject, isUp);

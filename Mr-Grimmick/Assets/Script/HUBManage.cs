@@ -113,8 +113,11 @@ public class HUBManage : MonoBehaviour
             UsedItem();
         if (Input.GetKeyDown(KeyCode.V) && PlayerPrefs.GetInt("countItem") > 0 && stateItem[0] == 4)
         {
-            PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("maxHp"));
-            UsedItem();
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("maxHp"));
+                UsedItem();
+            }
         }
     }
     void CheckAnimationItem()

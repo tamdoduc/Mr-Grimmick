@@ -822,11 +822,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1624975442142488473, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 1624975442142488473, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 1624975442626685652, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
       propertyPath: player
@@ -3089,7 +3089,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &605481993
@@ -4037,7 +4037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: NewPosInNextScene.y
-      value: 6.7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565385, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: m_Name
@@ -4914,7 +4914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: NewPosInNextScene.y
-      value: 6.7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565385, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: m_Name
@@ -5720,7 +5720,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1120129512}
-  m_Layer: 0
+  - component: {fileID: 1120129513}
+  - component: {fileID: 1120129514}
+  - component: {fileID: 1120129515}
+  m_Layer: 23
   m_Name: LayerUp_Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5760,6 +5763,101 @@ Transform:
   m_Father: {fileID: 1859305477}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1120129513
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120129511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.6468782, y: 0.38769913}
+      - {x: -4.477065, y: 0.4145849}
+      - {x: -4.451614, y: -0.53453815}
+      - {x: -2.4382591, y: -0.55669403}
+      - {x: -2.410376, y: -1.3368623}
+      - {x: -1.5746412, y: -1.3365154}
+      - {x: -1.5403748, y: -0.5144225}
+--- !u!60 &1120129514
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120129511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.529604, y: 0.31260777}
+      - {x: 2.5408964, y: -0.4883587}
+      - {x: 2.546722, y: -1.468913}
+      - {x: 3.5615807, y: -1.4485569}
+      - {x: 3.52775, y: -0.60712624}
+      - {x: 5.482018, y: -0.5065639}
+      - {x: 5.4878454, y: 0.4190001}
+--- !u!60 &1120129515
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120129511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -78.45238, y: 15.437377}
+      - {x: -78.4547, y: 6.501152}
+      - {x: -77.53021, y: 6.4741993}
+      - {x: -77.46003, y: 14.461629}
+      - {x: -75.524994, y: 14.516064}
+      - {x: -75.469345, y: 15.426542}
 --- !u!1001 &1186531050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5845,6 +5943,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2143581878}
+    - target: {fileID: 1624975442626685652, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
+      propertyPath: pos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1624975442626685652, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
       propertyPath: pos.Array.data[0].x
       value: 9.4
@@ -6362,11 +6464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.4
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.52
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7074,6 +7176,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2143581878}
+    - target: {fileID: 1624975442626685652, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
+      propertyPath: pos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1624975442626685652, guid: 1474266ac09ecc14cb6b4e5bfe48c366, type: 3}
       propertyPath: pos.Array.data[0].x
       value: 20.5

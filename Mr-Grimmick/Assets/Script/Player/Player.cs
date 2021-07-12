@@ -56,6 +56,14 @@ public class Player : MonoBehaviour
         animator.SetBool("IsJumping", false);
         animator.SetBool("IsFainting", false);
         body.velocity = new Vector2(0, 0);
+        vel = new Vector2(0, 0);
+        body.velocity = new Vector2(0, 0);
+        if (cloneAnimationSkill != null)
+            GameObject.Destroy(cloneAnimationSkill);
+        if (cloneSkill != null)
+            cloneSkill.SelfDestruct();
+        timeHoldSkill = 0;
+        isHoldingSkill = false;
     }
     void SetPosStart()
     {
@@ -88,7 +96,7 @@ public class Player : MonoBehaviour
             Gate = GameObject.Instantiate(Gate);
             Gate.transform.position = this.gameObject.transform.position + new Vector3(0, 0.5f, 0); 
         }
-       //  SetPosStart();
+        SetPosStart();
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -163,12 +171,18 @@ public class Player : MonoBehaviour
     {
         return isHoldingSkill;
     }
+    int typeSkill;
     void CheckSkill()
     {
         if (isHoldingSkill)
             timeHoldSkill += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null &&PlayerPrefs.GetInt("item0")!=4)
+        if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null )
         {
+            if (Input.GetKey(KeyCode.UpArrow) && PlayerPrefs.GetInt("item0") == 4)
+                return;
+            typeSkill = PlayerPrefs.GetInt("IDSkill");
+            if (!Input.GetKey(KeyCode.UpArrow))
+                typeSkill = 0;
             if (cloneAnimationSkill == null)
             {
                 cloneAnimationSkill = GameObject.Instantiate(animationSkill);
@@ -177,11 +191,11 @@ public class Player : MonoBehaviour
         }
         if (cloneSkill == null && timeHoldSkill >= 1f)
         {
-            InstanceSkill(PlayerPrefs.GetInt("IDSkill"));
+            InstanceSkill(typeSkill);
         }
         if (Input.GetKeyUp(KeyCode.V) && isHoldingSkill == true)
         {
-            Shoot(PlayerPrefs.GetInt("IDSkill"));
+            Shoot(typeSkill);
         }
     }
     void InstanceSkill(int typeSKill)
@@ -434,19 +448,6 @@ public class Player : MonoBehaviour
         Res = Mathf.Max(Res, -1);
         PlayerPrefs.SetInt("res", Res);
         GameObject.Destroy(this.gameObject);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer.ToString() == "23") //pipe
-        {
-            if (cloneAnimationSkill != null)
-                GameObject.Destroy(cloneAnimationSkill);
-            if (cloneSkill != null)
-                cloneSkill.SelfDestruct();
-            timeHoldSkill = 0;
-            isHoldingSkill = false;
-            isActive = false;
-        }
     }
 
 }

@@ -34,13 +34,15 @@ public class Pipe : MonoBehaviour
             for (int i=1;i<pos.Length;i++)
             {
                 clone.AddPos(pos[i]);
+                Debug.Log("Uppppppppppppppp" + pos[i]);
             }
         else
-            for (int i = pos.Length-1; i >=0; i--)
+            for (int i = pos.Length-2; i >=0; i--)
             {
                 clone.AddPos(pos[i]);
+                Debug.Log("Downnnnnnnnnnnnnnnnnnnnnn" + pos[i]);
             }
-        clone.SetGameObject(Object);
+        clone.SetGameObject(Object,this);
         gameObjects.Add(Object);
         Debug.Log("StartMoving");
         clone.Active();
@@ -51,6 +53,7 @@ public class Pipe : MonoBehaviour
             if (g!=null && g == @object)
             {
                 gameObjects.Remove(g);
+                Debug.Log("Remove: " + g.name);
             }
     }
     bool CheckObject(GameObject @object)
