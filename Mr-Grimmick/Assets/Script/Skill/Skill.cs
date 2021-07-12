@@ -18,6 +18,9 @@ public class Skill : SkillTemp
     [SerializeField] LayerMask GroundLayer;
     [SerializeField] LayerMask DestroySkillLayer;
 
+    [SerializeField] AudioSource bounce;
+    AudioSource cloneAudio;
+
     Vector3[] positionShadow = new Vector3[3];
 
     [SerializeField] float timeExist;
@@ -107,6 +110,11 @@ public class Skill : SkillTemp
                     vel.y = decrease * Mathf.Abs(velocity.y);
                     countCollision++;
                     this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
+                    if (cloneAudio == null)
+                    {
+                        cloneAudio = AudioSource.Instantiate(bounce);
+                        Destroy(cloneAudio.gameObject, 1);
+                    }
                 }
             }
             else if (collisionU)
@@ -115,6 +123,8 @@ public class Skill : SkillTemp
                 {
                     vel.y = decrease * -Mathf.Abs(velocity.y);
                     countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
                 }
             }
         }
@@ -126,6 +136,8 @@ public class Skill : SkillTemp
                 {
                     vel.x = decrease * Mathf.Abs(velocity.x);
                     countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
                 }
             }
             else if (collisionR)
@@ -134,6 +146,8 @@ public class Skill : SkillTemp
                 {
                     vel.x = decrease * -Mathf.Abs(velocity.x);
                     countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
                 }
             }
         }

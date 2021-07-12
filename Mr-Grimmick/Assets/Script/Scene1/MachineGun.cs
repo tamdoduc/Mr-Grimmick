@@ -16,10 +16,16 @@ public class MachineGun : MonoBehaviour
     [SerializeField] GameObject itemBom;
     GameObject cloneitem;
 
+    [SerializeField] AudioSource audio;
+    AudioSource clone;
+
+    Camera camera;
+
     // Start is called before the first frame update
     void Start()
     {
-        timeLoop = 0;   
+        timeLoop = 0;
+        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -28,6 +34,12 @@ public class MachineGun : MonoBehaviour
         timeLoop += Time.deltaTime;
         if (timeLoop>2)
         {
+            if (this.gameObject.transform.position.x > camera.transform.position.x - 7 && this.gameObject.transform.position.x < camera.transform.position.x + 7)
+                if (this.gameObject.transform.position.x > camera.transform.position.y - 7 && this.gameObject.transform.position.x < camera.transform.position.y + 7)
+                {
+                    clone = AudioSource.Instantiate(audio);
+                    Destroy(clone.gameObject, 1);
+                }
             int r = Random.Range(0, 20);
             if (r > 0)
             {

@@ -19,10 +19,14 @@ public class Treasure : MonoBehaviour
     {
         
     }
+    [SerializeField] AudioSource audio;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
+            audio = AudioSource.Instantiate(audio);
+            Destroy(audio, 10);
             PlayerPrefs.SetInt("treasure" + name,1);
             PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + score);
             GameObject.Destroy(this.gameObject);

@@ -343,6 +343,7 @@ MonoBehaviour:
   DestroySkillLayer:
     serializedVersion: 2
     m_Bits: 262144
+  bounce: {fileID: 8462393699398504096, guid: 472b4950c4e4c2a40b9606ca87ae27c4, type: 3}
   timeExist: 0
   timeChangeShadowPos: 0
   countCollision: 0

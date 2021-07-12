@@ -18,7 +18,6 @@ public class CheckPipe : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.layer.ToString() == "23")
         {
             player.SetActive(false);
@@ -27,7 +26,6 @@ public class CheckPipe : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.layer.ToString() == "23")
         {
             player.SetActive(true);

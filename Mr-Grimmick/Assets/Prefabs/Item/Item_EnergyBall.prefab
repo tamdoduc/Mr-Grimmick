@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  selfDestruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
+  audio: {fileID: 1474335889774117344, guid: 353cee6670f756b45ac1b6f40d4fc538, type: 3}
 --- !u!50 &1984293789964047393
 Rigidbody2D:
   serializedVersion: 4

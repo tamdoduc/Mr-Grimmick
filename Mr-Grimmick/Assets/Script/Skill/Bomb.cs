@@ -27,7 +27,7 @@ public class Bomb : SkillTemp
                 velocity.y -= Time.deltaTime * 30;
                 body.velocity = velocity;
                 timeShooted += Time.deltaTime;
-                if (timeShooted >= 2f ||Eneemy())
+                if (timeShooted >= 2f )
                     SelfDestruct();
             }
         } else
@@ -37,22 +37,21 @@ public class Bomb : SkillTemp
                 GameObject.Destroy(this.gameObject);
         }
     }
-    bool Eneemy()
-    {
-        RaycastHit2D hit2D = Physics2D.BoxCast(boxBody.bounds.center, boxBody.bounds.size, 0, Vector2.down, 0.05f, layerEnemy);
-        return hit2D.collider != null ;
-    }
+    [SerializeField] AudioSource audio;
+    
     override public void SelfDestruct()
     {
         isExist = false;
         animator.SetBool("IsActive", true);
         Debug.Log("animation");
         this.gameObject.GetComponent<Rigidbody2D>().Sleep();
+        audio = AudioSource.Instantiate(audio);
+        Destroy(audio.gameObject, 1f);
       //  Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
+        if (collision.gameObject.layer.ToString() == "12" || collision.gameObject.layer.ToString() == "13" || collision.gameObject.layer.ToString() == "14") //Thorn Trap
         {
             SelfDestruct();
         }

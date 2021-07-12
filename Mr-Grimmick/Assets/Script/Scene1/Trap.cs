@@ -7,7 +7,7 @@ public class Trap : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] GameObject trap;
-    bool isActived ;
+    bool isActived;
 
     [SerializeField] SelfDestruct selfDestruct;
     // Start is called before the first frame update
@@ -19,9 +19,9 @@ public class Trap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isActived) 
+        if (isActived)
         {
-            trap.transform.position += new Vector3(0,- Time.deltaTime *5, 0);
+            trap.transform.position += new Vector3(0, -Time.deltaTime * 5, 0);
         }
     }
     public void Active()
@@ -31,11 +31,12 @@ public class Trap : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer.ToString() =="8")
+        Debug.LogError("ffffffffffffffffffffffffffff" + collision.gameObject.name);
+        if (collision.gameObject.layer.ToString() == "8" || collision.gameObject.name == "EnergyBall(Clone)" || collision.gameObject.name == "Bomb(Clone)")
         {
             selfDestruct = GameObject.Instantiate(selfDestruct);
             selfDestruct.transform.position = this.gameObject.transform.position;
             GameObject.Destroy(trap.gameObject);
-        }
+        } 
     }
 }

@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
     int Res;
     [SerializeField] EventPlayerDie eventPlayerDie;
 
+    [SerializeField] AudioSource Jump;
+    [SerializeField] AudioSource HoldSkill;
+    [SerializeField] AudioSource ShootSkill,EnergyBall,Bomb;
+    AudioSource cloneAudio;
 
     public void SetActive(bool active)
     {
@@ -96,7 +100,7 @@ public class Player : MonoBehaviour
             Gate = GameObject.Instantiate(Gate);
             Gate.transform.position = this.gameObject.transform.position + new Vector3(0, 0.5f, 0); 
         }
-        SetPosStart();
+        //SetPosStart();
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -178,6 +182,8 @@ public class Player : MonoBehaviour
             timeHoldSkill += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.V) && !IsCollisionAreaSkill() && !isHoldingSkill && cloneSkill == null )
         {
+            cloneAudio = AudioSource.Instantiate(HoldSkill);
+            Destroy(cloneAudio.gameObject, 5);
             if (Input.GetKey(KeyCode.UpArrow) && PlayerPrefs.GetInt("item0") == 4)
                 return;
             typeSkill = PlayerPrefs.GetInt("IDSkill");
@@ -242,12 +248,16 @@ public class Player : MonoBehaviour
             switch (typeSkill)
             {
                 case 0:
+                    cloneAudio = AudioSource.Instantiate(ShootSkill);
+                    Destroy(cloneAudio.gameObject, 1);
                     if (IsCollisionAreaSkill())
                         cloneSkill.SelfDestruct();
                     else
                         cloneSkill.Shot(directory, new Vector2(10, -15));
                     break;
                 case 1:
+                    cloneAudio = AudioSource.Instantiate(EnergyBall);
+                    Destroy(cloneAudio.gameObject, 1);
                     PlayerPrefs.SetInt("item0", 0);
                     if (IsCollisionAreaSkill())
                         cloneSkill.SelfDestruct();
@@ -255,6 +265,8 @@ public class Player : MonoBehaviour
                         cloneSkill.Shot(directory, new Vector2(10, 10));
                     break;
                 case 2:
+                    cloneAudio = AudioSource.Instantiate(Bomb);
+                    Destroy(cloneAudio.gameObject, 1);
                     PlayerPrefs.SetInt("item0", 0);
                     cloneSkill.Shot(directory, new Vector2(10, 0));
                     break;
@@ -320,6 +332,8 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && (IsNearGrounded() || IsOnSkillLayer())) // Start jump
             {
                 IsPressJump = true;
+                cloneAudio = AudioSource.Instantiate(Jump);
+                Destroy(cloneAudio.gameObject, 1);
             }
         }
         else   //  Jumping

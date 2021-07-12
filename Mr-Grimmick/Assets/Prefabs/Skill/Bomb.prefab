@@ -123,6 +123,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 9216
   boxBody: {fileID: 2215305258077099845}
+  audio: {fileID: 5006343503563644779, guid: 7a165946732dd384c8d68e2f3e11167b, type: 3}
 --- !u!58 &2215305258077099845
 CircleCollider2D:
   m_ObjectHideFlags: 0
