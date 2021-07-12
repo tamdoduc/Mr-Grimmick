@@ -76,7 +76,10 @@ public class White : MonoBehaviour
             else
             {
                 if (!onHead)
+                {
                     PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+                    onHead = true;
+                }
                 if (vel.x > 0)
                     vel.x = Mathf.Max(0, vel.x += (Time.deltaTime * MaxVelocityXLeft) / (0.8f));
                 else

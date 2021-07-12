@@ -44,8 +44,6 @@ public class HUBManage : MonoBehaviour
     {
 
         int score2 = PlayerPrefs.GetInt("score");
-        Debug.LogError(score2);
-        Debug.LogError(score);
         if (score2 - score >= 100)
             score += 100;
         else

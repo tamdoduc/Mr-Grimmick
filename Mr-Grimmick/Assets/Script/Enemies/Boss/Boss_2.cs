@@ -203,7 +203,6 @@ public class Boss_2 : MonoBehaviour
         if (isJump)
         {
             handleTime += Time.deltaTime;
-            Debug.Log(handleTime);
             vel.y = MaxVelocityY;
             if (handleTime >= jumpTime)
             {

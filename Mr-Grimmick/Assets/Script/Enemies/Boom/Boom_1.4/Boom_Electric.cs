@@ -6,6 +6,7 @@ public class Boom_Electric : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] Animator animator;
+    [SerializeField] Animator animatorDoor;
     [SerializeField] Rigidbody2D body;
     [SerializeField] Collider2D colliderCheckGround;
     [SerializeField] Collider2D colliderCheckEdge;
@@ -15,6 +16,7 @@ public class Boom_Electric : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask skillLayer;
+    [SerializeField] LayerMask pipeLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float activeRange, groundLim;
     [SerializeField] bool isCarry = false, isDSM = false;
@@ -63,6 +65,11 @@ public class Boom_Electric : MonoBehaviour
                 }
                 break;
             case 1:
+                if (IsColliderPipe())
+                {
+                    body.velocity = new Vector2(0, 0);
+                    return;
+                }
                 if (isActive)
                 {
                     if (IsOutRange())
@@ -84,13 +91,13 @@ public class Boom_Electric : MonoBehaviour
                     {
                         bfCarry = isCarry;
                         isCarry = IsCarry();
+                        if (Mathf.Abs(transform.position.y - target.transform.position.y) < 0.2f)
+                            isCarry = false;
                         if (isCarry && isCarry != bfCarry)
                             PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
                         animator.SetBool("CP", isCarry);
                         if (isCarry)
                         {
-                            GameObject g = gameObject.transform.GetChild(1).gameObject;
-                            g.layer = 8;
                             IdleState();
                         }
                         else
@@ -118,9 +125,12 @@ public class Boom_Electric : MonoBehaviour
                                     return;
                                 }
                                 //
-                                if (!IsNotEdge())
-                                    faceRight = !faceRight;
-                                CheckMove();
+                                if (IsGrounded())
+                                {
+                                    if (!IsNotEdge())
+                                        faceRight = !faceRight;
+                                    CheckMove();
+                                }
                                 if (detectTime < resetTime)
                                 {
                                     detectTime += Time.deltaTime;
@@ -181,7 +191,7 @@ public class Boom_Electric : MonoBehaviour
         body.velocity = new Vector2(0, vel.y);
         animator.SetFloat("Speed", 0);
         GameObject g = gameObject.transform.GetChild(3).gameObject;
-        g.layer = 8;
+        g.layer = 17;
     }
     void StopState()
     {
@@ -208,10 +218,11 @@ public class Boom_Electric : MonoBehaviour
     }
     void CheckActive()
     {
-        if (IsGrounded())
+        //if (IsGrounded())
         {
+            animatorDoor.SetBool("Open", true);
             isActive = true;
-            vel.y = -1;
+            vel.y = -8;
         }
     }
     void CheckMove()
@@ -275,6 +286,11 @@ public class Boom_Electric : MonoBehaviour
     bool IsColliderSkill()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
+        return hit2D.collider != null;
+    }
+    bool IsColliderPipe()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, pipeLayer);
         return hit2D.collider != null;
     }
     bool IsColliderDS()

@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 506449469977310311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.43, y: 0.58, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4098626741285467387}
   - {fileID: 1984606264551186271}
@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 3134474884625846089}
+  animatorDoor: {fileID: 0}
   body: {fileID: 5350694971586043349}
   colliderCheckGround: {fileID: 7007971043642348806}
   colliderCheckEdge: {fileID: 8609349760541053282}
@@ -212,6 +213,9 @@ MonoBehaviour:
   skillLayer:
     serializedVersion: 2
     m_Bits: 2048
+  pipeLayer:
+    serializedVersion: 2
+    m_Bits: 8388608
   checkTop: {fileID: 7974144912893226989}
   activeRange: 12
   groundLim: -2

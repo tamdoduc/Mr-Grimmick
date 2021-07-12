@@ -17,11 +17,13 @@ public class Boss_7 : MonoBehaviour
     EffectFlash cloneEffectFlash;
     [SerializeField] Boss_7_Skill1 skill1;
     Boss_7_Skill1 cloneSkill1;
+    [SerializeField] Boss_7_Form2 form2;
+    Boss_7_Form2 cloneForm2;
 
-    private bool isActive = false, isLeft = false, isSkilling = false, hurt = false, isIM = false;
-    private int healPoint = 3, skillMode = 0;
-    private float posY, changeSideCount = 0.1f, skillCount = 0, imCount = 0, skillDelay = 0;
-    private const float changeSideTime = 4f, skillTime = 2f, prepareSkillTime = 0.8f, imTime = 0.5f;
+    private bool isActive = false, isLeft = false, isSkilling = false, isIM = false;
+    private int healPoint = 3;
+    private float posY, changeSideCount = 0.1f, skillCount = 0, imCount = 0, skillDelay = 0, transformCount = 0;
+    private const float changeSideTime = 4f, skillTime = 2f, prepareSkillTime = 0.8f, imTime = 0.5f, transformTime = 2.5f;
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
@@ -34,38 +36,34 @@ public class Boss_7 : MonoBehaviour
         if (isActive)
         {
             if (isSkilling)
-                switch (skillMode)
+            {
+                float velX = 8f;
+                Vector3 posStart = transform.position;
+                skillDelay += Time.deltaTime;
+                if (skillDelay > 0.08f && skillCount < 4)
                 {
-                    case 1:
-                        float velX = 8f;
-                        Vector3 posStart = transform.position;
-                        skillDelay += Time.deltaTime;
-                        if (skillDelay > 0.08f && skillCount < 4)
-                        {
-                            if (isLeft)
-                            {
-                                posStart += new Vector3(1f, -0.7f, 0);
-                                cloneSkill1 = GameObject.Instantiate(skill1);
-                                cloneSkill1.SetStart(posStart, velX, rightLim);
-                            }
-                            else
-                            {
-                                posStart -= new Vector3(1f, 0.7f, 0);
-                                cloneSkill1 = GameObject.Instantiate(skill1);
-                                cloneSkill1.SetStart(posStart, -velX, leftLim);
-                            }
-                            skillDelay = 0;
-                            skillCount++;
-                        }
-                        break;
+                    if (isLeft)
+                    {
+                        posStart += new Vector3(1f, -0.7f, 0);
+                        cloneSkill1 = GameObject.Instantiate(skill1);
+                        cloneSkill1.SetStart(posStart, velX, rightLim);
+                    }
+                    else
+                    {
+                        posStart -= new Vector3(1f, 0.7f, 0);
+                        cloneSkill1 = GameObject.Instantiate(skill1);
+                        cloneSkill1.SetStart(posStart, -velX, leftLim);
+                    }
+                    skillDelay = 0;
+                    skillCount++;
                 }
+            }
             switch (healPoint)
             {
                 case 0:
                     DieState();
                     break;
                 default:
-                    skillMode = 1;
                     if (!isIM)
                         CheckHit();
                     else
@@ -143,11 +141,25 @@ public class Boss_7 : MonoBehaviour
                 isIM = true;
                 animator.SetBool("Hit", true);
             }
+            else
+            {
+                cloneForm2 = GameObject.Instantiate(form2);
+                cloneForm2.SetStartPos(transform.position);
+                if (cloneEffectFlash == null)
+                {
+                    cloneEffectFlash = GameObject.Instantiate(effectFlash);
+                    cloneEffectFlash.SetTimeMax(3f);
+                    cloneEffectFlash.SetSpriteRender(this.gameObject.GetComponent<SpriteRenderer>());
+                    cloneEffectFlash.Active();
+                }
+            }
         }
     }
     void DieState()
     {
-        GameObject.Destroy(this.gameObject);
+        transformCount += Time.deltaTime;
+        if (transformCount > transformTime)
+            GameObject.Destroy(this.gameObject);
     }
     bool IsColliderSkill()
     {

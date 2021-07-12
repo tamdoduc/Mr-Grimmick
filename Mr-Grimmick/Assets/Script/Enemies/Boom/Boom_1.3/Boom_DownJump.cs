@@ -17,6 +17,7 @@ public class Boom_DownJump : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
+    [SerializeField] LayerMask pipeLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float resetRange, camRange, groundLim, topLim;
 
@@ -69,6 +70,11 @@ public class Boom_DownJump : MonoBehaviour
                 }
                 if (isActive)
                 {
+                    if (IsColliderPipe())
+                    {
+                        body.velocity = new Vector2(0, 0);
+                        return;
+                    }
                     SetState();
                     CheckHit();
                     body.velocity = vel;
@@ -267,6 +273,11 @@ public class Boom_DownJump : MonoBehaviour
     bool IsColliderSkill()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
+        return hit2D.collider != null;
+    }
+    bool IsColliderPipe()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, pipeLayer);
         return hit2D.collider != null;
     }
 

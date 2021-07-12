@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: 483f7653eda139e48b1907136a86b1f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5468999730323858634
+    second: Boss7 - Form2_Prepare2
+  - first:
+      213: -4150580475390000320
+    second: Boss7 - Form2_Jump
+  - first:
+      213: -1496206504817213963
+    second: Skill2
+  - first:
+      213: -3292480300867422079
+    second: Skill21
+  - first:
+      213: -5431361908516555199
+    second: Skill22
+  - first:
+      213: 7721844656318426849
+    second: Boss7 - Form2_Prepare
+  - first:
+      213: -452571054814888174
+    second: Boss7 - Form2_Prepare1
+  - first:
+      213: 2681509377357650282
+    second: Boss7 - Form2_Die1
+  - first:
+      213: -926075722986369273
+    second: Boss7 - Form2_Die2
+  - first:
+      213: 3816470961688470666
+    second: Boss7 - Form2_Star1
+  - first:
+      213: 4741779365883173938
+    second: Boss7 - Form2_Star2
+  - first:
+      213: -304500322851135158
+    second: Boss7 - Form2_Walk
+  - first:
+      213: -5767669073763266597
+    second: Boss7 - Form2_Walk1
+  - first:
+      213: 7678344063043148964
+    second: Boss7 - Form2_Walk2
+  - first:
+      213: 3265994572560250329
+    second: Boss7 - Form2_Walk3
+  - first:
+      213: 2406830624946054379
+    second: Boss7 - Form2_Dodge
+  - first:
+      213: -8345826290757894387
+    second: Boss7 - Form2_Dodge1
+  - first:
+      213: 2904134933098138957
+    second: Boss7 - Form2_Dodge2
+  - first:
+      213: 4807834405014584998
+    second: Boss7 - Form2_Skill2
+  - first:
+      213: -8791821457011946265
+    second: Boss7 - Form2_WalkBack
+  - first:
+      213: -9132122666145469925
+    second: Boss7 - Form2_Hit
+  - first:
+      213: 3354174079576287051
+    second: Boss7 - Form2_Skill13
+  - first:
+      213: 3442855844548749654
+    second: Boss7 - Form2_Skill13
+  - first:
+      213: -4990718721488895608
+    second: Boss7 - Form2_Skill13
+  - first:
+      213: -7156925670134830852
+    second: Boss7 - Form2_Hit1
+  - first:
+      213: 2452997020166405790
+    second: Boss7 - Form2_Hit2
+  - first:
+      213: 4869018328372495050
+    second: Boss7 - Form2_Hit3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss7 - Form2_Prepare2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 252
+        width: 51
+        height: 67
+      alignment: 9
+      pivot: {x: 0.7647059, y: 0.44776118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac429aa574ac5eb40800000000000000
+      internalID: 5468999730323858634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Jump
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 249
+        width: 47
+        height: 90
+      alignment: 9
+      pivot: {x: 0.27659574, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04305b06c0d2666c0800000000000000
+      internalID: -4150580475390000320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 316
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdbdb17c186c3be0800000000000000
+      internalID: -1496206504817213963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 316
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18873d45c92ce42d0800000000000000
+      internalID: -3292480300867422079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill22
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 316
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146784cee1def94b0800000000000000
+      internalID: -5431361908516555199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Prepare
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 253
+        width: 26
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51924765, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eeab968dc0892b60800000000000000
+      internalID: 7721844656318426849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Prepare1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 252
+        width: 37
+        height: 63
+      alignment: 9
+      pivot: {x: 0.7027027, y: 0.4761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f7222060528b9f0800000000000000
+      internalID: -452571054814888174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Die1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 302
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69184b4292a63520800000000000000
+      internalID: 2681509377357650282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Die2
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 302
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fc848590be523f0800000000000000
+      internalID: -926075722986369273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Star1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 303
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84e80f7e14d6f430800000000000000
+      internalID: 3816470961688470666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Star2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 302
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c5eb2d53f2ec140800000000000000
+      internalID: 4741779365883173938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Walk
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 179
+        width: 57
+        height: 70
+      alignment: 9
+      pivot: {x: 0.75438595, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a416776d19236cbf0800000000000000
+      internalID: -304500322851135158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Walk1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 179
+        width: 59
+        height: 70
+      alignment: 9
+      pivot: {x: 0.7288136, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf855c298f15ffa0800000000000000
+      internalID: -5767669073763266597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Walk2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 178
+        width: 53
+        height: 70
+      alignment: 9
+      pivot: {x: 0.7924528, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac9ae46e35fe8a60800000000000000
+      internalID: 7678344063043148964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Walk3
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 178
+        width: 53
+        height: 71
+      alignment: 9
+      pivot: {x: 0.7735849, y: 0.4225352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5becf72c4235d20800000000000000
+      internalID: 3265994572560250329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Dodge
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 146
+        width: 55
+        height: 70
+      alignment: 9
+      pivot: {x: 0.43636364, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4e07293b7c66120800000000000000
+      internalID: 2406830624946054379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Dodge1
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 146
+        width: 42
+        height: 93
+      alignment: 9
+      pivot: {x: 0.6904762, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f7246e43bad2c80800000000000000
+      internalID: -8345826290757894387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Dodge2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 149
+        width: 79
+        height: 59
+      alignment: 9
+      pivot: {x: 0.65822786, y: 0.5084746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d0e1bb55f8d4820800000000000000
+      internalID: 2904134933098138957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Skill2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 93
+        width: 42
+        height: 82
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.36585364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aebbc91bebd8b240800000000000000
+      internalID: 4807834405014584998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_WalkBack
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 92
+        width: 59
+        height: 66
+      alignment: 9
+      pivot: {x: 0.45762712, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec452647fc2df580800000000000000
+      internalID: -8791821457011946265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Hit
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 79
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7924528, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a2b17b1de244180800000000000000
+      internalID: -9132122666145469925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Skill11
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 12
+        width: 31
+        height: 79
+      alignment: 9
+      pivot: {x: 0.6451613, y: 0.3846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47a7ffdd8b6c8e20800000000000000
+      internalID: 3354174079576287051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Skill12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 12
+        width: 56
+        height: 61
+      alignment: 9
+      pivot: {x: 0.8214286, y: 0.5081967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659a43b462b77cf20800000000000000
+      internalID: 3442855844548749654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Skill13
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 12
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: 0.7961765, y: 0.5081967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88143c7c3c76dbab0800000000000000
+      internalID: -4990718721488895608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Hit1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 13
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7924528, y: 0.4761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf82db3a50e7dac90800000000000000
+      internalID: -7156925670134830852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Hit2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 13
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7924528, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e3c161bcbca0220800000000000000
+      internalID: 2452997020166405790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss7 - Form2_Hit3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 13
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7924528, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2428b5f5a329340800000000000000
+      internalID: 4869018328372495050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

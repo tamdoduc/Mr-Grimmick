@@ -23,7 +23,7 @@ public class Devil : MonoBehaviour
     private float handleTime = 0, detectTime = 0, imCount = 0;
     private Vector2 vel;
 
-    private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 0.5f, jumpTime = 0.35f, eps = 0.15f, chaseTime = 1.5f, imTime = 0.5f;
+    private float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 0.5f, jumpTime = 0.35f, eps = 0.15f, chaseTime = 1.5f, imTime = 0.5f, runTime = 4f;
     void Start()
     {
         body.velocity = new Vector2(0, 0);
@@ -38,6 +38,8 @@ public class Devil : MonoBehaviour
         if (isActive)
         {
             //CheckOutRange();
+            if (hurt || runMode || chaseMode)
+                body.isKinematic = false;
             if (!runMode && !hurt)
                 CheckHit();
             if (hurt)
@@ -50,7 +52,7 @@ public class Devil : MonoBehaviour
             if (runMode && !delayed)
             {
                 detectTime += Time.deltaTime;
-                if (detectTime > jumpTime / 2)
+                if (detectTime > jumpTime / 3)
                     delayed = true;
                 else
                     return;
@@ -103,8 +105,17 @@ public class Devil : MonoBehaviour
                 }
             }
             if (runMode)
-                vel.x += 2;
-            body.velocity = vel;
+            {
+                detectTime+= Time.deltaTime;
+                if (detectTime > runTime)
+                    GameObject.Destroy(this.gameObject);
+                if (vel.x > 0)
+                    body.velocity = vel + new Vector2(2, 0);
+                else
+                    body.velocity = vel - new Vector2(2, 0);
+            }
+            else
+                body.velocity = vel;
         }
         else
             CheckInRange();

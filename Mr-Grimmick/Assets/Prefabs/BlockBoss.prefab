@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3673133372950350338}
   - component: {fileID: 3673133372950350339}
   - component: {fileID: 3673133372950350336}
-  m_Layer: 15
+  m_Layer: 10
   m_Name: BlockBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,4 +73,4 @@ MonoBehaviour:
   target: {fileID: 0}
   colliderBlockBoss: {fileID: 3673133372950350339}
   triggerPoint: -29.4
-  blockSide: 0
+  blockLeftSide: 1

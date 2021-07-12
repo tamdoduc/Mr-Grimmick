@@ -333,6 +333,7 @@ MonoBehaviour:
   posYEnd: 6.8
   goRight: 1
   effectPlash: {fileID: 1110899992657816096, guid: 44f64ecf6edf504488cf40b89094f2e6, type: 3}
+  selfDestruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
 --- !u!1001 &1639877436473777396
 PrefabInstance:
   m_ObjectHideFlags: 0

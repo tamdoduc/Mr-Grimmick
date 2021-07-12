@@ -367,6 +367,9 @@ MonoBehaviour:
   skillLayer:
     serializedVersion: 2
     m_Bits: 2048
+  pipeLayer:
+    serializedVersion: 2
+    m_Bits: 8388608
   checkTop: {fileID: 6142891131579193648}
   wakeRange: 8.5
   resetRange: 12

@@ -164,7 +164,7 @@ public class CarryBird : MonoBehaviour
     }
     void Carrying()
     {
-        body.velocity = new Vector2(goRight * maxVelocityX, maxVelocityY);
+        body.velocity = new Vector2(goRight * maxVelocityX, 0);
         maxVelocityY = -maxVelocityY;
         //fly to end posX
         if (goRight * transform.position.x >= goRight * endPositionX)

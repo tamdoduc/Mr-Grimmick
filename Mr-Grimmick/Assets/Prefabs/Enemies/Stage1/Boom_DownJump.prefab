@@ -310,11 +310,17 @@ MonoBehaviour:
   skillLayer:
     serializedVersion: 2
     m_Bits: 2048
+  pipeLayer:
+    serializedVersion: 2
+    m_Bits: 8388608
   checkTop: {fileID: 4089786167904435213}
   resetRange: 15
   camRange: 7
   groundLim: 16.5
   topLim: 29
+  isActive: 0
+  faceRight: 0
+  isJump: 0
 --- !u!1 &4087362964490949321
 GameObject:
   m_ObjectHideFlags: 0

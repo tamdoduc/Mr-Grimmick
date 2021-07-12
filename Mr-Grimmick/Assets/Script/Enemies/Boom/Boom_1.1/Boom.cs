@@ -18,11 +18,12 @@ public class Boom : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
+    [SerializeField] LayerMask pipeLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float wakeRange, resetRange, camRange, groundLim;
     [SerializeField] bool ready = false;
     [SerializeField] int jumpCount = 15;
-    private int healPoint = 1, score = 120;
+    public int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
     private bool isActive = false, faceRight = false, isJump = false, flyMode = false, outRange = false;
     private Vector2 vel;
@@ -71,6 +72,11 @@ public class Boom : MonoBehaviour
                 CheckOutRange();
                 if (isActive)
                 {
+                    if (IsColliderPipe())
+                    {
+                        body.velocity = new Vector2(0, 0);
+                        return;
+                    }
                     SetState();
                     CheckHit();
                     if (!flyMode)
@@ -100,7 +106,7 @@ public class Boom : MonoBehaviour
     {
         if (IsColliderSkill())
         {
-            healPoint--;
+            healPoint = 0;
         }
     }
     void DieState()
@@ -340,6 +346,11 @@ public class Boom : MonoBehaviour
     bool IsColliderSkill()
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
+        return hit2D.collider != null;
+    }
+    bool IsColliderPipe()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, pipeLayer);
         return hit2D.collider != null;
     }
 
