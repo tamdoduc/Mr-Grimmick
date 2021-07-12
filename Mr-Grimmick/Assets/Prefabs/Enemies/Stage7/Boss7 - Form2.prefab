@@ -276,6 +276,7 @@ MonoBehaviour:
   skill2: {fileID: -5281138195513293713, guid: 56b8f55feb649714e9bda86de8c778ba, type: 3}
   dieEffect: {fileID: -4324780853121544219, guid: 7e5cd85c7d0fd6445b74a90a796bb945, type: 3}
   starEffect: {fileID: 3304539288443732537, guid: 332300b28ed7a5449bf5bdc62b21b5c1, type: 3}
+  dieSE: {fileID: 7358981732281150169, guid: 425ee0b1f7a7cb246b44ee0b304b9ee8, type: 3}
   isActive: 0
   isIM: 0
   isActing: 0

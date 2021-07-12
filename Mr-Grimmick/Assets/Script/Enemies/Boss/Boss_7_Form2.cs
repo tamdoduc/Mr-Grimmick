@@ -24,11 +24,13 @@ public class Boss_7_Form2 : MonoBehaviour
     Boss_7_Die cloneDieEffect;
     [SerializeField] Boss_7_Star starEffect;
     Boss_7_Star cloneStarEffect;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     public bool isActive = false, isIM = false, isActing = false, faceRight = false, usedSkill = false, isJump = false;
     public int healPoint = 4, randomAction = 0, randomWalk = 0;
     private float randomCount = 0, imCount = 0, actingCount = 0, transformCount = 0, jumpCount = 0, dieCount = 0;
-    private const float randomTime = 1.5f, skillTime = 0.5f, prepareTime = 2f, imTime = 0.5f, walkTime = 2f, jumpTime = 0.35f, dieTime = 3f;
+    private const float randomTime = 0.5f, skillTime = 0.5f, prepareTime = 1.5f, imTime = 0.5f, walkTime = 1.5f, jumpTime = 0.35f, dieTime = 3f;
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
@@ -51,6 +53,8 @@ public class Boss_7_Form2 : MonoBehaviour
                     dieCount += Time.deltaTime;
                     healPoint--;
                     DieEffect();
+                    cloneAudio = AudioSource.Instantiate(dieSE);
+                    Destroy(cloneAudio.gameObject, 1);
                 }
                 break;
             default:
