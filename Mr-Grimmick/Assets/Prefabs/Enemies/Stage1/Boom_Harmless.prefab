@@ -165,3 +165,4 @@ MonoBehaviour:
   limLeft: -1
   limRight: 0
   groundLim: -2
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}

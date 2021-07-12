@@ -20,6 +20,8 @@ public class BigGreen : MonoBehaviour
     [SerializeField] EffectFlash effectPlash;
     EffectFlash cloneEffectFLash;
     [SerializeField] float groundLim, leftLim, rightLim, topLim, camRange;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
 
     public float activeDistanceX, dis = 0;
@@ -66,6 +68,8 @@ public class BigGreen : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 if (isActive)
@@ -116,6 +120,7 @@ public class BigGreen : MonoBehaviour
         GameObject g = gameObject.transform.GetChild(1).gameObject;
         g.layer = 8;
         handleTime += Time.deltaTime;
+        transform.eulerAngles = new Vector3(180, 0, 0);
         colliderHead.isTrigger = true;
         colliderBody.isTrigger = true;
         if (handleTime > dieTime)

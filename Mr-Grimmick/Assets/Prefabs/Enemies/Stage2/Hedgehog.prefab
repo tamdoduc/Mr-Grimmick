@@ -180,6 +180,7 @@ MonoBehaviour:
     m_Bits: 2048
   groundLim: -20
   checktop: {fileID: 617270591653126663, guid: 1811bed9649b46b4895bddbab786dc31, type: 3}
+  dieSE: {fileID: 3401831535468974327, guid: 257e8955e46f62d48b2b16f15b73d7a5, type: 3}
   faceRight: 1
 --- !u!1 &3533106484907378710
 GameObject:

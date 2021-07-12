@@ -8,6 +8,8 @@ public class BlockBoss : MonoBehaviour
     [SerializeField] Collider2D colliderBlockBoss;
     [SerializeField] float triggerPoint;
     [SerializeField] bool blockLeftSide = true; //true is block left
+    [SerializeField] AudioSource bossSE;
+    AudioSource cloneAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,21 @@ public class BlockBoss : MonoBehaviour
         if (blockLeftSide)
         {
             if (target.transform.position.x > triggerPoint)
+            {
                 colliderBlockBoss.isTrigger = false;
+                if (cloneAudio == null)
+                    cloneAudio = AudioSource.Instantiate(bossSE);
+            }
         }
         else
         {
             if (target.transform.position.x < triggerPoint)
+            {
                 colliderBlockBoss.isTrigger = false;
+                if (cloneAudio == null)
+                    cloneAudio = AudioSource.Instantiate(bossSE);
+            }
         }
+
     }
 }

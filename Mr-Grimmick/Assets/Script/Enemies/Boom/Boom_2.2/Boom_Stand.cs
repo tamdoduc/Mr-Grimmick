@@ -11,6 +11,8 @@ public class Boom_Stand : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float groundLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
     private int healPoint = 1;
     private float handleTime = 0, dieVelocity = 0.7f;
     private const int score = 120;
@@ -48,6 +50,8 @@ public class Boom_Stand : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 CheckHit();

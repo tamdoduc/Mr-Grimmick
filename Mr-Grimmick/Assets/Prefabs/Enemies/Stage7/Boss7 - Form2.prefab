@@ -208,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.406067, y: -0.44628096}
+  m_Offset: {x: -2.1688194, y: -1.353595}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.51924765, y: 0.46875}
@@ -219,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6929855, y: 2.857438}
+  m_Size: {x: 2.2184906, y: 1.04281}
   m_EdgeRadius: 0
 --- !u!50 &2970759459383063168
 Rigidbody2D:
@@ -273,6 +273,9 @@ MonoBehaviour:
   rightPosX: 60
   effectFlash: {fileID: 1110899992657816096, guid: 44f64ecf6edf504488cf40b89094f2e6, type: 3}
   skill1: {fileID: 8716130321337338470, guid: 7ca8636753152ab409afce3591868746, type: 3}
+  skill2: {fileID: -5281138195513293713, guid: 56b8f55feb649714e9bda86de8c778ba, type: 3}
+  dieEffect: {fileID: -4324780853121544219, guid: 7e5cd85c7d0fd6445b74a90a796bb945, type: 3}
+  starEffect: {fileID: 3304539288443732537, guid: 332300b28ed7a5449bf5bdc62b21b5c1, type: 3}
   isActive: 0
   isIM: 0
   isActing: 0
@@ -281,6 +284,7 @@ MonoBehaviour:
   isJump: 0
   healPoint: 4
   randomAction: 0
+  randomWalk: 0
 --- !u!58 &2970759459383063293
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -452,10 +456,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0232544, y: 1.6860449}
+  m_Offset: {x: -2.2000046, y: 1.8745776}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -466,7 +470,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7262955, y: 1.5706611}
+  m_Size: {x: 1.3727951, y: 0.81653}
   m_EdgeRadius: 0
 --- !u!1 &2970759460642845200
 GameObject:

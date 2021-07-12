@@ -16,12 +16,14 @@ public class Boss_2 : MonoBehaviour
     [SerializeField] float groundLim, leftLim, rightLim;
     [SerializeField] Boss_2_Sword Sword;
     Boss_2_Sword sword;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
     GameObject g; 
     private int healPoint = 5, score = 8000;
     private float handleTime = 0, dieVelocity = 0.7f, imCount = 0, murderCount = 0;
     private float rangeHit = 2f, rangeJump = 3.5f, rangeWalk = 5f;
-    public float distance;
-    public bool isActive = false, murderMode = false, isIM = false, hit = false, hurt = false, jump = false, goRight = false, faceRight = true, isJump = false;
+    private float distance;
+    private bool isActive = false, murderMode = false, isIM = false, hit = false, hurt = false, jump = false, goRight = false, faceRight = true, isJump = false;
     private Vector2 vel;
     private const float MaxVelocityXRight = 5f, MaxVelocityXLeft = -5f, MaxVelocityY = 12f, MaxGravity = -8f, imTime = 0.2f, murderTime = 2f, jumpTime = 0.3f, dieTime = 0.2f, eps = 1f;
     void Start()
@@ -71,6 +73,8 @@ public class Boss_2 : MonoBehaviour
                     }
                     if (sword.transform.position.x > (leftLim + rightLim) / 2)
                         sword.MaxVelocity *= -1;
+                    cloneAudio = AudioSource.Instantiate(dieSE);
+                    Destroy(cloneAudio.gameObject, 3);
                     break;
                 case 1:
                     murderMode = true;

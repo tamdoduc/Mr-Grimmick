@@ -376,7 +376,8 @@ MonoBehaviour:
   camRange: 7
   groundLim: -20
   ready: 0
-  jumpCount: 15
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
+  flyModeSE: {fileID: 2359286581518689530, guid: 32d1c4d9cdba8124f967a54faf1654de, type: 3}
 --- !u!1001 &6750634866975144759
 PrefabInstance:
   m_ObjectHideFlags: 0

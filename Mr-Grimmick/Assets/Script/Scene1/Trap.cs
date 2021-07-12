@@ -31,7 +31,6 @@ public class Trap : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.LogError("ffffffffffffffffffffffffffff" + collision.gameObject.name);
         if (collision.gameObject.layer.ToString() == "8" || collision.gameObject.name == "EnergyBall(Clone)" || collision.gameObject.name == "Bomb(Clone)")
         {
             selfDestruct = GameObject.Instantiate(selfDestruct);

@@ -21,6 +21,8 @@ public class Boom_DownPrior : MonoBehaviour
     [SerializeField] CheckTop checkTop;
     [SerializeField] SelfDestruct selfDestruct;
     [SerializeField] float resetRange, camRange, groundLim, topLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
@@ -62,6 +64,8 @@ public class Boom_DownPrior : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 if (target.transform.position.y < groundLim || target.transform.position.y > topLim)

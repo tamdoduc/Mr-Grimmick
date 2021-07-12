@@ -271,11 +271,8 @@ MonoBehaviour:
   wakeRange: 15
   resetRange: 15
   camRange: 7
-  groundLim: -10
-  isActive: 0
-  faceRight: 0
-  isJump: 0
-  isOutStage: 0
+  groundLim: -7
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
 --- !u!1 &791447619630969145
 GameObject:
   m_ObjectHideFlags: 0

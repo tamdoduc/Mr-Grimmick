@@ -21,10 +21,12 @@ public class Boom_Climb : MonoBehaviour
     [SerializeField] CheckTop checkTop;
     [SerializeField] SelfDestruct selfDestruct;
     [SerializeField] float wakeRange, resetRange, camRange, groundLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
-    public bool isActive = false, faceRight = false, isJump = false, isOutStage = false;
+    private bool isActive = false, faceRight = false, isJump = false, isOutStage = false;
     private Vector2 vel;
     private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 1.5f, jumpTime = 0.2f, dieTime = 0.2f;
 
@@ -62,6 +64,8 @@ public class Boom_Climb : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 if (isActive)
@@ -134,10 +138,9 @@ public class Boom_Climb : MonoBehaviour
     }
     void CheckOutRange()
     {
-        if (isOutStage)
+        if (transform.position.y < groundLim || target.transform.position.y < groundLim)
         {
-            isActive = false;
-            body.velocity = new Vector2(0, 0);
+            GameObject.Destroy(this.gameObject);
         }
         if (Mathf.Abs(target.transform.position.x - transform.position.x) > resetRange || Mathf.Abs(target.transform.position.y - transform.position.y) > resetRange)
         {

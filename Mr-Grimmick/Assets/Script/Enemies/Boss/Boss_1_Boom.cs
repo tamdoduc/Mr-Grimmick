@@ -17,6 +17,8 @@ public class Boss_1_Boom : MonoBehaviour
     [SerializeField] LayerMask skillLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float camRange, groundLim, limX;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f, MaxVelocityY = 5f, MaxGravity = -8f, MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f;
@@ -57,6 +59,8 @@ public class Boss_1_Boom : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 CheckHit();
@@ -248,6 +252,13 @@ public class Boss_1_Boom : MonoBehaviour
     {
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
         return hit2D.collider != null;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "12") //thorTrap
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
 
 }

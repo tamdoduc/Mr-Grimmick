@@ -17,6 +17,8 @@ public class Boom_Jump : MonoBehaviour
     [SerializeField] LayerMask skillLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float wakeRange, resetRange, camRange, groundLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
@@ -59,12 +61,12 @@ public class Boom_Jump : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 if (isActive)
-                {
-                    if (transform.position.y < groundLim)
-                        GameObject.Destroy(this.gameObject);
+                {  
                     SetState();
                     CheckOutRange();
                     CheckHit();
@@ -252,5 +254,11 @@ public class Boom_Jump : MonoBehaviour
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, skillLayer);
         return hit2D.collider != null;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "12") //thorTrap
+        {
+            GameObject.Destroy(this.gameObject);
+        }
+    }
 }

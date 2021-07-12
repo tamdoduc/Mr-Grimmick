@@ -376,6 +376,7 @@ MonoBehaviour:
   camRange: 7
   groundLim: 5
   topLim: 16
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
 --- !u!1001 &2171808288655096550
 PrefabInstance:
   m_ObjectHideFlags: 0

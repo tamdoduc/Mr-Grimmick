@@ -18,6 +18,9 @@ public class Devil : MonoBehaviour
     [SerializeField] bool isBack, faceRight, canChase;
     [SerializeField] float resetRange, groundLim, wakeRange;
     [SerializeField] int healPoint = 1;
+    [SerializeField] AudioSource hitSE;
+    [SerializeField] AudioSource runSE;
+    AudioSource cloneAudio;
 
     [SerializeField] bool isActive = false, runMode = false, isJump = false, chaseMode = false, delayed = false, hurt = false;
     private float handleTime = 0, detectTime = 0, imCount = 0;
@@ -37,7 +40,7 @@ public class Devil : MonoBehaviour
     {
         if (isActive)
         {
-            //CheckOutRange();
+            CheckOutRange();
             if (hurt || runMode || chaseMode)
                 body.isKinematic = false;
             if (!runMode && !hurt)
@@ -106,7 +109,9 @@ public class Devil : MonoBehaviour
             }
             if (runMode)
             {
-                detectTime+= Time.deltaTime;
+                if (cloneAudio == null)
+                cloneAudio = AudioSource.Instantiate(runSE);
+                detectTime += Time.deltaTime;
                 if (detectTime > runTime)
                     GameObject.Destroy(this.gameObject);
                 if (vel.x > 0)
@@ -129,6 +134,8 @@ public class Devil : MonoBehaviour
             imCount = 0;
             if (healPoint == 0)
             {
+                cloneAudio = AudioSource.Instantiate(hitSE);
+                Destroy(cloneAudio.gameObject, 1);
                 runMode = true;
                 vel = new Vector2(0, 3);
                 body.velocity = vel;
@@ -159,6 +166,7 @@ public class Devil : MonoBehaviour
             || transform.position.y < groundLim
             || target.transform.position.y < groundLim)
         {
+            Destroy(cloneAudio.gameObject, 1);
             GameObject.Destroy(this.gameObject);
         }
     }

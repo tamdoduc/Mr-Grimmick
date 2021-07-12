@@ -20,10 +20,13 @@ public class Boom_Electric : MonoBehaviour
     [SerializeField] CheckTop checkTop;
     [SerializeField] float activeRange, groundLim;
     [SerializeField] bool isCarry = false, isDSM = false;
+    [SerializeField] AudioSource dieSE;
+    [SerializeField] AudioSource electricSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1;
     private float detectTime = 0.001f, handleTime = 0, posX, posY, dieVelocity = 0.7f;
-    public bool isActive = false, inRange = false, faceRight = true, bfCarry = false, isElectric = false;
+    private bool isActive = false, inRange = false, faceRight = true, bfCarry = false, isElectric = false;
     private Vector2 vel;
     private const int score = 780;
     private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, resetTime = 1.7f, idleTime = 1.5f, DSMTime = 0.7f, dieTime = 0.2f;
@@ -63,17 +66,19 @@ public class Boom_Electric : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             case 1:
-                if (IsColliderPipe())
-                {
-                    body.velocity = new Vector2(0, 0);
-                    return;
-                }
                 if (isActive)
                 {
                     if (IsOutRange())
                         GameObject.Destroy(this.gameObject);
+                    if (IsColliderPipe())
+                    {
+                        body.velocity = new Vector2(0, 0);
+                        return;
+                    }
                     CheckHit();
                     if (IsColliderDS())
                     {
@@ -195,9 +200,12 @@ public class Boom_Electric : MonoBehaviour
     }
     void StopState()
     {
+        if (cloneAudio == null)
+        cloneAudio = AudioSource.Instantiate(electricSE);
         handleTime += Time.deltaTime;
         if (handleTime > DSMTime)
         {
+            Destroy(cloneAudio.gameObject, 1);
             detectTime = 0.001f;
             handleTime = 0;
             isDSM = false;

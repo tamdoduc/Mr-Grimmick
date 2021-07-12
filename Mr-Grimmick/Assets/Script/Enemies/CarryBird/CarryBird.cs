@@ -16,6 +16,8 @@ public class CarryBird : MonoBehaviour
     [SerializeField] EffectFlash effectPlash;
     EffectFlash cloneEffectFLash;
     [SerializeField] SelfDestruct selfDestruct;
+    [SerializeField] AudioSource startSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 3, status = -1;
     private float handleTime = 0, maxVelocityY = 1f, eps = 0.1f;
@@ -87,7 +89,8 @@ public class CarryBird : MonoBehaviour
     }
     void CheckInRange()
     {
-        if (Mathf.Abs(target.transform.position.x - transform.position.x) < wakeRange)
+        if (Mathf.Abs(target.transform.position.x - transform.position.x) < wakeRange
+            && Mathf.Abs(target.transform.position.y - transform.position.y) < wakeRange)
         {
             status = 0;
             isActive = true;
@@ -107,6 +110,11 @@ public class CarryBird : MonoBehaviour
     void Prepare()
     {
         handleTime += Time.deltaTime;
+        if (handleTime > prepareTime - 0.2f && cloneAudio == null)
+        {
+            cloneAudio = AudioSource.Instantiate(startSE);
+            Destroy(cloneAudio.gameObject, 1);
+        }
         if (handleTime > prepareTime)
         {
             status = 1;

@@ -344,6 +344,8 @@ MonoBehaviour:
   wakeRange: 10
   healPoint: 3
   white: {fileID: 727820987}
+  hitSE: {fileID: 0}
+  runSE: {fileID: 0}
   isActive: 0
   runMode: 0
   isJump: 0
@@ -387,6 +389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
+      propertyPath: bossSE
+      value: 
+      objectReference: {fileID: 1727746873024214431, guid: 37d53343502b69042a1a866b09835374, type: 3}
     - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
       propertyPath: triggerPoint
       value: 48.3
@@ -533,11 +539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 45.56
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z

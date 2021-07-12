@@ -18,11 +18,17 @@ public class Boss_7_Form2 : MonoBehaviour
     EffectFlash cloneEffectFlash;
     [SerializeField] Boss_7_Skill1 skill1;
     Boss_7_Skill1 cloneSkill1;
+    [SerializeField] Boss_7_Skill2 skill2;
+    Boss_7_Skill2 cloneSkill2;
+    [SerializeField] Boss_7_Die dieEffect;
+    Boss_7_Die cloneDieEffect;
+    [SerializeField] Boss_7_Star starEffect;
+    Boss_7_Star cloneStarEffect;
 
     public bool isActive = false, isIM = false, isActing = false, faceRight = false, usedSkill = false, isJump = false;
-    public int healPoint = 4, randomAction = 0;
-    private float randomCount = 0, imCount = 0, actingCount = 0, transformCount = 0, jumpCount = 0;
-    private const float randomTime = 3f, skillTime = 0.5f, prepareTime = 3f, imTime = 0.5f, transformTime = 1f, walkTime = 2f, jumpTime = 0.35f;
+    public int healPoint = 4, randomAction = 0, randomWalk = 0;
+    private float randomCount = 0, imCount = 0, actingCount = 0, transformCount = 0, jumpCount = 0, dieCount = 0;
+    private const float randomTime = 1.5f, skillTime = 0.5f, prepareTime = 2f, imTime = 0.5f, walkTime = 2f, jumpTime = 0.35f, dieTime = 3f;
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
@@ -34,8 +40,18 @@ public class Boss_7_Form2 : MonoBehaviour
     {
         switch (healPoint)
         {
-            case 0:
+            case -1:
                 DieState();
+                break;
+            case 0:
+                dieCount += Time.deltaTime;
+                if (dieCount > imTime)
+                {
+                    animator.SetBool("Dead", true);
+                    dieCount += Time.deltaTime;
+                    healPoint--;
+                    DieEffect();
+                }
                 break;
             default:
                 if (isActive)
@@ -60,16 +76,17 @@ public class Boss_7_Form2 : MonoBehaviour
                         {
                             if (!isActing)
                             {
-                                randomAction = Random.Range(1, 4);
+                                randomAction = Random.Range(1, 6);
                                 if (randomAction < 3)
                                     isJump = true;
+                                if (randomAction == 3)
+                                    randomWalk = Random.Range(1, 3);
                                 randomCount = 0;
                                 isActing = true;
                             }
                         }
                         else
                         {
-                            Debug.Log(IsColliderDodge() + " " + isActing);
                             if (!isActing && IsColliderDodge())
                             {
                                 randomCount = 0;
@@ -105,7 +122,27 @@ public class Boss_7_Form2 : MonoBehaviour
     }
     public void SetStartPos(Vector3 pos)
     {
+        target = GameObject.Find("Player").GetComponent<Transform>();
         transform.position = pos;
+        if (transform.position.x < target.position.x)
+        {
+            faceRight = true;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+    }
+    void DieEffect()
+    {
+        cloneDieEffect = GameObject.Instantiate(dieEffect);
+        cloneDieEffect.SetPos(transform.position + new Vector3(-0.5f, -0.5f, 0), dieTime - imTime);
+
+        cloneDieEffect = GameObject.Instantiate(dieEffect);
+        cloneDieEffect.SetPos(transform.position + new Vector3(0.5f, 0.5f, 0), dieTime - imTime);
+
+        cloneDieEffect = GameObject.Instantiate(dieEffect);
+        cloneDieEffect.SetPos(transform.position + new Vector3(-0.5f, 0.5f, 0), dieTime - imTime);
+
+        cloneDieEffect = GameObject.Instantiate(dieEffect);
+        cloneDieEffect.SetPos(transform.position + new Vector3(0.5f, -0.5f, 0), dieTime - imTime);
     }
     void CheckInRange()
     {
@@ -130,9 +167,13 @@ public class Boss_7_Form2 : MonoBehaviour
     void DieState()
     {
         animator.SetBool("Dead", true);
-        transformCount += Time.deltaTime;
-        if (transformCount > transformTime)
+        dieCount += Time.deltaTime;
+        if (dieCount > dieTime)
+        {
+            cloneStarEffect = GameObject.Instantiate(starEffect);
+            cloneStarEffect.SetPos(transform.position);
             GameObject.Destroy(this.gameObject);
+        }
     }
     void CheckHit()
     {
@@ -140,7 +181,7 @@ public class Boss_7_Form2 : MonoBehaviour
         {
             imCount = 0;
             healPoint--;
-            if (healPoint > 0)
+            if (healPoint >= 0)
             {
                 isIM = true;
                 animator.SetBool("Hit", true);
@@ -241,23 +282,23 @@ public class Boss_7_Form2 : MonoBehaviour
             randomAction = 0;
             return;
         }
+        if (randomWalk == 1)
+        {
+            body.velocity = new Vector2(3, -8);
+        }
+        else
+        {
+            body.velocity = new Vector2(-3, -8);
 
+        }
         if (Mathf.Abs(target.transform.position.x - transform.position.x) > 3f)
         {
-            if (Mathf.Abs(target.transform.position.x - transform.position.x) > 3.5f)
                 animator.SetBool("WalkBack", false);
-            if (target.transform.position.x > transform.position.x)
-                body.velocity = new Vector2(3, -8);
-            else
-                body.velocity = new Vector2(-3, -8);
         }
         else
         {
             animator.SetBool("WalkBack", true);
-            if (target.transform.position.x < transform.position.x)
-                body.velocity = new Vector2(5, -8);
-            else
-                body.velocity = new Vector2(-5, -8);
+            body.velocity = new Vector2(0, -8);
         }
     }
     void Skill1()
@@ -275,13 +316,13 @@ public class Boss_7_Form2 : MonoBehaviour
             Vector3 posStart = transform.position;
             if (faceRight)
             {
-                posStart += new Vector3(1f, -0.7f, 0);
+                posStart += new Vector3(1.5f, -1f, 0);
                 cloneSkill1 = GameObject.Instantiate(skill1);
                 cloneSkill1.SetStart(posStart, velX, rightLim);
             }
             else
             {
-                posStart -= new Vector3(1f, 0.7f, 0);
+                posStart -= new Vector3(1.5f, 1f, 0);
                 cloneSkill1 = GameObject.Instantiate(skill1);
                 cloneSkill1.SetStart(posStart, -velX, leftLim);
             }
@@ -290,14 +331,34 @@ public class Boss_7_Form2 : MonoBehaviour
     }
     void Skill2()
     {
-        animator.SetBool("Skill1", true);
+        animator.SetBool("Skill2", true);
         actingCount += Time.deltaTime;
         if (actingCount > skillTime)
         {
             actingCount = 0;
-            animator.SetBool("Skill1", false);
+            animator.SetBool("Skill2", false);
             isActing = false;
             randomAction = 0;
+            float velX = 4f;
+            Vector3 posStart = transform.position;
+            if (faceRight)
+            {
+                for (int i = 1; i < 6; i++)
+                {
+                    posStart += new Vector3(0.1f * i, 0.1f * i , 0);
+                    cloneSkill2 = GameObject.Instantiate(skill2);
+                    cloneSkill2.SetStart(posStart + new Vector3(0.5f, 0, 0), velX + (0.5f * i));
+                }
+            }
+            else
+            {
+                for (int i = 1; i < 6; i++)
+                {
+                    posStart += new Vector3(-0.1f * i, 0.1f * i, 0);
+                    cloneSkill2 = GameObject.Instantiate(skill2);
+                    cloneSkill2.SetStart(posStart - new Vector3(0.5f, 0, 0), -velX - (0.5f * i));
+                }
+            }
             return;
         }
     }

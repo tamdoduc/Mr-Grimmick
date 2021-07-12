@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5871279009169001907}
   m_Layer: 0
   m_Name: Boom_Electric
-  m_TagString: Untagged
+  m_TagString: MovingByPipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,11 +221,8 @@ MonoBehaviour:
   groundLim: -2
   isCarry: 0
   isDSM: 0
-  isActive: 0
-  inRange: 0
-  faceRight: 1
-  bfCarry: 0
-  isElectric: 0
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
+  electricSE: {fileID: 2440818144828323611, guid: 04423b6bb95e1974786d25b3067882bd, type: 3}
 --- !u!1 &4877309729079061711
 GameObject:
   m_ObjectHideFlags: 0

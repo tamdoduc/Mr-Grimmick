@@ -22,8 +22,8 @@ public class Boss_7 : MonoBehaviour
 
     private bool isActive = false, isLeft = false, isSkilling = false, isIM = false;
     private int healPoint = 3;
-    private float posY, changeSideCount = 0.1f, skillCount = 0, imCount = 0, skillDelay = 0, transformCount = 0;
-    private const float changeSideTime = 4f, skillTime = 2f, prepareSkillTime = 0.8f, imTime = 0.5f, transformTime = 2.5f;
+    private float posY, changeSideCount = 0.1f, skillCount = 0, imCount = 0, skillDelay = 0, transformCount = 0, prepareCount = 0;
+    private const float prepareTime = 0.5f, changeSideTime = 4f, skillTime = 2f, prepareSkillTime = 0.8f, imTime = 0.5f, transformTime = 1.5f;
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
@@ -127,7 +127,9 @@ public class Boss_7 : MonoBehaviour
     {
         if (target.transform.position.x > leftLim)
         {
-            isActive = true;
+            prepareCount += Time.deltaTime;
+            if (prepareCount > prepareTime)
+                isActive = true;
         }
     }
     void CheckHit()

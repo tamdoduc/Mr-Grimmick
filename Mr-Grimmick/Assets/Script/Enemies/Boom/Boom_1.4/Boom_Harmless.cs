@@ -10,6 +10,8 @@ public class Boom_Harmless : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float camRange, limLeft, limRight, groundLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
     private int healPoint = 1;
     private float handleTime = 0, dieVelocity = 0.7f;
     private bool faceRight = false, turn = false, stop = false;
@@ -50,6 +52,8 @@ public class Boom_Harmless : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             case 1:
                 CheckHit();

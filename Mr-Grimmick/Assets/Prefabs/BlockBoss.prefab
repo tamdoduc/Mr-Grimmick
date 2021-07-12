@@ -74,3 +74,4 @@ MonoBehaviour:
   colliderBlockBoss: {fileID: 3673133372950350339}
   triggerPoint: -29.4
   blockLeftSide: 1
+  bossSE: {fileID: 2212841829372565224, guid: d8cb2bb6bb273f44a942fda392d9104f, type: 3}

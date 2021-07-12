@@ -14,6 +14,9 @@ public class Boss_1 : MonoBehaviour
     [SerializeField] float triggerPoint, groundLim;
     [SerializeField] Boss_1_Boom boom;
     Boss_1_Boom booms;
+    [SerializeField] AudioSource dieSE;
+    [SerializeField] AudioSource hitSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 3, status = 2, bfstatus = 0, index = 0;
     private float handleTime = 0, dieVelocity = 0.7f, imCount = 0;
@@ -54,6 +57,8 @@ public class Boss_1 : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 3);
                 break;
             default:
                 if (!isActive)
@@ -131,7 +136,9 @@ public class Boss_1 : MonoBehaviour
             healPoint--;
             isIM = true;
             handleTime = 0;
-            status = 4;  
+            status = 4;
+            cloneAudio = AudioSource.Instantiate(hitSE);
+            Destroy(cloneAudio.gameObject, 1);
         }
     }
     [SerializeField] UnlockStage unlock;

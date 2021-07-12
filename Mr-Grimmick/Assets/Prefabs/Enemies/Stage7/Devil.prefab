@@ -315,6 +315,8 @@ MonoBehaviour:
   groundLim: -1
   wakeRange: 7
   healPoint: 1
+  hitSE: {fileID: 8731857718532004576, guid: 11b474079fdf3eb4dbb8af92780e8124, type: 3}
+  runSE: {fileID: 3684228228108702781, guid: d4b173476f968ce4b847a48ca2879f09, type: 3}
   isActive: 0
   runMode: 0
   isJump: 0

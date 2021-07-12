@@ -211,6 +211,7 @@ MonoBehaviour:
   camRange: 7
   groundLim: -1.5
   limX: -29.4
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
 --- !u!1 &6574989683796618184
 GameObject:
   m_ObjectHideFlags: 0

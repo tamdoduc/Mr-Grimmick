@@ -19,12 +19,15 @@ public class DevilWithWhite : MonoBehaviour
     [SerializeField] float resetRange, groundLim, wakeRange;
     [SerializeField] int healPoint = 1;
     [SerializeField] GameObject white;
+    [SerializeField] AudioSource hitSE;
+    [SerializeField] AudioSource runSE;
+    AudioSource cloneAudio;
 
     [SerializeField] bool isActive = false, runMode = false, isJump = false, chaseMode = false, delayed = false, hurt = false;
     private float handleTime = 0, detectTime = 0, imCount = 0;
     private Vector2 vel;
     private Vector3 posBefore;
-    private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 0.5f, jumpTime = 0.35f, eps = 0.15f, chaseTime = 1.5f, imTime = 0.5f;
+    private const float MaxVelocityXRight = 4.5f, MaxVelocityXLeft = -4.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 0.5f, jumpTime = 0.35f, eps = 0.15f, chaseTime = 1.5f, imTime = 0.5f, runTime = 4f;
     void Start()
     {
         body.velocity = new Vector2(0, 0);
@@ -112,7 +115,17 @@ public class DevilWithWhite : MonoBehaviour
                 }
             }
             if (runMode)
-                vel.x += 2;
+            {
+                if (cloneAudio == null)
+                    cloneAudio = AudioSource.Instantiate(runSE);
+                detectTime += Time.deltaTime;
+                if (detectTime > runTime)
+                    GameObject.Destroy(this.gameObject);
+                if (vel.x > 0)
+                    body.velocity = vel + new Vector2(2, 0);
+                else
+                    body.velocity = vel - new Vector2(2, 0);
+            }
             body.velocity = vel;
         }
         else
@@ -128,6 +141,8 @@ public class DevilWithWhite : MonoBehaviour
             if (healPoint == 0)
             {
                 healPoint = -1;
+                cloneAudio = AudioSource.Instantiate(hitSE);
+                Destroy(cloneAudio.gameObject, 1);
                 PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 130);
                 runMode = true;
                 vel = new Vector2(0, 3);

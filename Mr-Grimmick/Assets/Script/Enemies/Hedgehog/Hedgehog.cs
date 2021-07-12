@@ -14,6 +14,8 @@ public class Hedgehog : MonoBehaviour
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float groundLim;
     [SerializeField] CheckTop checktop;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     public bool faceRight = true;
     private int healPoint = 2;
@@ -55,6 +57,8 @@ public class Hedgehog : MonoBehaviour
                     body.AddForce(Vector2.right * 0.08f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 0.2f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             case 1:
                 if (!isIM)

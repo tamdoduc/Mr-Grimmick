@@ -22,8 +22,10 @@ public class Boom : MonoBehaviour
     [SerializeField] CheckTop checkTop;
     [SerializeField] float wakeRange, resetRange, camRange, groundLim;
     [SerializeField] bool ready = false;
-    [SerializeField] int jumpCount = 15;
-    public int healPoint = 1, score = 120;
+    [SerializeField] AudioSource dieSE;
+    [SerializeField] AudioSource flyModeSE;
+    AudioSource cloneAudio;
+    private int healPoint = 1, score = 120, jumpCount = 12;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
     private bool isActive = false, faceRight = false, isJump = false, flyMode = false, outRange = false;
     private Vector2 vel;
@@ -67,6 +69,8 @@ public class Boom : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 CheckOutRange();
@@ -153,6 +157,8 @@ public class Boom : MonoBehaviour
             || target.transform.position.y < groundLim)
         {
             outRange = true;
+            if (cloneAudio != null)
+                GameObject.Destroy(cloneAudio);
         }
         if (outRange)
         {
@@ -276,6 +282,8 @@ public class Boom : MonoBehaviour
         else
         {
             animator.SetBool("Fly", flyMode);
+            if (cloneAudio == null)
+            cloneAudio = AudioSource.Instantiate(flyModeSE);
             CheckMove();
             if (detectTime < resetTime)
             {
@@ -316,11 +324,15 @@ public class Boom : MonoBehaviour
         isActive = false;
         flyMode = false;
         isJump = false;
+        animator.SetBool("Fly", false);
+        body.velocity = new Vector2(0, 0);
+        animator.SetFloat("Speed", 0);
         outRange = false;
         checkTop.SetActive(true);
         detectTime = 0;
         handleTime = 0;
-        if (!ready) jumpCount = 15;
+        ready = false;
+        jumpCount = 12;
         transform.position = new Vector3(posX, posY, 0);
     }
     bool IsGrounded()

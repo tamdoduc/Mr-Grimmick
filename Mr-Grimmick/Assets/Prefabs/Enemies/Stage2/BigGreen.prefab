@@ -368,6 +368,7 @@ MonoBehaviour:
   rightLim: 7
   topLim: 1.5
   camRange: 7
+  dieSE: {fileID: 6980303730853267618, guid: eab8c773a99bf344b9ed5f97455ef6d1, type: 3}
   activeDistanceX: 12
   dis: 0
 --- !u!1 &9211618917610034235

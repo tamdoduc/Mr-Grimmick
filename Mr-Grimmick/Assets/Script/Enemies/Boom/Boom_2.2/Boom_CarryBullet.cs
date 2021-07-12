@@ -15,6 +15,8 @@ public class Boom_CarryBullet : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float groundLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1;
     private float range = 7, handleTime = 0, dieVelocity = 0.7f;
@@ -57,6 +59,8 @@ public class Boom_CarryBullet : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             case 1:
                 CheckHit();

@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8787002075010025727}
   m_Layer: 0
   m_Name: Boom_Jump
-  m_TagString: Untagged
+  m_TagString: MovingByPipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,7 +315,8 @@ MonoBehaviour:
   wakeRange: 12
   resetRange: 15
   camRange: 7
-  groundLim: -2
+  groundLim: -0.5
+  dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
 --- !u!1001 &4867731461437039237
 PrefabInstance:
   m_ObjectHideFlags: 0

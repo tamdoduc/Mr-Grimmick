@@ -20,10 +20,12 @@ public class Boom_DownJump : MonoBehaviour
     [SerializeField] LayerMask pipeLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float resetRange, camRange, groundLim, topLim;
+    [SerializeField] AudioSource dieSE;
+    AudioSource cloneAudio;
 
     private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
-    public bool isActive = false, faceRight = false, isJump = false;
+    private bool isActive = false, faceRight = false, isJump = false;
     private Vector2 vel;
     private const float MaxVelocityXRight = 3.5f, MaxVelocityXLeft = -3.5f, MaxVelocityY = 5f, MaxGravity = -8f, resetTime = 3.2f, jumpTime = 0.37f, dieTime = 0.2f;
 
@@ -61,6 +63,8 @@ public class Boom_DownJump : MonoBehaviour
                     body.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
                     body.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
                 }
+                cloneAudio = AudioSource.Instantiate(dieSE);
+                Destroy(cloneAudio.gameObject, 1);
                 break;
             default:
                 if (target.transform.position.y < groundLim || target.transform.position.y > topLim)
@@ -70,13 +74,13 @@ public class Boom_DownJump : MonoBehaviour
                 }
                 if (isActive)
                 {
-                    if (IsColliderPipe())
-                    {
-                        body.velocity = new Vector2(0, 0);
-                        return;
-                    }
                     SetState();
                     CheckHit();
+                    if (IsColliderPipe())
+                    {
+                        gameObject.tag = "MovingByPipe";
+                        vel.y = Mathf.Abs(vel.y);
+                    }
                     body.velocity = vel;
                     NormalMode();
                     CheckOutRange();
@@ -280,5 +284,11 @@ public class Boom_DownJump : MonoBehaviour
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, pipeLayer);
         return hit2D.collider != null;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "12") //thorTrap
+        {
+            GameObject.Destroy(this.gameObject);
+        }
+    }
 }
