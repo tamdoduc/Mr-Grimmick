@@ -1870,8 +1870,8 @@ MonoBehaviour:
   triggerPoint: -29.4
   groundLim: -2
   boom: {fileID: 6687383308922568334, guid: 4830d55b6dff7054fbd5da67bc86e253, type: 3}
-  dieSE: {fileID: 0}
-  hitSE: {fileID: 0}
+  dieSE: {fileID: 3401831535468974327, guid: 257e8955e46f62d48b2b16f15b73d7a5, type: 3}
+  hitSE: {fileID: 8867588076906477970, guid: 7b0a60da585baac4b979b9e3c1d0a0c0, type: 3}
   isActive: 0
   isIM: 0
   fUse: 1
