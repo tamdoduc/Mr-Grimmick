@@ -16,6 +16,7 @@ public class Water : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
+        active = true;
     }
 
     // Update is called once per frame
