@@ -29,7 +29,11 @@ public class Water : MonoBehaviour
         {
             if (collision.gameObject.name != "Player")
                 GameObject.Destroy(collision.gameObject);
-            else player.FallDownWater();
+            else
+            {
+                player.FallDownWater();
+                Destroy(this.gameObject);
+            }
             if (cloneAudio == null)
             {
                 cloneAudio = AudioSource.Instantiate(audio);

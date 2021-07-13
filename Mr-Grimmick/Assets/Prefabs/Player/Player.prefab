@@ -488,6 +488,8 @@ MonoBehaviour:
   ShootSkill: {fileID: 6721808612458835210, guid: 1d079d248ecb1f043b07aa7ef48f17c3, type: 3}
   EnergyBall: {fileID: 4569288013355351536, guid: bf2e221a39bb3f742badcf75bcbeb7c4, type: 3}
   Bomb: {fileID: 7506852298266597453, guid: ca0a5656fe4af3846b72d3d87f9853bb, type: 3}
+  audioFainting: {fileID: 7292320242015930206, guid: e9c8cd41ded1bb74289ac0b070c846bf, type: 3}
+  audioDie: {fileID: 3818075779653277688, guid: 6327fb4c6bb308d4aa30e22e607c1517, type: 3}
   Gate: {fileID: 6869838295550178229, guid: 977ffe537f380224c87ddce1737b416e, type: 3}
   PosGate: {x: 2, y: -15, z: 0}
   afterDie: {fileID: 8580638937810096421, guid: 90df0bf77be55394e953df109eaa0ec2, type: 3}

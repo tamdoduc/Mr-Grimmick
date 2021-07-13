@@ -3856,7 +3856,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1723830293}
   - component: {fileID: 1723830292}
-  - component: {fileID: 1723830291}
   - component: {fileID: 1723830290}
   - component: {fileID: 1723830294}
   m_Layer: 0
@@ -3892,18 +3891,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1723830291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723830289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25150851db3630c4cb170f7b049003e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1723830292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3952,7 +3939,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1723830293
@@ -4267,11 +4254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.42
+      value: 15.62
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4330,11 +4317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2847457755063840476, guid: f50bcb3c0ba3f4b4ca99545e0a4b9c90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.19246
+      value: 15.49
       objectReference: {fileID: 0}
     - target: {fileID: 2847457755063840476, guid: f50bcb3c0ba3f4b4ca99545e0a4b9c90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61338735
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 2847457755063840476, guid: f50bcb3c0ba3f4b4ca99545e0a4b9c90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4374,7 +4361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2847457755063840477, guid: f50bcb3c0ba3f4b4ca99545e0a4b9c90, type: 3}
       propertyPath: posRevive.x
-      value: 14
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 2847457755063840477, guid: f50bcb3c0ba3f4b4ca99545e0a4b9c90, type: 3}
       propertyPath: posRevive.y

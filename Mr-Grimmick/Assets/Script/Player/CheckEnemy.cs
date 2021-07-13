@@ -22,11 +22,12 @@ public class CheckEnemy : MonoBehaviour
         {
             if (player.IsFainting() == false)
                 player.BeActack();
-        }
+        } else
         if (collision.gameObject.layer.ToString() == "12") //thorTrap
         {
             Debug.LogWarning("Die");
             player.Die();
+            Destroy(this.gameObject);
         }
     }
 }

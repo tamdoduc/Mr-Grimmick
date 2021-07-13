@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 706743312540486512, guid: b025cf4b899d23645ad9f8cf0fa3e377, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.79
+      value: 20.46
       objectReference: {fileID: 0}
     - target: {fileID: 706743312540486512, guid: b025cf4b899d23645ad9f8cf0fa3e377, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1204,7 +1204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7384,11 +7384,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 706743312540486512, guid: b025cf4b899d23645ad9f8cf0fa3e377, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.14
+      value: 22.01
       objectReference: {fileID: 0}
     - target: {fileID: 706743312540486512, guid: b025cf4b899d23645ad9f8cf0fa3e377, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.89
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 706743312540486512, guid: b025cf4b899d23645ad9f8cf0fa3e377, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9033,11 +9033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.64
+      value: 7.15
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.52
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9932,7 +9932,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10111,14 +10111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1777348048, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777348048, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7170859070260654360, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -10163,18 +10155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7170859070260654361, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7170859070260654362, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    - target: {fileID: 7170859070260654375, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 430617834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97eb66c0ad58fd94cad2688b200c100c, type: 3}
 --- !u!1001 &1837896084
@@ -10625,11 +10609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: NewPosInNextScene.x
-      value: -6.5
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565384, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: NewPosInNextScene.y
-      value: -2.4
+      value: -12.5
       objectReference: {fileID: 0}
     - target: {fileID: 8564876618609565385, guid: bb3a1e1e211c183459d9297cc358b60d, type: 3}
       propertyPath: m_Name

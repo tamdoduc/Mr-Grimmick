@@ -7,6 +7,12 @@ public class ItemHP : MonoBehaviour
     bool isUsed = false;
 
     [SerializeField] AudioSource audio;
+    [SerializeField] string name;
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("itemhp"+name) == 1)
+            Destroy(this.gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player" && !isUsed)
@@ -22,7 +28,9 @@ public class ItemHP : MonoBehaviour
             }
             audio = AudioSource.Instantiate(audio);
             Destroy(audio.gameObject, 1);
+            PlayerPrefs.SetInt("itemhp"+name, 1);
             GameObject.Destroy(this.gameObject);
+
         }
     }
 }

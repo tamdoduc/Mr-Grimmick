@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,8 +14,6 @@ public class Worm : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
     [SerializeField] float camRange, groundLim;
-    [SerializeField] GameObject itemBottle;
-    GameObject cloneitem;
     [SerializeField] AudioSource dieSE;
     AudioSource cloneAudio;
 
@@ -43,11 +41,6 @@ public class Worm : MonoBehaviour
                 DieState();
                 break;
             case 0:
-                if (PlayerPrefs.GetInt("score") < 120)
-                {
-                    cloneitem = GameObject.Instantiate(itemBottle);
-                    cloneitem.transform.position = this.gameObject.transform.position;
-                }
                 PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + score);
                 if (target.transform.position.x > transform.position.x)
                     dieVelocity = -dieVelocity;
@@ -74,7 +67,7 @@ public class Worm : MonoBehaviour
                     CheckMove();
                 body.velocity = vel;
                 break;
-        }   
+        }
     }
     void DieState()
     {
@@ -112,7 +105,7 @@ public class Worm : MonoBehaviour
         }
 
         faceRight = !faceRight;
-        
+
     }
     bool IsNotEdge()
     {

@@ -33,7 +33,6 @@ public class HUBManage : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             stateItem[i] = 0;
-            PlayerPrefs.SetInt("item" + i.ToString(), 0);
         }
         int score2 = PlayerPrefs.GetInt("score");
         score = score2;
@@ -42,6 +41,8 @@ public class HUBManage : MonoBehaviour
             aniScores[i].SetInteger("Number", score2 % 10);
             score2 = score2 / 10;
         }
+        maxHP = 0;
+        currentHP = 0;
     }
     void SetAnimationScore()
     {

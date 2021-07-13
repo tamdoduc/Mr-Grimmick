@@ -161,7 +161,10 @@ public class Boss_7 : MonoBehaviour
     {
         transformCount += Time.deltaTime;
         if (transformCount > transformTime)
+        {
             GameObject.Destroy(this.gameObject);
+            Application.LoadLevel("Ending");
+        }
     }
     bool IsColliderSkill()
     {

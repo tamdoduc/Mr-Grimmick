@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource Jump;
     [SerializeField] AudioSource HoldSkill;
     [SerializeField] AudioSource ShootSkill,EnergyBall,Bomb;
+    [SerializeField] AudioSource audioFainting;
+    [SerializeField] AudioSource audioDie;
     AudioSource cloneAudio;
 
     public void SetActive(bool active)
@@ -74,10 +76,12 @@ public class Player : MonoBehaviour
         Vector3 posStart;
         if (PlayerPrefs.GetInt("isRevive") == 0)
         {
+           // PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("maxHp"));
             posStart = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
         }
         else
         {
+            PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("maxHp"));
             PlayerPrefs.SetInt("isRevive", 0);
             posStart = new Vector3(PlayerPrefs.GetFloat("posXRevive"), PlayerPrefs.GetFloat("posYRevive"), PlayerPrefs.GetFloat("posZRevive"));
         }
@@ -96,7 +100,7 @@ public class Player : MonoBehaviour
             Gate = GameObject.Instantiate(Gate);
             Gate.transform.position = this.gameObject.transform.position + new Vector3(0, 0.5f, 0); 
         }
-        //SetPosStart();
+        SetPosStart();
         body = this.gameObject.GetComponent<Rigidbody2D>();
         IsPressJump = false;
         timePressJump = 0;
@@ -362,6 +366,8 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("IsJumping", true);
         }
+        if (isActive==false)
+            body.velocity = vel;
     }
     bool IsColliderTop()
     {
@@ -403,7 +409,8 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("currentHp", HP);
             if (HP > 0)
             {
-
+                cloneAudio = AudioSource.Instantiate(audioFainting);
+                Destroy(cloneAudio.gameObject, 5);
                 timeFainting = 0;
                 isFainting = true;
                 SetActive(false);
@@ -449,6 +456,8 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("res", Res);
         if (eventPlayerDie!=null)
         GameObject.Instantiate(eventPlayerDie);
+        cloneAudio = AudioSource.Instantiate(audioDie);
+        Destroy(cloneAudio.gameObject, 5);
         if (afterDie != null)
             clone = GameObject.Instantiate(afterDie);
         GameObject.Destroy(this.gameObject);
@@ -463,6 +472,7 @@ public class Player : MonoBehaviour
         }
         if (cloneSkill != null)
             cloneSkill.SelfDestruct();
+        Res = PlayerPrefs.GetInt("res");
         Res--;
         Res = Mathf.Max(Res, -1);
         PlayerPrefs.SetInt("res", Res);

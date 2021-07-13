@@ -13262,6 +13262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item_HP
       objectReference: {fileID: 0}
+    - target: {fileID: 6449048236091215479, guid: d04cc91e01e2bb343819d98bc604dff3, type: 3}
+      propertyPath: name
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04cc91e01e2bb343819d98bc604dff3, type: 3}
 --- !u!1001 &155697774
@@ -15400,7 +15404,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

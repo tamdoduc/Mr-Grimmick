@@ -52,15 +52,27 @@ public class Menu : MonoBehaviour
     }
     void ResetPlayerperfab()
     {
+        
         PlayerPrefs.SetInt("scoreneed", 10000);
         PlayerPrefs.SetInt("res", 7);
         PlayerPrefs.SetInt("score", 0);
         PlayerPrefs.SetInt("maxHp", 2);
         PlayerPrefs.SetInt("currentHp", 2);
         PlayerPrefs.SetInt("countItem", 0);
+        PlayerPrefs.SetInt("item0", 0);
+        PlayerPrefs.SetInt("item1", 0);
+        PlayerPrefs.SetInt("item2", 0);
         PlayerPrefs.SetInt("countres", 2);
         PlayerPrefs.SetInt("isRevive", 0);
         PlayerPrefs.SetInt("StateShip", 0);
 
+
+        PlayerPrefs.SetInt("treasure1.1", 0);
+        PlayerPrefs.SetInt("treasure2.1", 0);
+        PlayerPrefs.SetInt("itemhp1.1", 0);
+        PlayerPrefs.SetInt("itemhp1.4", 0);
+        PlayerPrefs.SetInt("itemhp2.2", 0);
+        PlayerPrefs.SetInt("itemhp7.2.1", 0);
+        PlayerPrefs.SetInt("itemhp7.2.2", 0);
     }
 }
