@@ -119,6 +119,8 @@ public class Boom : MonoBehaviour
     void DieState()
     {
         animator.SetBool("Dead", true);
+        if (cloneAudio != null)
+            GameObject.Destroy(cloneAudio);
         GameObject g = gameObject.transform.GetChild(1).gameObject;
         g.layer = 8;
         transform.eulerAngles = new Vector3(180, 0, 0);
@@ -160,8 +162,12 @@ public class Boom : MonoBehaviour
             || target.transform.position.y < groundLim)
         {
             outRange = true;
-            if (cloneAudio != null)
-                GameObject.Destroy(cloneAudio);
+            if (flyMode)
+            {
+                if (cloneAudio != null)
+                    GameObject.Destroy(cloneAudio);
+                GameObject.Destroy(this.gameObject);
+            }
         }
         if (outRange)
         {
