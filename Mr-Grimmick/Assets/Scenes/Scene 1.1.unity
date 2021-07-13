@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50b2930b3f8b434d9731448ade2ea8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directory_IsLeft: 0
+  directory_IsLeft: 1
   force: 4
 --- !u!1 &592900781
 GameObject:
