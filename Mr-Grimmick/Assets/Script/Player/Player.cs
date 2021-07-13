@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
         isHoldingSkill = false;
 
         HP = PlayerPrefs.GetInt("currentHp");
-        Res = PlayerPrefs.GetInt("res");
+       // Res = PlayerPrefs.GetInt("res");
     }
 
     bool untouchAble = false;

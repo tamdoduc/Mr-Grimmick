@@ -23,17 +23,14 @@ public class Water : MonoBehaviour
     {
         
     }
+    bool active = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer.ToString() != "8")
+            if (collision.gameObject.layer.ToString() != "8" && active)
         {
-            if (collision.gameObject.name != "Player")
-                GameObject.Destroy(collision.gameObject);
-            else
-            {
-                player.FallDownWater();
-                Destroy(this.gameObject);
-            }
+            if (collision.gameObject.name == "Player")
+                active = false;
+            Debug.Log("faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+collision.gameObject.name);
             if (cloneAudio == null)
             {
                 cloneAudio = AudioSource.Instantiate(audio);
@@ -43,6 +40,14 @@ public class Water : MonoBehaviour
             clone = GameObject.Instantiate(animationDestruct);
             pos.x = collision.gameObject.transform.position.x;
             clone.transform.position = pos;
+            if (collision.gameObject.name != "Player")
+                GameObject.Destroy(collision.gameObject);
+            else
+            {
+                player.FallDownWater();
+                Destroy(this.gameObject);
+                Destroy(this);
+            }
         }
     }
 }
