@@ -394,6 +394,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1727746873024214431, guid: 37d53343502b69042a1a866b09835374, type: 3}
     - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
+      propertyPath: groundLim
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
       propertyPath: triggerPoint
       value: 48.3
       objectReference: {fileID: 0}
@@ -692,6 +696,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
+      propertyPath: groundLim
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
       propertyPath: triggerPoint
       value: 48.3

@@ -134,7 +134,7 @@ public class Boss_2 : MonoBehaviour
             }
         }
         else
-            if (target.position.x > leftLim - 1)
+            if (target.position.x > leftLim - 1 && target.position.y > groundLim)
             isActive = true;
     }
     void CheckHit()

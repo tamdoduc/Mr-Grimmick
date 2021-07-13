@@ -75,7 +75,7 @@ public class White : MonoBehaviour
             }
             else
             {
-                if (!onHead)
+                if (!onHead && target.transform.position.y > transform.position.y)
                 {
                     PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
                     onHead = true;

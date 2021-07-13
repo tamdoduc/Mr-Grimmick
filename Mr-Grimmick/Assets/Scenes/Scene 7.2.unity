@@ -3458,6 +3458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationDestruct: {fileID: 9157869426109530434, guid: d6ec73b01c5a63242b1610cdf79a656b, type: 3}
   pos: {x: 0, y: 1, z: 0}
+  audio: {fileID: 0}
 --- !u!1001 &1059544788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4695,6 +4696,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1727746873024214431, guid: 37d53343502b69042a1a866b09835374, type: 3}
     - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
+      propertyPath: groundLim
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673133372950350336, guid: 9b2c7541b35238b4e849af13a2c0aac9, type: 3}
       propertyPath: triggerPoint
       value: -65
       objectReference: {fileID: 0}
@@ -5545,6 +5550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationDestruct: {fileID: 9157869426109530434, guid: d6ec73b01c5a63242b1610cdf79a656b, type: 3}
   pos: {x: 0, y: -11, z: 0}
+  audio: {fileID: 0}
 --- !u!61 &1673211592
 BoxCollider2D:
   m_ObjectHideFlags: 0

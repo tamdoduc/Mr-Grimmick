@@ -18,13 +18,17 @@ public class Boom : MonoBehaviour
     [SerializeField] Collider2D colliderBody;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask skillLayer;
+    [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask pipeLayer;
     [SerializeField] CheckTop checkTop;
     [SerializeField] float wakeRange, resetRange, camRange, groundLim;
     [SerializeField] bool ready = false;
+    [SerializeField] GameObject itemBottle;
+    GameObject cloneitem;
     [SerializeField] AudioSource dieSE;
     [SerializeField] AudioSource flyModeSE;
     AudioSource cloneAudio;
+    
     private int healPoint = 1, score = 120, jumpCount = 12;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
     private bool isActive = false, faceRight = false, isJump = false, flyMode = false, outRange = false;
@@ -49,6 +53,11 @@ public class Boom : MonoBehaviour
                 DieState();
                 break;
             case 0:
+                if (PlayerPrefs.GetInt("score") < 120)
+                {
+                    cloneitem = GameObject.Instantiate(itemBottle);
+                    cloneitem.transform.position = this.gameObject.transform.position;
+                }
                 if (!flyMode)
                     PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + score);
                 else
@@ -76,16 +85,10 @@ public class Boom : MonoBehaviour
                 CheckOutRange();
                 if (isActive)
                 {
-                    if (IsColliderPipe())
-                    {
-                        body.velocity = new Vector2(0, 0);
-                        return;
-                    }
                     SetState();
                     CheckHit();
                     if (!flyMode)
                     {
-                        Debug.Log(flyMode + " " + jumpCount);
                         body.velocity = vel;
                         if (jumpCount > 0)
                         {
@@ -365,5 +368,9 @@ public class Boom : MonoBehaviour
         RaycastHit2D hit2D = Physics2D.BoxCast(colliderBody.bounds.center, colliderBody.bounds.size, 0, Vector2.up, 0.1f, pipeLayer);
         return hit2D.collider != null;
     }
-
+    bool IsColliderHead()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderHead.bounds.center, colliderHead.bounds.size, 0, Vector2.up, 0.1f, playerLayer);
+        return hit2D.collider != null;
+    }
 }

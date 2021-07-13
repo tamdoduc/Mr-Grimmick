@@ -367,6 +367,9 @@ MonoBehaviour:
   skillLayer:
     serializedVersion: 2
     m_Bits: 2048
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 65536
   pipeLayer:
     serializedVersion: 2
     m_Bits: 8388608
@@ -376,6 +379,7 @@ MonoBehaviour:
   camRange: 7
   groundLim: -20
   ready: 0
+  itemBottle: {fileID: 1507803185294621572, guid: a422e99f1da7fb94b9deb0d44a8a1188, type: 3}
   dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
   flyModeSE: {fileID: 2359286581518689530, guid: 32d1c4d9cdba8124f967a54faf1654de, type: 3}
 --- !u!1001 &6750634866975144759

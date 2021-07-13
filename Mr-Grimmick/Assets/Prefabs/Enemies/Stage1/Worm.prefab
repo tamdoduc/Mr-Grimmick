@@ -296,6 +296,7 @@ MonoBehaviour:
     m_Bits: 2048
   camRange: 7
   groundLim: 0
+  itemBottle: {fileID: 1507803185294621572, guid: a422e99f1da7fb94b9deb0d44a8a1188, type: 3}
   dieSE: {fileID: 7104465960619614438, guid: 915802a06b0faa94f8c3817e29b00542, type: 3}
 --- !u!1001 &3109779167477676629
 PrefabInstance:

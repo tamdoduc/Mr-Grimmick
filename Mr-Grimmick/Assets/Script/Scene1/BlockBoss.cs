@@ -6,7 +6,7 @@ public class BlockBoss : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] Collider2D colliderBlockBoss;
-    [SerializeField] float triggerPoint;
+    [SerializeField] float triggerPoint, groundLim;
     [SerializeField] bool blockLeftSide = true; //true is block left
     [SerializeField] AudioSource bossSE;
     AudioSource cloneAudio;
@@ -23,7 +23,7 @@ public class BlockBoss : MonoBehaviour
     {
         if (blockLeftSide)
         {
-            if (target.transform.position.x > triggerPoint)
+            if (target.transform.position.x > triggerPoint && target.position.y > groundLim)
             {
                 colliderBlockBoss.isTrigger = false;
                 if (cloneAudio == null)
@@ -34,7 +34,7 @@ public class BlockBoss : MonoBehaviour
         }
         else
         {
-            if (target.transform.position.x < triggerPoint)
+            if (target.transform.position.x < triggerPoint && target.position.y > groundLim)
             {
                 colliderBlockBoss.isTrigger = false;
                 if (cloneAudio == null)
