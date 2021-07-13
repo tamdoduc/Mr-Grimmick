@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 278116537}
   - component: {fileID: 278116536}
   m_Layer: 0
-  m_Name: 02_Happy Birthday
+  m_Name: AudioBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1708,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -6
   m_Sprite: {fileID: 21300000, guid: a346e469c40b8654a971dbaebb3ced8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1870,8 +1870,8 @@ MonoBehaviour:
   triggerPoint: -29.4
   groundLim: -2
   boom: {fileID: 6687383308922568334, guid: 4830d55b6dff7054fbd5da67bc86e253, type: 3}
-  dieSE: {fileID: 3401831535468974327, guid: 257e8955e46f62d48b2b16f15b73d7a5, type: 3}
-  hitSE: {fileID: 8867588076906477970, guid: 7b0a60da585baac4b979b9e3c1d0a0c0, type: 3}
+  dieSE: {fileID: 0}
+  hitSE: {fileID: 0}
   isActive: 0
   isIM: 0
   fUse: 1
@@ -3801,7 +3801,8 @@ GameObject:
   - component: {fileID: 1723830292}
   - component: {fileID: 1723830291}
   - component: {fileID: 1723830290}
-  m_Layer: 12
+  - component: {fileID: 1723830294}
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3818,7 +3819,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3894,7 +3895,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1723830293
@@ -3911,6 +3912,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723830294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723830289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3760327159672e047854fec02688bdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDestruct: {fileID: 9157869426109530434, guid: d6ec73b01c5a63242b1610cdf79a656b, type: 3}
+  pos: {x: 0, y: -1.5, z: 0}
+  audio: {fileID: 966505016420083132, guid: 0d9cdf396bb75af43b370d795aa69547, type: 3}
 --- !u!4 &1724894734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2903810874838201366, guid: 455ffd5b29b93ac489524976ca542f10, type: 3}
@@ -4194,11 +4210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.58
+      value: -3.42
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.61
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 8946205385286984445, guid: 8a37230649d533e408d0932dd55cede9, type: 3}
       propertyPath: m_LocalPosition.z

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8872503237098663209}
   - component: {fileID: 8872503237098663208}
   - component: {fileID: 8872503237098663212}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BulletTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8872503237098663212}
+  destruct: {fileID: 4956305557306865112, guid: 00aeae79cc5fa184896cfff6b7ccbf45, type: 3}
 --- !u!50 &8872503237098663212
 Rigidbody2D:
   serializedVersion: 4

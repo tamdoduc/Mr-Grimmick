@@ -74,10 +74,6 @@ public class Player : MonoBehaviour
         Vector3 posStart;
         if (PlayerPrefs.GetInt("isRevive") == 0)
         {
-            //PlayerPrefs.SetFloat("posXStart", 62.5f);
-            //PlayerPrefs.SetFloat("posYStart", -12.5f);
-            //PlayerPrefs.SetFloat("posZStart", 0);
-
             posStart = new Vector3(PlayerPrefs.GetFloat("posXStart"), PlayerPrefs.GetFloat("posYStart"), PlayerPrefs.GetFloat("posZStart"));
         }
         else
@@ -396,10 +392,13 @@ public class Player : MonoBehaviour
     }
     public void BeActack()
     {
+        HP = PlayerPrefs.GetInt("currentHp");
         if (this.gameObject.layer.ToString() == "16")
         {
+            Debug.Log("actackkkkkkkkkkkkkkkkkkkkkkkkkkkk      "+ HP);
+            gameObject.layer = 19; //immortal
             Shoot(PlayerPrefs.GetInt("IDSkill"));
-            //HP--; 
+            HP--; 
             HP = Mathf.Max(HP, 0);
             PlayerPrefs.SetInt("currentHp", HP);
             if (HP > 0)
@@ -422,7 +421,9 @@ public class Player : MonoBehaviour
             }
             if (HP == 0)
             {
+                if (cloneSkill!=null)
                 cloneSkill.SelfDestruct();
+                if (cloneAnimationSkill!=null)
                 Destroy(animationSkill);
                 Die();
             }
@@ -442,10 +443,14 @@ public class Player : MonoBehaviour
         }
         if (cloneSkill!=null)
             cloneSkill.SelfDestruct();
+        Res = PlayerPrefs.GetInt("res");
         Res--;
         Res = Mathf.Max(Res, -1);
         PlayerPrefs.SetInt("res", Res);
+        if (eventPlayerDie!=null)
         GameObject.Instantiate(eventPlayerDie);
+        if (afterDie != null)
+            clone = GameObject.Instantiate(afterDie);
         GameObject.Destroy(this.gameObject);
     }
     public void FallDownWater()
@@ -461,9 +466,12 @@ public class Player : MonoBehaviour
         Res--;
         Res = Mathf.Max(Res, -1);
         PlayerPrefs.SetInt("res", Res);
+        if (afterDie!=null)
+        clone = GameObject.Instantiate(afterDie);
         GameObject.Destroy(this.gameObject);
     }
-
+    [SerializeField] AterDie afterDie;
+    AterDie clone;
 }
 
 

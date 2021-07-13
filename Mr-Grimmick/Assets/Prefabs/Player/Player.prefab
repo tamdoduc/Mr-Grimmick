@@ -490,6 +490,7 @@ MonoBehaviour:
   Bomb: {fileID: 7506852298266597453, guid: ca0a5656fe4af3846b72d3d87f9853bb, type: 3}
   Gate: {fileID: 6869838295550178229, guid: 977ffe537f380224c87ddce1737b416e, type: 3}
   PosGate: {x: 2, y: -15, z: 0}
+  afterDie: {fileID: 8580638937810096421, guid: 90df0bf77be55394e953df109eaa0ec2, type: 3}
 --- !u!58 &8946205385286984417
 CircleCollider2D:
   m_ObjectHideFlags: 0

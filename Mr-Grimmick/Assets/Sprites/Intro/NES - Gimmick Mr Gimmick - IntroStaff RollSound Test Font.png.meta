@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: -7754459481762168146
     second: null
+  - first:
+      213: 7654691033450423946
+    second: Gameover
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +125,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 844
+        y: 1021
         width: 126
         height: 9
       alignment: 0
@@ -142,8 +145,8 @@ TextureImporter:
       name: 2a
       rect:
         serializedVersion: 2
-        x: 70
-        y: 768
+        x: 71
+        y: 945
         width: 79
         height: 32
       alignment: 0
@@ -163,8 +166,8 @@ TextureImporter:
       name: 3a
       rect:
         serializedVersion: 2
-        x: 83
-        y: 768
+        x: 84
+        y: 945
         width: 56
         height: 9
       alignment: 0
@@ -185,7 +188,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 742
+        y: 919
         width: 162
         height: 9
       alignment: 0
@@ -206,7 +209,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 717
+        y: 894
         width: 78
         height: 9
       alignment: 0
@@ -227,7 +230,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 691
+        y: 868
         width: 86
         height: 9
       alignment: 0
@@ -248,7 +251,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 640
+        y: 817
         width: 126
         height: 9
       alignment: 0
@@ -269,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 563
+        y: 740
         width: 79
         height: 32
       alignment: 0
@@ -289,8 +292,8 @@ TextureImporter:
       name: 3b
       rect:
         serializedVersion: 2
-        x: 83
-        y: 563
+        x: 82
+        y: 740
         width: 56
         height: 9
       alignment: 0
@@ -311,7 +314,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 537
+        y: 714
         width: 162
         height: 9
       alignment: 0
@@ -332,7 +335,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 512
+        y: 689
         width: 78
         height: 9
       alignment: 0
@@ -353,7 +356,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 486
+        y: 663
         width: 86
         height: 9
       alignment: 0
@@ -374,7 +377,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 422
+        y: 599
         width: 126
         height: 9
       alignment: 0
@@ -394,8 +397,8 @@ TextureImporter:
       name: 2c
       rect:
         serializedVersion: 2
-        x: 70
-        y: 345
+        x: 69
+        y: 523
         width: 79
         height: 32
       alignment: 0
@@ -415,8 +418,8 @@ TextureImporter:
       name: 3c
       rect:
         serializedVersion: 2
-        x: 83
-        y: 345
+        x: 84
+        y: 523
         width: 56
         height: 9
       alignment: 0
@@ -437,7 +440,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 320
+        y: 497
         width: 162
         height: 9
       alignment: 0
@@ -458,7 +461,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 294
+        y: 471
         width: 78
         height: 9
       alignment: 0
@@ -479,7 +482,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 269
+        y: 446
         width: 86
         height: 9
       alignment: 0
@@ -500,7 +503,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 179
+        y: 356
         width: 126
         height: 9
       alignment: 0
@@ -521,7 +524,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 102
+        y: 279
         width: 79
         height: 32
       alignment: 0
@@ -541,8 +544,8 @@ TextureImporter:
       name: 3d
       rect:
         serializedVersion: 2
-        x: 83
-        y: 102
+        x: 82
+        y: 279
         width: 56
         height: 9
       alignment: 0
@@ -563,7 +566,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 77
+        y: 254
         width: 162
         height: 9
       alignment: 0
@@ -584,7 +587,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 51
+        y: 228
         width: 78
         height: 9
       alignment: 0
@@ -604,8 +607,8 @@ TextureImporter:
       name: 6d
       rect:
         serializedVersion: 2
-        x: 64
-        y: 25
+        x: 63
+        y: 202
         width: 86
         height: 9
       alignment: 0
@@ -630,7 +633,7 @@ TextureImporter:
         width: 9
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -638,6 +641,27 @@ TextureImporter:
       bones: []
       spriteID: ea2086caf20a26490800000000000000
       internalID: -7754459481762168146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gameover
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 121
+        width: 94
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a862e2a40fcea3a60800000000000000
+      internalID: 7654691033450423946
       vertices: []
       indices: 
       edges: []

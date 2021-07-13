@@ -10,6 +10,9 @@ public class Water : MonoBehaviour
 
     GameObject clone;
     Player player;
+
+    [SerializeField] AudioSource audio;
+    AudioSource cloneAudio;
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -24,12 +27,18 @@ public class Water : MonoBehaviour
     {
         if (collision.gameObject.layer.ToString() != "8")
         {
-            clone = GameObject.Instantiate(animationDestruct);
-            pos.x = collision.gameObject.transform.position.x;
-            clone.transform.position = pos;
             if (collision.gameObject.name != "Player")
                 GameObject.Destroy(collision.gameObject);
             else player.FallDownWater();
+            if (cloneAudio == null)
+            {
+                cloneAudio = AudioSource.Instantiate(audio);
+                Destroy(cloneAudio.gameObject, 1);
+            }
+            if (animationDestruct!=null)
+            clone = GameObject.Instantiate(animationDestruct);
+            pos.x = collision.gameObject.transform.position.x;
+            clone.transform.position = pos;
         }
     }
 }

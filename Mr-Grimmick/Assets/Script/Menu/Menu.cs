@@ -23,14 +23,11 @@ public class Menu : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            ResetPlayerperfab();
             switch (indexbutton)
             {
                 case 0:
-                    PlayerPrefs.SetInt("currentMap", 1);
-                    PlayerPrefs.SetInt("maxHp", 2);
-                    PlayerPrefs.SetInt("currentHp", 2);
-                    PlayerPrefs.SetInt("score", 0);
-                    PlayerPrefs.SetInt("res", 0);
+                    PlayerPrefs.SetInt("currentLevel", 0);
                     Application.LoadLevel("Map");
                     break;
                 case 1:
@@ -52,5 +49,18 @@ public class Menu : MonoBehaviour
                 spriteContinue.enabled = true;
                 break;
         }
+    }
+    void ResetPlayerperfab()
+    {
+        PlayerPrefs.SetInt("scoreneed", 10000);
+        PlayerPrefs.SetInt("res", 7);
+        PlayerPrefs.SetInt("score", 0);
+        PlayerPrefs.SetInt("maxHp", 2);
+        PlayerPrefs.SetInt("currentHp", 2);
+        PlayerPrefs.SetInt("countItem", 0);
+        PlayerPrefs.SetInt("countres", 2);
+        PlayerPrefs.SetInt("isRevive", 0);
+        PlayerPrefs.SetInt("StateShip", 0);
+
     }
 }

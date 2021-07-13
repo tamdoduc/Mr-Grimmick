@@ -36,6 +36,6 @@ public class Trap : MonoBehaviour
             selfDestruct = GameObject.Instantiate(selfDestruct);
             selfDestruct.transform.position = this.gameObject.transform.position;
             GameObject.Destroy(trap.gameObject);
-        } 
+        }
     }
 }

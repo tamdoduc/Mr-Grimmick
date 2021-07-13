@@ -30,14 +30,17 @@ public class HUBManage : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        PlayerPrefs.SetInt("score",0);
-        PlayerPrefs.SetInt("maxHp",2);
-        PlayerPrefs.SetInt("currentHp",2);
-        PlayerPrefs.SetInt("countItem", 0);
         for (int i = 0; i < 3; i++)
         {
             stateItem[i] = 0;
             PlayerPrefs.SetInt("item" + i.ToString(), 0);
+        }
+        int score2 = PlayerPrefs.GetInt("score");
+        score = score2;
+        for (int i = 7; i >= 0; i--)
+        {
+            aniScores[i].SetInteger("Number", score2 % 10);
+            score2 = score2 / 10;
         }
     }
     void SetAnimationScore()
@@ -68,12 +71,18 @@ public class HUBManage : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 0.1f)
+        if (time > 0.05f)
         {
             if (score != PlayerPrefs.GetInt("score"))
             {
                 time = 0;
-                //score = PlayerPrefs.GetInt("score");
+                if (score >= PlayerPrefs.GetInt("scoreneed"))
+                {
+                    Debug.Log(PlayerPrefs.GetInt("scoreneed"));
+                    PlayerPrefs.SetInt("res", PlayerPrefs.GetInt("res") + 1);
+                    PlayerPrefs.SetInt("scoreneed", PlayerPrefs.GetInt("scoreneed")+PlayerPrefs.GetInt("countres")*10000);
+                    PlayerPrefs.SetInt("countres", PlayerPrefs.GetInt("countres") + 1);
+                }
                 SetAnimationScore();
             }
         }
