@@ -325,16 +325,16 @@ public class Boom : MonoBehaviour
     void ResetBoom()
     {
         isActive = false;
-        flyMode = false;
+       // flyMode = false;
         isJump = false;
-        animator.SetBool("Fly", false);
+        //animator.SetBool("Fly", false);
         body.velocity = new Vector2(0, 0);
         animator.SetFloat("Speed", 0);
         outRange = false;
         checkTop.SetActive(true);
         detectTime = 0;
         handleTime = 0;
-        ready = false;
+        //ready = false;
         jumpCount = 12;
         transform.position = new Vector3(posX, posY, 0);
     }
