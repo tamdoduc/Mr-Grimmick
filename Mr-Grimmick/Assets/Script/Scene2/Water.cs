@@ -46,7 +46,6 @@ public class Water : MonoBehaviour
             {
                 player.FallDownWater();
                 Destroy(this.gameObject);
-                Destroy(this);
             }
         }
     }
