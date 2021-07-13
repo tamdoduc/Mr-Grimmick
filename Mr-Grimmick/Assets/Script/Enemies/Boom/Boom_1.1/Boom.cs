@@ -28,8 +28,9 @@ public class Boom : MonoBehaviour
     [SerializeField] AudioSource dieSE;
     [SerializeField] AudioSource flyModeSE;
     AudioSource cloneAudio;
-    
-    private int healPoint = 1, score = 120, jumpCount = 12;
+
+    [SerializeField] int jumpCount = 12;
+    private int healPoint = 1, score = 120;
     private float detectTime = 0, handleTime = 0, posX, posY, dieVelocity = 0.7f;
     private bool isActive = false, faceRight = false, isJump = false, flyMode = false, outRange = false;
     private Vector2 vel;

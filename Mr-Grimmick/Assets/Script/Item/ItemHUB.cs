@@ -7,10 +7,16 @@ public class ItemHUB : MonoBehaviour
     [SerializeField] int id;
     [SerializeField] SelfDestruct selfDestruct;
     [SerializeField] AudioSource audio;
+    bool active;
+    private void Start()
+    {
+        active = true;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player"&&active)
         {
+            active = false;
             int countItem = PlayerPrefs.GetInt("countItem") -1;
             if (countItem < 2)
             {
