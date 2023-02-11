@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6449048236091215477}
   - component: {fileID: 6449048236091215476}
   - component: {fileID: 6449048236091215479}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Item_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6449048236091215478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.1160426, y: -17.13095, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: -1119324230190804807, guid: 6f598a5efacb52448a4c3375b8ca9463, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cff5330b079a414b9a03e15e109a705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 1474335889774117344, guid: 353cee6670f756b45ac1b6f40d4fc538, type: 3}

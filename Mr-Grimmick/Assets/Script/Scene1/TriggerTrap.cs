@@ -11,5 +11,6 @@ public class TriggerTrap : MonoBehaviour
         {
             trap.Active();
         }
+        
     }
 }

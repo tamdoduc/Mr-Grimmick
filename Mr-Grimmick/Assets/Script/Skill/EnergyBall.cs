@@ -30,4 +30,8 @@ public class EnergyBall : SkillTemp
             body.velocity = velocity;
         }
     }
+    public override void SelfDestruct()
+    {
+        Destroy(this.gameObject);
+    }
 }

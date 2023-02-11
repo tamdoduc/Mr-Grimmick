@@ -10,14 +10,24 @@ public class Ship : MonoBehaviour
 
     [SerializeField] Player player;
     [SerializeField] float limX;
+
+    int state;
     void Start()
     {
         isBelowPlayer = false;
+        state = PlayerPrefs.GetInt("StateShip");
+        if (state == 1)
+        {
+            Vector3 pos = this.gameObject.transform.position;
+            pos.x = limX;
+            this.gameObject.transform.position = pos;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (state == 1) return;
         if (isMoving)
         {
             if (this.gameObject.transform.position.x == limX)

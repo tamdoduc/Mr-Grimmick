@@ -43,7 +43,6 @@ public class ManageCamera : MonoBehaviour
     }
     void SetLimHorizontal()
     {
-        Debug.Log(limHorizontal.Length);
         for (int i = 0; i < limHorizontal.Length; i++)
         {
             string tmp = "";

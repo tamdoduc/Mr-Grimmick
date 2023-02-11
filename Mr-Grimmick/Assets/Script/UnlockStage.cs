@@ -5,10 +5,19 @@ using UnityEngine;
 public class UnlockStage : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] int stage;
-    private void OnTriggerEnter2D(Collider2D collision)
+    int stage;
+    float time = 0;
+    void Update()
     {
-        PlayerPrefs.SetInt("Stage", stage);
-        Application.LoadLevel("Map");
+        time += Time.deltaTime;
+        if (time > 5)
+        {
+            PlayerPrefs.SetInt("currentLevel", stage);
+            Application.LoadLevel("Map");
+        }
+    }
+    public void SetStage(int stage)
+    {
+        this.stage = stage;
     }
 }

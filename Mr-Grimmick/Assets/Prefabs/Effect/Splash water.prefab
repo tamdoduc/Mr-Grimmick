@@ -116,3 +116,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMax: 0.6
+  audio: {fileID: 966505016420083132, guid: 0d9cdf396bb75af43b370d795aa69547, type: 3}

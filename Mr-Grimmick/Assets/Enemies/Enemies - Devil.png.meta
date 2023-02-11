@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: 05f00de088a1df441ba54168096bb3e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2339525431301659755
+    second: Enemies - Devil_Walk
+  - first:
+      213: -6780210008674279742
+    second: Enemies - Devil_Walk1
+  - first:
+      213: -4435765960662883123
+    second: Enemies - Devil_Jump
+  - first:
+      213: -3115585216537071686
+    second: Enemies - Devil_Walk3
+  - first:
+      213: 5262488143864893932
+    second: Enemies - Devil_Idle1
+  - first:
+      213: -5823205419636251950
+    second: Enemies - Devil_Idle2
+  - first:
+      213: -1150259671312745283
+    second: Enemies - Devil_Idle3
+  - first:
+      213: -8582872767612010722
+    second: Enemies - Devil_Idle4
+  - first:
+      213: -7807035384034247076
+    second: Enemies - Devil_BackIdle1
+  - first:
+      213: -5566455929038653483
+    second: Enemies - Devil_BackIdle2
+  - first:
+      213: 4800956386876599587
+    second: Enemies - Devil_BackIdle3
+  - first:
+      213: -722762401329520714
+    second: Enemies - Devil_BackIdle4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemies - Devil_Walk
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593a54cf306588fd0800000000000000
+      internalID: -2339525431301659755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_Jump
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc46be74c5ef072c0800000000000000
+      internalID: -4435765960662883123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_Idle1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce195c1c51d180940800000000000000
+      internalID: 5262488143864893932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_Idle2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2a3740681df2fa0800000000000000
+      internalID: -5823205419636251950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_Idle3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc32fb5ce47900f0800000000000000
+      internalID: -1150259671312745283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_Idle4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fbc1e11b283e880800000000000000
+      internalID: -8582872767612010722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_BackIdle1
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ebbb18ea6d7a390800000000000000
+      internalID: -7807035384034247076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_BackIdle2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7b8cb23d9ffb2b0800000000000000
+      internalID: -5566455929038653483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_BackIdle3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d2ce5b56c60a240800000000000000
+      internalID: 4800956386876599587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies - Devil_BackIdle4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7083333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfdeb3ec6b38f5f0800000000000000
+      internalID: -722762401329520714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

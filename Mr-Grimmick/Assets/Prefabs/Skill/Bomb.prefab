@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2215305258077099842}
   - component: {fileID: 2215305258077099845}
   - component: {fileID: 2215305258077099844}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 307951252316037306, guid: 4dcc751af79aa344e9c38cbe312373b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,6 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2215305258077099849}
   body: {fileID: 2215305258077099844}
+  layerEnemy:
+    serializedVersion: 2
+    m_Bits: 9216
+  boxBody: {fileID: 2215305258077099845}
+  audio: {fileID: 5006343503563644779, guid: 7a165946732dd384c8d68e2f3e11167b, type: 3}
 --- !u!58 &2215305258077099845
 CircleCollider2D:
   m_ObjectHideFlags: 0

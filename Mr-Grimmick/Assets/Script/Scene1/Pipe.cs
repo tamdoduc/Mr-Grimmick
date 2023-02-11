@@ -7,78 +7,62 @@ public class Pipe : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Vector3[] pos;
 
-    [SerializeField] Player player;
-
     [SerializeField] bool isActived;
     [SerializeField] bool isUp;
 
     [SerializeField] int indexPos;
+    [SerializeField] MovingGameObject moving;
+    MovingGameObject clone;
+    List<GameObject> gameObjects = new List<GameObject>();
     void Start()
     {
         isActived = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isActived)
-        {
-            Vector3 temp = player.transform.position;
-            if (isUp)
-            {
-                if (temp.x==pos[indexPos].x  && temp.y == pos[indexPos].y ) 
-                indexPos++;
-                if (indexPos == pos.Length)
-                {
-                    player.SetActive(true);
-                    isActived = false;
-                }
-            }
-            else
-            {
-                if (temp.x == pos[indexPos].x && temp.y == pos[indexPos].y) 
-                    indexPos--;
-                if (indexPos == -1)
-                {
-                    player.SetActive(true);
-                    isActived = false;
-                }
-            }
-        }
-        if (isActived)
-        {
-            Vector3 temp = player.transform.position;
-            if (temp.x < pos[indexPos].x)
-                temp.x = Mathf.Min(pos[indexPos].x, temp.x + Time.deltaTime * 5);
-
-            if (temp.x > pos[indexPos].x)
-                temp.x = Mathf.Max(pos[indexPos].x, temp.x - Time.deltaTime * 5);
-
-
-            if (temp.y < pos[indexPos].y)
-                temp.y = Mathf.Min(pos[indexPos].y, temp.y + Time.deltaTime * 5);
-            else
-            if (temp.y > pos[indexPos].y)
-                temp.y = Mathf.Max(pos[indexPos].y, temp.y - Time.deltaTime * 5);
-            player.transform.position = temp;
-        }
     }
     public bool GetActive()
     {
         return isActived;
     }
-    public void Active(bool isUp)
+    GameObject LastGameObject= null;
+    public void Active(GameObject Object , bool isUp)
     {
-        isActived = true;
-        player.SetActive(false);
-        this.isUp = isUp;
+        if (!CheckObject(Object))
+            return;
+        Debug.Log("trrrrr");
+        clone = GameObject.Instantiate(moving);
+        
         if (isUp)
-        {
-            indexPos = 1;
-        }
+            for (int i=1;i<pos.Length;i++)
+            {
+                clone.AddPos(pos[i]);
+                Debug.Log("Uppppppppppppppp" + pos[i]);
+            }
         else
-        {
-            indexPos = pos.Length - 2;
-        }
+            for (int i = pos.Length-2; i >=0; i--)
+            {
+                clone.AddPos(pos[i]);
+                Debug.Log("Downnnnnnnnnnnnnnnnnnnnnn" + pos[i]);
+            }
+        clone.SetGameObject(Object,this);
+        gameObjects.Add(Object);
+        Debug.Log("StartMoving");
+        clone.Active();
+    }
+    public void ResetObject(GameObject @object)
+    {
+        foreach (GameObject g in gameObjects)
+            if (g!=null && g == @object)
+            {
+                gameObjects.Remove(g);
+                Debug.Log("Remove: " + g.name);
+            }
+    }
+    bool CheckObject(GameObject @object)
+    {
+        foreach (GameObject g in gameObjects)
+            if (g != null && g == @object)
+            {
+                return false;
+            }
+        return true;
     }
 }

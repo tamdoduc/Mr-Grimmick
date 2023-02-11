@@ -23,15 +23,25 @@ public class Elevator : MonoBehaviour
     }
 
     // Update is called once per frame
+    [SerializeField] AudioSource move;
+    AudioSource clone;
+    [SerializeField] float maxPosX;
     void Update()
     {
         if (isMoving)
         {
-            timeActived += Time.deltaTime;
             float range = Time.deltaTime * 5 / 2;
-            if (timeActived < 1.5f)
+            if (this.gameObject.transform.position.x < maxPosX )
             {
+                if (clone==null)
+                {
+                    clone = AudioSource.Instantiate(move);
+                    GameObject.Destroy(clone.gameObject, 1);
+                }
                 this.transform.position += new Vector3(range, 0, 0);
+                Vector3 vector3 = this.transform.position;
+                vector3.x = Mathf.Min(this.gameObject.transform.position.x, maxPosX);
+                this.transform.position = vector3;
             }
             else
             {

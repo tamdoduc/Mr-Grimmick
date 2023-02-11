@@ -13,12 +13,12 @@ public class GatePile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag.ToString() == "MovingByPipe")
         {
-            if (!pipe.GetActive())
-                pipe.Active(isUp);
+            pipe.Active(collision.gameObject, isUp);
+            Debug.Log(collision.gameObject.name);
         }
-
     }
     // Update is called once per frame
     void Update()

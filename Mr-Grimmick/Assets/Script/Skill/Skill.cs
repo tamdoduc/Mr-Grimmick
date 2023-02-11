@@ -1,4 +1,5 @@
-﻿using System.Collections;
+  
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,10 @@ public class Skill : SkillTemp
     [SerializeField] Collider2D colliderT;
 
     [SerializeField] LayerMask GroundLayer;
+    [SerializeField] LayerMask DestroySkillLayer;
+
+    [SerializeField] AudioSource bounce;
+    AudioSource cloneAudio;
 
     Vector3[] positionShadow = new Vector3[3];
 
@@ -25,6 +30,7 @@ public class Skill : SkillTemp
 
     [SerializeField] SelfDestruct selfDestruct;
 
+    bool isActive=true;
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -40,9 +46,10 @@ public class Skill : SkillTemp
     // Update is called once per frame
     void Update()
     {
+        if (!isActive)
+            return;
         timeExist += Time.deltaTime;
-        if (!isShooted)
-            this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
+        if (!isShooted)           this.gameObject.transform.position = player.transform.position + new Vector3(0, 1, 0);
         timeChangeShadowPos += Time.deltaTime;
         if (timeChangeShadowPos >= 0.025f)
         {
@@ -54,7 +61,7 @@ public class Skill : SkillTemp
         {
             CheckCollision();
             body.velocity = velocity;
-            if (countCollision >= 20)
+            if (countCollision >= 20 || IsDestroySkill())
             {
                 SelfDestruct();
             }
@@ -62,10 +69,14 @@ public class Skill : SkillTemp
     }
     override public void SelfDestruct()
     {
+        Destroy(shadowSkill1.gameObject);
+        Destroy(shadowSkill2.gameObject);
+        Debug.LogWarning("asdasd");
+
         selfDestruct = GameObject.Instantiate(selfDestruct);
         selfDestruct.transform.position = this.gameObject.transform.position;
         GameObject.Destroy(this.gameObject);
-    }    
+    }
     void SetShadow()
     {
         for (int i = 2; i > 0; i--)
@@ -89,50 +100,97 @@ public class Skill : SkillTemp
 
         float decrease = 0.8f;
 
+        
         Vector3 vel = velocity;
-        if (collisionD)
         {
-            if (velocity.y < 0)
+            if (collisionD)
             {
-                vel.y = decrease * Mathf.Abs(velocity.y);
-                countCollision++;
-                this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
+                if (velocity.y < 0)
+                {
+                    vel.y = decrease * Mathf.Abs(velocity.y);
+                    countCollision++;
+                    this.gameObject.transform.position += new Vector3(0, Time.deltaTime * 2, 0);
+                    if (cloneAudio == null)
+                    {
+                        cloneAudio = AudioSource.Instantiate(bounce);
+                        Destroy(cloneAudio.gameObject, 1);
+                    }
+                }
+            }
+            else if (collisionU)
+            {
+                if (velocity.y > 0)
+                {
+                    vel.y = decrease * -Mathf.Abs(velocity.y);
+                    countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
+                }
             }
         }
-        else if (collisionU)
+      //  if (Mathf.Abs(vel.y) < Mathf.Abs(vel.x) || Mathf.Abs(vel.x) < 1f)
         {
-            if (velocity.y > 0)
+            if (collisionL)
             {
-                vel.y = decrease * -Mathf.Abs(velocity.y);
-                countCollision++;
+                if (velocity.x < 0)
+                {
+                    vel.x = decrease * Mathf.Abs(velocity.x);
+                    countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
+                }
             }
-        }
-    //    else
-        if (collisionL)
-        {
-            if (velocity.x < 0)
+            else if (collisionR)
             {
-                vel.x = decrease * Mathf.Abs(velocity.x);
-                countCollision++;
-            }
-        }
-        else if (collisionR)
-        {
-            if (velocity.x > 0)
-            {
-                vel.x = decrease * -Mathf.Abs(velocity.x);
-                countCollision++;
+                if (velocity.x > 0)
+                {
+                    vel.x = decrease * -Mathf.Abs(velocity.x);
+                    countCollision++;
+                    cloneAudio = AudioSource.Instantiate(bounce);
+                    Destroy(cloneAudio.gameObject, 1);
+                }
             }
         }
 
         velocity = vel;
-        velocity.y -= Time.deltaTime *35;
+        velocity.y -= Time.deltaTime * 35;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer.ToString() == "23") //pipe
+        {
+            isActive = false;
+        }
         if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
         {
             SelfDestruct();
         }
+        if (collision.gameObject.layer == 18) //DestroySkill
+        {
+            SelfDestruct();
+            Debug.Log("Bossssss");
+        }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.ToString() == "23") //pipe
+        {
+            SelfDestruct();
+        }
+    }
+    bool IsDestroySkill()
+    {
+        RaycastHit2D hit2D = Physics2D.BoxCast(colliderL.bounds.center, colliderL.bounds.size, 0, Vector2.left, 0, DestroySkillLayer);
+        bool collisionL = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderR.bounds.center, colliderR.bounds.size, 0, Vector2.right, 0, DestroySkillLayer);
+        bool collisionR = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderT.bounds.center, colliderT.bounds.size, 0, Vector2.up, 0f, DestroySkillLayer);
+        bool collisionU = hit2D.collider != null;
+        hit2D = Physics2D.BoxCast(colliderD.bounds.center, colliderD.bounds.size, 0, Vector2.down, 0f, DestroySkillLayer);
+        bool collisionD = hit2D.collider != null;
+        if (collisionL || collisionR || collisionU || collisionD)
+            return true;
+        return false;
+    }
+
 }

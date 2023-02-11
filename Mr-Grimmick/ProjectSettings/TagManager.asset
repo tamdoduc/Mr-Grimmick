@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - MovingByPipe
   layers:
   - Default
   - TransparentFX
@@ -13,23 +13,23 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Boss
   - Ground
-  - 
-  - 
+  - EnemyStand
+  - BlockBoss
   - Skill
   - ThornTrap
   - Enemy
   - MachineGun
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyHead
+  - Player
+  - Trigger
+  - DestroySkill
+  - Immortal
+  - Skill_Bomb
+  - Skill_EnergyBall
+  - Item
+  - Pipe
   - 
   - 
   - 

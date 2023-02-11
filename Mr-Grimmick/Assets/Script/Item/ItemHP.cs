@@ -5,6 +5,14 @@ using UnityEngine;
 public class ItemHP : MonoBehaviour
 {
     bool isUsed = false;
+
+    [SerializeField] AudioSource audio;
+    [SerializeField] string name;
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("itemhp"+name) == 1)
+            Destroy(this.gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player" && !isUsed)
@@ -18,7 +26,11 @@ public class ItemHP : MonoBehaviour
                 PlayerPrefs.SetInt("currentHp", PlayerPrefs.GetInt("currentHp") + 1);
                 PlayerPrefs.SetInt("currentHp", maxHp + 1);
             }
+            audio = AudioSource.Instantiate(audio);
+            Destroy(audio.gameObject, 1);
+            PlayerPrefs.SetInt("itemhp"+name, 1);
             GameObject.Destroy(this.gameObject);
+
         }
     }
 }

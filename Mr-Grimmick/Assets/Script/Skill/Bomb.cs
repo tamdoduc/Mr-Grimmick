@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bomb : SkillTemp
 {
     float timeSelfDestruct;
-
+    [SerializeField] LayerMask layerEnemy;
+    [SerializeField] Collider2D boxBody;
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -26,24 +27,31 @@ public class Bomb : SkillTemp
                 velocity.y -= Time.deltaTime * 30;
                 body.velocity = velocity;
                 timeShooted += Time.deltaTime;
-                if (timeShooted >= 2f)
+                if (timeShooted >= 2f )
                     SelfDestruct();
             }
         } else
         {
             timeSelfDestruct += Time.deltaTime;
-            if (timeSelfDestruct >= 0.66f)
+            if (timeSelfDestruct >= 0.5f)
                 GameObject.Destroy(this.gameObject);
         }
     }
+    [SerializeField] AudioSource audio;
+    
     override public void SelfDestruct()
     {
         isExist = false;
         animator.SetBool("IsActive", true);
+        Debug.Log("animation");
+        this.gameObject.GetComponent<Rigidbody2D>().Sleep();
+        audio = AudioSource.Instantiate(audio);
+        Destroy(audio.gameObject, 1f);
+      //  Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer.ToString() == "12") //Thorn Trap
+        if (collision.gameObject.layer.ToString() == "12" || collision.gameObject.layer.ToString() == "13" || collision.gameObject.layer.ToString() == "14") //Thorn Trap
         {
             SelfDestruct();
         }
